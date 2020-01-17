@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        .screen {
+            height: 100vh;
+            width: 100vw;
+        }
+        .frontpage {
+        }
+        .backpage {
+            height: -100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="backpage" class="screen"></div>
+    <script>
+        class Page1 {
+            constructor() {
+                const html = `
+        <div class="w-100 h-100 bg-success">
+            <h1>page 12</h1>
+            <button id="btn1" class="btn btn-primary btn-lg"> hello </button>
+        </div>
+            `;
+                $("#backpage").html(html);
+                $("#btn1").click(() => {
+                    this.transition();
+                });
+            }
+
+            initialize() {
+
+            }
+
+            transition() {
+                let x = "slideInUp";
+                $('#backpage').removeClass().addClass(`screen ${x} animated`).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                    $("frontpage").remove();
+                    $(this).removeClass().addClass(`screen`);
+                });
+            }
+
+        }
+
+
+        let p = new Page1();
+        p.initialize();
+
+    </script>
+</body>
+
+</html>
