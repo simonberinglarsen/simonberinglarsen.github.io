@@ -14,13 +14,18 @@
 
     <style>
         html {
-            font-size: 70px;
+            font-size: 24px;
+            overflow: hidden;
         }
 
         #app {
-            background-color: purple;
+            background-color: white;
             height: 100vh;
             width: 100vw;
+        }
+
+        .fa-10x {
+            font-size: 10em;
         }
     </style>
 
@@ -32,9 +37,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
+    <script src="https://kit.fontawesome.com/56639b13a6.js" crossorigin="anonymous"></script>
     <!-- Required scripts -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
@@ -56,57 +59,81 @@
 <body>
     <!-- Our application root element -->
     <div id="app">
-        <b-navbar type="dark" variant="dark" style="justify-content: space-between;">
-            <b-navbar-nav>
-                <b-nav-item to="/">Home</b-nav-item>
-                <b-nav-item to="/fade/up">Home2</b-nav-item>
-
-                <!-- Navbar dropdowns -->
-                <b-nav-item-dropdown text="Fade" left>
-                    <b-dropdown-item to="/fade/up">Up</b-dropdown-item>
-                    <b-dropdown-item to="/fade/right">Right</b-dropdown-item>
-                    <b-dropdown-item to="/fade/down">Down</b-dropdown-item>
-                    <b-dropdown-item to="/fade/left">Left</b-dropdown-item>
-                </b-nav-item-dropdown>
-
-
-            </b-navbar-nav>
-        </b-navbar>
-        <div class="p-4">
-            <vue-page-transition name="fade">
-                <router-view />
-            </vue-page-transition>
-        </div>
+        <vue-page-transition name="fade">
+            <router-view />
+        </vue-page-transition>
     </div>
     <!-- Start running your app -->
     <script>
         var home = Vue.component('home', {
             template: `
-        <i class="fa fa-5x fa-clock-o"></i>
+            <div>
+                <div @click="router.push('/timer')" class="card shadow-lg m-5 text-center">
+                    <i class="fa fa-10x fa-clock-o bg-success p-2"></i>
+                    <div class="card-body">
+                        <p class="card-text"><h1>Timer</h1></p>
+                    </div>
+                </div>
+                <div @click="router.push('/log')" class="card shadow-lg m-5 text-center">
+                    <i class="fa fa-10x fa-clipboard-list bg-warning p-2"></i>
+                    <div class="card-body">
+                        <p class="card-text"><h1>Log</h1></p>
+                    </div>
+                </div>
+                <div @click="router.push('/settings')" class="card shadow-lg m-5 text-center">
+                    <i class="fa fa-10x fa-cog bg-secondary p-2"></i>
+                    <div class="card-body">
+                        <p class="card-text"><h1>Settings</h1></p>
+                    </div>
+                </div>
+            </div>
+        `,
+            methods: {
+               
+            },
+            data() {
+                return {
+                    name: "Donald"
+                };
+            },
+        })
+
+        var timerPage = Vue.component('timer-page', {
+            template: `
+            <div>
+                <div @click="router.push('/')" class="card shadow-lg m-5 text-center">
+                    <i class="fa fa-10x fa-cube bg-danger p-2"></i>
+                    <div class="card-body">
+                        <p class="card-text"><h1>Home</h1></p>
+                    </div>
+                </div> 
+            </div>
         `
         })
 
-        var fadeUp = Vue.component('fade-up', {
+        var settingsPage = Vue.component('settings-page', {
             template: `
-        <i class="fa fa-5x fa-clock-o"></i>
+            <div>
+                <div @click="router.push('/')" class="card shadow-lg m-5 text-center">
+                    <i class="fa fa-10x fa-cube bg-danger p-2"></i>
+                    <div class="card-body">
+                        <p class="card-text"><h1>Home</h1></p>
+                    </div>
+                </div> 
+            </div>
         `
         })
 
-        var fadeRight = Vue.component('fade-right', {
+        var logPage = Vue.component('log-page', {
             template: `
-        <i class="fa fa-5x fa-clock-o"></i>
-        `
-        })
-
-        var fadeDown = Vue.component('fade-down', {
-            template: `
-        <i class="fa fa-5x fa-clock-o"></i>
-        `
-        })
-
-        var fadeLeft = Vue.component('fade-left', {
-            template: `
-        <i class="fa fa-5x fa-clock-o"></i>
+            <div>
+                <div @click="router.push('/')" class="card shadow-lg m-5 text-center">
+                    <i class="fa fa-10x fa-cube bg-danger p-2"></i>
+                    <div class="card-body">
+                        <p class="card-text"><h1>Home</h1></p>
+                    </div>
+                </div> 
+            </div>
         `
         })
 
@@ -116,32 +143,26 @@
                     path: '/',
                     name: 'Vue Page Transition',
                     component: home,
-                    meta: { transition: 'fade' },
-                },
-                {
-                    path: '/fade/up',
-                    name: 'Fade In Up - Vue Page Transition',
-                    component: fadeUp,
                     meta: { transition: 'fade-in-up' },
                 },
                 {
-                    path: '/fade/right',
-                    name: 'Fade In Right - Vue Page Transition',
-                    component: fadeRight,
+                    path: '/timer',
+                    name: 'Timer',
+                    component: timerPage,
                     meta: { transition: 'fade-in-right' },
                 },
                 {
-                    path: '/fade/down',
-                    name: 'Fade In Down - Vue Page Transition',
-                    component: fadeDown,
-                    meta: { transition: 'fade-in-down' },
+                    path: '/log',
+                    name: 'Log',
+                    component: logPage,
+                    meta: { transition: 'fade-in-right' },
                 },
                 {
-                    path: '/fade/left',
-                    name: 'Fade In Left - Vue Page Transition',
-                    component: fadeLeft,
-                    meta: { transition: 'fade-in-left' },
-                }
+                    path: '/settings',
+                    name: 'Settings',
+                    component: settingsPage,
+                    meta: { transition: 'fade-in-right' },
+                },
             ]
         })
 
