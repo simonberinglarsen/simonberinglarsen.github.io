@@ -1,60 +1,99 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <style>
-        .screen {
+        body {
+            overflow: hidden;
+            /* Hide scrollbars */
+        }
+
+        .fullscreen {
             height: 100vh;
             width: 100vw;
         }
-        .frontpage {
-        }
-        .backpage {
-            height: -100vh;
+
+        .super-fast {
+            animation-duration: 0.2s;
         }
     </style>
 </head>
 
 <body>
-    <div id="backpage" class="screen"></div>
+    <div id="frontPage" class="card fullscreen super-fast bg-success">
+        front
+        <button class="btn btn-primary" onclick="goto('page2')">next</button>
+    </div>
+    <div id="backPage" class="card fullscreen super-fast bg-warning">
+        back
+    </div>
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
     <script>
-        class Page1 {
-            constructor() {
-                const html = `
-        <div class="w-100 h-100 bg-success">
-            <h1>page 12</h1>
-            <button id="btn1" class="btn btn-primary btn-lg"> hello </button>
-        </div>
-            `;
-                $("#backpage").html(html);
-                $("#btn1").click(() => {
-                    this.transition();
-                });
+        function animateCSS(element, animationName, callback) {
+            const node = document.querySelector(element)
+            node.classList.add('animated', animationName);
+
+            function handleAnimationEnd() {
+                node.classList.remove('animated', animationName)
+                node.removeEventListener('animationend', handleAnimationEnd)
+
+                if (typeof callback === 'function') callback()
             }
 
-            initialize() {
-
-            }
-
-            transition() {
-                let x = "slideInUp";
-                $('#backpage').removeClass().addClass(`screen ${x} animated`).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-                    $("frontpage").remove();
-                    $(this).removeClass().addClass(`screen`);
-                });
-            }
-
+            node.addEventListener('animationend', handleAnimationEnd)
         }
 
+        function swapPage() {
+            animateCSS('#frontPage', `zoomOut`, () => {
+                $('#frontPage').removeClass('d-none').addClass('d-none');
+                $('#backPage').removeClass('d-none')
+                animateCSS('#backPage', `zoomIn`);
+                var f = $('#frontPage');
+                var b = $('#backPage');
+                f.attr('id', 'backPage');
+                b.attr('id', 'frontPage');
+            });
+        }
 
-        let p = new Page1();
-        p.initialize();
+        function page1() {
+            return `
+            p1 <button class="btn btn-primary" onclick="goto(page2())">go to p2</button>
+            `;
+        }
+
+        function page2() {
+            return `
+            p2 <button class="btn btn-primary" onclick="goto(page1())">go to p1</button>
+            `;
+        }
+
+        function loadBackPage(html) {
+            $('#backPage').html(html);
+        }
+
+        function goto(html) {
+            loadBackPage(html);
+            swapPage();
+        }
+
+        goto(page1());
 
     </script>
 </body>
