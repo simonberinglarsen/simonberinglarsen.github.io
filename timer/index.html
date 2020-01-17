@@ -4,6 +4,7 @@
 <head>
     <!-- Required meta tags -->
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -75,13 +76,13 @@
 
         function page1() {
             return `
-            p1 <button class="btn btn-primary" onclick="goto(page2())">go to p2</button>
+            p1 v2 <button class="btn btn-primary" onclick="goto(page2())">go to p2</button>
             `;
         }
 
         function page2() {
             return `
-            p2 <button class="btn btn-primary" onclick="goto(page1())">go to p1</button>
+            p2 v2 <button class="btn btn-primary" onclick="goto(page1())">go to p1</button>
             `;
         }
 
