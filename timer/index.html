@@ -3,169 +3,110 @@
 
 <head>
     <!-- Required meta tags -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="google" content="notranslate">
-    <meta charset="utf-8" />
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Vue Page Transition</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <title>Hello, world!</title>
     <style>
-        html {
-            overflow-x: hidden;
-        }
-
-        #app {
-            background-color: white;
-            width: 100vw;
+        .feature {
+            width: 300px;
         }
     </style>
-
-    <!-- Required Stylesheets -->
-    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
-    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css" />
-
-    <link type="text/css" rel="stylesheet" href="dist/vue-page-transition.css" />
-
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/56639b13a6.js" crossorigin="anonymous"></script>
-    <!-- Required scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
-    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.3/vue-router.min.js"></script>
-    <script src="dist/vue-page-transition.browser.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-    <script charset="UTF-8"
-        src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            document.querySelectorAll('pre code').forEach((block) => {
-                hljs.highlightBlock(block);
-            });
-        });
-    </script>
 </head>
 
 <body>
-    <!-- Our application root element -->
-    <div id="app">
-        <vue-page-transition name="fade">
-            <router-view />
-        </vue-page-transition>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <div class="scramble">
+        <h4>scramble</h4>
+        <div id="scrambleText"></div>
+        <button id="newScramble">new</button>
     </div>
-    <!-- Start running your app -->
+
+    <div class="feature">
+        <h4>timer</h4>
+        <div id="timerText"></div>
+        <button id="btnStart">start</button>
+        <button id="btnStop">stop</button>
+    </div>
+    <div class="feature">
+        <h4>avg</h4>
+        <div id="avgText"></div>
+    </div>
+    <div class="feature">
+        <h4>log</h4>
+        <div id="log"></div>
+    </div>
+
+
     <script>
-        var home = Vue.component('home', {
-            template: `
-            <div>
-                <div @click="router.push('/timer')" class="card shadow-lg m-5 text-center">
-                    <i class="fa fa-5x fa-clock-o bg-success p-2"></i>
-                    <div class="card-body">
-                        <p class="card-text"><h1>Timer</h1></p>
-                    </div>
-                </div>
-                <div @click="router.push('/log')" class="card shadow-lg m-5 text-center">
-                    <i class="fa fa-5x fa-clipboard-list bg-warning p-2"></i>
-                    <div class="card-body">
-                        <p class="card-text"><h1>Log</h1></p>
-                    </div>
-                </div>
-                <div @click="router.push('/settings')" class="card shadow-lg m-5 text-center">
-                    <i class="fa fa-5x fa-cog bg-secondary p-2"></i>
-                    <div class="card-body">
-                        <p class="card-text"><h1>Settings</h1></p>
-                    </div>
-                </div>
-            </div>
-        `,
-            methods: {
-
-            },
-            data() {
-                return {
-                    name: "Donald"
-                };
-            },
-        })
-
-        var timerPage = Vue.component('timer-page', {
-            template: `
-            <div>
-                <div @click="router.push('/')" class="card shadow-lg m-5 text-center">
-                    <i class="fa fa-5x fa-cube bg-danger p-2"></i>
-                    <div class="card-body">
-                        <p class="card-text"><h1>Home</h1></p>
-                    </div>
-                </div> 
-            </div>
-        `
-        })
-
-        var settingsPage = Vue.component('settings-page', {
-            template: `
-            <div>
-                <div @click="router.push('/')" class="card shadow-lg m-5 text-center">
-                    <i class="fa fa-5x fa-cube bg-danger p-2"></i>
-                    <div class="card-body">
-                        <p class="card-text"><h1>Home</h1></p>
-                    </div>
-                </div> 
-            </div>
-        `
-        })
-
-        var logPage = Vue.component('log-page', {
-            template: `
-            <div>
-                <div @click="router.push('/')" class="card shadow-lg m-5 text-center">
-                    <i class="fa fa-5x fa-cube bg-danger p-2"></i>
-                    <div class="card-body">
-                        <p class="card-text"><h1>Home</h1></p>
-                    </div>
-                </div> 
-            </div>
-        `
-        })
-
-        var router = new VueRouter({
-            routes: [
-                {
-                    path: '/',
-                    name: 'Vue Page Transition',
-                    component: home,
-                    meta: { transition: 'fade-in-up' },
-                },
-                {
-                    path: '/timer',
-                    name: 'Timer',
-                    component: timerPage,
-                    meta: { transition: 'fade-in-right' },
-                },
-                {
-                    path: '/log',
-                    name: 'Log',
-                    component: logPage,
-                    meta: { transition: 'fade-in-right' },
-                },
-                {
-                    path: '/settings',
-                    name: 'Settings',
-                    component: settingsPage,
-                    meta: { transition: 'fade-in-right' },
-                },
-            ]
-        })
-
-        Vue.use(VuePageTransition)
-
-        window.app = new Vue({
-            el: '#app',
-            router,
-        })
+        let timelog = [
+            31, 30, 29, 35, 39, 29, 30, 35, 36, 35, 41
+        ];
+        let startTime = 0;
+        $('#btnStart').click(() => {
+            $('#timerText').html('time is running...');
+            startTime = new Date();
+        });
+        $('#btnStop').click(() => {
+            $('#timerText').html('stop');
+            elapsedMs = (new Date() - startTime) / 1000;
+            addEntry(elapsedMs);
+        });
+        $('#newScramble').click(()=>{
+            newScramble();
+        });
+        function addEntry(time) {
+            timelog.push(time);
+            renderTimeLog();
+        }
+        function newScramble() {
+            $('#scrambleText').empty();
+            let operators='RLUDBF';
+            let variant=['', `'`, '2'];
+            let scramble = '';
+            for(let i=0; i<20; i++) {
+                let idx = Math.floor((Math.random() * operators.length));
+                scramble += operators[idx];
+                idx = Math.floor((Math.random() * 3));
+                scramble += variant[idx];
+                scramble += ' ';
+            }
+            $('#scrambleText').append(`${scramble}`);
+        }
+        function renderTimeLog() {
+            $('#log').empty();
+            let maxItemsInUI = 5;
+            let moreItemsInLog = timelog.length > maxItemsInUI;
+            let logCount = moreItemsInLog ? maxItemsInUI : timelog.length;
+            for (let i = 0; i < logCount; i++) {
+                let t = timelog[timelog.length - i - 1];
+                $('#log').append(`<div>${t}</div>`);
+            }
+            if (moreItemsInLog) {
+                $('#log').append(`<div>...</div>`);
+            }
+            renderAvg();
+        }
+        function renderAvg() {
+            let sum = timelog.reduce((previous, current) => current += previous);
+            let avg = sum / timelog.length;
+            $('#avgText').empty();
+            $('#avgText').append(`<div>${avg}</div>`);
+        }
+        renderTimeLog();
+        newScramble();
     </script>
 </body>
 
