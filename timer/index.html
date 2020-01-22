@@ -28,17 +28,27 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <div class="scramble">
+
+    <div class="feature">
+        <h4>settings</h4>
+        <div class="btn btn-secondary m-1 w-100" id="config-inspection">inspection: Yes</div>
+        <div class="btn btn-secondary m-1 w-100" id="config-auto-scramble">auto-scramble: Yes</div>
+        <div class="btn btn-secondary m-1 w-100" id="config-clear-log">clear-log</div>
+    </div>
+
+
+    <div class="feature">
         <h4>scramble</h4>
         <div id="scrambleText"></div>
-        <button id="newScramble">new</button>
+        <button class="btn btn-secondary" id="newScramble">new</button>
+        <button class="btn btn-success" id="ready">ready!</button>
     </div>
 
     <div class="feature">
         <h4>timer</h4>
-        <div id="timerText"></div>
-        <button id="btnStart">start</button>
-        <button id="btnStop">stop</button>
+        <div id="timerText">waiting..</div>
+        <button class="btn btn-secondary" id="btnStart">start</button>
+        <button class="btn btn-secondary" id="btnStop">stop</button>
     </div>
     <div class="feature">
         <h4>avg</h4>
@@ -60,11 +70,11 @@
             startTime = new Date();
         });
         $('#btnStop').click(() => {
-            $('#timerText').html('stop');
-            elapsedMs = (new Date() - startTime) / 1000;
+            let elapsedMs = (new Date() - startTime) / 1000;
+            $('#timerText').html(`${(elapsedMs).toFixed(2)}`);
             addEntry(elapsedMs);
         });
-        $('#newScramble').click(()=>{
+        $('#newScramble').click(() => {
             newScramble();
         });
         function addEntry(time) {
@@ -73,10 +83,10 @@
         }
         function newScramble() {
             $('#scrambleText').empty();
-            let operators='RLUDBF';
-            let variant=['', `'`, '2'];
+            let operators = 'RLUDBF';
+            let variant = ['', `'`, '2'];
             let scramble = '';
-            for(let i=0; i<20; i++) {
+            for (let i = 0; i < 20; i++) {
                 let idx = Math.floor((Math.random() * operators.length));
                 scramble += operators[idx];
                 idx = Math.floor((Math.random() * 3));
