@@ -35,18 +35,18 @@
         <div class="btn btn-secondary m-1 w-100" id="settings-auto-scramble"></div>
         <div class="btn btn-secondary m-1 w-100" id="settings-clear-log">clear-log</div>
     </div>
-
     <div class="feature">
         <h4>scramble</h4>
         <div id="scramble-text"></div>
         <button class="btn btn-secondary" id="scramble-new">new</button>
     </div>
-
     <div class="feature">
         <h4>timer</h4>
-        <div id="timerText">waiting..</div>
-        <button class="btn btn-secondary" id="timer-start">start</button>
-        <button class="btn btn-secondary" id="timer-stop">stop</button>
+        <div>
+            <span id="timer-text">waiting..</span>
+            <span class="badge badge-success" id="timer-ready">Ready</span>
+        </div>
+        <button class="btn btn-secondary" id="timer-action">action</button>
     </div>
     <div class="feature">
         <h4>avg</h4>
@@ -61,6 +61,7 @@
     <script>
         let state = {
             timer: {
+                mode: 'idle', //idle -> (inspection, get-ready) -> ready -> started -> idle
                 startTime: null,
                 log: []
             },
@@ -78,63 +79,111 @@
             render();
         }
 
-        [
-            35, 39, 29, 30, 35, 36, 35, 41, 35, 36, 31, 32
-        ].forEach(time => {
-            newScramble();
-            addEntry(time);
-        });
-        $('#settings-inspection').click(() => {
-            setState(
-                {
-                    ...state,
-                    settings: {
-                        ...state.settings,
-                        inspection: !state.settings.inspection
-                    }
-                }
-            );
-        });
-        $('#settings-auto-scramble').click(() => {
-            setState(
-                {
-                    ...state,
-                    settings: {
-                        ...state.settings,
-                        autoScramble: !state.settings.autoScramble
-                    }
-                }
-            );
-        });
-        $('#settings-clear-log').click(() => {
-            setState(
-                {
-                    ...state,
-                    timer: {
-                        ...state.timer,
-                        log: []
-                    }
-                }
-            );
-        });
-        $('#timer-start').click(() => {
+        function setStateSlice(prop, obj) {
             setState({
                 ...state,
-                timer: {
-                    ...state.timer,
-                    startTime: new Date()
+                [prop]: {
+                    ...state[prop],
+                    ...obj
                 }
             });
-        });
-        $('#timer-stop').click(() => {
-            addEntry((new Date() - state.timer.startTime) / 1000);
-            if (state.settings.autoScramble) {
+        }
+
+        function startApp() {
+            [
+                35, 39, 29, 30, 35, 36, 35, 41, 35, 36, 31, 32
+            ].forEach(time => {
                 newScramble();
+                addEntry(time);
+            });
+        }
+
+        $('#settings-inspection').click(() => {
+            setStateSlice('settings', {
+                ...state.settings,
+                inspection: !state.settings.inspection
+            });
+        });
+
+        $('#settings-auto-scramble').click(() => {
+            setStateSlice('settings', {
+                ...state.settings,
+                autoScramble: !state.settings.autoScramble
+            });
+        });
+
+        $('#settings-clear-log').click(() => {
+            setStateSlice('timer', {
+                ...state.timer,
+                log: []
+            });
+        });
+
+        $('#timer-action').mouseup(() => {
+            if (state.timer.mode === 'idle') {
+
+            }
+            else if (state.timer.mode === 'inspection') {
+
+            }
+            else if (state.timer.mode === 'get-ready') {
+                setStateSlice('timer', { mode: 'idle', startTime: null });
+            }
+            else if (state.timer.mode === 'ready') {
+                if (state.settings.inspection) {
+                    setStateSlice('timer', { mode: 'inspection', startTime: new Date() });
+                    setTimeout(timerWatchDog, 1000);
+                }
+                else {
+                    setStateSlice('timer', { mode: 'started', startTime: new Date() });
+                }
+
+            }
+            else if (state.timer.mode === 'started') {
+
             }
         });
+
+        function timerWatchDog() {
+            if (state.timer.mode === 'get-ready') {
+                let elapsed = (new Date() - state.timer.startTime) / 1000;
+                if (elapsed > 1) {
+                    setStateSlice('timer', { mode: 'ready', startTime: null });
+                }
+            }
+            else if (state.timer.mode === 'inspection') {
+                setTimeout(timerWatchDog, 1000);
+                render();
+            }
+        }
+
+        $('#timer-action').mousedown(() => {
+            if (state.timer.mode === 'idle') {
+                setStateSlice('timer', { mode: 'get-ready', startTime: new Date() });
+                setTimeout(timerWatchDog, 1000);
+            }
+            else if (state.timer.mode === 'inspection') {
+                setStateSlice('timer', { mode: 'started', startTime: new Date() });
+            }
+            else if (state.timer.mode === 'get-ready') {
+
+            }
+            else if (state.timer.mode === 'ready') {
+
+            }
+            else if (state.timer.mode === 'started') {
+                let elapsed = (new Date() - state.timer.startTime) / 1000;
+                addEntry(elapsed);
+                if (state.settings.autoScramble) {
+                    newScramble();
+                }
+            }
+        });
+
         $('#scramble-new').click(() => {
             newScramble();
         });
+
         function addEntry(elapsedMs) {
             const timerlog = [...state.timer.log];
             let entry = {
@@ -151,13 +200,11 @@
                         .reduce((acc, cur) => acc + cur, 0) / num;
             entry.ao5 = ao(5, timerlog);
             entry.ao12 = ao(12, timerlog);
-            setState({
-                ...state,
-                timer: {
-                    ...state.timer,
-                    startTime: null,
-                    log: timerlog
-                }
+            setStateSlice('timer', {
+                ...state.timer,
+                mode: 'idle',
+                startTime: null,
+                log: timerlog
             });
         }
 
@@ -172,12 +219,9 @@
                 scramble += variant[idx];
                 scramble += ' ';
             }
-            setState({
-                ...state,
-                scramble: {
-                    ...state.scramble,
-                    current: scramble
-                }
+            setStateSlice('scramble', {
+                ...state.scramble,
+                current: scramble
             });
 
         }
@@ -202,17 +246,19 @@
         }
 
         function renderTimer() {
-            if (state.timer.startTime !== null) {
-                $('#timerText').html('time is running...');
-                return;
+            let elapsed = (new Date() - state.timer.startTime) / 1000;
+            if (state.timer.mode === 'ready') {
+                $('#timer-ready').removeClass("d-none");
             }
-            if (state.timer.log.length === 0) {
-                $('#timerText').html('no solves yet...');
-                return;
+            else {
+                $('#timer-ready').removeClass("d-none").addClass("d-none");
             }
-            const log = state.timer.log;
-            const last = log[log.length - 1];
-            $('#timerText').html(`${(last.time).toFixed(2)}`);
+            if (state.timer.mode === 'inspection') {
+                $('#timer-text').html(`${state.timer.mode}, ${elapsed.toFixed(2)}`);
+            }
+            else {
+                $('#timer-text').html(state.timer.mode);
+            }
         }
 
         function renderTimeLog() {
@@ -231,16 +277,17 @@
         }
 
         function renderAvg() {
+            $('#avg-text').empty();
             const timelog = state.timer.log;
             if (timelog.length === 0) {
+                $('#avg-text').html(`no solves..`);
                 return;
             }
             const last = timelog[timelog.length - 1];
-            $('#avg-text').empty();
             $('#avg-text').append(`<div>ao5=${last.ao5.toFixed(2)}, ao12=${last.ao12.toFixed(2)}</div>`);
         }
 
-        newScramble();
+        startApp();
     </script>
 </body>
 
