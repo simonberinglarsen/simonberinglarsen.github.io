@@ -178,9 +178,7 @@
             mouseDown[state.timer.mode]();
         });
 
-        $('#scramble-new').click(() => {
-            newScramble();
-        });
+        $('#scramble-new').click(newScramble);
 
         function addEntry(elapsedMs) {
             const timerlog = [...state.timer.log];
