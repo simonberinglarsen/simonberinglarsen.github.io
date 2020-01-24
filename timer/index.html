@@ -31,58 +31,137 @@
 
     <div class="feature">
         <h4>settings</h4>
-        <div class="btn btn-secondary m-1 w-100" id="config-inspection">inspection: Yes</div>
-        <div class="btn btn-secondary m-1 w-100" id="config-auto-scramble">auto-scramble: Yes</div>
-        <div class="btn btn-secondary m-1 w-100" id="config-clear-log">clear-log</div>
+        <div class="btn btn-secondary m-1 w-100" id="settings-inspection"></div>
+        <div class="btn btn-secondary m-1 w-100" id="settings-auto-scramble"></div>
+        <div class="btn btn-secondary m-1 w-100" id="settings-clear-log">clear-log</div>
     </div>
-
 
     <div class="feature">
         <h4>scramble</h4>
-        <div id="scrambleText"></div>
-        <button class="btn btn-secondary" id="newScramble">new</button>
-        <button class="btn btn-success" id="ready">ready!</button>
+        <div id="scramble-text"></div>
+        <button class="btn btn-secondary" id="scramble-new">new</button>
     </div>
 
     <div class="feature">
         <h4>timer</h4>
         <div id="timerText">waiting..</div>
-        <button class="btn btn-secondary" id="btnStart">start</button>
-        <button class="btn btn-secondary" id="btnStop">stop</button>
+        <button class="btn btn-secondary" id="timer-start">start</button>
+        <button class="btn btn-secondary" id="timer-stop">stop</button>
     </div>
     <div class="feature">
         <h4>avg</h4>
-        <div id="avgText"></div>
+        <div id="avg-text"></div>
     </div>
     <div class="feature">
         <h4>log</h4>
-        <div id="log"></div>
+        <pre id="log-text"></pre>
     </div>
 
 
     <script>
-        let timelog = [
-            31, 30, 29, 35, 39, 29, 30, 35, 36, 35, 41
-        ];
-        let startTime = 0;
-        $('#btnStart').click(() => {
-            $('#timerText').html('time is running...');
-            startTime = new Date();
+        let state = {
+            timer: {
+                startTime: null,
+                log: []
+            },
+            scramble: {
+                current: ''
+            },
+            settings: {
+                inspection: false,
+                autoScramble: false,
+            }
+        };
+
+        function setState(s) {
+            state = s;
+            render();
+        }
+
+        [
+            35, 39, 29, 30, 35, 36, 35, 41, 35, 36, 31, 32
+        ].forEach(time => {
+            newScramble();
+            addEntry(time);
         });
-        $('#btnStop').click(() => {
-            let elapsedMs = (new Date() - startTime) / 1000;
-            $('#timerText').html(`${(elapsedMs).toFixed(2)}`);
-            addEntry(elapsedMs);
+        $('#settings-inspection').click(() => {
+            setState(
+                {
+                    ...state,
+                    settings: {
+                        ...state.settings,
+                        inspection: !state.settings.inspection
+                    }
+                }
+            );
         });
-        $('#newScramble').click(() => {
+        $('#settings-auto-scramble').click(() => {
+            setState(
+                {
+                    ...state,
+                    settings: {
+                        ...state.settings,
+                        autoScramble: !state.settings.autoScramble
+                    }
+                }
+            );
+        });
+        $('#settings-clear-log').click(() => {
+            setState(
+                {
+                    ...state,
+                    timer: {
+                        ...state.timer,
+                        log: []
+                    }
+                }
+            );
+        });
+        $('#timer-start').click(() => {
+            setState({
+                ...state,
+                timer: {
+                    ...state.timer,
+                    startTime: new Date()
+                }
+            });
+        });
+        $('#timer-stop').click(() => {
+            addEntry((new Date() - state.timer.startTime) / 1000);
+            if (state.settings.autoScramble) {
+                newScramble();
+            }
+        });
+        $('#scramble-new').click(() => {
             newScramble();
         });
-        function addEntry(time) {
-            timelog.push(time);
-            renderTimeLog();
+        function addEntry(elapsedMs) {
+            const timerlog = [...state.timer.log];
+            let entry = {
+                time: elapsedMs,
+                ao5: 0,
+                ao12: 0,
+                scramble: state.scramble.current
+            };
+            timerlog.push(entry);
+            let ao = (num, arr) =>
+                arr.length < num ? 0 :
+                    arr.slice(arr.length - num)
+                        .map(e => e.time)
+                        .reduce((acc, cur) => acc + cur, 0) / num;
+            entry.ao5 = ao(5, timerlog);
+            entry.ao12 = ao(12, timerlog);
+            setState({
+                ...state,
+                timer: {
+                    ...state.timer,
+                    startTime: null,
+                    log: timerlog
+                }
+            });
         }
+
         function newScramble() {
-            $('#scrambleText').empty();
             let operators = 'RLUDBF';
             let variant = ['', `'`, '2'];
             let scramble = '';
@@ -93,29 +172,74 @@
                 scramble += variant[idx];
                 scramble += ' ';
             }
-            $('#scrambleText').append(`${scramble}`);
+            setState({
+                ...state,
+                scramble: {
+                    ...state.scramble,
+                    current: scramble
+                }
+            });
+
         }
-        function renderTimeLog() {
-            $('#log').empty();
-            let maxItemsInUI = 5;
-            let moreItemsInLog = timelog.length > maxItemsInUI;
-            let logCount = moreItemsInLog ? maxItemsInUI : timelog.length;
-            for (let i = 0; i < logCount; i++) {
-                let t = timelog[timelog.length - i - 1];
-                $('#log').append(`<div>${t}</div>`);
-            }
-            if (moreItemsInLog) {
-                $('#log').append(`<div>...</div>`);
-            }
+
+        function render() {
+            renderSettings();
+            renderScramble();
+            renderTimer();
+            renderTimeLog();
             renderAvg();
         }
-        function renderAvg() {
-            let sum = timelog.reduce((previous, current) => current += previous);
-            let avg = sum / timelog.length;
-            $('#avgText').empty();
-            $('#avgText').append(`<div>${avg}</div>`);
+
+        function renderSettings() {
+            let yesNo = (b) => b ? 'Yes' : 'No';
+            $('#settings-inspection').html(`inspection: ${yesNo(state.settings.inspection)}`);
+            $('#settings-auto-scramble').html(`auto scramble: ${yesNo(state.settings.autoScramble)}`);
         }
-        renderTimeLog();
+
+        function renderScramble() {
+            $('#scramble-text').empty();
+            $('#scramble-text').append(`${state.scramble.current}`);
+        }
+
+        function renderTimer() {
+            if (state.timer.startTime !== null) {
+                $('#timerText').html('time is running...');
+                return;
+            }
+            if (state.timer.log.length === 0) {
+                $('#timerText').html('no solves yet...');
+                return;
+            }
+            const log = state.timer.log;
+            const last = log[log.length - 1];
+            $('#timerText').html(`${(last.time).toFixed(2)}`);
+        }
+
+        function renderTimeLog() {
+            $('#log-text').empty();
+            const timelog = state.timer.log;
+            let index = timelog.length;
+            timelog
+                .slice(Math.max(0, timelog.length - 5))
+                .reverse()
+                .forEach(t => {
+                    $('#log-text').append(`<div>${index--}, ${t.time.toFixed(2)}, ${t.ao5.toFixed(2)}, ${t.ao12.toFixed(2)}, ${t.scramble.substring(0, 8)}...</div>`);
+                });
+            if (timelog.length > 5) {
+                $('#log-text').append(`<div>...</div>`);
+            }
+        }
+
+        function renderAvg() {
+            const timelog = state.timer.log;
+            if (timelog.length === 0) {
+                return;
+            }
+            const last = timelog[timelog.length - 1];
+            $('#avg-text').empty();
+            $('#avg-text').append(`<div>ao5=${last.ao5.toFixed(2)}, ao12=${last.ao12.toFixed(2)}</div>`);
+        }
+
         newScramble();
     </script>
 </body>
