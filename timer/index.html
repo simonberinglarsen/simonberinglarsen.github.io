@@ -14,29 +14,49 @@
     <style>
         .app {
             position: relative;
-            border: 3px solid #ff0000;
+            width: 100vw;
+            height: 100vh;
         }
 
-        .hotbar-collapsed {
+        .hotbar {
             position: absolute;
             top: 0px;
             right: 0px;
+            z-index: 999;
+        }
+
+        .hotbar.collapsed {
+
             border: 3px solid #00ff00;
         }
 
-        .hotbar-expanded {
-            position: absolute;
-            top: 0px;
-            right: 0px;
+        .hotbar.expanded {
+
             background-color: #a0a0a0;
             border: 3px solid #0000ff;
+        }
+
+        .box {
+            border-radius: 20px;
+            width: 50px;
+            height: 50px;
+        }
+
+        #timer-component {
+            border: 3px solid #ff0000;
+            width: 100%;
+            height: 100%;
+        }
+
+        #debug-log {
+            height: 200px;
         }
     </style>
 </head>
 
 <body>
     <div id="app" class="app">
-        <div class="hotbar-collapsed">
+        <div class="hotbar collapsed">
             <div id="settings-collapsed">
                 <div class="btn btn-warning btn-sm">
                     <h2>❉</h2>
@@ -56,15 +76,17 @@
     </div>
     <div id="app-components" class="d-none">
         <div id="settings-component" class="settings">
-            <div id="settings-expanded" class="hotbar-expanded">
+            <div id="settings-expanded" class="hotbar expanded p-3">
                 <div class="btn btn-secondary m-1 w-100" id="settings-inspection"></div>
                 <div class="btn btn-secondary m-1 w-100" id="settings-auto-scramble"></div>
                 <div class="btn btn-secondary m-1 w-100" id="settings-clear-log">clear-log</div>
                 <div class="btn btn-primary float-right" id="settings-close">CLOSE</div>
+                <pre id="debug-log">Log:
+                </pre>
             </div>
         </div>
         <div id="scramble-component" class="settings">
-            <div id="scramble-expanded" class="hotbar-expanded">
+            <div id="scramble-expanded" class="hotbar expanded p-3">
                 <div id="scramble-text"></div>
                 <button class="btn btn-secondary" id="scramble-new">new</button>
                 <div class="btn btn-primary float-right" id="scramble-close">CLOSE</div>
@@ -72,21 +94,23 @@
         </div>
         <div id="timer-component">
             <div>
-                <span id="timer-text">waiting..</span>
-                <span class="badge badge-success" id="timer-ready">Ready</span>
+                <ul class="list-group m-auto w-50">
+                    <li class="list-group-item active text-center">
+                        <h1><span id="timer-header">waiting..</span></h1>
+                    </li>
+                    <li class="list-group-item">Time: <span id="timer-last"></span></li>
+                    <li class="list-group-item">ao5: <span id="timer-ao5"></span></li>
+                    <li class="list-group-item">ao12: <span id="timer-ao12"></span></li>
+                </ul>
             </div>
-            <button class="btn btn-secondary" id="timer-action">action</button>
         </div>
         <div id="log-component" class="settings">
-            <div id="log-expanded" class="hotbar-expanded">
+            <div id="log-expanded" class="hotbar expanded p-3">
                 <pre id="log-text"></pre>
                 <div class="btn btn-primary float-right" id="log-close">CLOSE</div>
             </div>
         </div>
     </div>
-    <pre id="debug-log">Log:
-    </pre>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

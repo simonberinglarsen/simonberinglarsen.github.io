@@ -89,8 +89,8 @@ $('#settings-clear-log').click(() => {
     });
 });
 
-$('#timer-action').on('touchmove', (e) => { return false; });
-$('#timer-action').on('touchend mouseup', () => {
+$('#timer-component').on('touchmove', (e) => { return false; });
+$('#timer-component').on('touchend mouseup', () => {
     logInfo('touchend/mouseup');
     const mouseUp = {
         'idle': () => { },
@@ -114,7 +114,7 @@ $('#timer-action').on('touchend mouseup', () => {
 });
 
 
-$('#timer-action').on('touchstart mousedown', () => {
+$('#timer-component').on('touchstart mousedown', () => {
     logInfo('touchstart/mousedown');
     const mouseDown = {
         'idle': () => {
@@ -264,12 +264,30 @@ const renderModule = (function renderModule() {
     function renderTimer(visible) {
         domAttached(timerComponent);
         let elapsed = (new Date() - state.timer.startTime) / 1000;
-        show($('#timer-ready'), state.timer.mode === 'ready');
-        if (state.timer.mode === 'inspection' || state.timer.mode === 'started') {
-            $('#timer-text').html(`${state.timer.mode}, ${elapsed.toFixed(3)}`);
+        $('#timer-header').html(state.timer.mode);
+        if (state.timer.mode === 'idle') {
+            const timelog = state.timer.log;
+            let last = timelog[timelog.length - 1];
+            if (last) {
+                $('#timer-last').html(`${last.time.toFixed(2)}`);
+                $('#timer-ao5').html(`${last.ao5.toFixed(2)}`);
+                $('#timer-ao12').html(`${last.ao12.toFixed(2)}`);
+            }
+            else {
+                $('#timer-last').html(`---`);
+                $('#timer-ao5').html(`---`);
+                $('#timer-ao12').html(`---`);
+            }
         }
         else {
-            $('#timer-text').html(state.timer.mode);
+            $('#timer-ao5').html(`---`);
+            $('#timer-ao12').html(`---`);
+        }
+        if (state.timer.mode === 'inspection' || state.timer.mode === 'started') {
+            $('#timer-last').html(`${elapsed.toFixed(3)}`);
+        }
+        else {
+            
         }
     }
 
