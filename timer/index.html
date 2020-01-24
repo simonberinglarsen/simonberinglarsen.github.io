@@ -184,7 +184,7 @@
             });
         });
 
-        $('#timer-action').mouseup(() => {
+        $('#timer-action').bind('mouseup touchend', () => {
             const mouseUp = {
                 'idle': () => { },
                 'inspection': () => { },
@@ -205,7 +205,7 @@
             mouseUp[state.timer.mode]();
         });
 
-        $('#timer-action').mousedown(() => {
+        $('#timer-action').bind('mousedown touchstart', () => {
             const mouseDown = {
                 'idle': () => {
                     setStateSlice('timer', { mode: 'get-ready', startTime: new Date() });
