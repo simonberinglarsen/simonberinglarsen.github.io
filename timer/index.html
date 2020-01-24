@@ -12,38 +12,79 @@
 
     <title>Hello, world!</title>
     <style>
-        body {
+        .app {
             max-width: 300px;
+            position: relative;
+            border: 3px solid #ff0000;
+        }
+
+        .hotbar-collapsed {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            border: 3px solid #00ff00;
+        }
+
+        .hotbar-expanded {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background-color: #a0a0a0;
+            border: 3px solid #0000ff;
         }
     </style>
 </head>
 
 <body>
-    <div id="app"></div>
-    <div id="app-components" class="d-none">
-        <div id="settings-component">
-            <h4>settings</h4>
-            <div class="btn btn-secondary m-1 w-100" id="settings-inspection"></div>
-            <div class="btn btn-secondary m-1 w-100" id="settings-auto-scramble"></div>
-            <div class="btn btn-secondary m-1 w-100" id="settings-clear-log">clear-log</div>
+    <div id="app" class="app">
+        <div class="hotbar-collapsed">
+            <div id="settings-collapsed">
+                <div class="btn btn-warning btn-sm">
+                    <h2>❉</h2>
+                </div>
+            </div>
+            <div id="scramble-collapsed">
+                <div class="btn btn-warning btn-sm">
+                    <h2>❑</h2>
+                </div>
+            </div>
+            <div id="log-collapsed">
+                <div class="btn btn-warning btn-sm">
+                    <h2>☴</h2>
+                </div>
+            </div>
         </div>
-        <div id="scramble-component">
-            <h4>scramble</h4>
-            <div id="scramble-text"></div>
-            <button class="btn btn-secondary" id="scramble-new">new</button>
+    </div>
+    <div id="app-components" class="d-none">
+        <div id="settings-component" class="settings">
+            <div id="settings-expanded" class="hotbar-expanded">
+                <div class="btn btn-secondary m-1 w-100" id="settings-inspection"></div>
+                <div class="btn btn-secondary m-1 w-100" id="settings-auto-scramble"></div>
+                <div class="btn btn-secondary m-1 w-100" id="settings-clear-log">clear-log</div>
+                <div class="btn btn-primary float-right" id="settings-close">CLOSE</div>
+            </div>
+        </div>
+        <div id="scramble-component" class="settings">
+            <div id="scramble-expanded" class="hotbar-expanded">
+                <div id="scramble-text"></div>
+                <button class="btn btn-secondary" id="scramble-new">new</button>
+                <div class="btn btn-primary float-right" id="scramble-close">CLOSE</div>
+            </div>
         </div>
         <div id="timer-component">
-            <h4>timer</h4>
             <div>
                 <span id="timer-text">waiting..</span>
                 <span class="badge badge-success" id="timer-ready">Ready</span>
             </div>
             <button class="btn btn-secondary" id="timer-action">action</button>
         </div>
-        <div id="log-component">
-            <h4>log</h4>
-            <pre id="log-text"></pre>
+        <div id="log-component" class="settings">
+            <div id="log-expanded" class="hotbar-expanded">
+                <pre id="log-text"></pre>
+                <div class="btn btn-primary float-right" id="log-close">CLOSE</div>
+            </div>
         </div>
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -97,6 +138,31 @@
                 insertTimeEntry(time);
             });
         }
+
+        $('#settings-collapsed').click(() => {
+            setStateSlice('navigation', { page: 'settings' });
+        });
+
+        $('#settings-close').click(() => {
+            setStateSlice('navigation', { page: 'timer' });
+        });
+
+        $('#scramble-collapsed').click(() => {
+            setStateSlice('navigation', { page: 'scramble' });
+        });
+
+        $('#scramble-close').click(() => {
+            setStateSlice('navigation', { page: 'timer' });
+        });
+
+        $('#log-collapsed').click(() => {
+            setStateSlice('navigation', { page: 'log' });
+        });
+
+        $('#log-close').click(() => {
+            setStateSlice('navigation', { page: 'timer' });
+        });
+
 
         $('#settings-inspection').click(() => {
             setStateSlice('settings', {
@@ -242,22 +308,32 @@
 
             function domAttached(component) {
                 let inDom = $.contains(document.documentElement, component.get(0));
-                if(!inDom) {
+                if (!inDom) {
                     $('#app').append(component);
                 }
             }
 
             function domDetached(component) {
                 let inDom = $.contains(document.documentElement, component.get(0));
-                if(inDom) {
+                if (inDom) {
                     component.detach();
+                }
+            }
+
+            function show(bootstrapElement, show) {
+                if (show) {
+                    bootstrapElement.removeClass("d-none");
+                }
+                else {
+                    bootstrapElement.removeClass("d-none").addClass("d-none");
                 }
             }
 
             function renderSettings(collapsed) {
                 domAttached(settingsComponent);
+                show($('#settings-collapsed'), collapsed);
+                show($('#settings-expanded'), !collapsed);
                 if (collapsed) {
-                    $('#settings-component').html('collapsed');
                     return;
                 }
                 let yesNo = (b) => b ? 'Yes' : 'No';
@@ -267,8 +343,9 @@
 
             function renderScramble(collapsed) {
                 domAttached(scrambleComponent);
+                show($('#scramble-collapsed'), collapsed);
+                show($('#scramble-expanded'), !collapsed);
                 if (collapsed) {
-                    $('#scramble-component').html('collapsed');
                     return;
                 }
                 $('#scramble-text').empty();
@@ -278,12 +355,7 @@
             function renderTimer(visible) {
                 domAttached(timerComponent);
                 let elapsed = (new Date() - state.timer.startTime) / 1000;
-                if (state.timer.mode === 'ready') {
-                    $('#timer-ready').removeClass("d-none");
-                }
-                else {
-                    $('#timer-ready').removeClass("d-none").addClass("d-none");
-                }
+                show($('#timer-ready'), state.timer.mode === 'ready');
                 if (state.timer.mode === 'inspection' || state.timer.mode === 'started') {
                     $('#timer-text').html(`${state.timer.mode}, ${elapsed.toFixed(3)}`);
                 }
@@ -294,8 +366,9 @@
 
             function renderTimeLog(collapsed) {
                 domAttached(logComponent);
+                show($('#log-collapsed'), collapsed);
+                show($('#log-expanded'), !collapsed);
                 if (collapsed) {
-                    $('#log-component').html('collapsed');
                     return;
                 }
                 $('#log-text').empty();
