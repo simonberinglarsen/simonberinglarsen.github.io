@@ -89,8 +89,8 @@ $('#settings-clear-log').click(() => {
     });
 });
 
-$('#timer-action').bind('touchmove', (e) => { e.preventDefault(); });
-$('#timer-action').bind('touchend mouseup', () => {
+$('#timer-action').on('touchmove', (e) => { return false; });
+$('#timer-action').on('touchend mouseup', () => {
     logInfo('touchend/mouseup');
     const mouseUp = {
         'idle': () => { },
@@ -110,10 +110,11 @@ $('#timer-action').bind('touchend mouseup', () => {
         'started': () => { }
     };
     mouseUp[state.timer.mode]();
+    return false;
 });
 
 
-$('#timer-action').bind('touchstart mousedown', () => {
+$('#timer-action').on('touchstart mousedown', () => {
     logInfo('touchstart/mousedown');
     const mouseDown = {
         'idle': () => {
@@ -134,6 +135,7 @@ $('#timer-action').bind('touchstart mousedown', () => {
         }
     };
     mouseDown[state.timer.mode]();
+    return false;
 });
 $('#scramble-new').click(newScramble);
 
