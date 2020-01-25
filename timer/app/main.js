@@ -1,6 +1,9 @@
+const timerUpdateFrequency = 200;
+
 let state = {
     navigation: {
-        page: 'timer'
+        page: 'timer',
+        expandHotbar: false
     },
     timer: {
         mode: 'idle', //idle -> (inspection, get-ready) -> ready -> started -> idle
@@ -43,28 +46,32 @@ function startApp() {
     });
 }
 
-$('#settings-collapsed').click(() => {
+$('#hotbar-master').click(()=>{
+    setStateSlice('navigation', { expandHotbar: !state.navigation.expandHotbar });
+});
+
+$('#hotbar-settings').click(() => {
     setStateSlice('navigation', { page: 'settings' });
 });
 
 $('#settings-close').click(() => {
-    setStateSlice('navigation', { page: 'timer' });
+    setStateSlice('navigation', { page: 'timer', expandHotbar: false });
 });
 
-$('#scramble-collapsed').click(() => {
+$('#hotbar-scramble').click(() => {
     setStateSlice('navigation', { page: 'scramble' });
 });
 
 $('#scramble-close').click(() => {
-    setStateSlice('navigation', { page: 'timer' });
+    setStateSlice('navigation', { page: 'timer', expandHotbar: false });
 });
 
-$('#log-collapsed').click(() => {
+$('#hotbar-log').click(() => {
     setStateSlice('navigation', { page: 'log' });
 });
 
 $('#log-close').click(() => {
-    setStateSlice('navigation', { page: 'timer' });
+    setStateSlice('navigation', { page: 'timer', expandHotbar: false });
 });
 
 
@@ -105,7 +112,7 @@ $('#timer-component').on('touchend mouseup', () => {
             else {
                 setStateSlice('timer', { mode: 'started', startTime: new Date() });
             }
-            setTimeout(timerWatchDog, 500);
+            setTimeout(timerWatchDog, timerUpdateFrequency);
         },
         'started': () => { }
     };
@@ -119,7 +126,7 @@ $('#timer-component').on('touchstart mousedown', () => {
     const mouseDown = {
         'idle': () => {
             setStateSlice('timer', { mode: 'get-ready', startTime: new Date() });
-            setTimeout(timerWatchDog, 500);
+            setTimeout(timerWatchDog, timerUpdateFrequency);
         },
         'inspection': () => {
             setStateSlice('timer', { mode: 'started', startTime: new Date() });
@@ -146,11 +153,11 @@ function timerWatchDog() {
             setStateSlice('timer', { mode: 'ready', startTime: null });
         }
         else {
-            setTimeout(timerWatchDog, 500);
+            setTimeout(timerWatchDog, timerUpdateFrequency);
         }
     }
     else if (state.timer.mode === 'inspection' || state.timer.mode === 'started') {
-        setTimeout(timerWatchDog, 500);
+        setTimeout(timerWatchDog, timerUpdateFrequency);
         renderModule.render();
     }
 }
@@ -202,17 +209,19 @@ const renderModule = (function renderModule() {
     const timerComponent = $('#timer-component');
     const settingsComponent = $('#settings-component');
     const scrambleComponent = $('#scramble-component');
-
+    const hotbarComponent = $('#hotbar-component');
     logComponent.detach();
     timerComponent.detach();
     settingsComponent.detach();
     scrambleComponent.detach();
+    hotbarComponent.detach();
 
     function render() {
         renderTimer(true);
         renderSettings(state.navigation.page !== 'settings');
         renderScramble(state.navigation.page !== 'scramble');
         renderTimeLog(state.navigation.page !== 'log');
+        renderHotbar();
     }
 
     function domAttached(component) {
@@ -238,10 +247,24 @@ const renderModule = (function renderModule() {
         }
     }
 
+    function renderHotbar() {
+        const visible = state.navigation.page === 'timer';
+        if(!visible) {
+            domDetach(hotbarComponent);
+            return;
+        }
+        domAttached(hotbarComponent);
+        const collapsed = !state.navigation.expandHotbar;
+        show($('#hotbar-master'), true);
+        show($('#hotbar-settings'), !collapsed);
+        show($('#hotbar-log'), !collapsed);
+        show($('#hotbar-scramble'), !collapsed);
+    }
+
     function renderSettings(collapsed) {
         domAttached(settingsComponent);
-        show($('#settings-collapsed'), collapsed);
-        show($('#settings-expanded'), !collapsed);
+        show($('#hotbar-settings'), collapsed);
+        show(settingsComponent, !collapsed);
         if (collapsed) {
             return;
         }
@@ -252,8 +275,8 @@ const renderModule = (function renderModule() {
 
     function renderScramble(collapsed) {
         domAttached(scrambleComponent);
-        show($('#scramble-collapsed'), collapsed);
-        show($('#scramble-expanded'), !collapsed);
+        show($('#hotbar-scramble'), collapsed);
+        show(scrambleComponent, !collapsed);
         if (collapsed) {
             return;
         }
@@ -293,8 +316,8 @@ const renderModule = (function renderModule() {
 
     function renderTimeLog(collapsed) {
         domAttached(logComponent);
-        show($('#log-collapsed'), collapsed);
-        show($('#log-expanded'), !collapsed);
+        show($('#hotbar-log'), collapsed);
+        show(logComponent, !collapsed);
         if (collapsed) {
             return;
         }
