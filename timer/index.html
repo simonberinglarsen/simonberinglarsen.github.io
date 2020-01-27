@@ -20,6 +20,11 @@
             height: 100vh;
         }
 
+        body {
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+
         .hotbar {
             position: absolute;
             top: 0px;
@@ -57,25 +62,25 @@
 
 <body>
     <div id="app" class="app">
-        <div id="hotbar-component" class="hotbar collapsed">
+        <div id="hotbar-component" class="hotbar collapsed d-flex flex-column align-items-end m-1">
             <div id="hotbar-master">
-                <div class="btn btn-warning btn-sm">
-                    <h2>+</h2>
+                <div class="text-primary">
+                    <h2><i class="fas fa-exclamation-circle fa-2x"></i></h2>
                 </div>
             </div>
-            <div id="hotbar-settings" style="animation-delay: 0.05s">
-                <div class="btn btn-warning btn-sm">
-                    <h2>S</h2>
+            <div id="hotbar-settings" style="animation-delay: 0.05s" class="mt-2">
+                <div class="btn btn-warning btn-lg fa-2x">
+                    <h2><i class="fas fa-cog"></i></h2>
                 </div>
             </div>
-            <div id="hotbar-scramble" style="animation-delay: 0.1s">
-                <div class="btn btn-warning btn-sm">
-                    <h2>C</h2>
+            <div id="hotbar-scramble" style="animation-delay: 0.1s" class="mt-2">
+                <div class="btn btn-danger btn-lg">
+                    <h2><i class="fas fa-dice-d6"></i></h2>
                 </div>
             </div>
-            <div id="hotbar-log" style="animation-delay: 0.15s">
-                <div class="btn btn-warning btn-sm">
-                    <h2>L</h2>
+            <div id="hotbar-log" style="animation-delay: 0.15s" class="mt-2">
+                <div class="btn btn-success btn-lg">
+                    <h2><i class="fas fa-book"></i></h2>
                 </div>
             </div>
         </div>
@@ -94,14 +99,14 @@
         </div>
         <div id="timer-component">
             <div>
-                <ul class="list-group m-auto w-50">
-                    <li class="list-group-item active text-center">
+                <div class="list-group m-auto w-50">
+                    <div class="shadow p-3 mb-5 bg-white rounded text-center">
                         <h1><span id="timer-header">waiting..</span></h1>
-                    </li>
-                    <li class="list-group-item">Time: <span id="timer-last"></span></li>
-                    <li class="list-group-item">ao5: <span id="timer-ao5"></span></li>
-                    <li class="list-group-item">ao12: <span id="timer-ao12"></span></li>
-                </ul>
+                    </div>
+                    <div class="list-group-item">Time: <span id="timer-last"></span></div>
+                    <div class="list-group-item">ao5: <span id="timer-ao5"></span></div>
+                    <div class="list-group-item">ao12: <span id="timer-ao12"></span></div>
+                </div>
             </div>
         </div>
         <div id="log-component" class="hotbar expanded p-3">
@@ -110,6 +115,7 @@
         </div>
     </div>
 
+    <script src="https://kit.fontawesome.com/56639b13a6.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

@@ -24,15 +24,12 @@ let state = {
     }
 };
 
-let oldState = state;
-
 function setState(s) {
-    oldState = state;
     state = s;
     state$.next(s);
 }
 
-function selectSlice(selector) {
+function selectStateSlice(selector) {
     return state$
         .pipe(
             Rx.operators.map(selector),
@@ -241,12 +238,11 @@ const renderModule = (function renderModule() {
     }
 
     function advancedShow(element, show, animated) {
-        console.log(`advancedShow(${element}, show:${show}, animate:${animated})`);
         const comp = $(element);
         const isHidden = comp.hasClass("d-none");
         if (isHidden && !show) {
             return;
-        }
+        }   
         comp.removeClass("d-none");
         if (show) {
             if (animated) {
@@ -256,7 +252,10 @@ const renderModule = (function renderModule() {
         }
         if (animated) {
             animateCSS(element, 'bounceOutUp', () => {
-                comp.removeClass("d-none").addClass("d-none");
+                const x = $(element);
+                if(!x.hasClass('bounceInDown')) {
+                    comp.removeClass("d-none").addClass("d-none");
+                }
             });
         }
         else {
@@ -266,38 +265,39 @@ const renderModule = (function renderModule() {
     }
 
     function animateShow(element, show) {
-        advancedShow(element, show, false);
+        advancedShow(element, show, true);
     }
 
-    selectSlice((s) => s.navigation.page).subscribe((page) => {
+    selectStateSlice((s) => s.navigation.page).subscribe((page) => {
         animateShow('#hotbar-component', page === 'timer');
         animateShow('#settings-component', page === 'settings');
         animateShow('#scramble-component', page === 'scramble');
         animateShow('#log-component', page === 'log');
     });
 
-    selectSlice((s) => s.navigation.expandHotbar).subscribe((navigationExpandHotbar) => {
+    selectStateSlice((s) => s.navigation.expandHotbar).subscribe((navigationExpandHotbar) => {
         const collapsed = !navigationExpandHotbar;
+        animateCSS('#hotbar-master', 'rubberBand');
         animateShow('#hotbar-settings', !collapsed);
         animateShow('#hotbar-log', !collapsed);
         animateShow('#hotbar-scramble', !collapsed);
     });
 
-    selectSlice((s) => s.navigation).subscribe((navigation) => {
+    selectStateSlice((s) => s.navigation).subscribe((navigation) => {
         renderTimeLog(navigation);
     });
 
-    selectSlice((s) => s.timer).subscribe((timer) => {
+    selectStateSlice((s) => s.timer).subscribe((timer) => {
         renderTimer(timer);
     });
 
-    selectSlice((s) => s.settings).subscribe((settings) => {
+    selectStateSlice((s) => s.settings).subscribe((settings) => {
         let yesNo = (b) => b ? 'Yes' : 'No';
         $('#settings-inspection').html(`inspection: ${yesNo(settings.inspection)}`);
         $('#settings-auto-scramble').html(`auto scramble: ${yesNo(settings.autoScramble)}`);
     });
 
-    selectSlice((s) => s.scramble).subscribe((scramble) => {
+    selectStateSlice((s) => s.scramble).subscribe((scramble) => {
         $('#scramble-text').empty();
         $('#scramble-text').append(`${scramble.current}`);
     });
