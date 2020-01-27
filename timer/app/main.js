@@ -2,7 +2,7 @@ const timerUpdateFrequency = 200;
 
 let state = {
     navigation: {
-        page: 'timer',
+        page: '',
         expandHotbar: false
     },
     timer: {
@@ -19,7 +19,10 @@ let state = {
     }
 };
 
+let oldState = state;
+
 function setState(s) {
+    oldState = state;
     state = s;
     renderModule.render();
 }
@@ -33,6 +36,7 @@ function setStateSlice(prop, obj) {
         }
     });
 }
+
 function logInfo(msg) {
     $('#debug-log').append(`${msg}\n`)
 }
@@ -44,14 +48,15 @@ function startApp() {
         newScramble();
         insertTimeEntry(time);
     });
+    setStateSlice('navigation', { page: 'timer' });
 }
 
-$('#hotbar-master').click(()=>{
+$('#hotbar-master').click(() => {
     setStateSlice('navigation', { expandHotbar: !state.navigation.expandHotbar });
 });
 
 $('#hotbar-settings').click(() => {
-    setStateSlice('navigation', { page: 'settings' });
+    setStateSlice('navigation', { page: 'settings', expandHotbar: false });
 });
 
 $('#settings-close').click(() => {
@@ -59,7 +64,7 @@ $('#settings-close').click(() => {
 });
 
 $('#hotbar-scramble').click(() => {
-    setStateSlice('navigation', { page: 'scramble' });
+    setStateSlice('navigation', { page: 'scramble', expandHotbar: false });
 });
 
 $('#scramble-close').click(() => {
@@ -67,13 +72,12 @@ $('#scramble-close').click(() => {
 });
 
 $('#hotbar-log').click(() => {
-    setStateSlice('navigation', { page: 'log' });
+    setStateSlice('navigation', { page: 'log', expandHotbar: false });
 });
 
 $('#log-close').click(() => {
     setStateSlice('navigation', { page: 'timer', expandHotbar: false });
 });
-
 
 $('#settings-inspection').click(() => {
     setStateSlice('settings', {
@@ -97,8 +101,8 @@ $('#settings-clear-log').click(() => {
 });
 
 $('#timer-component').on('touchmove', (e) => { return false; });
+
 $('#timer-component').on('touchend mouseup', () => {
-    logInfo('touchend/mouseup');
     const mouseUp = {
         'idle': () => { },
         'inspection': () => { },
@@ -120,9 +124,7 @@ $('#timer-component').on('touchend mouseup', () => {
     return false;
 });
 
-
 $('#timer-component').on('touchstart mousedown', () => {
-    logInfo('touchstart/mousedown');
     const mouseDown = {
         'idle': () => {
             setStateSlice('timer', { mode: 'get-ready', startTime: new Date() });
@@ -144,6 +146,7 @@ $('#timer-component').on('touchstart mousedown', () => {
     mouseDown[state.timer.mode]();
     return false;
 });
+
 $('#scramble-new').click(newScramble);
 
 function timerWatchDog() {
@@ -210,28 +213,63 @@ const renderModule = (function renderModule() {
     const settingsComponent = $('#settings-component');
     const scrambleComponent = $('#scramble-component');
     const hotbarComponent = $('#hotbar-component');
+
     logComponent.detach();
     timerComponent.detach();
     settingsComponent.detach();
     scrambleComponent.detach();
     hotbarComponent.detach();
 
+    function animateCSS(element, animationName, callback) {
+        const node = document.querySelector(element)
+        node.classList.add('animated', animationName)
+
+        function handleAnimationEnd() {
+            node.classList.remove('animated', animationName)
+            node.removeEventListener('animationend', handleAnimationEnd)
+
+            if (typeof callback === 'function') callback()
+        }
+
+        node.addEventListener('animationend', handleAnimationEnd)
+    }
+
+    function animateShow(element, show) {
+        const comp = $(element);
+        const isHidden = comp.hasClass("d-none");
+        if(isHidden && !show) {
+            return;
+        }
+        if (show) {
+            comp.removeClass("d-none");
+            animateCSS(element, 'bounceInDown', () => {});
+            return;
+        }
+        else {
+            comp.removeClass("d-none");
+            animateCSS(element, 'bounceOutUp', () => {
+                comp.removeClass("d-none").addClass("d-none");
+            });
+            return;
+        }
+    }
+
     function render() {
         renderTimer(true);
-        renderSettings(state.navigation.page !== 'settings');
-        renderScramble(state.navigation.page !== 'scramble');
-        renderTimeLog(state.navigation.page !== 'log');
+        renderSettings();
+        renderScramble();
+        renderTimeLog();
         renderHotbar();
     }
 
-    function domAttached(component) {
+    function domAttach(component) {
         let inDom = $.contains(document.documentElement, component.get(0));
         if (!inDom) {
             $('#app').append(component);
         }
     }
 
-    function domDetached(component) {
+    function domDetach(component) {
         let inDom = $.contains(document.documentElement, component.get(0));
         if (inDom) {
             component.detach();
@@ -249,22 +287,32 @@ const renderModule = (function renderModule() {
 
     function renderHotbar() {
         const visible = state.navigation.page === 'timer';
-        if(!visible) {
-            domDetach(hotbarComponent);
+        const visibleBefore = oldState.navigation.page === 'timer';
+        if (!visible && visibleBefore) {
+            animateCSS('#hotbar-component', 'bounceOutUp', () => {
+                domDetach(hotbarComponent);
+            });
             return;
         }
-        domAttached(hotbarComponent);
+        if (visible && !visibleBefore) {
+            domAttach(hotbarComponent);
+            animateCSS('#hotbar-component', 'bounceInDown', () => {
+            });
+        }
         const collapsed = !state.navigation.expandHotbar;
-        show($('#hotbar-master'), true);
-        show($('#hotbar-settings'), !collapsed);
-        show($('#hotbar-log'), !collapsed);
-        show($('#hotbar-scramble'), !collapsed);
+        const collapsedBefore = !oldState.navigation.expandHotbar;
+        const changed = collapsed != collapsedBefore;
+        if (changed) {
+            animateShow('#hotbar-settings', !collapsed); 
+            animateShow('#hotbar-log', !collapsed); 
+            animateShow('#hotbar-scramble', !collapsed); 
+        }
     }
 
-    function renderSettings(collapsed) {
-        domAttached(settingsComponent);
-        show($('#hotbar-settings'), collapsed);
-        show(settingsComponent, !collapsed);
+    function renderSettings() {
+        const collapsed = state.navigation.page !== 'settings';
+        domAttach(settingsComponent);
+        animateShow(`#${settingsComponent[0].id}`, !collapsed);
         if (collapsed) {
             return;
         }
@@ -273,9 +321,9 @@ const renderModule = (function renderModule() {
         $('#settings-auto-scramble').html(`auto scramble: ${yesNo(state.settings.autoScramble)}`);
     }
 
-    function renderScramble(collapsed) {
-        domAttached(scrambleComponent);
-        show($('#hotbar-scramble'), collapsed);
+    function renderScramble() {
+        const collapsed = state.navigation.page !== 'scramble'
+        domAttach(scrambleComponent);
         show(scrambleComponent, !collapsed);
         if (collapsed) {
             return;
@@ -285,7 +333,7 @@ const renderModule = (function renderModule() {
     }
 
     function renderTimer(visible) {
-        domAttached(timerComponent);
+        domAttach(timerComponent);
         let elapsed = (new Date() - state.timer.startTime) / 1000;
         $('#timer-header').html(state.timer.mode);
         if (state.timer.mode === 'idle') {
@@ -310,13 +358,13 @@ const renderModule = (function renderModule() {
             $('#timer-last').html(`${elapsed.toFixed(3)}`);
         }
         else {
-            
+
         }
     }
 
-    function renderTimeLog(collapsed) {
-        domAttached(logComponent);
-        show($('#hotbar-log'), collapsed);
+    function renderTimeLog() {
+        const collapsed = state.navigation.page !== 'log';
+        domAttach(logComponent);
         show(logComponent, !collapsed);
         if (collapsed) {
             return;

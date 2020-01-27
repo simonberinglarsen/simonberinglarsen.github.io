@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+        <link rel="stylesheet" type="text/css" href="style/animate.css">
+
     <title>Hello, world!</title>
     <style>
         .app {
@@ -26,14 +28,13 @@
         }
 
         .hotbar.collapsed {
-
-            border: 3px solid #00ff00;
+            border: 0px solid #00ff00;
         }
 
         .hotbar.expanded {
 
             background-color: #a0a0a0;
-            border: 3px solid #0000ff;
+            border: 0px solid #0000ff;
         }
 
         .box {
@@ -43,7 +44,7 @@
         }
 
         #timer-component {
-            border: 3px solid #ff0000;
+            border: 0px solid #ff0000;
             width: 100%;
             height: 100%;
         }
@@ -56,23 +57,23 @@
 
 <body>
     <div id="app" class="app">
-        <div id="hotbar" class="hotbar collapsed">
+        <div id="hotbar-component" class="hotbar collapsed">
             <div id="hotbar-master">
                 <div class="btn btn-warning btn-sm">
                     <h2>+</h2>
                 </div>
             </div>
-            <div id="hotbar-settings">
+            <div id="hotbar-settings" style="animation-delay: 0.05s">
                 <div class="btn btn-warning btn-sm">
                     <h2>S</h2>
                 </div>
             </div>
-            <div id="hotbar-scramble">
+            <div id="hotbar-scramble" style="animation-delay: 0.1s">
                 <div class="btn btn-warning btn-sm">
                     <h2>C</h2>
                 </div>
             </div>
-            <div id="hotbar-log">
+            <div id="hotbar-log" style="animation-delay: 0.15s">
                 <div class="btn btn-warning btn-sm">
                     <h2>L</h2>
                 </div>
@@ -89,11 +90,9 @@
                 </pre>
         </div>
         <div id="scramble-component" class="hotbar expanded p-3">
-            <div id="scramble-expanded" class="hotbar expanded p-3">
-                <div id="scramble-text"></div>
-                <button class="btn btn-secondary" id="scramble-new">new</button>
-                <div class="btn btn-primary float-right" id="scramble-close">CLOSE</div>
-            </div>
+            <div id="scramble-text"></div>
+            <button class="btn btn-secondary" id="scramble-new">new</button>
+            <div class="btn btn-primary float-right" id="scramble-close">CLOSE</div>
         </div>
         <div id="timer-component">
             <div>
@@ -108,10 +107,8 @@
             </div>
         </div>
         <div id="log-component" class="hotbar expanded p-3">
-            <div id="log-expanded" class="hotbar expanded p-3">
-                <pre id="log-text"></pre>
-                <div class="btn btn-primary float-right" id="log-close">CLOSE</div>
-            </div>
+            <pre id="log-text"></pre>
+            <div class="btn btn-primary float-right" id="log-close">CLOSE</div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
