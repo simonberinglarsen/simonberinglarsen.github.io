@@ -1,4 +1,8 @@
+const Rx = rxjs;
+const state$ = new Rx.Subject();
 const timerUpdateFrequency = 200;
+
+
 
 let state = {
     navigation: {
@@ -7,6 +11,7 @@ let state = {
     },
     timer: {
         mode: 'idle', //idle -> (inspection, get-ready) -> ready -> started -> idle
+        displayTime: '',
         startTime: null,
         log: []
     },
@@ -24,7 +29,15 @@ let oldState = state;
 function setState(s) {
     oldState = state;
     state = s;
-    renderModule.render();
+    state$.next(s);
+}
+
+function selectSlice(selector) {
+    return state$
+        .pipe(
+            Rx.operators.map(selector),
+            Rx.operators.distinctUntilChanged()
+        );
 }
 
 function setStateSlice(prop, obj) {
@@ -161,7 +174,8 @@ function timerWatchDog() {
     }
     else if (state.timer.mode === 'inspection' || state.timer.mode === 'started') {
         setTimeout(timerWatchDog, timerUpdateFrequency);
-        renderModule.render();
+        let elapsed = (new Date() - state.timer.startTime) / 1000;
+        setStateSlice('timer', { displayTime: elapsed.toFixed(3) });
     }
 }
 
@@ -208,18 +222,6 @@ function newScramble() {
 }
 
 const renderModule = (function renderModule() {
-    const logComponent = $('#log-component');
-    const timerComponent = $('#timer-component');
-    const settingsComponent = $('#settings-component');
-    const scrambleComponent = $('#scramble-component');
-    const hotbarComponent = $('#hotbar-component');
-
-    logComponent.detach();
-    timerComponent.detach();
-    settingsComponent.detach();
-    scrambleComponent.detach();
-    hotbarComponent.detach();
-
     function animateCSS(element, animationName, callback) {
         const node = document.querySelector(element)
         node.classList.add('animated', animationName)
@@ -234,110 +236,76 @@ const renderModule = (function renderModule() {
         node.addEventListener('animationend', handleAnimationEnd)
     }
 
-    function animateShow(element, show) {
+    function simpleShow(element, show) {
+        advancedShow(element, show, false);
+    }
+
+    function advancedShow(element, show, animated) {
+        console.log(`advancedShow(${element}, show:${show}, animate:${animated})`);
         const comp = $(element);
         const isHidden = comp.hasClass("d-none");
-        if(isHidden && !show) {
+        if (isHidden && !show) {
             return;
         }
+        comp.removeClass("d-none");
         if (show) {
-            comp.removeClass("d-none");
-            animateCSS(element, 'bounceInDown', () => {});
+            if (animated) {
+                animateCSS(element, 'bounceInDown', () => { });
+            }
             return;
         }
-        else {
-            comp.removeClass("d-none");
+        if (animated) {
             animateCSS(element, 'bounceOutUp', () => {
                 comp.removeClass("d-none").addClass("d-none");
             });
-            return;
-        }
-    }
-
-    function render() {
-        renderTimer(true);
-        renderSettings();
-        renderScramble();
-        renderTimeLog();
-        renderHotbar();
-    }
-
-    function domAttach(component) {
-        let inDom = $.contains(document.documentElement, component.get(0));
-        if (!inDom) {
-            $('#app').append(component);
-        }
-    }
-
-    function domDetach(component) {
-        let inDom = $.contains(document.documentElement, component.get(0));
-        if (inDom) {
-            component.detach();
-        }
-    }
-
-    function show(bootstrapElement, show) {
-        if (show) {
-            bootstrapElement.removeClass("d-none");
         }
         else {
-            bootstrapElement.removeClass("d-none").addClass("d-none");
+            comp.addClass("d-none");
         }
+        return;
     }
 
-    function renderHotbar() {
-        const visible = state.navigation.page === 'timer';
-        const visibleBefore = oldState.navigation.page === 'timer';
-        if (!visible && visibleBefore) {
-            animateCSS('#hotbar-component', 'bounceOutUp', () => {
-                domDetach(hotbarComponent);
-            });
-            return;
-        }
-        if (visible && !visibleBefore) {
-            domAttach(hotbarComponent);
-            animateCSS('#hotbar-component', 'bounceInDown', () => {
-            });
-        }
-        const collapsed = !state.navigation.expandHotbar;
-        const collapsedBefore = !oldState.navigation.expandHotbar;
-        const changed = collapsed != collapsedBefore;
-        if (changed) {
-            animateShow('#hotbar-settings', !collapsed); 
-            animateShow('#hotbar-log', !collapsed); 
-            animateShow('#hotbar-scramble', !collapsed); 
-        }
+    function animateShow(element, show) {
+        advancedShow(element, show, false);
     }
 
-    function renderSettings() {
-        const collapsed = state.navigation.page !== 'settings';
-        domAttach(settingsComponent);
-        animateShow(`#${settingsComponent[0].id}`, !collapsed);
-        if (collapsed) {
-            return;
-        }
+    selectSlice((s) => s.navigation.page).subscribe((page) => {
+        animateShow('#hotbar-component', page === 'timer');
+        animateShow('#settings-component', page === 'settings');
+        animateShow('#scramble-component', page === 'scramble');
+        animateShow('#log-component', page === 'log');
+    });
+
+    selectSlice((s) => s.navigation.expandHotbar).subscribe((navigationExpandHotbar) => {
+        const collapsed = !navigationExpandHotbar;
+        animateShow('#hotbar-settings', !collapsed);
+        animateShow('#hotbar-log', !collapsed);
+        animateShow('#hotbar-scramble', !collapsed);
+    });
+
+    selectSlice((s) => s.navigation).subscribe((navigation) => {
+        renderTimeLog(navigation);
+    });
+
+    selectSlice((s) => s.timer).subscribe((timer) => {
+        renderTimer(timer);
+    });
+
+    selectSlice((s) => s.settings).subscribe((settings) => {
         let yesNo = (b) => b ? 'Yes' : 'No';
-        $('#settings-inspection').html(`inspection: ${yesNo(state.settings.inspection)}`);
-        $('#settings-auto-scramble').html(`auto scramble: ${yesNo(state.settings.autoScramble)}`);
-    }
+        $('#settings-inspection').html(`inspection: ${yesNo(settings.inspection)}`);
+        $('#settings-auto-scramble').html(`auto scramble: ${yesNo(settings.autoScramble)}`);
+    });
 
-    function renderScramble() {
-        const collapsed = state.navigation.page !== 'scramble'
-        domAttach(scrambleComponent);
-        show(scrambleComponent, !collapsed);
-        if (collapsed) {
-            return;
-        }
+    selectSlice((s) => s.scramble).subscribe((scramble) => {
         $('#scramble-text').empty();
-        $('#scramble-text').append(`${state.scramble.current}`);
-    }
+        $('#scramble-text').append(`${scramble.current}`);
+    });
 
-    function renderTimer(visible) {
-        domAttach(timerComponent);
-        let elapsed = (new Date() - state.timer.startTime) / 1000;
-        $('#timer-header').html(state.timer.mode);
-        if (state.timer.mode === 'idle') {
-            const timelog = state.timer.log;
+    function renderTimer(timer) {
+        $('#timer-header').html(timer.mode);
+        if (timer.mode === 'idle') {
+            const timelog = timer.log;
             let last = timelog[timelog.length - 1];
             if (last) {
                 $('#timer-last').html(`${last.time.toFixed(2)}`);
@@ -354,21 +322,12 @@ const renderModule = (function renderModule() {
             $('#timer-ao5').html(`---`);
             $('#timer-ao12').html(`---`);
         }
-        if (state.timer.mode === 'inspection' || state.timer.mode === 'started') {
-            $('#timer-last').html(`${elapsed.toFixed(3)}`);
-        }
-        else {
-
+        if (timer.mode === 'inspection' || timer.mode === 'started') {
+            $('#timer-last').html(`${timer.displayTime}`);
         }
     }
 
     function renderTimeLog() {
-        const collapsed = state.navigation.page !== 'log';
-        domAttach(logComponent);
-        show(logComponent, !collapsed);
-        if (collapsed) {
-            return;
-        }
         $('#log-text').empty();
         const timelog = state.timer.log;
         let index = timelog.length;
@@ -384,8 +343,11 @@ const renderModule = (function renderModule() {
     }
 
     return {
-        render: render
+        renderTimer: renderTimer
     }
 })();
 
+
 startApp();
+
+
