@@ -59,6 +59,7 @@ function startApp() {
         newScramble();
         insertTimeEntry(time);
     });
+    logInfo(`version: 1.1`);
     setStateSlice('navigation', { page: 'timer' });
 }
 
