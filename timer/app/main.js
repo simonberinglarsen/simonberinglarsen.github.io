@@ -2,8 +2,6 @@ const Rx = rxjs;
 const state$ = new Rx.Subject();
 const timerUpdateFrequency = 200;
 
-
-
 let state = {
     navigation: {
         page: '',
@@ -47,8 +45,9 @@ function setStateSlice(prop, obj) {
     });
 }
 
+let lineno = 1;
 function logInfo(msg) {
-    $('#debug-log').append(`${msg}\n`)
+    $('#debug-log').append(`${lineno++} : ${msg}\n`)
 }
 
 function startApp() {
@@ -71,6 +70,11 @@ $('#hotbar-settings').click(() => {
 
 $('#settings-close').click(() => {
     setStateSlice('navigation', { page: 'timer', expandHotbar: false });
+});
+
+
+$('#settings-clear-dbg').click(() => {
+    $('#debug-log').empty();
 });
 
 $('#hotbar-scramble').click(() => {
@@ -298,18 +302,23 @@ const renderModule = (function renderModule() {
     });
 
     function renderMode(mode) {
+        logInfo(`mode = ${mode}`);
         $('#timer-stage-idle').removeClass("bg-success bg-white text-secondary");
         $('#timer-stage-get-ready').removeClass("bg-warning bg-white text-secondary");
         $('#timer-stage-ready').removeClass("bg-warning bg-white text-secondary");
         $('#timer-stage-inspection').removeClass("bg-warning bg-white text-secondary");
         $('#timer-stage-started').removeClass("bg-danger bg-white text-secondary");
+        logInfo(`classes removed`);
 
         const showinspection = mode === 'inspection' || (!state.settings.inspection && mode === 'ready');
-        $('#timer-stage-idle').addClass(mode === 'idle' ? 'bg-success' :'text-secondary');
-        $('#timer-stage-get-ready').addClass(mode === 'get-ready' ? 'bg-warning' :'text-secondary');
-        $('#timer-stage-ready').addClass(mode === 'ready' ? 'bg-warning' :'text-secondary');
-        $('#timer-stage-inspection').addClass(showinspection ? 'bg-warning' :'text-secondary');
-        $('#timer-stage-started').addClass(mode === 'started' ? 'bg-danger' :'text-secondary');
+        $('#timer-stage-idle').addClass(mode === 'idle' ? 'bg-success' : 'text-secondary');
+        $('#timer-stage-get-ready').addClass(mode === 'get-ready' ? 'bg-warning' : 'text-secondary');
+        $('#timer-stage-ready').addClass(mode === 'ready' ? 'bg-warning' : 'text-secondary');
+        $('#timer-stage-inspection').addClass(showinspection ? 'bg-warning' : 'text-secondary');
+        $('#timer-stage-started').addClass(mode === 'started' ? 'bg-danger' : 'text-secondary');
+        logInfo(`classes added`);
+
+        logInfo(JSON.stringify($('#timer-stage-idle')[0].classList));
     }
 
     selectStateSlice((s) => s.settings).subscribe((settings) => {
