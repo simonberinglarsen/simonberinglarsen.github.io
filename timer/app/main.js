@@ -10,6 +10,8 @@ let state = {
     timer: {
         mode: 'idle', //idle -> (inspection, get-ready) -> ready -> started -> idle
         displayTime: '',
+        displayTimeMajor: '',
+        displayTimeMinor: '',
         startTime: null,
         log: []
     },
@@ -176,7 +178,7 @@ function timerWatchDog() {
     else if (state.timer.mode === 'inspection' || state.timer.mode === 'started') {
         setTimeout(timerWatchDog, timerUpdateFrequency);
         let elapsed = (new Date() - state.timer.startTime) / 1000;
-        setStateSlice('timer', { displayTime: elapsed.toFixed(3) });
+        setStateSlice('timer', { displayTime: elapsed });
     }
 }
 
@@ -335,7 +337,7 @@ const renderModule = (function renderModule() {
     function renderTimer(timer) {
         const timerModeText = {
             'idle': 'ready?',
-            'inspection': '..inspect.. shhh..',
+            'inspection': 'shhh..',
             'get-ready': 'SET ??',
             'ready': 'YES! IM READY!',
             'started': 'GO GO GO!',
@@ -345,12 +347,14 @@ const renderModule = (function renderModule() {
             const timelog = timer.log;
             let last = timelog[timelog.length - 1];
             if (last) {
-                $('#timer-last').html(`${last.time.toFixed(2)}`);
+                $('#timer-last-major').html(`${timeMajorText(last.time)}`);
+                $('#timer-last-minor').html(`${timeMinorText(last.time)}`);
                 $('#timer-ao5').html(`${last.ao5.toFixed(2)}`);
                 $('#timer-ao12').html(`${last.ao12.toFixed(2)}`);
             }
             else {
-                $('#timer-last').html(`---`);
+                $('#timer-last-major').html(`---`);
+                $('#timer-last-minor').html(`---`);
                 $('#timer-ao5').html(`---`);
                 $('#timer-ao12').html(`---`);
             }
@@ -360,8 +364,17 @@ const renderModule = (function renderModule() {
             $('#timer-ao12').html(`---`);
         }
         if (timer.mode === 'inspection' || timer.mode === 'started') {
-            $('#timer-last').html(`${timer.displayTime}`);
+            $('#timer-last-major').html(`${timeMajorText(timer.displayTime)}`);
+            $('#timer-last-minor').html(`${timeMinorText(timer.displayTime)}`);
         }
+    }
+
+    function timeMinorText(elapsed) {
+        return !elapsed ? '' : (elapsed % 1).toFixed(3).substring(1);
+    }
+
+    function timeMajorText(elapsed) {
+        return !elapsed ? '' : elapsed.toFixed(0);
     }
 
     function renderTimeLog() {
