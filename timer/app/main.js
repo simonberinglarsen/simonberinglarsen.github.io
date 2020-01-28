@@ -333,7 +333,14 @@ const renderModule = (function renderModule() {
     });
 
     function renderTimer(timer) {
-        $('#timer-header').html(timer.mode);
+        const timerModeText = {
+            'idle': 'ready?',
+            'inspection': '..inspect.. shhh..',
+            'get-ready': 'SET ??',
+            'ready': 'YES! IM READY!',
+            'started': 'GO GO GO!',
+        };
+        $('#timer-header').html(timerModeText[timer.mode]);
         if (timer.mode === 'idle') {
             const timelog = timer.log;
             let last = timelog[timelog.length - 1];
