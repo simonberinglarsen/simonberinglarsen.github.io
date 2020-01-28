@@ -234,26 +234,26 @@ const renderModule = (function renderModule() {
     }
 
     function simpleShow(element, show) {
-        advancedShow(element, show, false);
+        advancedShow(element, show, false, '', '');
     }
 
-    function advancedShow(element, show, animated) {
+    function advancedShow(element, show, animated, animationClassIn, animationClassOut) {
         const comp = $(element);
         const isHidden = comp.hasClass("d-none");
         if (isHidden && !show) {
             return;
-        }   
+        }
         comp.removeClass("d-none");
         if (show) {
             if (animated) {
-                animateCSS(element, 'bounceInDown', () => { });
+                animateCSS(element, `${animationClassIn}`, () => { });
             }
             return;
         }
         if (animated) {
-            animateCSS(element, 'bounceOutUp', () => {
+            animateCSS(element, `${animationClassOut}`, () => {
                 const x = $(element);
-                if(!x.hasClass('bounceInDown')) {
+                if (!x.hasClass(`${animationClassIn}`)) {
                     comp.removeClass("d-none").addClass("d-none");
                 }
             });
@@ -265,7 +265,11 @@ const renderModule = (function renderModule() {
     }
 
     function animateShow(element, show) {
-        advancedShow(element, show, true);
+        advancedShow(element, show, true, 'bounceInDown', 'bounceOutUp');
+    }
+
+    function animateShowFade(element, show) {
+        advancedShow(element, show, true, 'bounceIn', 'bounceOut');
     }
 
     selectStateSlice((s) => s.navigation.page).subscribe((page) => {
@@ -273,6 +277,7 @@ const renderModule = (function renderModule() {
         animateShow('#settings-component', page === 'settings');
         animateShow('#scramble-component', page === 'scramble');
         animateShow('#log-component', page === 'log');
+        animateShow('#hotbar-master', page === 'timer');
     });
 
     selectStateSlice((s) => s.navigation.expandHotbar).subscribe((navigationExpandHotbar) => {
@@ -289,7 +294,23 @@ const renderModule = (function renderModule() {
 
     selectStateSlice((s) => s.timer).subscribe((timer) => {
         renderTimer(timer);
+        renderMode(timer.mode);
     });
+
+    function renderMode(mode) {
+        $('#timer-stage-idle').removeClass("bg-success bg-white text-secondary");
+        $('#timer-stage-get-ready').removeClass("bg-warning bg-white text-secondary");
+        $('#timer-stage-ready').removeClass("bg-warning bg-white text-secondary");
+        $('#timer-stage-inspection').removeClass("bg-warning bg-white text-secondary");
+        $('#timer-stage-started').removeClass("bg-danger bg-white text-secondary");
+
+        const showinspection = mode === 'inspection' || (!state.settings.inspection && mode === 'ready');
+        $('#timer-stage-idle').addClass(mode === 'idle' ? 'bg-success' :'text-secondary');
+        $('#timer-stage-get-ready').addClass(mode === 'get-ready' ? 'bg-warning' :'text-secondary');
+        $('#timer-stage-ready').addClass(mode === 'ready' ? 'bg-warning' :'text-secondary');
+        $('#timer-stage-inspection').addClass(showinspection ? 'bg-warning' :'text-secondary');
+        $('#timer-stage-started').addClass(mode === 'started' ? 'bg-danger' :'text-secondary');
+    }
 
     selectStateSlice((s) => s.settings).subscribe((settings) => {
         let yesNo = (b) => b ? 'Yes' : 'No';
