@@ -1,6 +1,6 @@
 const Rx = rxjs;
 const state$ = new Rx.Subject();
-const timerUpdateFrequency = 200;
+const timerUpdateFrequency = 123;
 
 let state = {
     navigation: {

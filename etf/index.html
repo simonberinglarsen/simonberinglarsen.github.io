@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <style>
+    .bg-gray {
+        background-color: #ccc;
+    }
+    </style>
+    <title>ETF</title>
+</head>
+
+<body class="bg-dark">
+    <div id="stats"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/56639b13a6.js" crossorigin="anonymous"></script>
+    <script>
+        const elementStats = $('#stats');
+        const stats = [
+            { name: 'jeppe', subTitle: 'USA', value: 11 },
+            { name: 'lasse', subTitle: 'CHN', value: 40 },
+            { name: 'jonas', subTitle: 'EUR', value: -15 },
+        ];
+
+        loadStats(stats);
+
+        function loadStats(stats) {
+            clearStats();
+            stats.forEach(s => addStats(s));
+        }
+        function clearStats() {
+            elementStats.empty();
+        }
+
+        function addStats(s) {
+            const sign = s.value >= 0 ? '+' : '';
+            const arrowClass = s.value > 0 ? 'fa-arrow-up text-success' : 'fa-arrow-down text-danger';
+            const circleColor = s.value > 0 ? 'text-success' : 'text-danger';
+            elementStats.append(`
+        <div class="card shadow m-4 border-0">
+            <div class="card-body bg-gray">
+                <div class="display-2 font-weight-bold card-title mb-2">
+                    <i class="fas fa-circle ${circleColor}"></i>
+                    ${s.name} <span class="display-3">- ${s.subTitle}</span></div>
+                <div class="shadow mt-4 p-4 bg-light float-right">
+                    <div class="display-4">
+                        <span class="badge badge-warning">${sign}${s.value}</span>
+                        <i class="fas ${arrowClass}"></i>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        `);
+        }
+    </script>
+</body>
+
+</html>
