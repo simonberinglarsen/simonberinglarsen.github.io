@@ -19,7 +19,7 @@
 
 <body class="bg-dark">
     <div id="stats"></div>
-
+    <div id="latestUpdate" class="p-2 font-weight-bold float-right"></div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -33,6 +33,7 @@
     <script src="https://kit.fontawesome.com/56639b13a6.js" crossorigin="anonymous"></script>
     <script>
         const elementStats = $('#stats');
+        const elementLatestUpdate = $('#latestUpdate');
         const stats = [
             { name: 'jeppe', subTitle: 'USA', value: 6 },
             { name: 'lasse', subTitle: 'CHN', value: 51 },
@@ -40,7 +41,11 @@
         ];
 
         loadStats(stats);
+        latestUpdate("2020-02-05 14:21");
 
+        function latestUpdate(updateText) {
+            elementLatestUpdate.html(updateText);
+        }
         function loadStats(stats) {
             clearStats();
             stats.forEach(s => addStats(s));
