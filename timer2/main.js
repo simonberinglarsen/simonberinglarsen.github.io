@@ -178,13 +178,16 @@ store.select((s) => s.timer).subscribe((timer) => {
 });
 
 
-if (screenfull.isEnabled) {
+if (!screenfull.isEnabled) {
     screenfull.on('change', () => {
         if (!screenfull.isFullscreen) {
             setVisible($('#app-fullscreen'), true);
             setVisible($('#app'), false);
         }
     });
+}
+else {
+    $('#btn-go-fullscreen').html(`<div class="h1">app NOT supported</div>`);
 }
 
 store.setSlice('navigation', { page: '/scramble' });
