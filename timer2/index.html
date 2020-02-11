@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Hello, world!</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .app {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .row-1 {
+            height: 10vh;
+        }
+
+        .row-8 {
+            height: 80vh;
+        }
+
+        .btn-square {
+            width: 30px;
+            height: 30px;
+        }
+
+        .btn-text {
+            font-size: 0.8rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="app">
+        <div id="scr-details" class="row-8 bg-success p-2 text-center w-100">
+            <div id="scr-details-scramble" class="d-none">
+                <p id="scr-details-scramble-text" class="h1 text-monospace">
+                
+                </p>
+            </div>
+            <div id="scr-details-inspect" class="d-none">
+                <div class="mt-4">
+                    <span id="scr-details-inspect-text" class="rounded text-center display-1 p-3">...</span>
+                </div>
+            </div>
+            <div id="scr-details-log" class="d-none">
+                log...
+            </div>
+        </div>
+        <div id="scr-actions" class="row-1 bg-dark p-2 text-center">
+            <div id="scr-actions-scramble" class="d-none">
+                <button id="scr-actions-scramble-create" class="btn btn-default bg-white rounded-circle mx-2">
+                    <i class="fas fa-plus"></i></button>
+                <button id="scr-actions-scramble-forward" class="btn btn-default bg-white rounded-circle mx-2">
+                    <i class="fas fa-forward"></i></button>
+            </div>
+            <div id="scr-actions-inspect" class="d-none">
+                <button id="scr-actions-inspect-play" class="btn btn-default bg-white rounded-circle mx-2">
+                    <i id="scr-actions-inspect-icon" class="fas fa-play"></i></button>
+                <button id="scr-actions-inspect-forward" class="btn btn-default bg-white rounded-circle mx-2">
+                    <i class="fas fa-forward"></i></button>
+            </div>
+            <div id="scr-actions-log" class="d-none">
+                <button id="scr-actions-log-create" class="btn btn-default bg-white rounded-circle mx-2">
+                    <i class="fas fa-plus"></i></button>
+                <button id="scr-actions-log-forward" class="btn btn-default bg-white rounded-circle mx-2">
+                    <i class="fas fa-forward"></i></button>
+            </div>
+        </div>
+        <div id="scr-statusbar" class="row-1 bg-light p-2 text-center">
+            <div class="d-flex flex-row justify-content-around">
+                <div class="text-dark mx-2" id="btn-scramble">
+                    <div><i class="fas fa-cube"></i></div>
+                    <div class="btn-text font-weight-bold">scramble</div>
+                </div>
+                <div class="text-dark mx-2" id="btn-inspect">
+                    <div><i class="fas fa-glasses"></i></div>
+                    <div class="btn-text font-weight-bold">inspect</div>
+                </div>
+                <div class="text-dark mx-2" id="btn-log">
+                    <div><i class="far fa-edit"></i></div>
+                    <div class="btn-text font-weight-bold">log</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.1.0/rxjs.umd.js"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
