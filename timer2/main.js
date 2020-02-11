@@ -178,7 +178,7 @@ store.select((s) => s.timer).subscribe((timer) => {
 });
 
 
-if (!screenfull.isEnabled) {
+if (screenfull.isEnabled) {
     screenfull.on('change', () => {
         if (!screenfull.isFullscreen) {
             setVisible($('#app-fullscreen'), true);
