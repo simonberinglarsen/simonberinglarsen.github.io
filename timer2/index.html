@@ -41,12 +41,19 @@
 </head>
 
 <body>
-
-    <div class="app">
+    <div id="app-fullscreen" class="app fullscreen text-center">
+        <div class="m-4">
+            <div class="btn text-dark mx-2" id="btn-go-fullscreen">
+                <div><i class="fas fa-expand-arrows-alt fa-4x"></i></div>
+                <div class="font-weight-bold">GO FULLSCREEN</div>
+            </div>
+        </div>
+    </div>
+    <div id="app" class="app d-none">
         <div id="scr-details" class="row-8 bg-success p-2 text-center w-100">
             <div id="scr-details-scramble" class="d-none">
                 <p id="scr-details-scramble-text" class="h1 text-monospace">
-                
+
                 </p>
             </div>
             <div id="scr-details-inspect" class="d-none">
@@ -109,7 +116,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.1.0/rxjs.umd.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/5.0.0/screenfull.min.js"></script>
     <script src="main.js"></script>
 </body>
 

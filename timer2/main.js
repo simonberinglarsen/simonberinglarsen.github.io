@@ -22,13 +22,13 @@ class InspectionService {
             .subscribe((x) => {
                 this.calcElapsed();
                 let color = 'bg-success';
-                if(this.elapsed >= 8) {
+                if (this.elapsed >= 8) {
                     color = 'bg-warning';
                 }
-                if(this.elapsed >= 12) {
+                if (this.elapsed >= 12) {
                     color = 'bg-danger';
                 }
-                if(this.elapsed >= 15) {
+                if (this.elapsed >= 15) {
                     color = 'bg-danger';
                     this.stop();
                 }
@@ -116,6 +116,12 @@ $('#scr-actions-inspect-play').click(() => {
     store.setSlice('timer', { started: !store.state.timer.started });
 });
 
+$('#btn-go-fullscreen').click(() => {
+    screenfull.request();
+    setVisible($('#app-fullscreen'), false);
+    setVisible($('#app'), true);
+});
+
 
 function getScramble() {
     let text = '';
@@ -170,6 +176,16 @@ store.select((s) => s.timer).subscribe((timer) => {
     inspectionService.stop();
     icon.addClass('fa-play');
 });
+
+
+if (screenfull.isEnabled) {
+    screenfull.on('change', () => {
+        if (!screenfull.isFullscreen) {
+            setVisible($('#app-fullscreen'), true);
+            setVisible($('#app'), false);
+        }
+    });
+}
 
 store.setSlice('navigation', { page: '/scramble' });
 $('#scr-actions-scramble-create').click();
