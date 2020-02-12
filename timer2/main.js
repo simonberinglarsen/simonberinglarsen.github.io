@@ -141,9 +141,6 @@ function addLogEntry() {
     const newLog = [...store.state.log.entries];
     newLog.push({
         time: 2815,
-        ao5: 3516,
-        ao12: 3819,
-        scramble: 'U U D U D U  R F'
     });
     store.setSlice('log', { entries: newLog });
 
@@ -168,8 +165,8 @@ store.select((s) => s.log).subscribe((log) => {
             tbody.append(`<tr data-index="${i}" class="${bgclass}">
             <th scope="row">${i + 1}</th>
             <td>${entry.time}</td>
-            <td>${entry.ao5}</td>
-            <td>${entry.ao12}</td>
+            <td>---</td>
+            <td>---</td>
         </tr>`);
         }
         else {
@@ -186,9 +183,9 @@ store.select((s) => s.log).subscribe((log) => {
                                 <div><i class="far fa-clone"></i></div>
                                 <div class="small-text font-weight-bold">clone</div>
                             </div>
-                            <div class="btn text-dark mx-2" id="btn-log-cancel">
-                                <div><i class="fas fa-ban"></i></div>
-                                <div class="small-text font-weight-bold">cancel</div>
+                            <div class="btn text-dark mx-2" id="btn-log-delete">
+                                <div><i class="fas fa-trash-alt"></i></div>
+                                <div class="small-text font-weight-bold">delete</div>
                             </div>
                         </div>
                     </td>
@@ -203,23 +200,50 @@ store.select((s) => s.log).subscribe((log) => {
                 $('#btn-log-edit').click(() => {
                     store.setSlice('log', { editmode: true });
                 });
-                $('#btn-log-cancel').click(() => {
-                    store.setSlice('log', { selectedIndex: -1 });
+                $('#btn-log-delete').click(() => {
+                    const deleteAt = store.state.log.selectedIndex;
+                    const newLog = [...store.state.log.entries];
+                    newLog.splice( deleteAt, 1 );
+                    store.setSlice('log', { entries: newLog, editmode: false, selectedIndex: -1 });
                 });
             }
             else {
                 tbody.append(`
                 <tr data-index="${i}" class="${bgclass}">
                     <td colspan="5">
-                        this is edit mode...
+                        <div class="input-group">
+                            <input id="input-edit" 
+                                placeholder="${store.state.log.entries[store.state.log.selectedIndex].time}" 
+                                data-index="${i}" type="number" 
+                                class="form-control large-text font-weight-bold">
+                            <div class="input-group-append">
+                                <div class="btn text-dark mx-2" id="btn-edit-apply">
+                                    <div><i class="fas fa-check-circle fa-2x"></i></div>
+                                    <div class="small-text font-weight-bold">Apply</div>
+                                </div>
+                            </div>
+                        </div>
                     </td>
                 </tr>`);
+                $('#input-edit').focus();
+                $('#btn-edit-apply').click(()=>{
+                    const inputEdit = $('#input-edit');
+                    const index = inputEdit.data('index');
+                    const newLog = [...store.state.log.entries];
+                    newLog[index].time = inputEdit.val();
+                    store.setSlice('log', { entries: newLog, editmode:false, selectedIndex:-1 });
+
+                });
             }
         }
     }
     $("#scr-details-log-rows tr").on("click", (e) => {
         let selectedIndex = $(e.currentTarget).data('index');
         if(selectedIndex === store.state.log.selectedIndex) {
+            return;
+        }
+        if(store.state.log.selectedIndex !== -1) {
+            store.setSlice('log', { editmode: false, selectedIndex: -1 });
             return;
         }
         store.setSlice('log', { editmode: false, selectedIndex: selectedIndex });
@@ -287,6 +311,6 @@ class App {
 }
 
 const app = new App();
-app.debug = false;
+app.debug = true;
 app.start();
 
