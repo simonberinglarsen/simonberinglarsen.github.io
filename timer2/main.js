@@ -134,12 +134,16 @@ class LogComponent {
         });
     }
     buildActionRow(i) {
+        let defaultValue = store.state.log.entries[store.state.log.selectedIndex].time;
+        if(!defaultValue) {
+            defaultValue = '';
+        }
         this.tbody.append(`
         <tr data-index="${i}" class="bg-secondary">
             <td colspan="5">
                 <div class="input-group">
                     <input id="input-edit" 
-                        placeholder="${store.state.log.entries[store.state.log.selectedIndex].time}" 
+                        value="${defaultValue}" 
                         data-index="${i}" type="number" 
                         class="form-control large-text font-weight-bold">
                     <div class="input-group-append">
@@ -163,7 +167,7 @@ class LogComponent {
             const inputEdit = $('#input-edit');
             const index = inputEdit.data('index');
             const newLog = [...store.state.log.entries];
-            newLog[index].time = inputEdit.val();
+            newLog[index].time = inputEdit.val() ? +inputEdit.val() : 0;
             store.setSlice('log', { entries: newLog, editActionMode: false, selectedIndex: -1 });
 
         });
