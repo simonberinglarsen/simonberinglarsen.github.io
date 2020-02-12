@@ -177,15 +177,15 @@ store.select((s) => s.log).subscribe((log) => {
                 <tr data-index="${i}" class="${bgclass}">
                     <td colspan="5">
                         <div class="d-flex flex-row justify-content-around">
-                            <div class="btn text-dark pl-4 pr-wide" id="btn-log-edit">
+                            <div class="btn text-dark px-3" id="btn-log-edit">
                                 <div><i class="fas fa-pencil-alt"></i></div>
                                 <div class="small-text font-weight-bold">edit</div>
                             </div>
-                            <div class="btn text-dark pl-wide pr-wide" id="btn-log-clone">
+                            <div class="btn text-dark px-3" id="btn-log-clone">
                                 <div><i class="far fa-clone"></i></div>
                                 <div class="small-text font-weight-bold">clone</div>
                             </div>
-                            <div class="btn text-dark pr-4 pl-wide" id="btn-log-delete">
+                            <div class="btn text-dark px-3" id="btn-log-delete">
                                 <div><i class="fas fa-trash-alt"></i></div>
                                 <div class="small-text font-weight-bold">delete</div>
                             </div>
