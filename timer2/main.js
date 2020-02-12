@@ -227,6 +227,6 @@ class App {
 }
 
 const app = new App();
-app.debug = true;
+app.debug = false;
 app.start();
 
