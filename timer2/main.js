@@ -85,7 +85,7 @@ const store = new Store();
 const inspectionService = new InspectionService();
 
 $('#scr-actions-log-create').click(() => {
-    addLogEntry();
+    addEmptyLogEntry();
 });
 $('#btn-scramble').click(() => {
     store.setSlice('navigation', { page: '/scramble' });
@@ -106,6 +106,7 @@ $('#scr-actions-scramble-forward').click(() => {
 });
 $('#scr-actions-inspect-forward').click(() => {
     store.setSlice('navigation', { page: '/log' });
+    addEmptyLogEntry();
 });
 $('#scr-actions-inspect-forward').click(() => {
     store.setSlice('navigation', { page: '/log' });
@@ -137,13 +138,12 @@ function getScramble() {
     return moves;
 }
 
-function addLogEntry() {
+function addEmptyLogEntry() {
     const newLog = [...store.state.log.entries];
-    newLog.push({
-        time: 2815,
-    });
-    store.setSlice('log', { entries: newLog });
-
+    if (newLog.length === 0 || newLog[newLog.length - 1].time) {
+        newLog.push({ time: 0 });
+        store.setSlice('log', { entries: newLog, editmode: true, selectedIndex: newLog.length - 1 });
+    }
 }
 
 function setVisible(e, show) {
@@ -157,16 +157,18 @@ store.select((s) => s.log).subscribe((log) => {
     const tbody = $('#scr-details-log-rows');
     tbody.empty();
     const isEditing = store.state.log.editmode;
-    for (let i = 0; i < log.entries.length; i++) {
+    for (let i = log.entries.length - 1; i >= 0; i--) {
+        const ao5 = i < 4 ? '...' : Math.floor(log.entries.slice(i - 4, i + 1).map(e => +e.time).reduce((p, c) => p + c, 0) / 5);
+        const ao12 = i < 11 ? '...' : Math.floor(log.entries.slice(i - 11, i + 1).map(e => +e.time).reduce((p, c) => p + c, 0) / 12);
         const entry = log.entries[i];
         const rowIsSelected = (i == store.state.log.selectedIndex);
         const bgclass = (rowIsSelected) ? 'bg-secondary' : '';
         if (!rowIsSelected) {
             tbody.append(`<tr data-index="${i}" class="${bgclass}">
             <th scope="row">${i + 1}</th>
-            <td>${entry.time}</td>
-            <td>---</td>
-            <td>---</td>
+            <td>${!entry.time ? '' : entry.time}</td>
+            <td>${ao5}</td>
+            <td>${ao12}</td>
         </tr>`);
         }
         else {
@@ -175,15 +177,15 @@ store.select((s) => s.log).subscribe((log) => {
                 <tr data-index="${i}" class="${bgclass}">
                     <td colspan="5">
                         <div class="d-flex flex-row justify-content-around">
-                            <div class="btn text-dark mx-2" id="btn-log-edit">
+                            <div class="btn text-dark pl-4 pr-wide" id="btn-log-edit">
                                 <div><i class="fas fa-pencil-alt"></i></div>
                                 <div class="small-text font-weight-bold">edit</div>
                             </div>
-                            <div class="btn text-dark mx-2" id="btn-log-clone">
+                            <div class="btn text-dark pl-wide pr-wide" id="btn-log-clone">
                                 <div><i class="far fa-clone"></i></div>
                                 <div class="small-text font-weight-bold">clone</div>
                             </div>
-                            <div class="btn text-dark mx-2" id="btn-log-delete">
+                            <div class="btn text-dark pr-4 pl-wide" id="btn-log-delete">
                                 <div><i class="fas fa-trash-alt"></i></div>
                                 <div class="small-text font-weight-bold">delete</div>
                             </div>
@@ -193,9 +195,9 @@ store.select((s) => s.log).subscribe((log) => {
                 $('#btn-log-clone').click(() => {
                     const insertAt = store.state.log.selectedIndex;
                     const newLog = [...store.state.log.entries];
-                    const newItem = {...newLog[insertAt]};
-                    newLog.splice( insertAt, 0, newItem );
-                    store.setSlice('log', { entries: newLog });
+                    const newItem = { ...newLog[insertAt] };
+                    newLog.splice(insertAt, 0, newItem);
+                    store.setSlice('log', { entries: newLog, selectedIndex: insertAt + 1 });
                 });
                 $('#btn-log-edit').click(() => {
                     store.setSlice('log', { editmode: true });
@@ -203,7 +205,7 @@ store.select((s) => s.log).subscribe((log) => {
                 $('#btn-log-delete').click(() => {
                     const deleteAt = store.state.log.selectedIndex;
                     const newLog = [...store.state.log.entries];
-                    newLog.splice( deleteAt, 1 );
+                    newLog.splice(deleteAt, 1);
                     store.setSlice('log', { entries: newLog, editmode: false, selectedIndex: -1 });
                 });
             }
@@ -226,12 +228,19 @@ store.select((s) => s.log).subscribe((log) => {
                     </td>
                 </tr>`);
                 $('#input-edit').focus();
-                $('#btn-edit-apply').click(()=>{
+                $('#input-edit').keypress(function (e) {
+                    var key = e.which;
+                    if (key == 13) {
+                        $('#btn-edit-apply').click();
+                        return false;
+                    }
+                });
+                $('#btn-edit-apply').click(() => {
                     const inputEdit = $('#input-edit');
                     const index = inputEdit.data('index');
                     const newLog = [...store.state.log.entries];
                     newLog[index].time = inputEdit.val();
-                    store.setSlice('log', { entries: newLog, editmode:false, selectedIndex:-1 });
+                    store.setSlice('log', { entries: newLog, editmode: false, selectedIndex: -1 });
 
                 });
             }
@@ -239,10 +248,10 @@ store.select((s) => s.log).subscribe((log) => {
     }
     $("#scr-details-log-rows tr").on("click", (e) => {
         let selectedIndex = $(e.currentTarget).data('index');
-        if(selectedIndex === store.state.log.selectedIndex) {
+        if (selectedIndex === store.state.log.selectedIndex) {
             return;
         }
-        if(store.state.log.selectedIndex !== -1) {
+        if (store.state.log.selectedIndex !== -1) {
             store.setSlice('log', { editmode: false, selectedIndex: -1 });
             return;
         }
@@ -311,6 +320,5 @@ class App {
 }
 
 const app = new App();
-app.debug = true;
+app.debug = false;
 app.start();
-
