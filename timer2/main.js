@@ -54,6 +54,9 @@ class Store {
             },
             timer: {
                 started: false
+            },
+            log: {
+                entries: []
             }
         };
     }
@@ -79,6 +82,9 @@ class Store {
 const store = new Store();
 const inspectionService = new InspectionService();
 
+$('#scr-actions-log-create').click(() => {
+    addLogEntry();
+});
 $('#btn-scramble').click(() => {
     store.setSlice('navigation', { page: '/scramble' });
 });
@@ -91,7 +97,7 @@ $('#btn-log').click(() => {
 $('#scr-actions-scramble-create').click(() => {
     $('#scr-details-scramble-text').html(`${
         getScramble().map(m => `<span class="text-warning mono-text large-text mr-3">${m}</span>`).join(' ')
-    }`);
+        }`);
 });
 $('#scr-actions-scramble-forward').click(() => {
     store.setSlice('navigation', { page: '/inspect' });
@@ -129,12 +135,37 @@ function getScramble() {
     return moves;
 }
 
+function addLogEntry() {
+    const newLog = [...store.state.log.entries];
+    newLog.push({
+        time: 2815,
+        ao5: 3516,
+        ao12: 3819,
+        scramble: 'U U D U D U  R F'
+    });
+    store.setSlice('log', { entries: newLog });
+
+}
+
 function setVisible(e, show) {
     e.removeClass('d-none');
     if (!show) {
         e.addClass('d-none');
     }
 }
+
+store.select((s) => s.log).subscribe((log) => {
+    $('#scr-details-log-rows').empty();
+    log.entries.forEach(element => {
+        $('#scr-details-log-rows').append(`<tr>
+            <th scope="row">1</th>
+            <td>28.120</td>
+            <td>32.130</td>
+            <td>33.020</td>
+        </tr>`);
+    });
+});
+
 
 store.select((s) => s.navigation).subscribe((navigation) => {
     store.setSlice('timer', { started: false });
@@ -171,7 +202,7 @@ store.select((s) => s.timer).subscribe((timer) => {
 
 class App {
     constructor() {
-        this.debug  = false;
+        this.debug = false;
     }
     start() {
         if (screenfull.isEnabled) {
@@ -198,3 +229,4 @@ class App {
 const app = new App();
 app.debug = true;
 app.start();
+
