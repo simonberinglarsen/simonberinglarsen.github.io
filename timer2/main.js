@@ -1,6 +1,31 @@
 var { interval, Subject } = rxjs;
 var { map, distinctUntilChanged, takeUntil } = rxjs.operators;
 
+class App {
+    constructor() {
+        this.debug = false;
+    }
+    start() {
+        if (screenfull.isEnabled) {
+            screenfull.on('change', () => {
+                if (!screenfull.isFullscreen) {
+                    setVisible($('#app-fullscreen'), true);
+                    setVisible($('#app'), false);
+                }
+            });
+        }
+        else {
+            $('#btn-go-fullscreen').html(`<div class="h1">app NOT supported</div>`);
+        }
+
+        store.setSlice('navigation', { page: '/scramble' });
+        $('#scr-actions-scramble-create').click();
+        if (this.debug) {
+            setVisible($('#app-fullscreen'), false);
+            setVisible($('#app'), true);
+        }
+    }
+}
 
 class InspectionService {
     constructor() {
@@ -45,6 +70,157 @@ class InspectionService {
     }
 }
 
+class LogComponent {
+    constructor(log) {
+        this.log = log;
+        this.tbody = $('#scr-details-log-rows');
+    }
+    buildRow(i) {
+        const ao5 = i < 4 ? '...' :
+            Math.floor(this.log.entries
+                .slice(i - 4, i + 1)
+                .map(e => +e.time)
+                .reduce((p, c) => p + c, 0) / 5
+            );
+        const ao12 = i < 11 ? '...' :
+            Math.floor(this.log.entries
+                .slice(i - 11, i + 1)
+                .map(e => +e.time)
+                .reduce((p, c) => p + c, 0) / 12
+            );
+        const entry = this.log.entries[i];
+        this.tbody.append(`<tr data-index="${i}">
+            <th scope="row">${i + 1}</th>
+            <td>${!entry.time ? '' : entry.time}</td>
+            <td>${ao5}</td>
+            <td>${ao12}</td>
+        </tr>`);
+    }
+    buildEditRow(i) {
+        this.tbody.append(`
+        <tr data-index="${i}" class="bg-secondary">
+            <td colspan="5">
+                <div class="d-flex flex-row justify-content-around">
+                    <div class="btn text-dark px-3" id="btn-log-edit">
+                        <div><i class="fas fa-pencil-alt"></i></div>
+                        <div class="small-text font-weight-bold">edit</div>
+                    </div>
+                    <div class="btn text-dark px-3" id="btn-log-clone">
+                        <div><i class="far fa-clone"></i></div>
+                        <div class="small-text font-weight-bold">clone</div>
+                    </div>
+                    <div class="btn text-dark px-3" id="btn-log-delete">
+                        <div><i class="fas fa-trash-alt"></i></div>
+                        <div class="small-text font-weight-bold">delete</div>
+                    </div>
+                </div>
+            </td>
+        </tr>`);
+        $('#btn-log-clone').click(() => {
+            const insertAt = store.state.log.selectedIndex;
+            const newLog = [...store.state.log.entries];
+            const newItem = { ...newLog[insertAt] };
+            newLog.splice(insertAt, 0, newItem);
+            store.setSlice('log', { entries: newLog, selectedIndex: insertAt + 1 });
+        });
+        $('#btn-log-edit').click(() => {
+            store.setSlice('log', { editActionMode: true });
+        });
+        $('#btn-log-delete').click(() => {
+            const deleteAt = store.state.log.selectedIndex;
+            const newLog = [...store.state.log.entries];
+            newLog.splice(deleteAt, 1);
+            store.setSlice('log', { entries: newLog, editActionMode: false, selectedIndex: -1 });
+        });
+    }
+    buildActionRow(i) {
+        this.tbody.append(`
+        <tr data-index="${i}" class="bg-secondary">
+            <td colspan="5">
+                <div class="input-group">
+                    <input id="input-edit" 
+                        placeholder="${store.state.log.entries[store.state.log.selectedIndex].time}" 
+                        data-index="${i}" type="number" 
+                        class="form-control large-text font-weight-bold">
+                    <div class="input-group-append">
+                        <div class="btn text-dark mx-2" id="btn-edit-apply">
+                            <div><i class="fas fa-check-circle fa-2x"></i></div>
+                            <div class="small-text font-weight-bold">Apply</div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>`);
+        $('#input-edit').focus();
+        $('#input-edit').keypress(function (e) {
+            var key = e.which;
+            if (key == 13) {
+                $('#btn-edit-apply').click();
+                return false;
+            }
+        });
+        $('#btn-edit-apply').click(() => {
+            const inputEdit = $('#input-edit');
+            const index = inputEdit.data('index');
+            const newLog = [...store.state.log.entries];
+            newLog[index].time = inputEdit.val();
+            store.setSlice('log', { entries: newLog, editActionMode: false, selectedIndex: -1 });
+
+        });
+    }
+    buildSelectedRow(i) {
+        const isActionMode = store.state.log.editActionMode;
+        if (isActionMode) {
+            this.buildActionRow(i);
+        }
+        else {
+            this.buildEditRow(i);
+        }
+    }
+    registerRowClick() {
+        $("#scr-details-log-rows tr").on("click", (e) => {
+            let selectedIndex = $(e.currentTarget).data('index');
+            if (selectedIndex === store.state.log.selectedIndex) {
+                return;
+            }
+            if (store.state.log.selectedIndex !== -1) {
+                store.setSlice('log', { editActionMode: false, selectedIndex: -1 });
+                return;
+            }
+            store.setSlice('log', { editActionMode: false, selectedIndex: selectedIndex });
+        });
+    }
+    rebuild() {
+        this.tbody.empty();
+        for (let i = this.log.entries.length - 1; i >= 0; i--) {
+            const rowIsSelected = (i == store.state.log.selectedIndex);
+            if (rowIsSelected) {
+                this.buildSelectedRow(i);
+            }
+            else {
+                this.buildRow(i);
+            }
+        }
+        this.registerRowClick();
+    }
+}
+
+class BusinessLogicService {
+    getScramble() {
+        let moves = [];
+        let last = '';
+        let rnd = (x) => x[Math.floor(Math.random() * x.length)];
+        for (let i = 0; i < 25; i++) {
+            let faces = ['R', 'L', 'F', 'B', 'U', 'D'];
+            faces = faces.filter(f => f !== last);
+            last = rnd(faces);
+            let direction = ['\'', '2', ''];
+            moves.push(`${last}${rnd(direction)}`);
+        }
+        return moves;
+    }
+}
+
 class Store {
     constructor() {
         this.state$ = new Subject();
@@ -58,7 +234,7 @@ class Store {
             log: {
                 entries: [],
                 selectedIndex: -1,
-                editmode: false
+                editActionMode: false
             }
         };
     }
@@ -82,6 +258,7 @@ class Store {
 }
 
 const store = new Store();
+const businessLogicService = new BusinessLogicService();
 const inspectionService = new InspectionService();
 
 $('#scr-actions-log-create').click(() => {
@@ -98,7 +275,9 @@ $('#btn-log').click(() => {
 });
 $('#scr-actions-scramble-create').click(() => {
     $('#scr-details-scramble-text').html(`${
-        getScramble().map(m => `<span class="text-warning mono-text large-text mr-3">${m}</span>`).join(' ')
+        businessLogicService.getScramble()
+            .map(m => `<span class="text-warning mono-text large-text mr-3">${m}</span>`)
+            .join(' ')
         }`);
 });
 $('#scr-actions-scramble-forward').click(() => {
@@ -123,26 +302,11 @@ $('#btn-go-fullscreen').click(() => {
     setVisible($('#app'), true);
 });
 
-
-function getScramble() {
-    let moves = [];
-    let last = '';
-    let rnd = (x) => x[Math.floor(Math.random() * x.length)];
-    for (let i = 0; i < 25; i++) {
-        let faces = ['R', 'L', 'F', 'B', 'U', 'D'];
-        faces = faces.filter(f => f !== last);
-        last = rnd(faces);
-        let direction = ['\'', '2', ''];
-        moves.push(`${last}${rnd(direction)}`);
-    }
-    return moves;
-}
-
 function addEmptyLogEntry() {
     const newLog = [...store.state.log.entries];
     if (newLog.length === 0 || newLog[newLog.length - 1].time) {
         newLog.push({ time: 0 });
-        store.setSlice('log', { entries: newLog, editmode: true, selectedIndex: newLog.length - 1 });
+        store.setSlice('log', { entries: newLog, editActionMode: true, selectedIndex: newLog.length - 1 });
     }
 }
 
@@ -154,111 +318,9 @@ function setVisible(e, show) {
 }
 
 store.select((s) => s.log).subscribe((log) => {
-    const tbody = $('#scr-details-log-rows');
-    tbody.empty();
-    const isEditing = store.state.log.editmode;
-    for (let i = log.entries.length - 1; i >= 0; i--) {
-        const ao5 = i < 4 ? '...' : Math.floor(log.entries.slice(i - 4, i + 1).map(e => +e.time).reduce((p, c) => p + c, 0) / 5);
-        const ao12 = i < 11 ? '...' : Math.floor(log.entries.slice(i - 11, i + 1).map(e => +e.time).reduce((p, c) => p + c, 0) / 12);
-        const entry = log.entries[i];
-        const rowIsSelected = (i == store.state.log.selectedIndex);
-        const bgclass = (rowIsSelected) ? 'bg-secondary' : '';
-        if (!rowIsSelected) {
-            tbody.append(`<tr data-index="${i}" class="${bgclass}">
-            <th scope="row">${i + 1}</th>
-            <td>${!entry.time ? '' : entry.time}</td>
-            <td>${ao5}</td>
-            <td>${ao12}</td>
-        </tr>`);
-        }
-        else {
-            if (!isEditing) {
-                tbody.append(`
-                <tr data-index="${i}" class="${bgclass}">
-                    <td colspan="5">
-                        <div class="d-flex flex-row justify-content-around">
-                            <div class="btn text-dark px-3" id="btn-log-edit">
-                                <div><i class="fas fa-pencil-alt"></i></div>
-                                <div class="small-text font-weight-bold">edit</div>
-                            </div>
-                            <div class="btn text-dark px-3" id="btn-log-clone">
-                                <div><i class="far fa-clone"></i></div>
-                                <div class="small-text font-weight-bold">clone</div>
-                            </div>
-                            <div class="btn text-dark px-3" id="btn-log-delete">
-                                <div><i class="fas fa-trash-alt"></i></div>
-                                <div class="small-text font-weight-bold">delete</div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>`);
-                $('#btn-log-clone').click(() => {
-                    const insertAt = store.state.log.selectedIndex;
-                    const newLog = [...store.state.log.entries];
-                    const newItem = { ...newLog[insertAt] };
-                    newLog.splice(insertAt, 0, newItem);
-                    store.setSlice('log', { entries: newLog, selectedIndex: insertAt + 1 });
-                });
-                $('#btn-log-edit').click(() => {
-                    store.setSlice('log', { editmode: true });
-                });
-                $('#btn-log-delete').click(() => {
-                    const deleteAt = store.state.log.selectedIndex;
-                    const newLog = [...store.state.log.entries];
-                    newLog.splice(deleteAt, 1);
-                    store.setSlice('log', { entries: newLog, editmode: false, selectedIndex: -1 });
-                });
-            }
-            else {
-                tbody.append(`
-                <tr data-index="${i}" class="${bgclass}">
-                    <td colspan="5">
-                        <div class="input-group">
-                            <input id="input-edit" 
-                                placeholder="${store.state.log.entries[store.state.log.selectedIndex].time}" 
-                                data-index="${i}" type="number" 
-                                class="form-control large-text font-weight-bold">
-                            <div class="input-group-append">
-                                <div class="btn text-dark mx-2" id="btn-edit-apply">
-                                    <div><i class="fas fa-check-circle fa-2x"></i></div>
-                                    <div class="small-text font-weight-bold">Apply</div>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>`);
-                $('#input-edit').focus();
-                $('#input-edit').keypress(function (e) {
-                    var key = e.which;
-                    if (key == 13) {
-                        $('#btn-edit-apply').click();
-                        return false;
-                    }
-                });
-                $('#btn-edit-apply').click(() => {
-                    const inputEdit = $('#input-edit');
-                    const index = inputEdit.data('index');
-                    const newLog = [...store.state.log.entries];
-                    newLog[index].time = inputEdit.val();
-                    store.setSlice('log', { entries: newLog, editmode: false, selectedIndex: -1 });
-
-                });
-            }
-        }
-    }
-    $("#scr-details-log-rows tr").on("click", (e) => {
-        let selectedIndex = $(e.currentTarget).data('index');
-        if (selectedIndex === store.state.log.selectedIndex) {
-            return;
-        }
-        if (store.state.log.selectedIndex !== -1) {
-            store.setSlice('log', { editmode: false, selectedIndex: -1 });
-            return;
-        }
-        store.setSlice('log', { editmode: false, selectedIndex: selectedIndex });
-    });
+    const logComponent = new LogComponent(log);
+    logComponent.rebuild();
 });
-
 
 store.select((s) => s.navigation).subscribe((navigation) => {
     store.setSlice('timer', { started: false });
@@ -280,7 +342,6 @@ store.select((s) => s.navigation).subscribe((navigation) => {
     x($('#btn-log'), visible);
 });
 
-
 store.select((s) => s.timer).subscribe((timer) => {
     const icon = $('#scr-actions-inspect-icon');
     icon.removeClass('fa-play fa-stop');
@@ -292,32 +353,6 @@ store.select((s) => s.timer).subscribe((timer) => {
     inspectionService.stop();
     icon.addClass('fa-play');
 });
-
-class App {
-    constructor() {
-        this.debug = false;
-    }
-    start() {
-        if (screenfull.isEnabled) {
-            screenfull.on('change', () => {
-                if (!screenfull.isFullscreen) {
-                    setVisible($('#app-fullscreen'), true);
-                    setVisible($('#app'), false);
-                }
-            });
-        }
-        else {
-            $('#btn-go-fullscreen').html(`<div class="h1">app NOT supported</div>`);
-        }
-
-        store.setSlice('navigation', { page: '/scramble' });
-        $('#scr-actions-scramble-create').click();
-        if (this.debug) {
-            setVisible($('#app-fullscreen'), false);
-            setVisible($('#app'), true);
-        }
-    }
-}
 
 const app = new App();
 app.debug = false;
