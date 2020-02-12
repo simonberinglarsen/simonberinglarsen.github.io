@@ -33,8 +33,8 @@
             font-size: 2.0rem;
         }
 
-        .mono-text { 
-            font-family:Consolas,"Courier New","Liberation Mono",monospace;
+        .mono-text {
+            font-family: Consolas, "Courier New", "Liberation Mono", monospace;
         }
 
         .h100 {
@@ -43,6 +43,10 @@
 
         .flex-1 {
             flex: 1;
+        }
+
+        .scrollbar {
+            overflow-y: scroll;
         }
     </style>
 
@@ -58,7 +62,7 @@
         </div>
     </div>
     <div id="app" class="app d-none d-flex flex-column h100">
-        <div id="scr-details" class="flex-1 bg-dark text-light p-2 text-center w-100">
+        <div id="scr-details" class="flex-1 bg-dark text-light p-2 text-center w-100 scrollbar">
             <div id="scr-details-scramble" class="d-none">
                 <div id="scr-details-scramble-text"></div>
             </div>
@@ -68,36 +72,18 @@
                 </div>
             </div>
             <div id="scr-details-log" class="d-none">
-                <table class="table table-dark">
+                <table class="table table-dark" id="table-log">
                     <thead>
-                      <tr>
-                        <th class="text-danger" scope="col">#</th>
-                        <th class="text-success" scope="col">Time</th>
-                        <th class="text-warning" scope="col">Ao5</th>
-                        <th class="text-info" scope="col">Ao12</th>
-                      </tr>
+                        <tr>
+                            <th class="text-danger" scope="col">#</th>
+                            <th class="text-success" scope="col">Time</th>
+                            <th class="text-warning" scope="col">Ao5</th>
+                            <th class="text-info" scope="col">Ao12</th>
+                        </tr>
                     </thead>
                     <tbody id="scr-details-log-rows">
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>28.120</td>
-                        <td>32.130</td>
-                        <td>33.020</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
                     </tbody>
-                  </table>
+                </table>
             </div>
         </div>
         <div id="scr-actions" class="bg-black p-2 text-center">

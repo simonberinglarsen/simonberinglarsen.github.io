@@ -56,7 +56,9 @@ class Store {
                 started: false
             },
             log: {
-                entries: []
+                entries: [],
+                selectedIndex: -1,
+                editmode: false
             }
         };
     }
@@ -155,14 +157,72 @@ function setVisible(e, show) {
 }
 
 store.select((s) => s.log).subscribe((log) => {
-    $('#scr-details-log-rows').empty();
-    log.entries.forEach(element => {
-        $('#scr-details-log-rows').append(`<tr>
-            <th scope="row">1</th>
-            <td>28.120</td>
-            <td>32.130</td>
-            <td>33.020</td>
+    const tbody = $('#scr-details-log-rows');
+    tbody.empty();
+    const isEditing = store.state.log.editmode;
+    for (let i = 0; i < log.entries.length; i++) {
+        const entry = log.entries[i];
+        const rowIsSelected = (i == store.state.log.selectedIndex);
+        const bgclass = (rowIsSelected) ? 'bg-secondary' : '';
+        if (!rowIsSelected) {
+            tbody.append(`<tr data-index="${i}" class="${bgclass}">
+            <th scope="row">${i + 1}</th>
+            <td>${entry.time}</td>
+            <td>${entry.ao5}</td>
+            <td>${entry.ao12}</td>
         </tr>`);
+        }
+        else {
+            if (!isEditing) {
+                tbody.append(`
+                <tr data-index="${i}" class="${bgclass}">
+                    <td colspan="5">
+                        <div class="d-flex flex-row justify-content-around">
+                            <div class="btn text-dark mx-2" id="btn-log-edit">
+                                <div><i class="fas fa-pencil-alt"></i></div>
+                                <div class="small-text font-weight-bold">edit</div>
+                            </div>
+                            <div class="btn text-dark mx-2" id="btn-log-clone">
+                                <div><i class="far fa-clone"></i></div>
+                                <div class="small-text font-weight-bold">clone</div>
+                            </div>
+                            <div class="btn text-dark mx-2" id="btn-log-cancel">
+                                <div><i class="fas fa-ban"></i></div>
+                                <div class="small-text font-weight-bold">cancel</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>`);
+                $('#btn-log-clone').click(() => {
+                    const insertAt = store.state.log.selectedIndex;
+                    const newLog = [...store.state.log.entries];
+                    const newItem = {...newLog[insertAt]};
+                    newLog.splice( insertAt, 0, newItem );
+                    store.setSlice('log', { entries: newLog });
+                });
+                $('#btn-log-edit').click(() => {
+                    store.setSlice('log', { editmode: true });
+                });
+                $('#btn-log-cancel').click(() => {
+                    store.setSlice('log', { selectedIndex: -1 });
+                });
+            }
+            else {
+                tbody.append(`
+                <tr data-index="${i}" class="${bgclass}">
+                    <td colspan="5">
+                        this is edit mode...
+                    </td>
+                </tr>`);
+            }
+        }
+    }
+    $("#scr-details-log-rows tr").on("click", (e) => {
+        let selectedIndex = $(e.currentTarget).data('index');
+        if(selectedIndex === store.state.log.selectedIndex) {
+            return;
+        }
+        store.setSlice('log', { editmode: false, selectedIndex: selectedIndex });
     });
 });
 
