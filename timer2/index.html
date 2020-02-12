@@ -20,21 +20,29 @@
             height: 100vh;
         }
 
-        .row-1 {
-            height: 10vh;
-        }
-
-        .row-8 {
-            height: 80vh;
-        }
-
         .btn-square {
             width: 30px;
             height: 30px;
         }
 
-        .btn-text {
+        .small-text {
             font-size: 0.8rem;
+        }
+
+        .large-text {
+            font-size: 2.0rem;
+        }
+
+        .mono-text { 
+            font-family:Consolas,"Courier New","Liberation Mono",monospace;
+        }
+
+        .h100 {
+            height: 100vh;
+        }
+
+        .flex-1 {
+            flex: 1;
         }
     </style>
 
@@ -49,21 +57,21 @@
             </div>
         </div>
     </div>
-    <div id="app" class="app d-none">
-        <div id="scr-details" class="row-8 bg-success p-2 text-center w-100">
+    <div id="app" class="app d-none d-flex flex-column h100">
+        <div id="scr-details" class="flex-1 bg-dark text-light p-2 text-center w-100">
             <div id="scr-details-scramble" class="d-none">
-                <p id="scr-details-scramble-text" class="h1 text-monospace"></p>
+                <div id="scr-details-scramble-text"></div>
             </div>
             <div id="scr-details-inspect" class="d-none">
                 <div class="mt-4">
-                    <span id="scr-details-inspect-text" class="rounded text-center display-1 p-3">...</span>
+                    <span id="scr-details-inspect-text" class="rounded text-center text-dark display-1 p-3"></span>
                 </div>
             </div>
             <div id="scr-details-log" class="d-none">
                 log...
             </div>
         </div>
-        <div id="scr-actions" class="row-1 bg-dark p-2 text-center">
+        <div id="scr-actions" class="bg-black p-2 text-center">
             <div id="scr-actions-scramble" class="d-none">
                 <button id="scr-actions-scramble-create" class="btn btn-default bg-white rounded-circle mx-2">
                     <i class="fas fa-plus"></i></button>
@@ -83,19 +91,19 @@
                     <i class="fas fa-forward"></i></button>
             </div>
         </div>
-        <div id="scr-statusbar" class="row-1 bg-light p-2 text-center">
+        <div id="scr-statusbar" class="bg-light p-2 text-center">
             <div class="d-flex flex-row justify-content-around">
                 <div class="text-dark mx-2" id="btn-scramble">
                     <div><i class="fas fa-cube"></i></div>
-                    <div class="btn-text font-weight-bold">scramble</div>
+                    <div class="small-text font-weight-bold">scramble</div>
                 </div>
                 <div class="text-dark mx-2" id="btn-inspect">
                     <div><i class="fas fa-glasses"></i></div>
-                    <div class="btn-text font-weight-bold">inspect</div>
+                    <div class="small-text font-weight-bold">inspect</div>
                 </div>
                 <div class="text-dark mx-2" id="btn-log">
                     <div><i class="far fa-edit"></i></div>
-                    <div class="btn-text font-weight-bold">log</div>
+                    <div class="small-text font-weight-bold">log</div>
                 </div>
             </div>
         </div>

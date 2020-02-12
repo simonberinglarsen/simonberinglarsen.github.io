@@ -9,7 +9,6 @@ class InspectionService {
         this.elapsed = 0;
         this.destroy$ = new Subject();
     }
-
     start() {
         if (this.started) {
             return;
@@ -32,17 +31,15 @@ class InspectionService {
                     color = 'bg-danger';
                     this.stop();
                 }
-                $('#scr-details-inspect-text').removeClass('bg-success bg-warning bg-danger').addClass(color);
+                $('#scr-details-inspect').removeClass('bg-success bg-warning bg-danger').addClass(color);
                 $('#scr-details-inspect-text').html(this.elapsed);
             });
     }
-
     stop() {
         this.destroy$.next();
         this.calcElapsed();
         this.started = false;
     }
-
     calcElapsed() {
         this.elapsed = Math.floor((new Date() - this.startTime) / 1000);
     }
@@ -91,31 +88,26 @@ $('#btn-inspect').click(() => {
 $('#btn-log').click(() => {
     store.setSlice('navigation', { page: '/log' });
 });
-
 $('#scr-actions-scramble-create').click(() => {
-    $('#scr-details-scramble-text').html(`${getScramble()}`);
+    $('#scr-details-scramble-text').html(`${
+        getScramble().map(m => `<span class="text-warning mono-text large-text mr-3">${m}</span>`).join(' ')
+    }`);
 });
-
 $('#scr-actions-scramble-forward').click(() => {
     store.setSlice('navigation', { page: '/inspect' });
 });
-
 $('#scr-actions-inspect-forward').click(() => {
     store.setSlice('navigation', { page: '/log' });
 });
-
 $('#scr-actions-inspect-forward').click(() => {
     store.setSlice('navigation', { page: '/log' });
 });
-
 $('#scr-actions-log-forward').click(() => {
     store.setSlice('navigation', { page: '/scramble' });
 });
-
 $('#scr-actions-inspect-play').click(() => {
     store.setSlice('timer', { started: !store.state.timer.started });
 });
-
 $('#btn-go-fullscreen').click(() => {
     screenfull.request();
     setVisible($('#app-fullscreen'), false);
@@ -124,7 +116,7 @@ $('#btn-go-fullscreen').click(() => {
 
 
 function getScramble() {
-    let text = '';
+    let moves = [];
     let last = '';
     let rnd = (x) => x[Math.floor(Math.random() * x.length)];
     for (let i = 0; i < 25; i++) {
@@ -132,9 +124,9 @@ function getScramble() {
         faces = faces.filter(f => f !== last);
         last = rnd(faces);
         let direction = ['\'', '2', ''];
-        text += `${last}${rnd(direction)} `;
+        moves.push(`${last}${rnd(direction)}`);
     }
-    return text;
+    return moves;
 }
 
 function setVisible(e, show) {
@@ -177,18 +169,32 @@ store.select((s) => s.timer).subscribe((timer) => {
     icon.addClass('fa-play');
 });
 
-
-if (screenfull.isEnabled) {
-    screenfull.on('change', () => {
-        if (!screenfull.isFullscreen) {
-            setVisible($('#app-fullscreen'), true);
-            setVisible($('#app'), false);
+class App {
+    constructor() {
+        this.debug  = false;
+    }
+    start() {
+        if (screenfull.isEnabled) {
+            screenfull.on('change', () => {
+                if (!screenfull.isFullscreen) {
+                    setVisible($('#app-fullscreen'), true);
+                    setVisible($('#app'), false);
+                }
+            });
         }
-    });
-}
-else {
-    $('#btn-go-fullscreen').html(`<div class="h1">app NOT supported</div>`);
+        else {
+            $('#btn-go-fullscreen').html(`<div class="h1">app NOT supported</div>`);
+        }
+
+        store.setSlice('navigation', { page: '/scramble' });
+        $('#scr-actions-scramble-create').click();
+        if (this.debug) {
+            setVisible($('#app-fullscreen'), false);
+            setVisible($('#app'), true);
+        }
+    }
 }
 
-store.setSlice('navigation', { page: '/scramble' });
-$('#scr-actions-scramble-create').click();
+const app = new App();
+app.debug = true;
+app.start();
