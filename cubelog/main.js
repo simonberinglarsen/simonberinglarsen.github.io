@@ -4,20 +4,28 @@ var { map, distinctUntilChanged, takeUntil } = rxjs.operators;
 class App {
     constructor() {
         this.debug = false;
+        this.notSupported = [];
+        if (typeof (Storage) === "undefined") {
+            this.notSupported.push('browser storage')
+        }
+        if (!screenfull.isEnabled) {
+            this.notSupported.push('full screen')
+        }
     }
     start() {
-        if (screenfull.isEnabled) {
-            screenfull.on('change', () => {
-                if (!screenfull.isFullscreen) {
-                    setVisible($('#app-fullscreen'), true);
-                    setVisible($('#app'), false);
-                }
+        if (this.notSupported.length > 0) {
+            $('#btn-go-fullscreen').empty();
+            this.notSupported.forEach(item => {
+                $('#btn-go-fullscreen').append(`<div class="h1">${item}</div>`);
             });
+            return;
         }
-        else {
-            $('#btn-go-fullscreen').html(`<div class="h1">app NOT supported</div>`);
-        }
-
+        screenfull.on('change', () => {
+            if (!screenfull.isFullscreen) {
+                setVisible($('#app-fullscreen'), true);
+                setVisible($('#app'), false);
+            }
+        });
         store.setSlice('navigation', { page: '/scramble' });
         $('#scr-actions-scramble-create').click();
         if (this.debug) {
@@ -135,7 +143,7 @@ class LogComponent {
     }
     buildActionRow(i) {
         let defaultValue = store.state.log.entries[store.state.log.selectedIndex].time;
-        if(!defaultValue) {
+        if (!defaultValue) {
             defaultValue = '';
         }
         this.tbody.append(`
@@ -297,6 +305,10 @@ $('#scr-actions-inspect-forward').click(() => {
 $('#scr-actions-log-forward').click(() => {
     store.setSlice('navigation', { page: '/scramble' });
 });
+$('#scr-actions-log-archive').click(() => {
+    alert('select archive');
+});
+
 $('#scr-actions-inspect-play').click(() => {
     store.setSlice('timer', { started: !store.state.timer.started });
 });
@@ -330,7 +342,7 @@ store.select((s) => s.navigation).subscribe((navigation) => {
     store.setSlice('timer', { started: false });
     let visible;
     const x = (e, v) => {
-        e.removeClass('text-primary text-dark').addClass(v ? 'text-primary' : 'text-dark');
+        e.removeClass('text-primary text-dark small-text').addClass(v ? 'text-primary' : 'text-dark small-text');
     };
     visible = navigation.page === '/scramble';
     setVisible($('#scr-details-scramble'), visible);
