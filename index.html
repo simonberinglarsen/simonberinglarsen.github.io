@@ -1,1 +1,73 @@
-hello
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Portal</title>
+    <style>
+        .w-link {
+            width: 6.0rem;
+        }
+
+        .h-icon {
+            height: 6.0rem;
+        }
+
+        .bg-black {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+    <div>
+
+        <div id="icon-etf" class="btn w-link bg-black rounded d-flex flex-column m-2">
+            <div class="link-body bg-success rounded text-center h-icon d-flex flex-column justify-content-around">
+                <div><i class="fas fa-chart-line fa-3x"></i></div>
+            </div>
+            <div class="text-center text-secondary font-weight-bold">ETF</div>
+        </div>
+
+        <div id="icon-cubelog" class="btn w-link bg-black rounded d-flex flex-column m-2 float-left">
+            <div class="link-body bg-warning rounded text-center h-icon d-flex flex-column justify-content-around">
+                <div><i class="fas fa-cubes fa-3x"></i></div>
+            </div>
+            <div class="text-center text-secondary font-weight-bold">CubeLog</div>
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.1.0/rxjs.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/5.0.0/screenfull.min.js"></script>
+    <script>
+        const links = [
+            { id: '#icon-etf', href: '/etf/index.html' },
+            { id: '#icon-cubelog', href: '/cubelog/index.html' }
+        ];
+        links.forEach(l => {
+            $(l.id).click(() => {
+                window.location.href = l.href;
+            });
+        });
+    </script>
+</body>
+
+</html>
