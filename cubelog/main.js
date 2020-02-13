@@ -305,10 +305,6 @@ $('#scr-actions-inspect-forward').click(() => {
 $('#scr-actions-log-forward').click(() => {
     store.setSlice('navigation', { page: '/scramble' });
 });
-$('#scr-actions-log-archive').click(() => {
-    alert('select archive');
-});
-
 $('#scr-actions-inspect-play').click(() => {
     store.setSlice('timer', { started: !store.state.timer.started });
 });
@@ -371,5 +367,5 @@ store.select((s) => s.timer).subscribe((timer) => {
 });
 
 const app = new App();
-app.debug = false;
+app.debug = true;
 app.start();
