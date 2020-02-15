@@ -12,14 +12,6 @@ export class LogComponent {
         this.destroy$.next();
     }
 
-    addEmptyLogEntry() {
-        const newLog = [...app.store.state.log.entries];
-        if (newLog.length === 0 || newLog[newLog.length - 1].time) {
-            newLog.push({ time: 0 });
-            app.store.setSlice('log', { entries: newLog, editActionMode: true, selectedIndex: newLog.length - 1 });
-        }
-    }
-
     init() {
         $('#scr-details').empty().html(`
             <div id="scr-details-log">
@@ -46,7 +38,7 @@ export class LogComponent {
             app.store.setSlice('navigation', { page: '/scramble' });
         });
         $('#scr-actions-log-create').click(() => {
-            this.addEmptyLogEntry();
+            app.store.addEmptyLogEntry();
         });
         this.rebuild();
 

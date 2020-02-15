@@ -5,6 +5,11 @@ import { ScrambleComponent } from './components/scramble.mjs';
 import { Store } from './store.mjs';
 
 export class App {
+    ctor() {
+        this.detailsComponent = null;
+        this.store = new Store();
+        this.debug = false;
+    }
     init() {
         $('#scr-statusbar').empty().html(`
             <div class="d-flex flex-row justify-content-around">
@@ -64,8 +69,7 @@ export class App {
     }
 
     start() {
-        this.store = new Store();
-        this.debug = false;
+        this.ctor();
         this.init();
 
         this.notSupported = [];

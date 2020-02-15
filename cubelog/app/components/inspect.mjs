@@ -31,7 +31,7 @@ class InspectionService {
                     color = 'bg-danger';
                     this.stop();
                 }
-                $('#scr-details-inspect').removeClass('bg-success bg-warning bg-danger').addClass(color);
+                $('#scr-details-inspect').removeClass('bg-info bg-success bg-warning bg-danger').addClass(color);
                 $('#scr-details-inspect-text').html(this.elapsed);
             });
     }
@@ -40,7 +40,6 @@ class InspectionService {
         this.calcElapsed();
         this.started = false;
     }
-
     destroy() {
         this.destroy$.next();
     }
@@ -62,10 +61,10 @@ export class InspectComponent {
 
     init() {
         $('#scr-details').empty().html(`
-            <div id="scr-details-inspect">
+            <div id="scr-details-inspect" class="bg-info">
                 <div class="mt-4">
                     <span id="scr-details-inspect-text"
-                        class="rounded text-center text-dark display-1 font-weight-bold p-3"></span>
+                        class="rounded text-center text-dark display-1 font-weight-bold p-3">press play</span>
                 </div>
             </div>`);
         $('#scr-actions').empty().html(`
@@ -81,6 +80,7 @@ export class InspectComponent {
         });
         $('#scr-actions-inspect-forward').click(() => {
             app.store.setSlice('navigation', { page: '/log' });
+            app.store.addEmptyLogEntry();
         });
         app.store.select((s) => s.timer)
             .pipe(takeUntil(this.destroy$))

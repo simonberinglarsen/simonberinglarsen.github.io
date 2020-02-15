@@ -11,6 +11,9 @@ export class Store {
             timer: {
                 started: false
             },
+            scramble: {
+                text: ''
+            },
             log: {
                 entries: [],
                 selectedIndex: -1,
@@ -34,6 +37,14 @@ export class Store {
             }
         };
         this.state$.next(this.state);
+    }
+
+    addEmptyLogEntry() {
+        const newLog = [...this.state.log.entries];
+        if (newLog.length === 0 || newLog[newLog.length - 1].time) {
+            newLog.push({ time: 0 });
+            this.setSlice('log', { entries: newLog, editActionMode: true, selectedIndex: newLog.length - 1 });
+        }
     }
 }
 

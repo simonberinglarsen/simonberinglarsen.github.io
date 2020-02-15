@@ -1,4 +1,5 @@
 import { Subject } from 'https://dev.jspm.io/rxjs@6/_esm2015';
+import { takeUntil } from 'https://dev.jspm.io/rxjs@6/_esm2015/operators';
 import { app } from '../app.mjs';
 
 export class ScrambleComponent {
@@ -11,10 +12,10 @@ export class ScrambleComponent {
     }
 
     init() {
+        const scrambleText = app.store.state.scramble.text;
         $('#scr-details').empty().html(`
-            <div id="scr-details-scramble">
-                <div id="scr-details-scramble-text"></div>
-            </div>
+        <div id="scr-details-reuse" class="bg-warning rounded m-2 font-weight-bold display-4 text-dark">reused scramble</div>
+        <div id="scr-details-scramble-text">${scrambleText}</div>
         `);
         $('#scr-actions').empty().html(`
             <button id="scr-actions-scramble-create" class="btn btn-default bg-white rounded-circle mx-2">
@@ -26,13 +27,21 @@ export class ScrambleComponent {
             const scrambleText = this.getScramble()
                 .map(m => `<span class="text-warning mono-text large-text mr-3">${m}</span>`)
                 .join(' ');
-            $('#scr-details-scramble-text').html(`${scrambleText}`);
+            app.store.setSlice('scramble', { text: scrambleText });
+
         });
         $('#scr-actions-scramble-forward').click(() => {
             app.store.setSlice('navigation', { page: '/inspect' });
         });
-
-        $('#scr-actions-scramble-create').click();
+        app.store.select((s) => s.scramble)
+            .pipe(takeUntil(this.destroy$))
+            .subscribe((scramble) => {
+                $('#scr-details-scramble-text').html(`${scramble.text}`);
+                $('#scr-details-reuse').removeClass('d-none').addClass('d-none');
+            });
+        if (!scrambleText) {
+            $('#scr-actions-scramble-create').click();
+        }
     }
 
     getScramble() {
