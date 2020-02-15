@@ -64,7 +64,7 @@ export class InspectComponent {
             <div id="scr-details-inspect" class="bg-info">
                 <div class="mt-4">
                     <span id="scr-details-inspect-text"
-                        class="rounded text-center text-dark display-1 font-weight-bold p-3">press play</span>
+                        class="rounded text-center text-dark display-1 font-weight-bold p-3">ready</span>
                 </div>
             </div>`);
         $('#scr-actions').empty().html(`
