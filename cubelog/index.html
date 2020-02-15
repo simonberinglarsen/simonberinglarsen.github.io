@@ -62,67 +62,9 @@
         </div>
     </div>
     <div id="app" class="app d-none d-flex flex-column h100">
-        <div id="scr-details" class="flex-1 bg-dark text-light p-2 text-center w-100 scrollbar">
-            <div id="scr-details-scramble" class="d-none">
-                <div id="scr-details-scramble-text"></div>
-            </div>
-            <div id="scr-details-inspect" class="d-none">
-                <div class="mt-4">
-                    <span id="scr-details-inspect-text"
-                        class="rounded text-center text-dark display-1 font-weight-bold p-3"></span>
-                </div>
-            </div>
-            <div id="scr-details-log" class="d-none">
-                <table class="table table-dark" id="table-log">
-                    <thead>
-                        <tr>
-                            <th class="text-danger" scope="col">#</th>
-                            <th class="text-success" scope="col">Time</th>
-                            <th class="text-warning" scope="col">Ao5</th>
-                            <th class="text-info" scope="col">Ao12</th>
-                        </tr>
-                    </thead>
-                    <tbody id="scr-details-log-rows">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div id="scr-actions" class="bg-black p-2 text-center">
-            <div id="scr-actions-scramble" class="d-none">
-                <button id="scr-actions-scramble-create" class="btn btn-default bg-white rounded-circle mx-2">
-                    <i class="fas fa-redo"></i></button>
-                <button id="scr-actions-scramble-forward" class="btn btn-default bg-white rounded-circle mx-2">
-                    <i class="fas fa-forward"></i></button>
-            </div>
-            <div id="scr-actions-inspect" class="d-none">
-                <button id="scr-actions-inspect-play" class="btn btn-default bg-white rounded-circle mx-2">
-                    <i id="scr-actions-inspect-icon" class="fas fa-play"></i></button>
-                <button id="scr-actions-inspect-forward" class="btn btn-default bg-white rounded-circle mx-2">
-                    <i class="fas fa-forward"></i></button>
-            </div>
-            <div id="scr-actions-log" class="d-none">
-                <button id="scr-actions-log-create" class="btn btn-default bg-white rounded-circle mx-2">
-                    <i class="fas fa-plus"></i></button>
-                <button id="scr-actions-log-forward" class="btn btn-default bg-white rounded-circle mx-2">
-                    <i class="fas fa-forward"></i></button>
-            </div>
-        </div>
-        <div id="scr-statusbar" class="bg-light p-2 text-center">
-            <div class="d-flex flex-row justify-content-around">
-                <div class="text-dark mx-2" id="btn-scramble">
-                    <div><i class="fas fa-cube"></i></div>
-                    <div class="small-text font-weight-bold">scramble</div>
-                </div>
-                <div class="text-dark mx-2" id="btn-inspect">
-                    <div><i class="fas fa-glasses"></i></div>
-                    <div class="small-text font-weight-bold">inspect</div>
-                </div>
-                <div class="text-dark mx-2" id="btn-log">
-                    <div><i class="far fa-edit"></i></div>
-                    <div class="small-text font-weight-bold">log</div>
-                </div>
-            </div>
-        </div>
+        <div id="scr-details" class="flex-1 bg-dark text-light p-2 text-center w-100 scrollbar"></div>
+        <div id="scr-actions" class="bg-black p-2 text-center"></div>
+        <div id="scr-statusbar" class="bg-light p-2 text-center"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -135,9 +77,12 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.1.0/rxjs.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/5.0.0/screenfull.min.js"></script>
-    <script src="main.js"></script>
+    <script type="module">
+        import { app } from './app/app.mjs';
+        app.debug = false;
+        app.start();
+    </script>
 </body>
 
 </html>
