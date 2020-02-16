@@ -36,28 +36,27 @@ export class StackComponent {
             const detailsId = `stack-card-${e.key}`;
             const worstTime = Math.max(...e.log.map(item => item.time));
             const bestTime = Math.min(...e.log.map(item => item.time));
+            const solveCount = e.log.length;
             stackElem.append(
                 `<div class="m-2 mb-5 p-2 bg-secondary rounded text-dark text-mono text-left">
-                    <div class="h4 pb-4">${dateString} (${timeString})
-                        <button class="btn btn-outline-dark text-dark rounded-circle float-right scr-details-stack-toggle" 
-                                    data-detailsid="${detailsId}" 
-                                    data-key="${e.key}">
+                    <div class="mb-2">
+                        <button class="btn btn-default text-dark rounded-circle scr-details-stack-toggle" 
+                            data-detailsid="${detailsId}" 
+                            data-key="${e.key}">
                             <i class="fas fa-plus"></i>
                         </button>
-                        <button class="btn btn-outline-dark text-dark rounded-circle mr-4 float-right scr-details-stack-delete" 
+                        <button class="btn btn-dark text-secondary rounded-circle scr-details-stack-delete float-right" 
                             data-key="${e.key}">
                             <i class="fas fa-trash"></i>
                         </button>
                     </div>
-                    <div class="row border-top border-dark">
-                        <div class="col-6">
-                            <div class="row"><div class="col-8">BEST single</div><div class="col-4 font-weight-bold">${bestTime}</div></div>
-                        </div>
-                        <div class="col-6 border-left border-dark">
-                            <div class="row"><div class="col-8">WORST single</div><div class="col-4">${worstTime}</div></div>
-                        </div>
+                    <div class="border-top border-dark bg-dark text-secondary px-2">${dateString} (${timeString})</div>
+                    <div class="border-top border-dark">
+                        <div>BEST single <span class="font-weight-bold">${bestTime}</span></div>
+                        <div>WORST single ${worstTime}</div>
+                        <div>TOTAL solves #${solveCount}</div>
                     </div>
-                    <div id="${detailsId}"></div>
+                    <div class="border-top border-dark" id="${detailsId}"></div>
                 </div>`);
         });
         $('.scr-details-stack-delete').click((e) => {
@@ -78,18 +77,9 @@ export class StackComponent {
                 let i = 1;
                 session.log.forEach(solve => {
                     detailsElem.append(`
-                        <div class="row border-top border-dark">
-                            <div class="col-1">
-                                #${i++}
-                            </div>
-                            <div class="col-3">
-                                ${solve.time}
-                            </div>
-                            <div class="col-8">
-                                ${solve.scrambleText}
-                            </div>
-                        </div>
-                    
+                        
+                        <div class="font-weight-bold">#${i++} ${solve.time}</div>
+                        <div class="px-4">${solve.scrambleText}</div>
                     `);
                 });
                 iconElem.removeClass('fa-plus fa-minus').addClass('fa-minus');
