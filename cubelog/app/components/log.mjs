@@ -27,6 +27,8 @@ export class LogComponent {
                     <tbody id="scr-details-log-rows">
                     </tbody>
                 </table>
+                <button id="scr-actions-log-save" class="btn btn-default text-dark rounded-circle mx-2">
+                <i class="fas fa-save fa-2x m-2"></i></button>
             </div>`);
         $('#scr-actions').empty().html(`<div id="scr-actions-log">
             <button id="scr-actions-log-create" class="btn btn-default bg-white rounded-circle mx-2">
@@ -34,6 +36,9 @@ export class LogComponent {
             <button id="scr-actions-log-forward" class="btn btn-default bg-white rounded-circle mx-2">
                 <i class="fas fa-forward"></i></button>
         </div>`);
+        $('#scr-actions-log-save').click(() => {
+            app.store.saveLog();
+        });
         $('#scr-actions-log-forward').click(() => {
             app.store.setSlice('navigation', { page: '/scramble' });
         });
@@ -72,6 +77,7 @@ export class LogComponent {
         </tr>`);
     }
     buildEditRow(i) {
+        const entry = this.log.entries[i];
         this.tbody.append(`
         <tr data-index="${i}" class="bg-secondary">
             <td colspan="5">
@@ -88,6 +94,13 @@ export class LogComponent {
                         <div><i class="fas fa-trash-alt"></i></div>
                         <div class="small-text font-weight-bold">delete</div>
                     </div>
+                    <div class="btn text-dark px-3" id="btn-log-cancel">
+                        <div><i class="fas fa-times"></i></div>
+                        <div class="small-text font-weight-bold">cancel</div>
+                    </div>
+                </div>
+                <div class="bg-dark text-mono text-secondary p-2 rounded">
+                    ${entry.scrambleText}
                 </div>
             </td>
         </tr>`);
@@ -97,6 +110,9 @@ export class LogComponent {
             const newItem = { ...newLog[insertAt] };
             newLog.splice(insertAt, 0, newItem);
             app.store.setSlice('log', { entries: newLog, selectedIndex: insertAt + 1 });
+        });
+        $('#btn-log-cancel').click(() => {
+            app.store.setSlice('log', { editActionMode: false, selectedIndex: -1 });
         });
         $('#btn-log-edit').click(() => {
             app.store.setSlice('log', { editActionMode: true });
@@ -143,6 +159,7 @@ export class LogComponent {
             const index = inputEdit.data('index');
             const newLog = [...app.store.state.log.entries];
             newLog[index].time = inputEdit.val() ? +inputEdit.val() : 0;
+            newLog[index].scrambleText = app.store.state.scramble.text;
             app.store.setSlice('log', { entries: newLog, editActionMode: false, selectedIndex: -1 });
 
         });
@@ -170,6 +187,7 @@ export class LogComponent {
         });
     }
     rebuild() {
+        $('#scr-actions-log-save').prop( "disabled", this.log.entries.length === 0 );
         this.tbody = $('#scr-details-log-rows');
         this.tbody.empty();
         for (let i = this.log.entries.length - 1; i >= 0; i--) {

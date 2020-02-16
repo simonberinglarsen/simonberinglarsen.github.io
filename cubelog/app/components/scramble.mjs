@@ -15,7 +15,7 @@ export class ScrambleComponent {
         const scrambleText = app.store.state.scramble.text;
         $('#scr-details').empty().html(`
         <div id="scr-details-reuse" class="bg-warning rounded m-2 font-weight-bold display-4 text-dark">reused scramble</div>
-        <div id="scr-details-scramble-text">${scrambleText}</div>
+        <div id="scr-details-scramble-text">${this.formatScramble(scrambleText)}</div>
         `);
         $('#scr-actions').empty().html(`
             <button id="scr-actions-scramble-create" class="btn btn-default bg-white rounded-circle mx-2">
@@ -24,10 +24,8 @@ export class ScrambleComponent {
                 <i class="fas fa-forward"></i></button>
         `);
         $('#scr-actions-scramble-create').click(() => {
-            const scrambleText = this.getScramble()
-                .map(m => `<span class="text-warning mono-text large-text mr-3">${m}</span>`)
-                .join(' ');
-            app.store.setSlice('scramble', { text: scrambleText });
+            const scrambleRaw = this.getScramble();
+            app.store.setSlice('scramble', { text: scrambleRaw.join(' ') });
 
         });
         $('#scr-actions-scramble-forward').click(() => {
@@ -36,12 +34,20 @@ export class ScrambleComponent {
         app.store.select((s) => s.scramble)
             .pipe(takeUntil(this.destroy$))
             .subscribe((scramble) => {
-                $('#scr-details-scramble-text').html(`${scramble.text}`);
+                $('#scr-details-scramble-text').html(`${this.formatScramble(scramble.text)}`);
                 $('#scr-details-reuse').removeClass('d-none').addClass('d-none');
             });
         if (!scrambleText) {
             $('#scr-actions-scramble-create').click();
         }
+    }
+
+    formatScramble(text) {
+        const scrambleText = text
+            .split(' ')
+            .map(m => `<span class="text-warning text-mono large-text mr-3">${m}</span>`)
+            .join(' ');
+        return scrambleText;
     }
 
     getScramble() {

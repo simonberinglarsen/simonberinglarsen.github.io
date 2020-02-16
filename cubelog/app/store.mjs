@@ -18,6 +18,9 @@ export class Store {
                 entries: [],
                 selectedIndex: -1,
                 editActionMode: false
+            },
+            sessions: {
+                entries: [],
             }
         };
     }
@@ -42,10 +45,36 @@ export class Store {
     addEmptyLogEntry() {
         const newLog = [...this.state.log.entries];
         if (newLog.length === 0 || newLog[newLog.length - 1].time) {
-            newLog.push({ time: 0 });
+            newLog.push({ time: 0, scrambleText: this.state.scramble.text });
             this.setSlice('log', { entries: newLog, editActionMode: true, selectedIndex: newLog.length - 1 });
         }
     }
+
+    saveLog() {
+        const log = [...this.state.log.entries];
+        const logs = [...this.state.sessions.entries];
+        logs.push({
+            key: new Date().getTime(),
+            log: log
+        });
+        this.setSlice('sessions', { entries: logs });
+        this.setSlice('log', { entries: [], editActionMode: false, selectedIndex: - 1 });
+        this.storeInDatabase();
+    }
+
+    deleteLog(key) {
+        const logs = [...this.state.sessions.entries].filter(e => e.key !== key);
+        this.setSlice('sessions', { entries: logs });
+        this.storeInDatabase();
+    }
+
+    loadFromDatabase() {
+        if (localStorage.getItem('sessions')) {
+            this.state.sessions = JSON.parse(localStorage.getItem('sessions'));
+        }
+    }
+
+    storeInDatabase() {
+        localStorage.setItem('sessions', JSON.stringify(this.state.sessions));
+    }
 }
-
-
