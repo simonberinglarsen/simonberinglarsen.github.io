@@ -17,6 +17,7 @@ export class StackComponent {
         $('#scr-actions').empty().html(
             `<button class="btn btn-default bg-transparent rounded-circle mx-2">
             <i class="fas fa-plus"></i></button>`);
+        app.store.setSlice('sessions', { viewed: true });
         this.rebuild();
         app.store.select((s) => s.sessions)
             .pipe(takeUntil(this.destroy$))

@@ -37,7 +37,7 @@ export class App {
             $('#main').empty().html(
                 `<div id="app" class="app d-flex flex-column h100">
                     <div id="scr-details" class="flex-1 bg-dark text-light p-2 text-center w-100 scrollbar"></div>
-                    <div id="scr-actions" class="bg-black p-2 text-center"></div>
+                    <div id="scr-actions" class="bg-black p-2"></div>
                     <div id="scr-statusbar" class="bg-light p-2 text-center">
                         <div class="d-flex flex-row justify-content-around">
                             <div class="text-dark mx-2" id="btn-scramble">
@@ -49,11 +49,11 @@ export class App {
                                 <div class="small-text font-weight-bold">inspect</div>
                             </div>
                             <div class="text-dark mx-2" id="btn-log">
-                                <div><i class="far fa-edit"></i></div>
+                                <div><i class="far fa-edit"></i><span id="btn-log-notify" class="badge badge-danger d-none">!</span></div>
                                 <div class="small-text font-weight-bold">log</div>
                             </div>
                             <div class="text-dark mx-2" id="btn-stack">
-                                <div><i class="fas fa-layer-group"></i></div>
+                                <div><i class="fas fa-layer-group"></i><span id="btn-stack-notify" class="badge badge-danger d-none">!</span></div>
                                 <div class="small-text font-weight-bold">stack</div>
                             </div>
                         </div>
@@ -75,6 +75,22 @@ export class App {
     }
     init() {
         this.rebuild();
+        this.store.select((s) => s.log).subscribe((log) => {
+            const notifyElem = $('#btn-log-notify');
+            notifyElem.removeClass('d-none');
+            if(log.entries.length === 0) {
+                notifyElem.addClass('d-none');
+            }
+        });
+        
+        this.store.select((s) => s.sessions).subscribe((sessions) => {
+            const notifyElem = $('#btn-stack-notify');
+            notifyElem.removeClass('d-none');
+            if(sessions.viewed) {
+                notifyElem.addClass('d-none');
+            }
+        });
+        
 
         this.store.select((s) => s.navigation).subscribe((navigation) => {
             if (this.detailsComponent) {

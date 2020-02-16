@@ -30,12 +30,15 @@ export class LogComponent {
                 <button id="scr-actions-log-save" class="btn btn-default text-dark rounded-circle mx-2">
                 <i class="fas fa-save fa-2x m-2"></i></button>
             </div>`);
-        $('#scr-actions').empty().html(`<div id="scr-actions-log">
-            <button id="scr-actions-log-create" class="btn btn-default bg-white rounded-circle mx-2">
-                <i class="fas fa-plus"></i></button>
-            <button id="scr-actions-log-forward" class="btn btn-default bg-white rounded-circle mx-2">
-                <i class="fas fa-forward"></i></button>
-        </div>`);
+        $('#scr-actions').empty().html(`
+            <div class="d-flex flex-row justify-content-around">
+                <button id="scr-actions-log-create" class="btn btn-default bg-white rounded-circle mx-2">
+                    <i class="fas fa-plus"></i></button>
+                <button id="scr-actions-log-forward" class="btn btn-default bg-white rounded-circle mx-2">
+                    <i class="fas fa-forward"></i></button>
+                <button class="PLACEHOLDER btn btn-default bg-transparent rounded-circle mx-2" disabled>
+                    &nbsp;</button>
+            </div>`);
         $('#scr-actions-log-save').click(() => {
             app.store.saveLog();
         });

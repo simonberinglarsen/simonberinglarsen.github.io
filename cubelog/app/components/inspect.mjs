@@ -68,11 +68,13 @@ export class InspectComponent {
                 </div>
             </div>`);
         $('#scr-actions').empty().html(`
-            <div id="scr-actions-inspect">
+            <div class="d-flex flex-row justify-content-around">
                 <button id="scr-actions-inspect-play" class="btn btn-default bg-white rounded-circle mx-2">
                     <i id="scr-actions-inspect-icon" class="fas fa-play"></i></button>
                 <button id="scr-actions-inspect-forward" class="btn btn-default bg-white rounded-circle mx-2">
                     <i class="fas fa-forward"></i></button>
+                <button class="PLACEHOLDER btn btn-default bg-transparent rounded-circle mx-2" disabled>
+                    &nbsp;</button>
             </div>`);
 
         $('#scr-actions-inspect-play').click(() => {

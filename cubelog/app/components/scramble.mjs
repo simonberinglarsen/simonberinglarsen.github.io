@@ -18,11 +18,14 @@ export class ScrambleComponent {
         <div id="scr-details-scramble-text">${this.formatScramble(scrambleText)}</div>
         `);
         $('#scr-actions').empty().html(`
-            <button id="scr-actions-scramble-create" class="btn btn-default bg-white rounded-circle mx-2">
-                <i class="fas fa-redo"></i></button>
-            <button id="scr-actions-scramble-forward" class="btn btn-default bg-white rounded-circle mx-2">
-                <i class="fas fa-forward"></i></button>
-        `);
+            <div class="d-flex flex-row justify-content-around">
+                <button id="scr-actions-scramble-create" class="btn btn-default bg-white rounded-circle mx-2">
+                    <i class="fas fa-redo"></i></button>
+                <button id="scr-actions-scramble-forward" class="btn btn-default bg-white rounded-circle mx-2">
+                    <i class="fas fa-forward"></i></button>
+                <button class="PLACEHOLDER btn btn-default bg-transparent rounded-circle mx-2" disabled>
+                    &nbsp;</button>
+            </div>`);
         $('#scr-actions-scramble-create').click(() => {
             const scrambleRaw = this.getScramble();
             app.store.setSlice('scramble', { text: scrambleRaw.join(' ') });

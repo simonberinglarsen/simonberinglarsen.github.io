@@ -21,6 +21,7 @@ export class Store {
             },
             sessions: {
                 entries: [],
+                viewed : false
             }
         };
     }
@@ -57,7 +58,7 @@ export class Store {
             key: new Date().getTime(),
             log: log
         });
-        this.setSlice('sessions', { entries: logs });
+        this.setSlice('sessions', { entries: logs, viewed: false });
         this.setSlice('log', { entries: [], editActionMode: false, selectedIndex: - 1 });
         this.storeInDatabase();
     }
