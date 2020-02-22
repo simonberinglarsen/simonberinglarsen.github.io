@@ -26,19 +26,29 @@
 
 <body class="bg-dark">
     <div>
-
-        <div id="icon-etf" class="btn w-link bg-black rounded d-flex flex-column m-2">
+        <div id="icon-etf" class="btn w-link bg-black rounded d-flex flex-column m-2 float-left">
             <div class="link-body bg-success rounded text-center h-icon d-flex flex-column justify-content-around">
                 <div><i class="fas fa-chart-line fa-3x"></i></div>
             </div>
             <div class="text-center text-secondary font-weight-bold">ETF</div>
         </div>
-
         <div id="icon-cubelog" class="btn w-link bg-black rounded d-flex flex-column m-2 float-left">
             <div class="link-body bg-warning rounded text-center h-icon d-flex flex-column justify-content-around">
                 <div><i class="fas fa-cubes fa-3x"></i></div>
             </div>
             <div class="text-center text-secondary font-weight-bold">CubeLog</div>
+        </div>
+        <div id="icon-gameandwatch" class="btn w-link bg-black rounded d-flex flex-column m-2 float-left">
+            <div class="link-body bg-info rounded text-center h-icon d-flex flex-column justify-content-around">
+                <div><i class="fas fa-gamepad fa-3x"></i></div>
+            </div>
+            <div class="text-center text-secondary font-weight-bold">manhole</div>
+        </div>
+        <div id="icon-gwmat" class="btn w-link bg-black rounded d-flex flex-column m-2 float-left">
+            <div class="link-body bg-secondary rounded text-center h-icon d-flex flex-column justify-content-around">
+                <div><i class="fas fa-th fa-3x"></i></div>
+            </div>
+            <div class="text-center text-secondary font-weight-bold">matrix</div>
         </div>
 
     </div>
@@ -60,7 +70,9 @@
     <script>
         const links = [
             { id: '#icon-etf', href: '/etf/index.html' },
-            { id: '#icon-cubelog', href: '/cubelog/index.html' }
+            { id: '#icon-cubelog', href: '/cubelog/index.html' },
+            { id: '#icon-gameandwatch', href: '/gameandwatch/index.html' },
+            { id: '#icon-gwmat', href: '/gwmat/index.html' },
         ];
         links.forEach(l => {
             $(l.id).click(() => {
