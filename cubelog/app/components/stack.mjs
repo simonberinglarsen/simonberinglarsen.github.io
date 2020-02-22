@@ -105,28 +105,38 @@ export class StackComponent {
     }
 
     buildGraph() {
-        let points = [
-            { x: 0, y: 0 },
-            { x: 1, y: 1 },
-            { x: 2, y: 2 },
-            { x: 3, y: 3 },
-            { x: 4, y: 4 },
-            { x: 5, y: 4 },
-            { x: 6, y: 2 },
-        ];
-        points = [];
-        let avgPoints = [];
-        let sum = 0;
-        let i = 1;
-        const sessions = app.store.state.sessions.entries.sort((a,b) => a.key - b.key);
+        const bestPoints = [];
+        const worstPoints = [];
+        const trainingCount = [];
+        const trainingLabels = [];
+        const avgPoints = [];
+        const avgBuffer = [];
+        let globalMin = 99999999;
+        let globalMax = -99999999;
+        let i = 0;
+        const sessions = app.store.state.sessions.entries.sort((a, b) => a.key - b.key);
         sessions.forEach(s => {
+            trainingCount.push(s.log.length);
+            trainingLabels.push(`${i+1}-${s.log.length+i}`);
             s.log.forEach(l => {
-                points.push({
-                    x: i,
-                    y: l.time
-                });
-                sum += l.time;
-                let avg = sum/i;
+                if(l.time < globalMin) {
+                    globalMin = l.time;
+                    bestPoints.push({
+                        x: i,
+                        y: l.time
+                    });
+                }
+                if(l.time > globalMax) {
+                    globalMax = l.time;
+                    worstPoints.push({
+                        x: i,
+                        y: l.time
+                    });
+                }
+
+                while (avgBuffer.length < 6) avgBuffer.push(l.time);
+                avgBuffer.shift();
+                let avg = avgBuffer.reduce((p, c) => p + c, 0) / 5;
                 avgPoints.push({
                     x: i,
                     y: avg
@@ -134,14 +144,22 @@ export class StackComponent {
                 i++;
             });
         });
-
-
+        bestPoints.push({
+            x: i,
+            y: globalMin
+        });
+        worstPoints.push({
+            x: i,
+            y: globalMax
+        });
 
 
         const stackElem = $('#scr-details-stack');
         stackElem.empty();
         stackElem.append('<canvas id="chart1"></canvas>');
+        stackElem.append('<canvas id="chart2"></canvas>');
         var ctx1 = document.getElementById('chart1').getContext('2d');
+        var ctx2 = document.getElementById('chart2').getContext('2d');
         var chart = new Chart(ctx1, {
             // The type of chart we want to create
             type: 'scatter',
@@ -149,26 +167,78 @@ export class StackComponent {
             // The data for our dataset
             data: {
                 datasets: [{
-                    label: 'Solves',
-                    backgroundColor: 'rgb(80,80,80)',
-                    borderColor: 'rgb(255,255,255)',
+                    label: 'Best',
+                    backgroundColor: 'rgb(0,255,0)',
+                    borderColor: 'rgb(0,255,0)',
                     showLine: true,
                     fill: false,
-                    data: points
+                    data: bestPoints,
+                    pointRadius: 1,
+                    borderWidth: 1,
+                    lineTension: 0,
+                },
+                {
+                    label: 'Worst',
+                    backgroundColor: 'rgb(255,0,0)',
+                    borderColor: 'rgb(255,0,0)',
+                    showLine: true,
+                    fill: false,
+                    data: worstPoints,
+                    pointRadius: 1,
+                    borderWidth: 1,
+                    lineTension: 0,
                 },
                 {
                     label: 'Avg',
-                    backgroundColor: 'rgb(80,80,80)',
-                    borderColor: 'rgb(0,255,255)',
+                    backgroundColor: 'rgb(255,255,255)',
+                    borderColor: 'rgb(255,255,255)',
                     showLine: true,
                     fill: false,
-                    data: avgPoints
+                    data: avgPoints,
+                    pointRadius: 2,
+                    borderWidth: 1
                 }]
             },
 
             // Configuration options go here
             options: {
                 aspectRatio: 1,
+
+            }
+        });
+        var chart2 = new Chart(ctx2, {
+            // The type of chart we want to create
+            type: 'bar',
+
+            // The data for our dataset
+            data: {
+                labels: trainingLabels,
+                datasets: [
+                    {
+                        label: 'Solves pr. session',
+                        backgroundColor: 'rgb(80,80,80)',
+                        borderColor: 'rgb(130,130,130)',
+                        borderWidth: 1,
+                        data: trainingCount
+                    }
+
+
+
+                ]
+            },
+
+            // Configuration options go here
+            options: {
+                aspectRatio: 1,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            max: 15,
+                            min: 0,
+                            stepSize: 0.5
+                        }
+                    }]
+                }
             }
         });
     }
