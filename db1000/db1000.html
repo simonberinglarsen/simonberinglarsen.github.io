@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>db 1000</title>
+    <style>
+        .square {
+            width: 3.0rem;
+            height: 3.0rem;
+        }
+
+        .color-1 {
+            background-color: rgb(95,75,139);
+            color:white;
+        }
+        .color-2 {
+            background-color: rgb(123,53,57);
+            color:white;
+        }
+        .color-3 {
+            background-color: rgb(188,50,44);
+            color:white;
+        }
+        .color-4 {
+            background-color: rgb(45,98,163);
+            color:white;
+        }
+        .color-5 {
+            background-color: rgb(228,113,39);
+            color:black;
+        }
+        .color-6 {
+            background-color: rgb(53,67,90);
+            color:white;
+        }
+        .color-7 {
+            background-color: rgb(204,179,144);
+            color:black;
+        }
+        .color-8 {
+            background-color: rgb(185,166,189);
+            color:black;
+        }
+        .color-9 {
+            background-color: rgb(164,111,68);
+            color:black;
+        }
+        .color-10 {
+            background-color: rgb(0,104,101);
+            color:white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="title" class="bg-success m-2 p-2 h1 text-center rounded"></div>
+    <div class="p-2 text-center">
+        <button id="prev" class="btn btn-outline-dark">&lt; prev</button>
+        <button id="next" class="btn btn-outline-dark">next &gt;</button>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <div id="grid"></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script type="module">
+        import { db1000 } from './app/db1000.mjs';
+        let currentPage = 1;
+        updateUi();
+
+        $('#prev').click(() => {
+            currentPage = currentPage === 1 ? 1 : currentPage - 1;
+            updateUi();
+        });
+        $('#next').click(() => {
+            currentPage = currentPage === 10 ? 10 : currentPage + 1;
+            updateUi();
+        });
+
+        function updateUi() {
+            $('#title').text(`Page ${currentPage}`);
+            const grid = $('#grid');
+            if (grid.is(':empty')) {
+                console.log('BUILD GRID')
+                const onClick = (e) => {
+                    const val = $(e.target).data("key");
+                    let url = db1000[val];
+                    url = url.replace(/Mr\. Robot/g, `example ${val+1}`)
+                    var win = window.open(url);
+                    win.focus();
+                };
+                let row;
+                for (var x = 0; x < 100; x++) {
+                    if (x % 10 === 0) {
+                        row = $(`<div class="d-flex flex-row"></div>`);
+                        grid.append(row);
+                    }
+                    const btnId = `btn-${x}`;
+                    const el = $(`<div><button id="${btnId}"></button></div>`);
+                    row.append(el);
+                    $(`#${btnId}`).click(onClick);
+                }
+            }
+            for (var x = 0; x < 100; x++) {
+                const key = (currentPage - 1) * 100 + x;
+                $(`#btn-${x}`).text((key + 1).toString());
+                $(`#btn-${x}`).data("key", key);
+                $(`#btn-${x}`).removeClass().addClass(`btn m-1 square color-${currentPage} font-weight-bold`);
+                $('#title').removeClass().addClass(`h1 color-${currentPage} font-weight-bold text-center m-2 p-2`);
+            }
+        }
+    </script>
+</body>
+
+</html>
