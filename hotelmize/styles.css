@@ -8,11 +8,11 @@ body {
 }
 
 .font-size-small {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .font-size-normal {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .font-size-large {
@@ -27,10 +27,16 @@ body {
     font-size: 38px;
 }
 
+.font-weight-bold {
+    font-weight: bold;
+}
+
 .content {
     margin-left: 212px;
+    width: 1123px;
     height: 2000px;
-    background-color: #E5E5E5;
+    background-color: white;
+    color: #003344;
 }
 
 .side-bar {
@@ -48,11 +54,96 @@ body {
 }
 
 .side-bar .section {
-    margin: 14px 24px;
+    margin-bottom: 14px
+}
+
+.mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+.ml-1 {
+    margin-right: 14px;
+}
+
+.mr-1 {
+    margin-right: 14px;
+}
+
+.mr-2 {
+    margin-right: 20px;
+}
+
+.px-1 {
+    padding-left: 14px;
+    padding-right: 14px;    
+}
+
+.mx-1 {
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+.mx-2 {
+    margin-left: 20px;
+    margin-right: 20px;    
+}
+
+.mx-3 {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+
+.my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.my-1 {
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.my-2 {
+    margin-top: 20px;
+    margin-bottom: 20px;    
+}
+
+.my-3 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+¨
+.my-auto {
+    max-width: 50%;
+}
+
+.mt-4 {
+    margin-top: 60px;
+}
+
+.mb-1 {
+    margin-bottom: 14px;
+}
+.mb-2 {
+    margin-bottom: 20px;
 }
 
 .side-bar .selected {
     color: #29D9C2;
+}
+
+.side-bar .button {
+    padding: 7px 18px;
+    border-radius: 5px;
+}
+
+.side-bar .button.selected {
+    color: white;
+    background-color: #29D9C2;
+    box-shadow: 0px 4px 15px rgba(0, 176, 153, 0.3);
 }
 
 .side-bar .section .link {
@@ -60,8 +151,6 @@ body {
     cursor: pointer;
 }
 
-.side-bar .section .item {
-}
 
 .clip {
     clip-path: circle(18px at 50% 50%);
@@ -71,4 +160,63 @@ body {
 .profile-pic {
     width: 50px;
     height: 50px;
+}
+
+.debug {
+    outline: 1px solid red;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.card {
+    min-width: 240px;
+}
+
+.card.fill {
+    width: 100%;
+}
+
+.card.normal {
+    background: #8BA9B4;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+}
+
+.card.dark {
+    background: #003344;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+}
+
+.card.light {
+    background: #29D9C2;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+}
+
+.box {
+    height: 44px;
+    text-align: center;
+    vertical-align: middle;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 50px rgba(0, 51, 68, 0.13);
+    border-radius: 6px;
+}
+
+.graph {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 50px rgba(0, 51, 68, 0.13);
+    border-radius: 6px;
+    height: 637px;
 }
