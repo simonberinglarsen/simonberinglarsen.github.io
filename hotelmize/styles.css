@@ -34,7 +34,7 @@ body {
 }
 
 .font-size-large {
-    font-size: 20px;
+    font-size: 19px;
 }
 
 .font-size-title {
@@ -91,6 +91,10 @@ body {
 
 .mr-2 {
     margin-right: 20px;
+}
+
+.p-1 {
+    padding: 14px;
 }
 
 .px-1 {
@@ -197,7 +201,7 @@ body {
 }
 
 .card {
-    min-width: 240px;
+    min-width: 200px;
 }
 
 .card.fill {
@@ -206,30 +210,45 @@ body {
 
 .card.normal {
     background: #8BA9B4;
+    color: white;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
     border-radius: 10px;
 }
 
 .card.dark {
     background: #003344;
+    color: white;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
     border-radius: 10px;
 }
 
 .card.light {
     background: #29D9C2;
+    color: white;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
     border-radius: 10px;
 }
 
 .box {
     height: 44px;
-    text-align: center;
-    vertical-align: middle;
 
     background: #FFFFFF;
     box-shadow: 0px 4px 50px rgba(0, 51, 68, 0.13);
     border-radius: 6px;
+}
+
+.box.light {
+    background: #29D9C2;
+    color: white;
+}
+
+.border-dark {
+    border: 1px solid #003344;
+}
+
+.box.dark {    
+    background: #003344;
+    color: white;
 }
 
 .graph {
