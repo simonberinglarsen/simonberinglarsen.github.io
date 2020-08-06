@@ -36,7 +36,7 @@
         }
 
         .bg-green {
-            background-color: #5a5;
+            background-color: #384;
         }
 
         .fg-white {
@@ -85,17 +85,16 @@
 
 
         .item-7 {
-            height: 50vh;
-            background-color: #666;
-
+            height: 100vh;
+            background-color: #fff;
         }
 
         .block {
             height: 60vh;
             padding-top: 10vh;
             padding-bottom: 10vh;
-            border-bottom: 2px dashed #666;
-
+            border-bottom: 8px dashed #fff;
+            border-top: 8px dashed #fff;
         }
 
         .flex {
@@ -158,7 +157,7 @@
         <img class="center animate__animated" src="p6.jpg" />
     </div>
 
-    <div class="flex flex-column">
+    <div class="item-7 flex flex-column">
         <div class="center">
             Hi, I'm <strong>Simon</strong>
         </div>
@@ -198,17 +197,15 @@
         </div>
         <div class="center">
             <span class="badge mb-1 bg-green fg-white">creative</span>
-            
         </div>
-
+        <div class="center">
+            ...well, I also do <strong>simple tasks</strong> :)
+        </div>
     </div>
     <script type="module">
         import { App } from './app.mjs';
         var app = new App();
         app.run();
-
-
-
     </script>
 </body>
 
