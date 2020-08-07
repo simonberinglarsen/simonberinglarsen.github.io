@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+  
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <style>
+    .box {
+      border: 1px solid black;
+      width: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>
+    SVG animation example for the upwork-logo task
+  </h1>
+  <div id="logo" class="box"></div>
+  <script>
+    var svg = d3.select("#logo")
+      .append("svg")
+      .attr("width", 500)
+      .attr("height", 500);
+
+    let line = svg.append("line")
+      .style("stroke", "black")
+      .attr("x1", 250)
+      .attr("y1", 250)
+      .attr("x2", 250)
+      .attr("y2", 250)
+      .transition().duration(1000)
+      .attr("x2", 20)
+      .attr("y2", 20);
+
+    svg.append("circle")
+      .attr("cx", 250)
+      .attr("cy", 250)
+      .attr("r", 20).transition().duration(1000)
+      .attr("cx", 20)
+      .attr("cy", 20);
+
+
+  </script>
+</body>
+
+</html>
