@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="l-wrapper">
+        <div class="c-header">
+            <img class="c-logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/813538/km-logo-color.svg"
+                draggable="false" />
+            <img class="c-logo" src="p1.png" draggable="false" />
+            <img class="c-logo" src="p2.png" draggable="false" />
+            <button class="c-button c-button--primary">Send Kudos</button>
+        </div>
+        <div class="l-grid">
+            <div class="l-grid__item l-grid__item--sticky">
+                <div class="c-card u-bg--light-gradient u-text--dark">
+                    <div class="c-card__body">
+                        <div class="u-display--flex u-justify--space-between">
+                            <div class="u-text--left">
+                                <div class="u-text--small">My Rank</div>
+                                <h2>3rd Place</h2>
+                            </div>
+                            <div class="u-text--right">
+                                <div class="u-text--small">My Score</div>
+                                <h2>24</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-card">
+                    <div class="c-card__body">
+                        <div class="u-text--center" id="winner"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="l-grid__item">
+                <div class="c-card">
+                    <div class="c-card__header">
+                        <h3>Received Kudos</h3>
+                        <select class="c-select">
+                            <option selected="selected">Sunday, Feb. 23 - Sunday, Feb. 30</option>
+                        </select>
+                    </div>
+                    <div class="c-card__body">
+                        <ul class="c-list" id="list">
+                            <li class="c-list__item">
+                                <div class="c-list__grid">
+                                    <div class="u-text--left u-text--small u-text--medium">Rank</div>
+                                    <div class="u-text--left u-text--small u-text--medium">Team Member</div>
+                                    <div class="u-display--flex flex-row">
+                                        <div class="u-text--right u-text--small u-text--medium w-60"># Kudos</div>
+                                        <div class="u-text--right u-text--small u-text--medium w-60"># Games</div>
+                                        <div class="u-text--right u-text--small u-text--medium w-60"># Total</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
