@@ -1,0 +1,60 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #eee;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type='text'] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+button {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.login {
+    display: inline-block;
+    background-color: #eee;
+    border-radius: 5px;
+    color: #444;
+}
+
+.login .header {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+.flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.error {
+    color: red;
+}
+
+.bg-active {
+    background-color: #ccf;
+}
