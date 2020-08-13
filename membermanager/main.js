@@ -38,11 +38,15 @@ function isVisible(id, show) {
     document.getElementById(id).setAttribute("style", show ? "" : "display:none")
 }
 
+function getText(id) {
+    return document.getElementById(id).value;
+}
+
 // renders the member table in html based on the javascript arrays
 function renderUserTable() {
-    const mapToRow  = (member) => `<tr>   
-    <th>${member.memID}</th>
-    <td>${member.name}</td>
+    const mapToRow = (member) => `<tr>   
+    <td>${member.memID}</td>
+    <td>${member.memName}</td>
     <td>${member.memDob}</td>
     <td>${member.memAddress}</td>
     <td>${member.memMobile}</td>
@@ -70,11 +74,31 @@ document.getElementById('btnLogout').onclick = function () {
     updateApp();
 }
 
+
+document.getElementById('btnAdd').onclick = function () {
+    members.push({
+        memID: getText('memId'),
+        memName: getText('memName'),
+        memDob: getText('memDob'),
+        memAddress: getText('memAddress'),
+        memMobile: getText('memMobile'),
+        memAge: getText('memAge'),
+    });
+}
+
+document.getElementById('btnClear').onclick = function () {
+    ['memId','memName','memDob','memAddress','memMobile','memAge'].forEach(e => document.getElementById(e).value = '');
+}
+document.getElementById('btnRefresh').onclick = function () {
+    updateApp();
+}
+
+
 // button to login. gets the username and password from the text boxes and see if there is a matching user in the global array.
 // in the end the application state is updated and the updateApp() method makes sure to hide/show the right stuff
 document.getElementById('btnLogin').onclick = function () {
-    let user = document.getElementById('loginUser').value;
-    let pass = document.getElementById('loginPassword').value;
+    let user = getText('loginUser');
+    let pass = getText('loginPassword');
     let admUser = admins.find(admUser => admUser.adminID === user && admUser.password === pass);
     if (!admUser) {
         appState.loggedInUser = null;
@@ -87,4 +111,5 @@ document.getElementById('btnLogin').onclick = function () {
 }
 
 // this updates the initial state of the app.
+appState.loggedInUser = admins[0];
 updateApp();

@@ -10,32 +10,65 @@
 
 <body>
     <div id="loginScreen">
+        <h1>Sign In</h1>
+        <div>Username: </div>
+        <input id="loginUser" type="text" name="username">
+        <div>Password: </div>
+        <input id="loginPassword" type="text" name="password">
         <div>
-            <div>
-                <h1>Sign In</h1>
-                <div>Username: </div>
-                <input id="loginUser" type="text" id="username" name="username">
-                <div>Password: </div>
-                <input id="loginPassword" type="text" id="password" name="password">
-                <div>
-                    <button id="btnLogin">Login</button>
-                </div>
-                <div id="loginValidation" class="error">
-                    wrong user or password
-                </div>
-            </div>
+            <button id="btnLogin">Login</button>
+        </div>
+        <div id="loginValidation" class="error">
+            wrong user or password
         </div>
     </div>
 
     <div id="memberAdminScreen">
-        <div>
-            <h1>
-                Member administration
-            </h1>
-            <div>
-                <button id="btnLogout">Logout</button>
-            </div>
-        </div>
+        <h1>
+            Member administration
+        </h1>
+        <button id="btnLogout">Logout</button>
+        <br />
+        <br />
+        <hr/>
+        <br />
+
+        <table id="userForm">
+            <tr>
+                <td>id</td>
+                <td><input id="memId" type="text"></td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td><input id="memName" type="text"></td>
+            </tr>
+            <tr>
+                <td>dob</td>
+                <td><input id="memDob" type="text"></td>
+            </tr>
+            <tr>
+                <td>address</td>
+                <td><input id="memAddress" type="text"></td>
+            </tr>
+            <tr>
+                <td>mobile</td>
+                <td><input id="memMobile" type="text"></td>
+            </tr>
+            <tr>
+                <td>age</td>
+                <td><input id="memAge" type="text"></td>
+            </tr>
+        </table>
+        <br />
+        <button id="btnAdd">Add</button>
+        <button id="btnClear">Clear</button>
+        <br />
+        <br />
+        <hr/>
+        <br />
+        <button id="btnRefresh">Refresh memberlist</button>
+        <br />
+        <br />
         <table id="userTable">
             <thead>
                 <tr>
