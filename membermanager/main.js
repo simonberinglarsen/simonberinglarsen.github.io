@@ -38,6 +38,7 @@ function isVisible(id, show) {
     document.getElementById(id).setAttribute("style", show ? "" : "display:none")
 }
 
+// gets the text from a text field on the site
 function getText(id) {
     return document.getElementById(id).value;
 }
@@ -51,7 +52,6 @@ function renderUserTable() {
     <td>${member.memAddress}</td>
     <td>${member.memMobile}</td>
     <td>${member.memAge}</td></tr>`;
-
     document.getElementById('userTable').tBodies[0].innerHTML = `${members.map(m => mapToRow(m)).join('')}`;
 }
 
@@ -74,7 +74,7 @@ document.getElementById('btnLogout').onclick = function () {
     updateApp();
 }
 
-
+// adds a new member to the array by reading the input and creating a new object to be pushed
 document.getElementById('btnAdd').onclick = function () {
     members.push({
         memID: getText('memId'),
@@ -86,9 +86,12 @@ document.getElementById('btnAdd').onclick = function () {
     });
 }
 
+// clears the fields by setting the value to empty string
 document.getElementById('btnClear').onclick = function () {
-    ['memId','memName','memDob','memAddress','memMobile','memAge'].forEach(e => document.getElementById(e).value = '');
+    ['memId', 'memName', 'memDob', 'memAddress', 'memMobile', 'memAge'].forEach(e => document.getElementById(e).value = '');
 }
+
+// refreshes the list
 document.getElementById('btnRefresh').onclick = function () {
     updateApp();
 }
