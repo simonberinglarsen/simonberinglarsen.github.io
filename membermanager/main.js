@@ -111,5 +111,5 @@ document.getElementById('btnLogin').onclick = function () {
 }
 
 // this updates the initial state of the app.
-appState.loggedInUser = admins[0];
+//appState.loggedInUser = admins[0];
 updateApp();
