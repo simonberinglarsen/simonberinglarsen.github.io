@@ -1,36 +1,43 @@
+/* removes all margins and paddings - which is put on as default from the browser */
 * {
     margin: 0px;
     padding: 0px;
 }
 
+/* styles that apply "generally" for the whole site */
 body {
     background-color: #222;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #eee;
 }
 
+/* specific style for the label element */
 label {
     display: block;
     font-weight: bold;
 }
 
+/* this is for the text inputs */
 input[type='text'] {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid black;
 }
 
+/* this is for all buttons.. */
 button {
     padding: 10px;
     border: 1px solid black;
     border-radius: 5px;
 }
 
+/* this is for the html table */
 th, td {
     padding: 15px;
     text-align: left;
-  }
+}
 
+/* classes for the loginbox */
 .login {
     display: inline-block;
     background-color: #eee;
@@ -43,12 +50,9 @@ th, td {
     font-weight: bold;
 }
 
-
-.flex {
+/* arranging stuff */
+.center {
     display: flex;
-}
-
-.justify-content-center {
     justify-content: center;
 }
 
@@ -56,10 +60,21 @@ th, td {
     width: 100%;
 }
 
+/* error label in login box */
 .error {
     color: red;
 }
 
+/* navigation bar when the administrator is logged in */
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    background-color: #850;
+    padding: 20px;
+    font-size: 40px;
+}
+
+/* some colors */
 .bg-active {
     background-color: #ccf;
 }
@@ -67,12 +82,4 @@ th, td {
 .bg-dark {
     background-color: #222;
     color: #eee;
-}
-
-.nav-bar {
-    display: flex;
-    flex-direction: row;
-    background-color: #535;
-    padding: 20px;
-    font-size: 40px;
 }
