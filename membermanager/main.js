@@ -1,4 +1,5 @@
 // global array defining all admin users
+//=======================================================================================================================
 const admins = [
     {
         adminID: "a001",
@@ -8,6 +9,7 @@ const admins = [
 ];
 
 // global array defining all members
+//=======================================================================================================================
 const members = [
     {
         memID: "m001",
@@ -29,20 +31,25 @@ const members = [
 ];
 
 // application state - keeps track of things we save accross screens
+//=======================================================================================================================
 const appState = {
     loggedInUser: null,
 };
 
 // toggle whether or not to show a specific html element (given by id)
+//=======================================================================================================================
 function isVisible(id, show) {
     document.getElementById(id).setAttribute("style", show ? "" : "display:none")
 }
 
 // gets the text from a text field on the site
+//=======================================================================================================================
 function getText(id) {
     return document.getElementById(id).value;
 }
 
+// loads the member into the form so it can be edited
+//=======================================================================================================================
 function edit(memid) {
     const member = members.find(m => m.memID === memid);
     document.getElementById('memId').value = member.memID;
@@ -54,6 +61,8 @@ function edit(memid) {
     updateApp();
 }
 
+// takes the id and searches all mebers .. if found it will be deleted
+//=======================================================================================================================
 function deleteMember(memid) {
     const existingMember = members.find(m => m.memID === memid);
     if (existingMember) {
@@ -63,6 +72,7 @@ function deleteMember(memid) {
 }
 
 // renders the member table in html based on the javascript arrays
+//=======================================================================================================================
 function renderUserTable() {
     const mapToRow = (member) => `<tr>   
     <td>${member.memID}</td>
@@ -76,6 +86,7 @@ function renderUserTable() {
 }
 
 // updates the application - keeps track of what to show and what to hide. Also updating dynamic things based on application state (appState)
+//=======================================================================================================================
 function updateApp() {
     members.sort((a, b) => a.memID < b.memID ? -1 : 1);
     isVisible('loginScreen', !appState.loggedInUser);
@@ -89,14 +100,16 @@ function updateApp() {
 }
 
 // button to logout admin user. this method updates the state and calls the updateapp method to reflect changes
-document.getElementById('btnLogout').onclick = function () {
+//=======================================================================================================================
+function btnLogoutClick() {
     appState.loggedInUser = null;
     appState.invalidUser = false;
     updateApp();
 }
 
 // adds a new member to the array by reading the input and creating a new object to be pushed
-document.getElementById('btnAdd').onclick = function () {
+//=======================================================================================================================
+function btnAddClick() {
     const existingMember = members.find(m => m.memID === getText('memId'));
     if (existingMember) {
         members.splice(members.indexOf(existingMember), 1);
@@ -113,13 +126,15 @@ document.getElementById('btnAdd').onclick = function () {
 }
 
 // clears the fields by setting the value to empty string
-document.getElementById('btnClear').onclick = function () {
+//=======================================================================================================================
+function btnClearClick() {
     ['memId', 'memName', 'memDob', 'memAddress', 'memMobile', 'memAge'].forEach(e => document.getElementById(e).value = '');
 }
 
 // button to login. gets the username and password from the text boxes and see if there is a matching user in the global array.
 // in the end the application state is updated and the updateApp() method makes sure to hide/show the right stuff
-document.getElementById('btnLogin').onclick = function () {
+//=======================================================================================================================
+function btnLoginClick() {
     let user = getText('loginUser');
     let pass = getText('loginPassword');
     let admUser = admins.find(admUser => admUser.adminID === user && admUser.password === pass);
