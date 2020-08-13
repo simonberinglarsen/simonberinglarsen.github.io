@@ -26,6 +26,11 @@ button {
     border-radius: 5px;
 }
 
+th, td {
+    padding: 15px;
+    text-align: left;
+  }
+
 .login {
     display: inline-block;
     background-color: #eee;
@@ -57,4 +62,17 @@ button {
 
 .bg-active {
     background-color: #ccf;
+}
+
+.bg-dark {
+    background-color: #222;
+    color: #eee;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    background-color: #535;
+    padding: 20px;
+    font-size: 40px;
 }
