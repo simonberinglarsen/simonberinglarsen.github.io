@@ -1,6 +1,8 @@
 console.clear();
 
-const team = [
+let team = [];
+
+const teamMale = [
     {
         rank: 1,
         name: 'Lewis Hamilton',
@@ -82,7 +84,27 @@ const team = [
         games: 24
     }];
 
+const teamFemale = teamMale.map(x => {
+    return { ...x, name: `(f)${x.name}` };
+});
 
+
+function toggleButton(b1, b2) {
+    let c1 = btnMale.getAttribute("class")
+    let c2 = btnFemale.getAttribute("class")
+    btnMale.setAttribute("class", c2)
+    btnFemale.setAttribute("class", c1)
+}
+
+btnMale.onclick = function () {
+    toggleButton(btnMale, btnFemale);
+    update(teamMale);
+}
+
+btnFemale.onclick = function () {
+    toggleButton(btnMale, btnFemale);
+    update(teamFemale);
+}
 
 const randomEmoji = () => {
     const emojis = ['👏', '👍', '🙌', '🤩', '🔥', '⭐️', '🏆', '💯'];
@@ -90,18 +112,39 @@ const randomEmoji = () => {
     return emojis[randomNumber];
 };
 
-// Find Winner from sent kudos by sorting the drivers in the team array
-team.forEach(member => {
-    member.total = member.games + member.kudos;
-});
-let sortedTeam = team.sort((a, b) => b.total - a.total)
-sortedTeam.map((x,i)=>{x.rank = i+1});
-let winner = sortedTeam[0];
+function htmlToElement(html) {
+    var template = document.createElement('template');
+    html = html.trim(); // Never return a text node of whitespace as the result
+    template.innerHTML = html;
+    return template.content.firstChild;
+}
 
-team.forEach(member => {
-    let newRow = document.createElement('li');
-    newRow.classList = 'c-list__item';
-    newRow.innerHTML = `
+function update(team) {
+    // Find Winner from sent kudos by sorting the drivers in the team array
+    team.forEach(member => {
+        member.total = member.games + member.kudos;
+    });
+    let sortedTeam = team.sort((a, b) => b.total - a.total)
+    sortedTeam.map((x, i) => { x.rank = i + 1 });
+    let winner = sortedTeam[0];
+
+    list.innerHTML = ''
+    let header = htmlToElement(` <li class="c-list__item">
+    <div class="c-list__grid">
+        <div class="u-text--left u-text--small u-text--medium">Rank</div>
+        <div class="u-text--left u-text--small u-text--medium">Team Member</div>
+        <div class="u-display--flex flex-row">
+            <div class="u-text--right u-text--small u-text--medium w-60"># Kudos</div>
+            <div class="u-text--right u-text--small u-text--medium w-60"># Games</div>
+            <div class="u-text--right u-text--small u-text--medium w-60"># Total</div>
+        </div>
+    </div>
+</li>`);
+    list.appendChild(header);
+    team.forEach(member => {
+        let newRow = document.createElement('li');
+        newRow.classList = 'c-list__item';
+        newRow.innerHTML = `
 		<div class="c-list__grid">
 			<div class="c-flag c-place u-bg--transparent">${member.rank}</div>
 			<div class="c-media">
@@ -114,39 +157,42 @@ team.forEach(member => {
             <div class="u-text--right c-kudos">
                 <div class="u-display--flex flex-row">
                     <div class="u-mt--8  w-60">
-                        <strong>${member.kudos}</strong> ${randomEmoji()}
+                        <strong>${member.kudos}</strong>
                     </div>
                     <div class="u-mt--8  w-60">
                         <strong>${member.games}</strong>
                     </div>
                     <div class="u-mt--8  w-60">
-                        <strong>${member.total}</strong>
+                        <strong>${member.total}</strong> ${randomEmoji()}
                     </div>
                 </div>
 			</div>
 		</div>
 	`;
-    if (member.rank === 1) {
-        newRow.querySelector('.c-place').classList.add('u-text--dark');
-        newRow.querySelector('.c-place').classList.add('u-bg--yellow');
-        newRow.querySelector('.c-kudos').classList.add('u-text--yellow');
-    } else if (member.rank === 2) {
-        newRow.querySelector('.c-place').classList.add('u-text--dark');
-        newRow.querySelector('.c-place').classList.add('u-bg--teal');
-        newRow.querySelector('.c-kudos').classList.add('u-text--teal');
-    } else if (member.rank === 3) {
-        newRow.querySelector('.c-place').classList.add('u-text--dark');
-        newRow.querySelector('.c-place').classList.add('u-bg--orange');
-        newRow.querySelector('.c-kudos').classList.add('u-text--orange');
-    }
-    list.appendChild(newRow);
-});
+        if (member.rank === 1) {
+            newRow.querySelector('.c-place').classList.add('u-text--dark');
+            newRow.querySelector('.c-place').classList.add('u-bg--yellow');
+            newRow.querySelector('.c-kudos').classList.add('u-text--yellow');
+        } else if (member.rank === 2) {
+            newRow.querySelector('.c-place').classList.add('u-text--dark');
+            newRow.querySelector('.c-place').classList.add('u-bg--teal');
+            newRow.querySelector('.c-kudos').classList.add('u-text--teal');
+        } else if (member.rank === 3) {
+            newRow.querySelector('.c-place').classList.add('u-text--dark');
+            newRow.querySelector('.c-place').classList.add('u-bg--orange');
+            newRow.querySelector('.c-kudos').classList.add('u-text--orange');
+        }
 
-// Render winner card
-const winnerCard = document.getElementById('winner');
-winnerCard.innerHTML = `
+        list.appendChild(newRow);
+    });
+
+    // Render winner card
+    const winnerCard = document.getElementById('winner');
+    winnerCard.innerHTML = `
 	<div class="u-text-small u-text--medium u-mb--16">Top Sender Last Week</div>
 	<img class="c-avatar c-avatar--lg" src="${winner.img}"/>
 	<h3 class="u-mt--16">${winner.name}</h3>
 	<span class="u-text--teal u-text--small">${winner.name}</span>
 `;
+}
+update(teamFemale);
