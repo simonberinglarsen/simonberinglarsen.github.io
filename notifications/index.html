@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>Hello, world!</title>
+    <style>
+        .notif-bar {
+            display: flex;
+            flex-direction: row;
+            position: fixed;
+            width: 500px;
+            height: 150px;
+            margin: 0px auto;
+            left: 0;
+            right: 0;
+            top: 0px;
+            border: 1px solid black;
+            overflow: hidden;
+            
+
+        }
+
+        .notif-bar .smiley {
+            font-size: 100px;
+        }
+
+        p {
+            width: 500px;
+        }
+
+
+        div.scrolling {
+            padding-left: 100%;
+            padding-right: 100%; /*Initial offset*/
+            color: red;
+            overflow: visible;
+            white-space:nowrap;
+            width: auto;
+            font-size: 60px; position: relative;
+            animation: floatText 6s infinite linear;
+
+        }
+
+        @keyframes floatText {
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="notif-bar">
+        <div class="smiley">😀</div>
+        <div class="scrolling"></div>
+
+    </div>
+    <h1>Hello, world!</h1>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum</p>
+
+    <script>
+        const notifications = [
+            'Lorem Ipsum is simply dummy text of the 1234 1234 1234 1234 END.',
+            'Printing and typesetting industry. Lorem END.',
+            'Ipsum has been the industry END.',
+            'standard dummy text ever since the 1500s END.',
+            'When an unknown printer took a galley of type and scrambled it to make END.'
+        ];
+
+        const e = document.getElementsByClassName('scrolling')[0].innerText = notifications[0];
+
+
+
+
+    </script>
+</body>
+
+</html>
