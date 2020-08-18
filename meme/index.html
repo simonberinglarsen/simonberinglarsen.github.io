@@ -10,28 +10,29 @@
 
     <style>
         /*IMPORTS*/
-        
+
         @import "https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:400,400i,500|Lobster:400|Source+Code+Pro:400";
         /*MAIN*/
-        
+
         html,
         body {
             margin: 0px;
             padding: 0px;
         }
-        
+
         body {
             padding: 45px;
         }
-        
+
         * {
             box-sizing: border-box;
             font-family: 'Roboto';
             font-weight: 400;
             color: dimgrey;
         }
+
         /*HEADERS AND TEXT*/
-        
+
         h1,
         h2,
         h3 {
@@ -39,7 +40,7 @@
             font-family: 'Open Sans';
             font-weight: 300;
         }
-        
+
         h1 {
             font-weight: 400;
             font-family: 'Lobster';
@@ -48,43 +49,43 @@
             color: crimson;
             border-bottom: 1px dashed crimson;
         }
-        
+
         h2 {
             font-size: 30px;
             letter-spacing: 2px;
         }
-        
+
         h3 {
             font-size: 25px;
             letter-spacing: 1px;
         }
-        
+
         p {
             margin: 10px 0;
             color: dimgrey;
         }
-        
+
         span {
             color: dimgrey;
         }
-        
+
         code {
             font-family: 'Source Code Pro';
             color: black;
             background: #ededed;
             padding: 0px 5px 0px 5px;
         }
-        
+
         pre {
             padding: 5px;
             overflow: auto;
             background: #ededed;
         }
-        
+
         pre code {
             padding: 0px;
         }
-        
+
         img {
             width: auto;
             max-width: 100%;
@@ -92,8 +93,9 @@
             display: block;
             /* margin: 1em auto; */
         }
+
         /*INPUT METHODS*/
-        
+
         button,
         .btn {
             padding: 15px;
@@ -105,19 +107,19 @@
             outline: none;
             transition: all 0.25s, transform 0.1s;
         }
-        
+
         button:hover,
         .btn:hover {
             background: crimson;
             color: whitesmoke;
         }
-        
+
         button:active,
         .btn:active {
             background: crimson;
             transform: scale(0.8);
         }
-        
+
         input[type='text'],
         input[type='number'],
         select {
@@ -129,122 +131,125 @@
             outline: none;
             transition: all 0.25s;
         }
-        
+
         input[type='text']:hover,
         input[type='number']:hover,
         select:hover {
             background: grey;
         }
-        
+
         input[type='text']:focus,
         input[type='number']:focus,
         select:focus {
             background: crimson;
             color: whitesmoke;
         }
-        
+
         input[type='text']:focus::-webkit-input-placeholder,
         input[type='number']:focus::-webkit-input-placeholder,
         select:focus::-webkit-input-placeholder {
             color: whitesmoke;
         }
-        
+
         input[type='text']:focus::-moz-placeholder,
         input[type='number']:focus::-moz-placeholder,
         select:focus::-moz-placeholder {
             color: whitesmoke;
         }
-        
+
         input[type='text']:focus:-ms-input-placeholder,
         input[type='number']:focus:-ms-input-placeholder,
         select:focus:-ms-input-placeholder {
             color: whitesmoke;
         }
-        
+
         input[type='text']:focus:-moz-placeholder,
         input[type='number']:focus:-moz-placeholder,
         select:focus:-moz-placeholder {
             color: whitesmoke;
         }
-        
+
         a {
             box-sizing: border-box;
             color: crimson;
             text-decoration: none;
             font-weight: 500;
         }
-        
+
         a:hover {
             text-decoration: underline;
         }
+
         /*MISC*/
-        
+
         .inline {
             display: inline-block;
         }
-        
+
         .block {
             display: block;
         }
-        
+
         .hidden {
             display: none;
         }
+
         /*SCROLLBAR*/
-        
-         ::-webkit-scrollbar {
+
+        ::-webkit-scrollbar {
             width: 8px;
             height: 8px;
         }
-        
-         ::-webkit-scrollbar-button {
+
+        ::-webkit-scrollbar-button {
             width: 0px;
             height: 0px;
         }
-        
-         ::-webkit-scrollbar-thumb {
+
+        ::-webkit-scrollbar-thumb {
             background: crimson;
             border-radius: 0px;
         }
-        
-         ::-webkit-scrollbar-thumb:hover {
+
+        ::-webkit-scrollbar-thumb:hover {
             background: #d31339;
         }
-        
-         ::-webkit-scrollbar-thumb:active {
+
+        ::-webkit-scrollbar-thumb:active {
             box-shadow: inset 0px 0px 5px #67091c;
         }
-        
-         ::-webkit-scrollbar-track {
+
+        ::-webkit-scrollbar-track {
             background: lightgrey;
             border: 0px none darkgrey;
             border-radius: 0px;
             box-shadow: inset 0px 0px 5px dimgrey;
         }
-        
-         ::-webkit-scrollbar-track:hover {
+
+        ::-webkit-scrollbar-track:hover {
             background: lightgrey;
         }
-        
-         ::-webkit-scrollbar-track:active {
+
+        ::-webkit-scrollbar-track:active {
             box-shadow: inset 0px 0px 8px dimgrey;
         }
-        
-         ::-webkit-scrollbar-corner {
+
+        ::-webkit-scrollbar-corner {
             background: transparent;
         }
+
         /*RANGE*/
-        
+
         input[type=range] {
             -webkit-appearance: none;
             width: 100%;
             margin: 6px 0;
         }
-        
+
         input[type=range]:focus {
             outline: none;
         }
-        
+
         input[type=range]::-webkit-slider-runnable-track {
             width: 100%;
             height: 8px;
@@ -254,7 +259,7 @@
             border-radius: 20.1px;
             border: 0px solid #ffffff;
         }
-        
+
         input[type=range]::-webkit-slider-thumb {
             box-shadow: 0px 0px 0px #333333, 0px 0px 0px #404040;
             height: 20px;
@@ -265,11 +270,11 @@
             -webkit-appearance: none;
             margin-top: -6px;
         }
-        
+
         input[type=range]:focus::-webkit-slider-runnable-track {
             background: #dc143c;
         }
-        
+
         input[type=range]::-moz-range-track {
             width: 100%;
             height: 8px;
@@ -279,7 +284,7 @@
             border-radius: 20.1px;
             border: 0px solid #ffffff;
         }
-        
+
         input[type=range]::-moz-range-thumb {
             box-shadow: 0px 0px 0px #333333, 0px 0px 0px #404040;
             height: 20px;
@@ -288,7 +293,7 @@
             background: #696969;
             cursor: pointer;
         }
-        
+
         input[type=range]::-ms-track {
             width: 100%;
             height: 8px;
@@ -297,21 +302,21 @@
             border-color: transparent;
             color: transparent;
         }
-        
+
         input[type=range]::-ms-fill-lower {
             background: #dc143c;
             border: 0px solid #ffffff;
             border-radius: 40.2px;
             box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
         }
-        
+
         input[type=range]::-ms-fill-upper {
             background: #dc143c;
             border: 0px solid #ffffff;
             border-radius: 40.2px;
             box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
         }
-        
+
         input[type=range]::-ms-thumb {
             box-shadow: 0px 0px 0px #333333, 0px 0px 0px #404040;
             height: 20px;
@@ -321,25 +326,25 @@
             cursor: pointer;
             height: 8px;
         }
-        
+
         input[type=range]:focus::-ms-fill-lower {
             background: #dc143c;
         }
-        
+
         input[type=range]:focus::-ms-fill-upper {
             background: #dc143c;
         }
-        
+
         input[type=range] {
             -webkit-appearance: none;
             width: 100%;
             margin: 6px 0;
         }
-        
+
         input[type=range]:focus {
             outline: none;
         }
-        
+
         input[type=range]::-webkit-slider-runnable-track {
             width: 100%;
             height: 8px;
@@ -349,7 +354,7 @@
             border-radius: 20.1px;
             border: 0px solid #ffffff;
         }
-        
+
         input[type=range]::-webkit-slider-thumb {
             box-shadow: 0px 0px 0px #333333, 0px 0px 0px #404040;
             height: 20px;
@@ -360,11 +365,11 @@
             -webkit-appearance: none;
             margin-top: -6px;
         }
-        
+
         input[type=range]:focus::-webkit-slider-runnable-track {
             background: #dc143c;
         }
-        
+
         input[type=range]::-moz-range-track {
             width: 100%;
             height: 8px;
@@ -374,7 +379,7 @@
             border-radius: 20.1px;
             border: 0px solid #ffffff;
         }
-        
+
         input[type=range]::-moz-range-thumb {
             box-shadow: 0px 0px 0px #333333, 0px 0px 0px #404040;
             height: 20px;
@@ -383,7 +388,7 @@
             background: #696969;
             cursor: pointer;
         }
-        
+
         input[type=range]::-ms-track {
             width: 100%;
             height: 8px;
@@ -392,21 +397,21 @@
             border-color: transparent;
             color: transparent;
         }
-        
+
         input[type=range]::-ms-fill-lower {
             background: #dc143c;
             border: 0px solid #ffffff;
             border-radius: 40.2px;
             box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
         }
-        
+
         input[type=range]::-ms-fill-upper {
             background: #dc143c;
             border: 0px solid #ffffff;
             border-radius: 40.2px;
             box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
         }
-        
+
         input[type=range]::-ms-thumb {
             box-shadow: 0px 0px 0px #333333, 0px 0px 0px #404040;
             height: 20px;
@@ -416,25 +421,25 @@
             cursor: pointer;
             height: 8px;
         }
-        
+
         input[type=range]:focus::-ms-fill-lower {
             background: #dc143c;
         }
-        
+
         input[type=range]:focus::-ms-fill-upper {
             background: #dc143c;
         }
-        
+
         input[type=range] {
             -webkit-appearance: none;
             width: 100%;
             margin: 6px 0;
         }
-        
+
         input[type=range]:focus {
             outline: none;
         }
-        
+
         input[type=range]::-webkit-slider-runnable-track {
             width: 100%;
             height: 8px;
@@ -444,7 +449,7 @@
             border-radius: 20.1px;
             border: 0px solid #ffffff;
         }
-        
+
         input[type=range]::-webkit-slider-thumb {
             box-shadow: 0px 0px 0px #333333, 0px 0px 0px #404040;
             height: 20px;
@@ -455,11 +460,11 @@
             -webkit-appearance: none;
             margin-top: -6px;
         }
-        
+
         input[type=range]:focus::-webkit-slider-runnable-track {
             background: #dc143c;
         }
-        
+
         input[type=range]::-moz-range-track {
             width: 100%;
             height: 8px;
@@ -469,7 +474,7 @@
             border-radius: 20.1px;
             border: 0px solid #ffffff;
         }
-        
+
         input[type=range]::-moz-range-thumb {
             box-shadow: 0px 0px 0px #333333, 0px 0px 0px #404040;
             height: 20px;
@@ -478,7 +483,7 @@
             background: #696969;
             cursor: pointer;
         }
-        
+
         input[type=range]::-ms-track {
             width: 100%;
             height: 8px;
@@ -487,21 +492,21 @@
             border-color: transparent;
             color: transparent;
         }
-        
+
         input[type=range]::-ms-fill-lower {
             background: #dc143c;
             border: 0px solid #ffffff;
             border-radius: 40.2px;
             box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
         }
-        
+
         input[type=range]::-ms-fill-upper {
             background: #dc143c;
             border: 0px solid #ffffff;
             border-radius: 40.2px;
             box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
         }
-        
+
         input[type=range]::-ms-thumb {
             box-shadow: 0px 0px 0px #333333, 0px 0px 0px #404040;
             height: 20px;
@@ -511,21 +516,22 @@
             cursor: pointer;
             height: 8px;
         }
-        
+
         input[type=range]:focus::-ms-fill-lower {
             background: #dc143c;
         }
-        
+
         input[type=range]:focus::-ms-fill-upper {
             background: #dc143c;
         }
+
         /*LAYOUT*/
-        
+
         .box {
             display: block;
             width: 100%;
         }
-        
+
         .box::after {
             visibility: hidden;
             display: block;
@@ -534,27 +540,29 @@
             clear: both;
             height: 0;
         }
-        
+
         .box>div {
             display: inline-block;
             width: 50%;
             overflow: auto;
             float: left;
         }
-        
+
         .box>div:nth-child(odd) {
             padding-right: .5em;
         }
-        
+
         .box>div:nth-child(even) {
             padding-left: .5em;
         }
+
         /*MEDIA*/
-        
+
         @media only screen and (max-width: 720px) {
             body {
                 padding: 15px;
             }
+
             .box>div {
                 display: block;
                 width: 100%;
@@ -562,22 +570,22 @@
                 float: none;
             }
         }
-        
+
         .fullwidth {
             width: 100%;
             max-width: 500px;
             max-height: 800px;
         }
-        
+
         #imgFile {
             display: none;
         }
-        
+
         input[type='text'],
         input[type='range'] {
             width: 100%;
         }
-        
+
         h3>i.fa {
             margin-right: .2em;
         }
@@ -644,7 +652,7 @@
             <div class="box">
                 <div>
                     <h3><i class="fa fa-eye fa-fw" aria-hidden="true"></i>Preview Size</h3>
-                    <input id="trueSize" type="checkbox" select/>
+                    <input id="trueSize" type="checkbox" select />
                     <label for="trueSize"><span>Show true size</span></label>
                 </div>
 
@@ -669,7 +677,7 @@
 <script>
     // CAN\NVAS.js plugin
     // ninivert, december 2016
-    (function(window, document) {
+    (function (window, document) {
         /**
          * CAN\VAS Plugin - Adding line breaks to canvas
          * @arg {string} [str=Hello World] - text to be drawn
@@ -680,7 +688,7 @@
          * @arg {number} [method=fill]     - text drawing method, if 'none', text will not be rendered
          */
 
-        CanvasRenderingContext2D.prototype.drawBreakingText = function(str, x, y, w, lh, method) {
+        CanvasRenderingContext2D.prototype.drawBreakingText = function (str, x, y, w, lh, method) {
             // local variables and defaults
             var textSize = parseInt(this.font.replace(/\D/gi, ''));
             var textParts = [];
@@ -768,15 +776,11 @@
     var textTop = '';
     var textBottom = '';
     var textSizeTop = 10;
-    var textSizeBottom = 10;
+    var textSizeBottom = 16;
     var image = document.createElement('img');
-    image.crossOrigin = "Anonymous";
+    image.crossOrigin = 'Anonymous';
 
-
-
-
-
-    image.onload = function(ev) {
+    image.onload = function (ev) {
         // delete and recreate canvas do untaint it
         canvas.outerHTML = '';
         canvas = document.createElement('canvas');
@@ -784,20 +788,20 @@
         ctx = canvas.getContext('2d');
         document.getElementById('trueSize').click();
         document.getElementById('trueSize').click();
-        image.crossOrigin = "Anonymous";
+        image.crossOrigin = 'Anonymous';
         draw();
     };
 
-    document.getElementById('imgURL').oninput = function(ev) {
-        reader.onload = function(ev) {
+    document.getElementById('imgURL').oninput = function (ev) {
+        reader.onload = function (ev) {
             image.src = this.value;
         };
         reader.readAsDataURL(this.files[0]);
     };
 
-    document.getElementById('imgFile').onchange = function(ev) {
+    document.getElementById('imgFile').onchange = function (ev) {
         var reader = new FileReader();
-        reader.onload = function(ev) {
+        reader.onload = function (ev) {
             image.src = reader.result;
         };
         reader.readAsDataURL(this.files[0]);
@@ -805,24 +809,24 @@
 
 
 
-    document.getElementById('textTop').oninput = function(ev) {
+    document.getElementById('textTop').oninput = function (ev) {
         textTop = this.value;
         draw();
     };
 
-    document.getElementById('textBottom').oninput = function(ev) {
+    document.getElementById('textBottom').oninput = function (ev) {
         textBottom = this.value;
         draw();
     };
 
 
 
-    document.getElementById('textSizeTop').oninput = function(ev) {
+    document.getElementById('textSizeTop').oninput = function (ev) {
         textSizeTop = parseInt(this.value);
         draw();
         document.getElementById('textSizeTopOut').innerHTML = this.value;
     };
-    document.getElementById('textSizeBottom').oninput = function(ev) {
+    document.getElementById('textSizeBottom').oninput = function (ev) {
         textSizeBottom = parseInt(this.value);
         draw();
         document.getElementById('textSizeBottomOut').innerHTML = this.value;
@@ -830,7 +834,7 @@
 
 
 
-    document.getElementById('trueSize').onchange = function(ev) {
+    document.getElementById('trueSize').onchange = function (ev) {
         if (document.getElementById('trueSize').checked) {
             canvas.classList.remove('fullwidth');
         } else {
@@ -840,9 +844,9 @@
 
 
 
-    document.getElementById('export').onclick = function() {
+    document.getElementById('export').onclick = function () {
         var img = canvas.toDataURL('image/png');
-        var link = document.createElement("a");
+        var link = document.createElement('a');
         link.download = 'My Meme';
         link.href = img;
         link.click();
@@ -854,32 +858,32 @@
     };
 
     var i = 0;
-    document.getElementById('add_element').onclick = function() {
+    document.getElementById('add_element').onclick = function () {
 
-        var x = document.createElement("CANVAS");
-        var div = document.createElement("div");
-        var div1 = document.createElement("div");
-        var delete_img = document.createElement("img");
-        delete_img.src = "delete.png";
-        delete_img.setAttribute("style", "display:none; width:500px; heigth:500px;");
-        div.setAttribute("class", "add_row");
-        div.setAttribute("style", "margin-bottom:10px;");
+        var x = document.createElement('CANVAS');
+        var div = document.createElement('div');
+        var div1 = document.createElement('div');
+        var delete_img = document.createElement('img');
+        delete_img.src = 'delete.png';
+        delete_img.setAttribute('style', 'display:none; width:500px; heigth:500px;');
+        div.setAttribute('class', 'add_row');
+        div.setAttribute('style', 'margin-bottom:10px;');
 
         var add_box = document.getElementById('meme_box');
-        x.setAttribute("class", "add_canvas");
-        x.setAttribute("id", i);
-        x.onmouseover = function() {
-            x.setAttribute("style", "display:none");
-            delete_img.setAttribute("style", "display:block;width:500px; heigth:500px;");
+        x.setAttribute('class', 'add_canvas');
+        x.setAttribute('id', i);
+        x.onmouseover = function () {
+            x.setAttribute('style', 'display:none');
+            delete_img.setAttribute('style', 'display:block;width:500px; heigth:500px;');
         };
-        delete_img.onmouseout = function() {
-            x.setAttribute("style", "display:block");
-            delete_img.setAttribute("style", "display:none;width:500px; heigth:500px;");
+        delete_img.onmouseout = function () {
+            x.setAttribute('style', 'display:block');
+            delete_img.setAttribute('style', 'display:none;width:500px; heigth:500px;');
         };
-        delete_img.onclick = function() {
+        delete_img.onclick = function () {
             this.remove();
         };
-        var ctx = x.getContext("2d");
+        var ctx = x.getContext('2d');
         var top = textTop.toUpperCase();
         var bottom = textBottom.toUpperCase();
 
@@ -909,8 +913,8 @@
         // console.log(ctx.drawBreakingText(bottom, 0, 0, null, 1, 'none'));
         ctx.drawBreakingText(bottom, x.width / 2, x.height - padding - height, null, 1, 'fill');
         ctx.drawBreakingText(bottom, x.width / 2, x.height - padding - height, null, 1, 'stroke');
-        document.getElementById('textBottom').value = "";
-        document.getElementById('textTop').value = "";
+        document.getElementById('textBottom').value = '';
+        document.getElementById('textTop').value = '';
 
         div.appendChild(x);
         div.appendChild(div1);
@@ -970,6 +974,12 @@
     document.getElementById('textSizeBottom').value = textSizeBottom;
     document.getElementById('textSizeTopOut').innerHTML = textSizeTop;
     document.getElementById('textSizeBottomOut').innerHTML = textSizeBottom;
+
+    document.getElementById('textTop').value = 'this source code is..';
+    document.getElementById('textTop').oninput();
+    document.getElementById('textBottom').value = 'mindblowing!';
+    document.getElementById('textBottom').oninput();
+
 </script>
 
 </html>
