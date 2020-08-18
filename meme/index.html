@@ -660,7 +660,6 @@
                 <br>
                 <div>
                     <button id="export">Export!</button>
-                    <button id="add_element">Add Element</button>
                 </div>
 
             </div>
@@ -858,71 +857,6 @@
     };
 
     var i = 0;
-    document.getElementById('add_element').onclick = function () {
-
-        var x = document.createElement('CANVAS');
-        var div = document.createElement('div');
-        var div1 = document.createElement('div');
-        var delete_img = document.createElement('img');
-        delete_img.src = 'delete.png';
-        delete_img.setAttribute('style', 'display:none; width:500px; heigth:500px;');
-        div.setAttribute('class', 'add_row');
-        div.setAttribute('style', 'margin-bottom:10px;');
-
-        var add_box = document.getElementById('meme_box');
-        x.setAttribute('class', 'add_canvas');
-        x.setAttribute('id', i);
-        x.onmouseover = function () {
-            x.setAttribute('style', 'display:none');
-            delete_img.setAttribute('style', 'display:block;width:500px; heigth:500px;');
-        };
-        delete_img.onmouseout = function () {
-            x.setAttribute('style', 'display:block');
-            delete_img.setAttribute('style', 'display:none;width:500px; heigth:500px;');
-        };
-        delete_img.onclick = function () {
-            this.remove();
-        };
-        var ctx = x.getContext('2d');
-        var top = textTop.toUpperCase();
-        var bottom = textBottom.toUpperCase();
-
-        // set appropriate canvas size
-        x.width = 500;
-        x.height = 500;
-
-        // draw the image
-        ctx.drawImage(image, 0, 0, x.width, x.height);
-
-        // styles
-        ctx.fillStyle = '#fff';
-        ctx.strokeStyle = '#000';
-        ctx.lineWidth = x.width * 0.004;
-
-        var _textSizeTop = textSizeTop / 100 * x.width;
-        var _textSizeBottom = textSizeBottom / 100 * x.width;
-
-        // draw top text
-        add_style(ctx, 'Impact', _textSizeTop, 'center', 'bottom');
-        ctx.drawBreakingText(top, x.width / 2, _textSizeTop + padding, null, 1, 'fill');
-        ctx.drawBreakingText(top, x.width / 2, _textSizeTop + padding, null, 1, 'stroke');
-
-        // draw bottom text
-        add_style(ctx, 'Impact', _textSizeBottom, 'center', 'top');
-        var height = ctx.drawBreakingText(bottom, 0, 0, null, 1, 'none').textHeight;
-        // console.log(ctx.drawBreakingText(bottom, 0, 0, null, 1, 'none'));
-        ctx.drawBreakingText(bottom, x.width / 2, x.height - padding - height, null, 1, 'fill');
-        ctx.drawBreakingText(bottom, x.width / 2, x.height - padding - height, null, 1, 'stroke');
-        document.getElementById('textBottom').value = '';
-        document.getElementById('textTop').value = '';
-
-        div.appendChild(x);
-        div.appendChild(div1);
-        add_box.appendChild(div);
-        div1.appendChild(delete_img);
-        i++;
-    };
-
 
     function style(font, size, align, base) {
         ctx.font = Math.floor(size) + 'px ' + font;
