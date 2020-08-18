@@ -770,6 +770,7 @@
     var textSizeTop = 10;
     var textSizeBottom = 10;
     var image = document.createElement('img');
+    image.crossOrigin = "Anonymous";
 
 
 
@@ -783,7 +784,7 @@
         ctx = canvas.getContext('2d');
         document.getElementById('trueSize').click();
         document.getElementById('trueSize').click();
-
+        image.crossOrigin = "Anonymous";
         draw();
     };
 
