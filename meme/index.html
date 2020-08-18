@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme generate</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        /*IMPORTS*/
+        
+        @import "https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:400,400i,500|Lobster:400|Source+Code+Pro:400";
+        /*MAIN*/
+        
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            padding: 45px;
+        }
+        
+        * {
+            box-sizing: border-box;
+            font-family: 'Roboto';
+            font-weight: 400;
+            color: dimgrey;
+        }
+        /*HEADERS AND TEXT*/
+        
+        h1,
+        h2,
+        h3 {
+            margin: 15px 0;
+            font-family: 'Open Sans';
+            font-weight: 300;
+        }
+        
+        h1 {
+            font-weight: 400;
+            font-family: 'Lobster';
+            font-size: 45px;
+            letter-spacing: 3px;
+            color: crimson;
+            border-bottom: 1px dashed crimson;
+        }
+        
+        h2 {
+            font-size: 30px;
+            letter-spacing: 2px;
+        }
+        
+        h3 {
+            font-size: 25px;
+            letter-spacing: 1px;
+        }
+        
+        p {
+            margin: 10px 0;
+            color: dimgrey;
+        }
+        
+        span {
+            color: dimgrey;
+        }
+        
+        code {
+            font-family: 'Source Code Pro';
+            color: black;
+            background: #ededed;
+            padding: 0px 5px 0px 5px;
+        }
+        
+        pre {
+            padding: 5px;
+            overflow: auto;
+            background: #ededed;
+        }
+        
+        pre code {
+            padding: 0px;
+        }
+        
+        img {
+            width: auto;
+            max-width: 100%;
+            max-height: 500px;
+            display: block;
+            /* margin: 1em auto; */
+        }
+        /*INPUT METHODS*/
+        
+        button,
+        .btn {
+            padding: 15px;
+            margin: 0 10px 10px 0;
+            display: inline-block;
+            border: 0px solid dimgrey;
+            background: dimgrey;
+            color: whitesmoke;
+            outline: none;
+            transition: all 0.25s, transform 0.1s;
+        }
+        
+        button:hover,
+        .btn:hover {
+            background: crimson;
+            color: whitesmoke;
+        }
+        
+        button:active,
+        .btn:active {
+            background: crimson;
+            transform: scale(0.8);
+        }
+        
+        input[type='text'],
+        input[type='number'],
+        select {
+            padding: 15px;
+            margin: 0 10px 10px 0px;
+            border: 0px solid dimgrey;
+            background: dimgrey;
+            color: whitesmoke;
+            outline: none;
+            transition: all 0.25s;
+        }
+        
+        input[type='text']:hover,
+        input[type='number']:hover,
+        select:hover {
+            background: grey;
+        }
+        
+        input[type='text']:focus,
+        input[type='number']:focus,
+        select:focus {
+            background: crimson;
+            color: whitesmoke;
+        }
+        
+        input[type='text']:focus::-webkit-input-placeholder,
+        input[type='number']:focus::-webkit-input-placeholder,
+        select:focus::-webkit-input-placeholder {
+            color: whitesmoke;
+        }
+        
+        input[type='text']:focus::-moz-placeholder,
+        input[type='number']:focus::-moz-placeholder,
+        select:focus::-moz-placeholder {
+            color: whitesmoke;
+        }
+        
+        input[type='text']:focus:-ms-input-placeholder,
+        input[type='number']:focus:-ms-input-placeholder,
+        select:focus:-ms-input-placeholder {
+            color: whitesmoke;
+        }
+        
+        input[type='text']:focus:-moz-placeholder,
+        input[type='number']:focus:-moz-placeholder,
+        select:focus:-moz-placeholder {
+            color: whitesmoke;
+        }
+        
+        a {
+            box-sizing: border-box;
+            color: crimson;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        /*MISC*/
+        
+        .inline {
+            display: inline-block;
+        }
+        
+        .block {
+            display: block;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        /*SCROLLBAR*/
+        
+         ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        
+         ::-webkit-scrollbar-button {
+            width: 0px;
+            height: 0px;
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background: crimson;
+            border-radius: 0px;
+        }
+        
+         ::-webkit-scrollbar-thumb:hover {
+            background: #d31339;
+        }
+        
+         ::-webkit-scrollbar-thumb:active {
+            box-shadow: inset 0px 0px 5px #67091c;
+        }
+        
+         ::-webkit-scrollbar-track {
+            background: lightgrey;
+            border: 0px none darkgrey;
+            border-radius: 0px;
+            box-shadow: inset 0px 0px 5px dimgrey;
+        }
+        
+         ::-webkit-scrollbar-track:hover {
+            background: lightgrey;
+        }
+        
+         ::-webkit-scrollbar-track:active {
+            box-shadow: inset 0px 0px 8px dimgrey;
+        }
+        
+         ::-webkit-scrollbar-corner {
+            background: transparent;
+        }
+        /*RANGE*/
+        
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            margin: 6px 0;
+        }
+        
+        input[type=range]:focus {
+            outline: none;
+        }
+        
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+            background: #dc143c;
+            border-radius: 20.1px;
+            border: 0px solid #ffffff;
+        }
+        
+        input[type=range]::-webkit-slider-thumb {
+            box-shadow: 0px 0px 0px #333333, 0px 0px 0px #404040;
+            height: 20px;
+            width: 20px;
+            border-radius: 20px;
+            background: #696969;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -6px;
+        }
+        
+        input[type=range]:focus::-webkit-slider-runnable-track {
+            background: #dc143c;
+        }
+        
+        input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+            background: #dc143c;
+            border-radius: 20.1px;
+            border: 0px solid #ffffff;
+        }
+        
+        input[type=range]::-moz-range-thumb {
+            box-shadow: 0px 0px 0px #333333, 0px 0px 0px #404040;
+            height: 20px;
+            width: 20px;
+            border-radius: 20px;
+            background: #696969;
+            cursor: pointer;
+        }
+        
+        input[type=range]::-ms-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+        }
+        
+        input[type=range]::-ms-fill-lower {
+            background: #dc143c;
+            border: 0px solid #ffffff;
+            border-radius: 40.2px;
+            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+        }
+        
+        input[type=range]::-ms-fill-upper {
+            background: #dc143c;
+            border: 0px solid #ffffff;
+            border-radius: 40.2px;
+            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+        }
+        
+        input[type=range]::-ms-thumb {
+            box-shadow: 0px 0px 0px #333333, 0px 0px 0px #404040;
+            height: 20px;
+            width: 20px;
+            border-radius: 20px;
+            background: #696969;
+            cursor: pointer;
+            height: 8px;
+        }
+        
+        input[type=range]:focus::-ms-fill-lower {
+            background: #dc143c;
+        }
+        
+        input[type=range]:focus::-ms-fill-upper {
+            background: #dc143c;
+        }
+        
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            margin: 6px 0;
+        }
+        
+        input[type=range]:focus {
+            outline: none;
+        }
+        
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+            background: #dc143c;
+            border-radius: 20.1px;
+            border: 0px solid #ffffff;
+        }
+        
+        input[type=range]::-webkit-slider-thumb {
+            box-shadow: 0px 0px 0px #333333, 0px 0px 0px #404040;
+            height: 20px;
+            width: 20px;
+            border-radius: 20px;
+            background: #696969;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -6px;
+        }
+        
+        input[type=range]:focus::-webkit-slider-runnable-track {
+            background: #dc143c;
+        }
+        
+        input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+            background: #dc143c;
+            border-radius: 20.1px;
+            border: 0px solid #ffffff;
+        }
+        
+        input[type=range]::-moz-range-thumb {
+            box-shadow: 0px 0px 0px #333333, 0px 0px 0px #404040;
+            height: 20px;
+            width: 20px;
+            border-radius: 20px;
+            background: #696969;
+            cursor: pointer;
+        }
+        
+        input[type=range]::-ms-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+        }
+        
+        input[type=range]::-ms-fill-lower {
+            background: #dc143c;
+            border: 0px solid #ffffff;
+            border-radius: 40.2px;
+            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+        }
+        
+        input[type=range]::-ms-fill-upper {
+            background: #dc143c;
+            border: 0px solid #ffffff;
+            border-radius: 40.2px;
+            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+        }
+        
+        input[type=range]::-ms-thumb {
+            box-shadow: 0px 0px 0px #333333, 0px 0px 0px #404040;
+            height: 20px;
+            width: 20px;
+            border-radius: 20px;
+            background: #696969;
+            cursor: pointer;
+            height: 8px;
+        }
+        
+        input[type=range]:focus::-ms-fill-lower {
+            background: #dc143c;
+        }
+        
+        input[type=range]:focus::-ms-fill-upper {
+            background: #dc143c;
+        }
+        
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            margin: 6px 0;
+        }
+        
+        input[type=range]:focus {
+            outline: none;
+        }
+        
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+            background: #dc143c;
+            border-radius: 20.1px;
+            border: 0px solid #ffffff;
+        }
+        
+        input[type=range]::-webkit-slider-thumb {
+            box-shadow: 0px 0px 0px #333333, 0px 0px 0px #404040;
+            height: 20px;
+            width: 20px;
+            border-radius: 20px;
+            background: #696969;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -6px;
+        }
+        
+        input[type=range]:focus::-webkit-slider-runnable-track {
+            background: #dc143c;
+        }
+        
+        input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+            background: #dc143c;
+            border-radius: 20.1px;
+            border: 0px solid #ffffff;
+        }
+        
+        input[type=range]::-moz-range-thumb {
+            box-shadow: 0px 0px 0px #333333, 0px 0px 0px #404040;
+            height: 20px;
+            width: 20px;
+            border-radius: 20px;
+            background: #696969;
+            cursor: pointer;
+        }
+        
+        input[type=range]::-ms-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+        }
+        
+        input[type=range]::-ms-fill-lower {
+            background: #dc143c;
+            border: 0px solid #ffffff;
+            border-radius: 40.2px;
+            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+        }
+        
+        input[type=range]::-ms-fill-upper {
+            background: #dc143c;
+            border: 0px solid #ffffff;
+            border-radius: 40.2px;
+            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+        }
+        
+        input[type=range]::-ms-thumb {
+            box-shadow: 0px 0px 0px #333333, 0px 0px 0px #404040;
+            height: 20px;
+            width: 20px;
+            border-radius: 20px;
+            background: #696969;
+            cursor: pointer;
+            height: 8px;
+        }
+        
+        input[type=range]:focus::-ms-fill-lower {
+            background: #dc143c;
+        }
+        
+        input[type=range]:focus::-ms-fill-upper {
+            background: #dc143c;
+        }
+        /*LAYOUT*/
+        
+        .box {
+            display: block;
+            width: 100%;
+        }
+        
+        .box::after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: '';
+            clear: both;
+            height: 0;
+        }
+        
+        .box>div {
+            display: inline-block;
+            width: 50%;
+            overflow: auto;
+            float: left;
+        }
+        
+        .box>div:nth-child(odd) {
+            padding-right: .5em;
+        }
+        
+        .box>div:nth-child(even) {
+            padding-left: .5em;
+        }
+        /*MEDIA*/
+        
+        @media only screen and (max-width: 720px) {
+            body {
+                padding: 15px;
+            }
+            .box>div {
+                display: block;
+                width: 100%;
+                padding: 0 0 !important;
+                float: none;
+            }
+        }
+        
+        .fullwidth {
+            width: 100%;
+            max-width: 500px;
+            max-height: 800px;
+        }
+        
+        #imgFile {
+            display: none;
+        }
+        
+        input[type='text'],
+        input[type='range'] {
+            width: 100%;
+        }
+        
+        h3>i.fa {
+            margin-right: .2em;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <h1>Meme Generator</h1>
+
+    <div class="box">
+        <div>
+            <div id="canvasWrapper">
+            </div>
+        </div>
+        <div>
+            <h3><i class="fa fa-picture-o fa-fw" aria-hidden="true"></i>Source Image</h3>
+            <div class="box">
+                <div>
+                    <p>From URL</p>
+                    <input id="imgURL" class="block" type="text" placeholder="Link to image" />
+                    <!-- <a href="http://memeful.com/" target="_blank">Memeful.com</a> -->
+                </div>
+                <div>
+                    <p>From Local Disk</p>
+                    <input id="imgFile" type="file" accept="image/*" />
+                    <label for="imgFile" class="btn"><i class="fa fa-upload fa-fw"></i></label>
+                </div>
+            </div>
+
+
+
+            <h3><i class="fa fa-commenting-o fa-fw" aria-hidden="true"></i>Meme Text</h3>
+            <div class="box">
+                <div>
+                    <p>Top Text</p>
+                    <input id="textTop" type="text" class="block" placeholder="Top text" />
+                </div>
+                <div>
+                    <p>Bottom Text</p>
+                    <input id="textBottom" type="text" class="block" placeholder="Bottom text" />
+                </div>
+            </div>
+
+
+
+            <h3><i class="fa fa-text-height fa-fw" aria-hidden="true"></i>Text Size</h3>
+            <div class="box">
+                <div>
+                    <p>Top Text: <span id="textSizeTopOut">10</span></p>
+                    <input id="textSizeTop" type="range" min="2" max="50" step="2" />
+                </div>
+                <div>
+                    <p>Bottom Text: <span id="textSizeBottomOut">10</span></p>
+                    <input id="textSizeBottom" type="range" min="2" max="50" step="2" />
+                </div>
+            </div>
+
+
+
+            <div class="box">
+                <div>
+                    <h3><i class="fa fa-eye fa-fw" aria-hidden="true"></i>Preview Size</h3>
+                    <input id="trueSize" type="checkbox" select/>
+                    <label for="trueSize"><span>Show true size</span></label>
+                </div>
+
+
+                <br>
+                <div>
+                    <button id="export">Export!</button>
+                    <button id="add_element">Add Element</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="box" id="meme_box">
+    </div>
+</body>
+
+<script src="https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    // CAN\NVAS.js plugin
+    // ninivert, december 2016
+    (function(window, document) {
+        /**
+         * CAN\VAS Plugin - Adding line breaks to canvas
+         * @arg {string} [str=Hello World] - text to be drawn
+         * @arg {number} [x=0]             - top left x coordinate of the text
+         * @arg {number} [y=textSize]      - top left y coordinate of the text
+         * @arg {number} [w=canvasWidth]   - maximum width of drawn text
+         * @arg {number} [lh=1]            - line height
+         * @arg {number} [method=fill]     - text drawing method, if 'none', text will not be rendered
+         */
+
+        CanvasRenderingContext2D.prototype.drawBreakingText = function(str, x, y, w, lh, method) {
+            // local variables and defaults
+            var textSize = parseInt(this.font.replace(/\D/gi, ''));
+            var textParts = [];
+            var textPartsNo = 0;
+            var words = [];
+            var currLine = '';
+            var testLine = '';
+            str = str || '';
+            x = x || 0;
+            y = y || 0;
+            w = w || this.canvas.width;
+            lh = lh || 1;
+            method = method || 'fill';
+
+            // manual linebreaks
+            textParts = str.split('\n');
+            textPartsNo = textParts.length;
+
+            // split the words of the parts
+            for (var i = 0; i < textParts.length; i++) {
+                words[i] = textParts[i].split(' ');
+            }
+
+            // now that we have extracted the words
+            // we reset the textParts
+            textParts = [];
+
+            // calculate recommended line breaks
+            // split between the words
+            for (var i = 0; i < textPartsNo; i++) {
+
+                // clear the testline for the next manually broken line
+                currLine = '';
+
+                for (var j = 0; j < words[i].length; j++) {
+                    testLine = currLine + words[i][j] + ' ';
+
+                    // check if the testLine is of good width
+                    if (this.measureText(testLine).width > w && j > 0) {
+                        textParts.push(currLine);
+                        currLine = words[i][j] + ' ';
+                    } else {
+                        currLine = testLine;
+                    }
+                }
+                // replace is to remove trailing whitespace
+                textParts.push(currLine);
+            }
+
+            // render the text on the canvas
+            for (var i = 0; i < textParts.length; i++) {
+                if (method === 'fill') {
+                    this.fillText(textParts[i].replace(/((\s*\S+)*)\s*/, '$1'), x, y + (textSize * lh * i));
+                } else if (method === 'stroke') {
+                    this.strokeText(textParts[i].replace(/((\s*\S+)*)\s*/, '$1'), x, y + (textSize * lh * i));
+                } else if (method === 'none') {
+                    return {
+                        'textParts': textParts,
+                        'textHeight': textSize * lh * textParts.length
+                    };
+                } else {
+                    console.warn('drawBreakingText: ' + method + 'Text() does not exist');
+                    return false;
+                }
+            }
+
+            return {
+                'textParts': textParts,
+                'textHeight': textSize * lh * textParts.length
+            };
+        };
+    })(window, document);
+
+
+
+
+
+    var canvas = document.createElement('canvas');
+    var canvasWrapper = document.getElementById('canvasWrapper');
+    canvasWrapper.appendChild(canvas);
+    canvas.width = 500;
+    canvas.height = 500;
+    var ctx = canvas.getContext('2d');
+    var padding = 15;
+    var textTop = '';
+    var textBottom = '';
+    var textSizeTop = 10;
+    var textSizeBottom = 10;
+    var image = document.createElement('img');
+
+
+
+
+
+    image.onload = function(ev) {
+        // delete and recreate canvas do untaint it
+        canvas.outerHTML = '';
+        canvas = document.createElement('canvas');
+        canvasWrapper.appendChild(canvas);
+        ctx = canvas.getContext('2d');
+        document.getElementById('trueSize').click();
+        document.getElementById('trueSize').click();
+
+        draw();
+    };
+
+    document.getElementById('imgURL').oninput = function(ev) {
+        reader.onload = function(ev) {
+            image.src = this.value;
+        };
+        reader.readAsDataURL(this.files[0]);
+    };
+
+    document.getElementById('imgFile').onchange = function(ev) {
+        var reader = new FileReader();
+        reader.onload = function(ev) {
+            image.src = reader.result;
+        };
+        reader.readAsDataURL(this.files[0]);
+    };
+
+
+
+    document.getElementById('textTop').oninput = function(ev) {
+        textTop = this.value;
+        draw();
+    };
+
+    document.getElementById('textBottom').oninput = function(ev) {
+        textBottom = this.value;
+        draw();
+    };
+
+
+
+    document.getElementById('textSizeTop').oninput = function(ev) {
+        textSizeTop = parseInt(this.value);
+        draw();
+        document.getElementById('textSizeTopOut').innerHTML = this.value;
+    };
+    document.getElementById('textSizeBottom').oninput = function(ev) {
+        textSizeBottom = parseInt(this.value);
+        draw();
+        document.getElementById('textSizeBottomOut').innerHTML = this.value;
+    };
+
+
+
+    document.getElementById('trueSize').onchange = function(ev) {
+        if (document.getElementById('trueSize').checked) {
+            canvas.classList.remove('fullwidth');
+        } else {
+            canvas.classList.add('fullwidth');
+        }
+    };
+
+
+
+    document.getElementById('export').onclick = function() {
+        var img = canvas.toDataURL('image/png');
+        var link = document.createElement("a");
+        link.download = 'My Meme';
+        link.href = img;
+        link.click();
+
+        var win = window.open('', '_blank');
+        win.document.write('<img style="box-shadow: 0 0 1em 0 dimgrey;" src="' + img + '"/>');
+        win.document.write('<h1 style="font-family: Helvetica; font-weight: 300">Right Click > Save As<h1>');
+        win.document.body.style.padding = '1em';
+    };
+
+    var i = 0;
+    document.getElementById('add_element').onclick = function() {
+
+        var x = document.createElement("CANVAS");
+        var div = document.createElement("div");
+        var div1 = document.createElement("div");
+        var delete_img = document.createElement("img");
+        delete_img.src = "delete.png";
+        delete_img.setAttribute("style", "display:none; width:500px; heigth:500px;");
+        div.setAttribute("class", "add_row");
+        div.setAttribute("style", "margin-bottom:10px;");
+
+        var add_box = document.getElementById('meme_box');
+        x.setAttribute("class", "add_canvas");
+        x.setAttribute("id", i);
+        x.onmouseover = function() {
+            x.setAttribute("style", "display:none");
+            delete_img.setAttribute("style", "display:block;width:500px; heigth:500px;");
+        };
+        delete_img.onmouseout = function() {
+            x.setAttribute("style", "display:block");
+            delete_img.setAttribute("style", "display:none;width:500px; heigth:500px;");
+        };
+        delete_img.onclick = function() {
+            this.remove();
+        };
+        var ctx = x.getContext("2d");
+        var top = textTop.toUpperCase();
+        var bottom = textBottom.toUpperCase();
+
+        // set appropriate canvas size
+        x.width = 500;
+        x.height = 500;
+
+        // draw the image
+        ctx.drawImage(image, 0, 0, x.width, x.height);
+
+        // styles
+        ctx.fillStyle = '#fff';
+        ctx.strokeStyle = '#000';
+        ctx.lineWidth = x.width * 0.004;
+
+        var _textSizeTop = textSizeTop / 100 * x.width;
+        var _textSizeBottom = textSizeBottom / 100 * x.width;
+
+        // draw top text
+        add_style(ctx, 'Impact', _textSizeTop, 'center', 'bottom');
+        ctx.drawBreakingText(top, x.width / 2, _textSizeTop + padding, null, 1, 'fill');
+        ctx.drawBreakingText(top, x.width / 2, _textSizeTop + padding, null, 1, 'stroke');
+
+        // draw bottom text
+        add_style(ctx, 'Impact', _textSizeBottom, 'center', 'top');
+        var height = ctx.drawBreakingText(bottom, 0, 0, null, 1, 'none').textHeight;
+        // console.log(ctx.drawBreakingText(bottom, 0, 0, null, 1, 'none'));
+        ctx.drawBreakingText(bottom, x.width / 2, x.height - padding - height, null, 1, 'fill');
+        ctx.drawBreakingText(bottom, x.width / 2, x.height - padding - height, null, 1, 'stroke');
+        document.getElementById('textBottom').value = "";
+        document.getElementById('textTop').value = "";
+
+        div.appendChild(x);
+        div.appendChild(div1);
+        add_box.appendChild(div);
+        div1.appendChild(delete_img);
+        i++;
+    };
+
+
+    function style(font, size, align, base) {
+        ctx.font = Math.floor(size) + 'px ' + font;
+        ctx.textAlign = align;
+        ctx.textBaseline = base;
+    }
+
+    function add_style(ctx, font, size, align, base) {
+        ctx.font = Math.floor(size) + 'px ' + font;
+        ctx.textAlign = align;
+        ctx.textBaseline = base;
+    }
+
+    function draw() {
+        // uppercase the text
+        var top = textTop.toUpperCase();
+        var bottom = textBottom.toUpperCase();
+
+        // set appropriate canvas size
+        canvas.width = image.width;
+        canvas.height = image.height;
+
+        // draw the image
+        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+        // styles
+        ctx.fillStyle = '#fff';
+        ctx.strokeStyle = '#000';
+        ctx.lineWidth = canvas.width * 0.004;
+
+        var _textSizeTop = textSizeTop / 100 * canvas.width;
+        var _textSizeBottom = textSizeBottom / 100 * canvas.width;
+
+        // draw top text
+        style('Impact', _textSizeTop, 'center', 'bottom');
+        ctx.drawBreakingText(top, canvas.width / 2, _textSizeTop + padding, null, 1, 'fill');
+        ctx.drawBreakingText(top, canvas.width / 2, _textSizeTop + padding, null, 1, 'stroke');
+
+        // draw bottom text
+        style('Impact', _textSizeBottom, 'center', 'top');
+        var height = ctx.drawBreakingText(bottom, 0, 0, null, 1, 'none').textHeight;
+        // console.log(ctx.drawBreakingText(bottom, 0, 0, null, 1, 'none'));
+        ctx.drawBreakingText(bottom, canvas.width / 2, canvas.height - padding - height, null, 1, 'fill');
+        ctx.drawBreakingText(bottom, canvas.width / 2, canvas.height - padding - height, null, 1, 'stroke');
+    }
+
+    image.src = 'https://i0.kym-cdn.com/photos/images/newsfeed/000/995/349/9c9.jpg';
+    document.getElementById('textSizeTop').value = textSizeTop;
+    document.getElementById('textSizeBottom').value = textSizeBottom;
+    document.getElementById('textSizeTopOut').innerHTML = textSizeTop;
+    document.getElementById('textSizeBottomOut').innerHTML = textSizeBottom;
+</script>
+
+</html>
