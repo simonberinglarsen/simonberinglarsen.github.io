@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Simon</title>
+    <style>
+        @import 'https://fonts.googleapis.com/css?family=Inconsolata';
+
+        body {
+            background: #bdc3c7;
+            font-family: 'Inconsolata', sans-serif;
+            font-size: 17px;
+        }
+
+        .window {
+            width: 600px;
+            margin-top: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            background: #666;
+            border-radius: 5px;
+            display: relative;
+            box-shadow: 0px 13px 25px rgba(0,0,0,0.7);
+        }
+
+        .window-caption {
+            color: #aaa;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .bash {
+            padding: 10px;
+            background: #222;
+            height: 310px;
+            border-radius: 5px;
+            top: 40px;
+            display: absolute;
+            color: #fff;
+            line-height: 1.5rem;
+        }
+
+        .prompt {
+            color: #0f0;
+            padding-right: 20px;
+        }
+
+        .notification {
+            padding-left: 20px;
+            padding-right: 20px;
+            color: #000;
+            background-color: #0f0;
+        }
+
+        #result {
+            color: #aaf;
+        }
+
+        #ready {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="window">
+        <div class="controls">
+            <div class="window-caption">Terminal</div>
+        </div>
+        <div class="bash">
+            <div>
+                <span class="prompt">$></span><span id="command"></span>
+            </div>
+            <div>
+                <span id="result"></span>
+            </div>
+            <div id="ready">
+                <span class="prompt">$></span>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+        <script>
+            function showResult() {
+                new TypeIt("#result", {
+                    strings: `PID VSZ RSS COMMAND
+17595 4628 640 /bin/sh<br/>
+2076 6120 720 nginx:<br/>
+2164 6576 1252 nginx:<br/>
+24550 8512 3448 /usr/bin/docker-proxy<br/>
+2456 8512 3572 /usr/bin/docker-proxy<br/>
+2049 9324 1768 containerd-shim<br/>
+24572 9324 5160 containerd-shim<br/>
+<br/>
+<span class="notification">I can fix your problems on linux/mac ~~ <strong>simon</strong> !! </span>
+<br/>
+<br/>
+`,
+                    speed: 1,
+                    breakLines: true,
+                    waitUntilVisible: true,
+                    afterComplete: async (step, instance) => {
+                        $('#ready').show();
+                        instance.destroy();
+                    }
+                }).go();
+            }
+
+            new TypeIt("#command", {
+                strings: "",
+                speed: 50,
+                lifeLike: true,
+                waitUntilVisible: true,
+                cursorChar: '<span style="color: #0f0; font-size: 24px">|</span>',
+                afterComplete: async (step, instance) => {
+                    showResult();
+                    instance.destroy();
+                }
+            })
+                .type("", { delay: 1000 })
+                .type("ps aux", { delay: 200 })
+                .type(" | ", { delay: 200 })
+                .type("awk ''", { delay: 200 })
+                .move(-1, { delay: 200 })
+                .type("{}", { delay: 200 })
+                .move(-1, { delay: 200 })
+                .type("if ($5 != 0 )", { delay: 200 })
+                .type(" print $2,$5,$6,$11", { delay: 200 })
+                .move(2, { delay: 200 })
+                .type(" | ", { delay: 200 })
+                .type("sort -k2n", { delay: 200 })
+                .go();
+
+        </script>
+</body>
+
+</html>
