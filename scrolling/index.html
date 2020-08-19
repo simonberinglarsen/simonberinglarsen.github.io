@@ -21,7 +21,7 @@
         .info {
             display: flex;
             justify-content: center;
-            margin-top: 200px;
+            margin-top: 100px;
             font-size: 30px;
             color: #888;
         }
@@ -34,6 +34,7 @@
             box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
             border-radius: 10px;
             background-color: #848;
+            border: 2px solid #626;
             color: white;
             width: 500px;
             overflow: hidden;
@@ -61,8 +62,8 @@
             font-weight: bold;
             white-space: nowrap;
             transform: translateY(100px);
-            transition: 2s ease-in-out;
             display: inline-block;
+            transition: 3s linear;
         }
 
         .notification-text.scroll-in {
@@ -95,7 +96,6 @@
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script>
-        let notification = 'this is a super long text ;) .... with much info'
         $('.notification-text').on('transitionend', () => {
             kickstart();
         });
@@ -103,12 +103,18 @@
         let state = 0;
         function kickstart() {
             state++;
-            console.log(`state = ${state}`);
-
             switch (state) {
                 case 1:
-                    $('.notification-text').removeClass('scroll-in scroll-left scroll-out');
-                    $('.notification-text').addClass('scroll-in');
+                    fetch('https://official-joke-api.appspot.com/random_joke')
+                        .then(response => response.json())
+                        .then(data => {
+                            const smileys = ['😀', '😃', '😄', '😁', '😆', '😅', '🤣', '😂', '🙂', '🙃', '😉', '😊', '😇', '🤩', '😋', '😜', '🤪'];
+                            const rndSmiley = smileys[Math.floor(Math.random() * smileys.length)];
+                            const notification = `${data.setup}  ~ ~ ~ ~ ${data.punchline} ${rndSmiley}`;
+                            $('.notification-text').html(notification);
+                            $('.notification-text').removeClass('scroll-in scroll-left scroll-out');
+                            $('.notification-text').addClass('scroll-in');
+                        });
                     break;
                 case 2:
                     setTimeout(() => {
@@ -128,7 +134,7 @@
                     break;
             }
         }
-        $('.notification-text').text(notification);
+
         kickstart();
 
 
