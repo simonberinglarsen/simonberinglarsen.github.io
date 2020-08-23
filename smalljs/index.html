@@ -5,7 +5,23 @@
     <div>⭐ press f12 and go to console to view output</div>
     <div>⭐ rightclick + view source to see how its make</div>
     <script>
-        console.log('script is under development');
+        /*
+
+        Find and store the elements from array that start with 'ab'. The first two characters of the string  should be ab ONLY.
+       Given array names =  ["abcdef","acdef","adelf","abbjkl","bcdefh","cdefij","abzxeft","aghef","abmnop", "aabb","ab","123456"]
+       Output array answer = ["abcdef","abbjkl","abzxeft","abmnop","ab"]
+
+        */
+        let givenArrayNames =  ["abcdef","acdef","adelf","abbjkl","bcdefh","cdefij","abzxeft","aghef","abmnop", "aabb","ab","123456"]
+        let output = [];
+        for(let i=0; i<givenArrayNames.length; i++) {
+            if(givenArrayNames[i].indexOf('ab') === 0) {
+                output.push(givenArrayNames[i]);
+            }
+        }
+        console.log(`results: ${JSON.stringify(output)}`);
+
+
     </script>
 
 </body>
