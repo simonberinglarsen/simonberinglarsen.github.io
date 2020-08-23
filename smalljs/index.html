@@ -95,11 +95,38 @@
 
         let str = "abcd";
         let sum = 0;
-        for(let i=0 ;i<str.length; i++ ) {
-            let n = str.charCodeAt(i)-96;
+        for (let i = 0; i < str.length; i++) {
+            let n = str.charCodeAt(i) - 96;
             sum += n;
         }
         console.log(`${str} gives ${sum}`);
+
+        /*
+
+        4. Print the numbers from 1 to 50 if the number is divisible by 2 print “Divisible by 2” , if the number is divisible by 5 then print “Divisible by 5” and if the number is divisible by both 2 and 5 then print “Divisible by both 2 and 5”.
+        Example :
+        2 – Divisible by 2
+        4 – Divisible by 2
+        5 - Divisible by 5
+        6 – Divisible by 2
+        8 – Divisible by 2
+        10 – Divisible by both 2 and 5.
+
+        */
+
+        for (let i = 1; i <= 50; i++) {
+            if (i % 2 === 0 && i % 5 === 0) {
+                console.log(`${i} - Divisible by 2 and 5`);
+            }
+            else if (i % 2 === 0) {
+                console.log(`${i} - Divisible by 2`);
+            }
+            else if (i % 5 === 0) {
+                console.log(`${i} - Divisible by 5`);
+            }
+
+
+        }
 
     </script>
 
