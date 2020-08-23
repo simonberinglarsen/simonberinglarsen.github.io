@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            background-color: #aaa;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        #canvas {
+            border: 1px solid black;
+            box-shadow: 0px 3px 15px rgba(0,0,0,0.6);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="canvas"></canvas>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script type="module">
+        import { App } from './app.mjs';
+        let app = new App();
+        app.main();
+    </script>
+</body>
+
+</html>
