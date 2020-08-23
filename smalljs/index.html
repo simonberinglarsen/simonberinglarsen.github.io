@@ -69,14 +69,37 @@
             const age = +document.getElementById('age').value;
             document.getElementById('nameValidation').innerHTML = "&nbsp;";
             document.getElementById('ageValidation').innerHTML = "&nbsp;";
-            if(name.length < 5 || name.length > 10) {
+            if (name.length < 5 || name.length > 10) {
                 document.getElementById('nameValidation').innerHTML = "😥 invalid name";
             }
-            if(age < 5 || age > 25) {
+            if (age < 5 || age > 25) {
                 document.getElementById('ageValidation').innerHTML = "😥 invalid age";
             }
             return true;
         }
+
+        /*
+            Given a string . Find the numberical sum of the string .
+
+            Example 1: Given String = "abcd"
+            Numerical Sum = 1 + 2 + 3 + 4 = 10, Since a = 1 , b = 2 , c =3 and d = 4
+
+            Example 2 :
+            String = "ice", Numerical sum = 9 + 3 + 5 = 17.
+
+            Note : Any string will be given and return the numerical sum.
+            Must and should use loop to iterate the  string.
+
+            Hint : Use objects to store to numerical value of each character.         
+        */
+
+        let str = "abcd";
+        let sum = 0;
+        for(let i=0 ;i<str.length; i++ ) {
+            let n = str.charCodeAt(i)-96;
+            sum += n;
+        }
+        console.log(`${str} gives ${sum}`);
 
     </script>
 
