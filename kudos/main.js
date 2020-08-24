@@ -125,9 +125,14 @@ function update(team) {
         member.total = member.games + member.kudos;
     });
     let sortedTeam = team.sort((a, b) => b.total - a.total)
-    sortedTeam.map((x, i) => { x.rank = i + 1 });
-    let winner = sortedTeam[0];
+    sortedTeam.map((x, i) => { x.rank = i + 1; });
+    for (let i = 1; i < sortedTeam.length; i++) {
+        if (sortedTeam[i].total === sortedTeam[i - 1].total) {
+            sortedTeam[i].rank = sortedTeam[i - 1].rank;
+        }
+    }
 
+    let winner = sortedTeam[0];
     list.innerHTML = ''
     let header = htmlToElement(` <li class="c-list__item">
     <div class="c-list__grid">
