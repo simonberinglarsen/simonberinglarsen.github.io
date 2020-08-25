@@ -1,3 +1,12 @@
+
+/*
+Site Name: Sector 7 TFL Leaderboard
+Theme URI: https://sector7hq.co
+Author: Sector 7 HQ
+Author URI: https://sector7hq.co/
+Description: TFL Leaderboard by Sector 7
+*/
+
 :root {
   --black: #000000;
   --white: #ffffff;
@@ -40,7 +49,14 @@ body {
   font-family: 'Overpass Mono', system-ui;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
+  font-family: 'Anton', sans-serif;
+}
+
+
+
+
+h2, h3, h4, h5, h6 {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.05em;

@@ -1,25 +1,39 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+  <title>TFL - Online Challeges Leaderboard by Sector 7</title>
+  <meta name="keywords" content="Sector 7, TFL, Leaderboard">
+  <meta name="author" content="Sector 7">
+  <link rel="shortcut icon" type="image/png" href="https://sector7.space/assets/images/demo/logo/apple-icon-72x72.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="styles.css">
 </head>
 
+
 <body>
 
     <div class="l-wrapper">
         <div class="c-header">
-            <img class="c-logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/813538/km-logo-color.svg"
-                draggable="false" />
-            <img class="c-logo" src="p1.png" draggable="false" />
-            <img class="c-logo" src="p2.png" draggable="false" />
-            <button class="c-button c-button--primary">Send Kudos</button>
+            
+                <img class="c-logo" src="https://sector7.space/tfl/leaderboard2/TFL.png"  align="middle" draggable="false"/>
+                <h1 style="text-align:center;">The Fittest League National Leaderboard </h1>
+ 
+            </div>
+            <div class="c-header" align="center">
+            <!-- <img class="c-logo" src="p1.png" draggable="false" />
+            <img class="c-logo" src="p2.png" draggable="false" /> -->
+             <a>Associate Sponsor:<img class="c-logo" src="p3.png" align="middle" draggable="false"/></a> &nbsp; &nbsp; 
+              <a>Powered by:<img class="c-logo" src="p4.png" align="middle" draggable="false"/></a>
+            
         </div>
         <div class="l-wrapper" style="text-align:center;">
-            <button id="btnMale" class="c-button c-button--orange" onclick=" location.href='#male';">Male</button>
-            <button id="btnFemale" class="c-button c-button--dark" onclick=" location.href='#female';">Female</button>
+            <button id="btnMale" class="c-button c-button--orange" onclick=" location.href='#male';"><strong>Male</stong></button>
+            <button id="btnFemale" class="c-button c-button--dark" onclick=" location.href='#female';"><strong>Female</strong></button>
         </div>
         <div class="l-grid">
             <div class="l-grid__item l-grid__item--sticky">
@@ -27,12 +41,12 @@
                     <div class="c-card__body">
                         <div class="u-display--flex u-justify--space-between">
                             <div class="u-text--left">
-                                <div class="u-text--small">My Rank</div>
-                                <h2>3rd Place</h2>
+                                <div class="u-text--small">Top Score</div>
+                                <h3>185 Reps</h3>
                             </div>
                             <div class="u-text--right">
-                                <div class="u-text--small">My Score</div>
-                                <h2>24</h2>
+                                <div class="u-text--small">Last Updated</div>
+                                <h3>24th AUG | 23:00</h3>
                             </div>
                         </div>
                     </div>
@@ -46,10 +60,7 @@
             <div class="l-grid__item">
                 <div class="c-card">
                     <div class="c-card__header">
-                        <h3>Received Kudos</h3>
-                        <select class="c-select">
-                            <option selected="selected">Sunday, Feb. 23 - Sunday, Feb. 30</option>
-                        </select>
+                        <h3><strong>FREEDOM CHALLENGE NATIONAL LEADERBOARD</strong></h3>
                     </div>
                     <div class="c-card__body">
                         <ul class="c-list" id="list">
