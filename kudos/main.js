@@ -49,7 +49,7 @@ const teamMale = [
         handle: 'charles_leclerc',
         img: 'https://www.formula1.com/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/2col-retina/image.png',
         kudos: 16,
-        games: 6
+        games: 15
     },
     {
         rank: 7,
