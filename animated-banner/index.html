@@ -12,17 +12,24 @@
         }
 
         body {
-            background: #fff;
+            background: #888;
         }
 
-        .banner {
+        .spacer {
+            height: 60px;
+            background-color: #888;
+        }
+
+        /* animated banner classes */
+
+        .aniban-banner {
             background: #fff;
             display: flex;
             flex-direction: row;
             justify-content: center;
         }
 
-        .banner-videos {
+        .aniban-banner-videos {
             display: flex;
             flex-direction: row;
             width: 100%;
@@ -31,63 +38,20 @@
             justify-content: space-around;
         }
 
-        .play-overlay>img {
+        .aniban-play-overlay > img {
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 1);
             overflow: hidden;
             border-radius: 10px;
             border: 2px solid white;
         }
 
-        .slot {
-            overflow: visible;
-        }
-
-
-        .slot img {
+        .aniban-slot img {
             display: block;
             width: 180px;
             height: auto;
         }
 
-        .play {
-            transform: scale(0.5);
-            display: none;
-            opacity: 0;
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            z-index: 100;
-        }
-
-
-
-        /*---------------*/
-
-
-        .show {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 150px;
-            height: 40px;
-            margin-top: -20px;
-            margin-left: -75px;
-            background: #e74c3c;
-            border-radius: 5px;
-            border: 0;
-            border-bottom: 2px solid #c0392b;
-            cursor: pointer;
-        }
-
-        .show:hover {
-            background: #c0392b;
-        }
-
-        .show:active {
-            transform: scale(0.9);
-        }
-
-        .mask {
+        .aniban-mask {
             position: fixed;
             top: 0;
             left: 0;
@@ -100,7 +64,7 @@
             transition: 0.7s;
         }
 
-        .modal {
+        .aniban-modal {
             padding: 20px;
             position: fixed;
             border-radius: 10px;
@@ -118,18 +82,18 @@
             transform: translateY(45px);
         }
 
-        .active {
+        .aniban-active {
             visibility: visible;
             opacity: 1;
         }
 
-        .active+.modal {
+        .aniban-active+.aniban-modal {
             visibility: visible;
             opacity: 1;
             transform: translateY(0);
         }
 
-        .center {
+        .aniban-center {
             width: 100%;
             height: 100%;
         }
@@ -138,27 +102,19 @@
             outline: none;
         }
 
-        /*--------------*/
-
-        .spacer {
-            height: 60px;
-            background-color: #eee;
-        }
-
-        .mt-1 {
+        .aniban-mt-1 {
             margin-top: 50px;
         }
 
-        .mt-2 {
+        .aniban-mt-2 {
             margin-top: 100px;
         }
 
-        .mt-3 {
+        .aniban-mt-3 {
             margin-top: 150px;
         }
 
-
-        .play-button {
+        .aniban-play-button {
             cursor: pointer;
             position: absolute;
             top: 50%;
@@ -169,15 +125,15 @@
         }
 
         /*  animation */
-        .bounce {
-            animation-name: bounce;
+        .aniban-bounce {
+            animation-name: aniban-bounce;
             animation-direction: alternate;
             animation-duration: 1s;
             animation-iteration-count: infinite;
             animation-timing-function: ease-in-out;
         }
 
-        @keyframes bounce {
+        @keyframes aniban-bounce {
             from {
                 transform: translateY(0px);
             }
@@ -187,29 +143,29 @@
             }
         }
 
-        .anim {
+        .aniban-anim {
             animation-duration: 2s;
             animation-fill-mode: forwards;
             animation-timing-function: ease-out;
         }
 
-        .anim.left {
-            animation-name: key-anim-left;
+        .aniban-anim.left {
+            animation-name: key-aniban-left;
         }
 
-        .anim.right {
-            animation-name: key-anim-right;
+        .aniban-anim.right {
+            animation-name: key-aniban-right;
         }
 
-        .anim.up {
-            animation-name: key-anim-up;
+        .aniban-anim.up {
+            animation-name: key-aniban-up;
         }
 
-        .anim.down {
-            animation-name: key-anim-down;
+        .aniban-anim.down {
+            animation-name: key-aniban-down;
         }
 
-        @keyframes key-anim-left {
+        @keyframes key-aniban-left {
             from {
                 transform: translateX(-100px);
                 opacity: 0
@@ -221,7 +177,7 @@
             }
         }
 
-        @keyframes key-anim-right {
+        @keyframes key-aniban-right {
             from {
                 transform: translateX(100px);
                 opacity: 0
@@ -233,7 +189,7 @@
             }
         }
 
-        @keyframes key-anim-up {
+        @keyframes key-aniban-up {
             from {
                 transform: translateY(-100px);
                 opacity: 0
@@ -245,7 +201,7 @@
             }
         }
 
-        @keyframes key-anim-down {
+        @keyframes key-aniban-down {
             from {
                 transform: translateY(-100px);
                 opacity: 0
@@ -261,70 +217,70 @@
 
 <body>
     <div class="spacer"></div>
-    <div class="banner">
-        <div class="banner-videos">
-            <div class="banner-videos-container mt-2">
-                <div class="play-overlay">
-                    <div id="play1" class="play-button">
+    <div class="aniban-banner">
+        <div class="aniban-banner-videos">
+            <div class="aniban-banner-videos-container aniban-mt-2">
+                <div class="aniban-play-overlay">
+                    <div id="play1" class="aniban-play-button">
                         <img src="assets/button.png">
                     </div>
                     <img src="assets/V1b.png">
                 </div>
             </div>
-            <div class="banner-videos-container mt-3">
-                <div class="play-overlay">
-                    <div id="play2" class="play-button">
+            <div class="aniban-banner-videos-container aniban-mt-3">
+                <div class="aniban-play-overlay">
+                    <div id="play2" class="aniban-play-button">
                         <img src="assets/button.png">
                     </div>
                     <img src="assets/V2b.png">
                 </div>
             </div>
-            <div class="banner-videos-container mt-2">
-                <div class="play-overlay">
-                    <div id="play3" class="play-button">
+            <div class="aniban-banner-videos-container mt-2">
+                <div class="aniban-play-overlay">
+                    <div id="play3" class="aniban-play-button">
                         <img src="assets/button.png">
                     </div>
                     <img src="assets/V3b.png">
                 </div>
             </div>
         </div>
-        <div class="slot mt-1">
+        <div class="aniban-slot aniban-mt-1">
             <img src="assets/1.png">
             <img src="assets/2.png">
         </div>
-        <div class="slot">
+        <div class="aniban-slot">
             <img src="assets/3.png">
             <img src="assets/4.png">
         </div>
-        <div class="slot mt-1">
+        <div class="aniban-slot aniban-mt-1">
             <img src="assets/5.png">
             <img src="assets/6.png">
         </div>
-        <div class="slot">
+        <div class="aniban-slot">
             <img src="assets/7.png">
             <img src="assets/8.png">
         </div>
-        <div class="slot mt-1">
+        <div class="aniban-slot aniban-mt-1">
             <img src="assets/9.png">
             <img src="assets/10.png">
         </div>
-        <div class="slot">
+        <div class="aniban-slot">
             <img src="assets/11.png">
             <img src="assets/12.png">
         </div>
-        <div class="slot mt-1">
+        <div class="aniban-slot aniban-mt-1">
             <img src="assets/13.png">
             <img src="assets/14.png">
         </div>
-        <div class="slot">
+        <div class="aniban-slot">
             <img src="assets/15.png">
             <img src="assets/16.png">
         </div>
     </div>
     <div class="spacer"></div>
-    <div class="mask" role="dialog"></div>
-    <div class="modal" role="alert">
-        <video id="modalVideo" class="center" controls>
+    <div class="aniban-mask"></div>
+    <div class="aniban-modal">
+        <video id="modalVideo" class="aniban-center" controls>
         </video>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -339,12 +295,12 @@
             }
             function entrance(e, rndDirection, delay) {
                 $(e).css({ opacity: 0 });
-                setTimeout(() => { $(e).addClass(`anim ${rndDirection}`) }, delay);
+                setTimeout(() => { $(e).addClass(`aniban-anim ${rndDirection}`) }, delay);
             }
             function setupEvents() {
 
-                $('.play-button').on('click', function () {
-                    $('.mask').removeClass('active');
+                $('.aniban-play-button').on('click', function () {
+                    $('.aniban-mask').removeClass('active');
                     $('#modalVideo')[0].pause();
                 });
                 $('#play1').on('click', function () {
@@ -356,27 +312,26 @@
                 $('#play3').on('click', function () {
                     showModal('http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4');
                 });
-                $('.mask').on('click', function () {
-                    $('.mask').removeClass('active');
+                $('.aniban-mask').on('click', function () {
+                    $('.aniban-mask').removeClass('aniban-active');
                     $('#modalVideo')[0].pause();
                 });
             }
             function showModal(videoLink) {
-                let q = $('.mask');
-                q.addClass('active');
+                let q = $('.aniban-mask');
+                q.addClass('aniban-active');
                 $('#modalVideo').html(`<source src='${videoLink}' type='video/mp4'>`);
                 $('#modalVideo')[0].load();
                 $('#modalVideo')[0].play();
             }
             function startAnimations() {
-                $('.slot > img').each((i, e) => { randomEntrance(e); });
-                $('.banner-videos-container').each((i, e) => { entrance(e, 'down', 2000); });
-                $('.play-overlay').each((i, e) => {
+                $('.aniban-slot > img').each((i, e) => { randomEntrance(e); });
+                $('.aniban-banner-videos-container').each((i, e) => { entrance(e, 'down', 2000); });
+                $('.aniban-play-overlay').each((i, e) => {
                     const delay = 700 * i;
-                    setTimeout(() => { $(e).addClass('bounce') }, delay);
+                    setTimeout(() => { $(e).addClass('aniban-bounce') }, delay);
                 });
             }
-
             setupEvents();
             startAnimations();
         })();
