@@ -38,7 +38,7 @@
             justify-content: space-around;
         }
 
-        .aniban-play-overlay > img {
+        .aniban-play-overlay>img {
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 1);
             overflow: hidden;
             border-radius: 10px;
@@ -219,6 +219,7 @@
     <div class="spacer"></div>
     <div class="aniban-banner">
         <div class="aniban-banner-videos">
+            <!--
             <div class="aniban-banner-videos-container aniban-mt-2">
                 <div class="aniban-play-overlay">
                     <div id="play1" class="aniban-play-button">
@@ -243,6 +244,7 @@
                     <img src="assets/V3b.png">
                 </div>
             </div>
+            -->
         </div>
         <div class="aniban-slot aniban-mt-1">
             <img src="assets/1.png">
@@ -297,19 +299,21 @@
                 $(e).css({ opacity: 0 });
                 setTimeout(() => { $(e).addClass(`aniban-anim ${rndDirection}`) }, delay);
             }
-            function setupEvents() {
-                $('.aniban-play-button').on('click', function () {
-                    $('.aniban-mask').removeClass('active');
-                    $('#modalVideo')[0].pause();
-                });
-                $('#play1').on('click', function () {
-                    showModal('http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4');
-                });
-                $('#play2').on('click', function () {
-                    showModal('http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4');
-                });
-                $('#play3').on('click', function () {
-                    showModal('http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4');
+            function setupEvents(videos) {
+                videos.forEach((v, i) => {
+                    const playId = `btn-play-${i}`;
+                    $('.aniban-banner-videos').append($(`
+                        <div class="aniban-banner-videos-container aniban-mt-2">
+                            <div class="aniban-play-overlay">
+                                <div id="${playId}" class="aniban-play-button">
+                                    <img src="assets/button.png">
+                                </div>
+                                <img src="${v.img}">
+                            </div>
+                        </div>`));
+                    $(`#${playId}`).on('click', function () {
+                        showModal(v.videoLink);
+                    });
                 });
                 $('.aniban-mask').on('click', function () {
                     $('.aniban-mask').removeClass('aniban-active');
@@ -331,7 +335,13 @@
                     setTimeout(() => { $(e).addClass('aniban-bounce') }, delay);
                 });
             }
-            setupEvents();
+            setupEvents(
+                [
+                    { img: 'assets/V1b.png', videoLink: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' },
+                    { img: 'assets/V2b.png', videoLink: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' },
+                    { img: 'assets/V3b.png', videoLink: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' },
+                ]
+            );
             startAnimations();
         })();
     </script>
