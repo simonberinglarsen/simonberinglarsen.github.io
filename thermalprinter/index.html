@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Documento</title>
 </head>
 
 <style>
@@ -25,45 +25,134 @@
 		list-style-type: none;
 	}
 
-	div {
-		outline: 1px solid blue;
+	.center {
+		text-align: center;
 	}
 
-	p {
-		outline: 1px solid red;
+	.fs-12 {
+		font-size: 12px;
+	}
+
+	.fs-15 {
+		font-size: 15px;
+	}
+
+	.fs-16 {
+		font-size: 16px;
+	}
+
+	.fs-20 {
+		font-size: 20px;
+	}
+
+	.mt-5 {
+		margin-top: 5px;
+	}
+
+	.mt-10 {
+		margin-top: 10px;
+	}
+
+	.mt-15 {
+		margin-top: 15px;
+	}
+
+	.mt-20 {
+		margin-top: 20px;
+	}
+
+	.mt-40 {
+		margin-top: 40px;
+	}
+
+	.px-20 {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.pt-20 {
+		padding-top: 20px;
+	}
+
+	.fill-width {
+		max-height: auto;
+		max-width: 100%;
+	}
+
+	.barcode {
+		font-family: 'Free 3 of 9 Extended';
+		font-size: 60px;
+	}
+	
+	.uppercase {
+		text-transform: uppercase;
+	}
+	
+	.container {
+		display: none;
+	}
+
+	.container.show {
+		display: block;
 	}
 </style>
 
 <body>
-	<div class="container">
-		<div style="text-align: center;">
-			<img src="%logo%" style="max-height: auto; max-width: %tamaño_logo%%;" />
+	<div class="all-layouts">
+		<div class="container %company_dummy%">
+			<div class="center">
+				<img class="fill-width" src="%Logo%" />
+			</div>
+
+			<div class="center mt-10">
+				<p>%Razón_Social%</p>
+				<p>%RUT%</p>
+				<p>%Dirección%</p>
+				<p>%Teléfono%</p>
+			</div>
+
+			<p class="center mt-20 fs-16"><strong>DUMMY</strong></p>
+
+			<p class="center mt-40 barcode">
+				%Código_Barras%
+			</p>
+
+			<div class="mt-5 px-20">
+				<ul>
+					<li class="center mt-5">%Detalle%</li>
+				</ul>
+				<p class="center mt-5 fs-15"><strong>%Total%</strong></p>
+			</div>
+
+			<p class="center mt-15">
+				<i>%Observaciones%</i>
+			</p>
 		</div>
-
-		<div style="text-align: center; margin-top: 10px;">
-			<p>%Razón_Social%</p>
-			<p>%RUT%</p>
-			<p>%Dirección%</p>
-			<p>%Teléfono%</p>
+		<div class="container %company_casco%">
+			<p class="center pt-20"><strong>%Detalle%</strong></p>
+			<p class="center mt-40 barcode">
+				%Código_Barras%
+			</p>
 		</div>
-
-		<p style="text-align: center; margin-top: 20px; font-size: 16px;"><strong>DEVOLUCION DE ENVASES</strong></p>
-		<br><br><br>
-		<p style="text-align: center; font-family: 'Free 3 of 9 Extended'; font-size: 60px;margin-top: -40px">%Código_Barras%</p>
-
-		<div style="padding: 0 20px; margin-top: 10px;">
-			<ul>
-				[items]
-				<li style="text-align: center; margin-bottom: 5px;">%Detalle%</li>
-				[/items]
-			</ul>
-			<p style="text-align: center; font-size: 15px;"><strong>%Total%</strong></p>
+		<div class="container %company_pando%">
+			<p class="center pt-20">%Detalle%</p>
+			<p class="center mt-20 barcode">
+				%Código_Barras%
+			</p>
+			<p class="center mt-5 fs-20"><strong>%Total%</strong></p>
 		</div>
-
-		<p style="text-align: center; line-height: 1.4; margin-top: 15px;">
-			<i>%Observaciones%</i>
-		</p>
+		<div class="container %company_colmenar%">
+			<p class="center fs-12 pt-20 uppercase">%Detalle%</p>
+			<p class="center mt-5 barcode">
+				%Código_Barras%
+			</p>
+			<p class="center fs-12 uppercase">%Observaciones%</p>
+		</div>
 	</div>
-</body>
 
+	<!--------------------- CUT THIS OUT IN FINAL DELIVERY -------------------->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="app.js"></script>
+	<!--------------------- CUT THIS OUT IN FINAL DELIVERY -------------------->
+</body>
 </html>
