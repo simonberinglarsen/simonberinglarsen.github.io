@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	.container {
+		max-width: 400px;
+		margin: 0 auto;
+		padding: 0 10px;
+		font-family: 'Arial Narrow', Arial, sans-serif;
+		font-size: 14px;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	div {
+		outline: 1px solid blue;
+	}
+
+	p {
+		outline: 1px solid red;
+	}
+</style>
+
+<body>
+	<div class="container">
+		<div style="text-align: center;">
+			<img src="%logo%" style="max-height: auto; max-width: %tamaño_logo%%;" />
+		</div>
+
+		<div style="text-align: center; margin-top: 10px;">
+			<p>%Razón_Social%</p>
+			<p>%RUT%</p>
+			<p>%Dirección%</p>
+			<p>%Teléfono%</p>
+		</div>
+
+		<p style="text-align: center; margin-top: 20px; font-size: 16px;"><strong>DEVOLUCION DE ENVASES</strong></p>
+		<br><br><br>
+		<p style="text-align: center; font-family: 'Free 3 of 9 Extended'; font-size: 60px;margin-top: -40px">%Código_Barras%</p>
+
+		<div style="padding: 0 20px; margin-top: 10px;">
+			<ul>
+				[items]
+				<li style="text-align: center; margin-bottom: 5px;">%Detalle%</li>
+				[/items]
+			</ul>
+			<p style="text-align: center; font-size: 15px;"><strong>%Total%</strong></p>
+		</div>
+
+		<p style="text-align: center; line-height: 1.4; margin-top: 15px;">
+			<i>%Observaciones%</i>
+		</p>
+	</div>
+</body>
+
+</html>
