@@ -35,7 +35,15 @@ const allCompanies = [
     'casco',
     'pando',
     'colmenar',
-    'dummy'];
+    'dummy',
+    'olitino',
+    'gaceta_A',
+    'gaceta_B',
+    'miken',
+    'nebot',
+    'micuelete',
+    'harry',
+    'diego',];
 allCompanies.forEach((c, i) => {
     let id = `company_${c}`;
     $(`<button>${c}</button>`).appendTo(buttons).click(() => {
