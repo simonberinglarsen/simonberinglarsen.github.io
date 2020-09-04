@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Documento</title>
+</head>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	.container {
+		max-width: 400px;
+		margin: 0 auto;
+		padding: 0 10px;
+		font-family: 'Arial Narrow', Arial, sans-serif;
+		font-size: 14px;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	.center {
+		text-align: center;
+	}
+
+	.fs-12 {
+		font-size: 12px;
+	}
+
+	.fs-15 {
+		font-size: 15px;
+	}
+
+	.fs-16 {
+		font-size: 16px;
+	}
+
+	.fs-20 {
+		font-size: 20px;
+	}
+
+	.mt-5 {
+		margin-top: 5px;
+	}
+
+	.mt-10 {
+		margin-top: 10px;
+	}
+
+	.mt-15 {
+		margin-top: 15px;
+	}
+
+	.mt-20 {
+		margin-top: 20px;
+	}
+
+	.mt-40 {
+		margin-top: 40px;
+	}
+
+	.px-20 {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.pt-20 {
+		padding-top: 20px;
+	}
+
+	.fill-width {
+		max-height: auto;
+		max-width: 100%;
+	}
+
+	.barcode {
+		font-family: 'Free 3 of 9 Extended';
+		font-size: 60px;
+	}
+	
+	.uppercase {
+		text-transform: uppercase;
+	}
+	
+	.container {
+		display: none;
+	}
+
+	.container.show {
+		display: block;
+	}
+</style>
+
+<body>
+	<div class="all-layouts">
+		<div class="container %company_dummy%">
+			<div class="center">
+				<img class="fill-width" src="%Logo%" />
+			</div>
+
+			<div class="center mt-10">
+				<p>%Razón_Social%</p>
+				<p>%RUT%</p>
+				<p>%Dirección%</p>
+				<p>%Teléfono%</p>
+			</div>
+
+			<p class="center mt-20 fs-16"><strong>DUMMY</strong></p>
+
+			<p class="center mt-40 barcode">
+				%Código_Barras%
+			</p>
+
+			<div class="mt-5 px-20">
+				<ul>
+					<li class="center mt-5">%Detalle%</li>
+				</ul>
+				<p class="center mt-5 fs-15"><strong>%Total%</strong></p>
+			</div>
+
+			<p class="center mt-15">
+				<i>%Observaciones%</i>
+			</p>
+		</div>
+		<div class="container %company_casco%">
+			<p class="center pt-20"><strong>%Detalle%</strong></p>
+			<p class="center mt-40 barcode">
+				%Código_Barras%
+			</p>
+		</div>
+		<div class="container %company_pando%">
+			<p class="center pt-20">%Detalle%</p>
+			<p class="center mt-20 barcode">
+				%Código_Barras%
+			</p>
+			<p class="center mt-5 fs-20"><strong>%Total%</strong></p>
+		</div>
+		<div class="container %company_colmenar%">
+			<p class="center fs-12 pt-20 uppercase">%Detalle%</p>
+			<p class="center mt-5 barcode">
+				%Código_Barras%
+			</p>
+			<p class="center fs-12 uppercase">%Observaciones%</p>
+		</div>
+	</div>
+</body>
+</html>
