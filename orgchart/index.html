@@ -77,7 +77,7 @@
     <table class="table">
         <tr class="table-header">
             <td colspan="2">
-                <div class="center">1234</div>
+                <div class="center">AUTHORISED BY:</div>
             </td>
         </tr>
         <tr>
@@ -167,54 +167,54 @@
         }
 
         let anchor;
-        let chief = new Box().add(800, 158, 'box-brown', 'CHIEF HUMAN RESOURCE OFFICER<br/>JOGN SMITH');
-        let assist = new Box().add(1453, 259, 'box-purple', 'PERSONAL ASSISTANT<br/>' + randomName());
-        let b1 = new Box().add(174, 419, 'box-light-brown', 'GENERAL MANAGER<br/>' + randomName());
-        let b2 = new Box().add(1335, 419, 'box-light-brown', 'GENERAL MANAGER<br/>' + randomName());
+        let chief = new Box().add(800, 158, 'box-brown', 'CHIEF HUMAN RESOURCE OFFICER<br/>LUNGI MAETA');
+        let assist = new Box().add(1453, 259, 'box-purple', 'PERSONAL ASSISTANT<br/>ALETTA WYNGAARDT');
+        let b1 = new Box().add(174, 419, 'box-light-brown', 'GENERAL MANAGER(INTERNAL<br/>TRAINING):<br/>RENEY CHETTY');
+        let b2 = new Box().add(1335, 419, 'box-light-brown', 'GENERAL MANAGER(EXTERNAL<br/>TRAINING):<br/>DUDUZILE SCHALK');
         addLine(b1.cx, b1.y1 + 20, b2.cx, b1.y1 + 20);
         addLine(chief.cx, chief.cy, chief.cx, b1.y1 + 20);
         addLine(assist.cx, assist.cy, chief.cx, assist.cy, { 'stroke-dasharray': '4 2' });
 
 
-        let man1 = new Box().add(630, 553, 'box-blue', '<br/>ADMIN MANAGER<br/>CANDICE PORTER<br/>').lineTo(b1.center);
-        new Box().add(1673, 553, 'box-blue', '<br/>ADMIN MANAGER<br/>CANDICE PORTER<br/>');
+        let man1 = new Box().add(630, 553, 'box-blue', 'ADMIN MANAGER<br/>CANDICE PORTER<br/>').lineTo(b1.center);
+        new Box().add(1673, 553, 'box-blue', 'ACCOUNTANT<br/>SIBONGILE<br/>');
 
-        let t1 = new Box().add(437, 685, 'box-blue', 'TRAINING ADMIN<br/>' + randomName());
-        let t2 = new Box().add(873, 685, 'box-blue', 'LEARNING ADMIN<br/>' + randomName());
+        let t1 = new Box().add(437, 685, 'box-blue', 'TRAINING ADMIN<br/>ASSISTANT<br/>CHANTEL SIMPSON');
+        let t2 = new Box().add(873, 685, 'box-blue', 'LEARNING<br/>PROGRAMME<br/>CO-ORDINATOR<br/>VACANT');
         addLine(t1.cx, t1.y1 + 50, t2.cx, t1.y1 + 50);
         addLine(man1.cx, man1.cy, man1.cx, t1.y1 + 50);
 
-        new Box().add(1673, 685, 'box-blue', 'TRAINING ADMIN<br/>1234').lineTo(b2.center);
+        new Box().add(1673, 685, 'box-blue', 'ADMINISTRATIVE<br/>ASSISTANT<br/>JOY MALINGA').lineTo(b2.center);
 
         anchor = { x: b1.cx, y: 895 - 40 };
-        new Box().add(17, 895, 'box-blue', 'John Doe<br/>12341').lineTo(anchor);
-        new Box().add(177, 895, 'box-blue', randomName()).lineTo(anchor);
-        let d1 = new Box().add(311, 895, 'box-blue', randomName()).lineTo(anchor);
-        let d2 = new Box().add(459, 895, 'box-blue', randomName()).lineTo(anchor);
-        let d3 = new Box().add(581, 895, 'box-blue', randomName()).lineTo(anchor);
-        let d4 = new Box().add(709, 895, 'box-blue', randomName()).lineTo(anchor);
-        let d5 = new Box().add(853, 895, 'box-blue', randomName()).lineTo(anchor);
-        let d6 = new Box().add(995, 895, 'box-blue', randomName()).lineTo(anchor);
+        new Box().add(17, 895, 'box-blue', 'NAtional<br/>SYSTEMS<br/>SPECIALIST<br/>FRANS<br/>MOTHUTSE').lineTo(anchor);
+        new Box().add(177, 895, 'box-blue', 'SKILLS<br/>DEV<br/>FACILITA<br/>TOR<br/>MELBA<br/>JACOBS').lineTo(anchor);
+        let d1 = new Box().add(311, 895, 'box-blue', 'FACILITA<br/>TORS<br/>HAZEL<br/>MOTSISI').lineTo(anchor);
+        let d2 = new Box().add(459, 895, 'box-blue', 'FACILIT<br/>ACTORS<br/>PAULOS<br/>BEJE').lineTo(anchor);
+        let d3 = new Box().add(581, 895, 'box-blue', 'TDM<br/>NORTHE<br/>RN<br/>RAJ<br/>GOVIND').lineTo(anchor);
+        let d4 = new Box().add(709, 895, 'box-blue', 'TDM<br/>KZN<br/>MPUME<br/>MYEZA').lineTo(anchor);
+        let d5 = new Box().add(853, 895, 'box-blue', 'TDM<br/>W&E<br/>CAPE<br/>VACANT').lineTo(anchor);
+        let d6 = new Box().add(995, 895, 'box-blue', 'TDM<br/>HEALTHC<br/>ARE<br/>PHUME<br/>GUMEDE').lineTo(anchor);
         addLine(anchor.x, anchor.y, b1.cx, b1.cy)
 
         let anchor2 = { x: 1513, y: 825 };
         addLine(b2.cx, b2.cy, b2.cx, anchor2.y);
-        new Box().add(1177, 895, 'box-blue', 'MANAGER: SETA<br/>1234<br/>1324');
-        new Box().add(1479, 895, 'box-blue', 'MANAGER: EXTERNAL<br/>1234<br/>1324');
-        new Box().add(1767, 895, 'box-blue', 'MANAGER: EXTERNAL<br/>1234<br/>1324').lineTo(anchor2);
+        new Box().add(1177, 895, 'box-blue', 'MANAGER: SETA<br/>PROJECTS<br/>CLEMENT<br/>TSHIKOLOMO');
+        new Box().add(1479, 895, 'box-blue', 'MANAGER: EXTERNAL<br/>PROJECTS<br/>ANTHENA BASSON');
+        new Box().add(1767, 895, 'box-blue', 'MANAGER: EXTERNAL<br/>PROJECTS<br/>TANYA ANTHONY').lineTo(anchor2);
 
-        new Box().add(311, 1077, 'box-blue', randomName()).lineTo(d1.center);;
-        new Box().add(459, 1077, 'box-blue', randomName()).lineTo(d2.center);;
-        new Box().add(581, 1077, 'box-blue', randomName()).lineTo(d3.center);;
-        new Box().add(709, 1077, 'box-blue', randomName()).lineTo(d4.center);;
-        new Box().add(853, 1077, 'box-blue', randomName()).lineTo(d5.center);;
-        new Box().add(995, 1077, 'box-blue', randomName()).lineTo(d6.center);;
+        new Box().add(311, 1077, 'box-blue', 'TC X 7').lineTo(d1.center);;
+        new Box().add(459, 1077, 'box-blue', 'TC X 4').lineTo(d2.center);;
+        new Box().add(581, 1077, 'box-blue', 'TC X 6').lineTo(d3.center);;
+        new Box().add(709, 1077, 'box-blue', 'TC X 4').lineTo(d4.center);;
+        new Box().add(853, 1077, 'box-blue', 'TC X 6').lineTo(d5.center);;
+        new Box().add(995, 1077, 'box-blue', 'TC X 1<br/>VACANT X 2').lineTo(d6.center);;
 
-        new Box().add(1177, 1025, 'box-blue', 'LEARNING<br/>PROGRAMME: SETA<br/>1234<br/>1324').lineTo(anchor2);
-        new Box().add(1479, 1025, 'box-blue', randomName()).lineTo(anchor2);
+        new Box().add(1177, 1025, 'box-blue', 'LEARNING<br/>PROGRAMME CO-<br/>ORDINAORS:<br/>THEMBI THEKISO<br/>SILAE MUFUMADI<br/>PORTIA NETSHIFHEFHE<br/>TUMELO MARAOKA').lineTo(anchor2);
+        new Box().add(1479, 1025, 'box-blue', 'LEARNING<br/>PROGRAMME CO-<br/>CORDINATOR:<br/>MAMODISE MAAKE').lineTo(anchor2);
 
-        let pas = new Box().add(1177, 1269, 'box-blue', 'PRODUCTION<br/>ASSISTANCE<br/>');
-        let rec = new Box().add(1407, 1269, 'box-blue', 'RECEPTIONIST: <br/>XYZ<br/><br/>');
+        let pas = new Box().add(1177, 1269, 'box-blue', 'PRODUCTION<br/>ASSISTANT:<br/>VACANT');
+        let rec = new Box().add(1407, 1269, 'box-blue', 'RECEPTIONIST: <br/>SHIRLEY<br/>MASHASHANE');
         addLine(pas.cx, pas.cy, pas.x1 - 40, pas.cy);
         addLine(pas.x1 - 40, pas.cy, pas.x1 - 40, b2.y1 + b2.h + 100);
         addLine(pas.x1 - 40, b2.y1 + b2.h + 100, b2.cx, b2.y1 + b2.h + 100);
