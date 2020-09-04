@@ -173,70 +173,71 @@
             };
         }
 
+        function drawDiagram(text) {
+            let chief = new Box().add(gx[9], gy[0], 'box-brown', text[0]);
+            let assist = new Box().add(gx[16], gy[1], 'box-purple', text[1]);
+            let b1 = new Box().add(gx[1], gy[2], 'box-light-brown', text[2]);
+            let b2 = new Box().add(gx[14], gy[2], 'box-light-brown', text[3]);
+            addLine(b1.cx, b1.y1 + o20, b2.cx, b1.y1 + o20);
+            addLine(chief.cx, chief.cy, chief.cx, b1.y1 + o20);
+            addLine(assist.cx, assist.cy, chief.cx, assist.cy, { 'stroke-dasharray': '4 2' });
 
-        function randomName() {
-            const count = Math.floor(Math.random() * 3) + 3;
-            const rnd = [];
-            for (let i = 0; i < count; i++) {
-                let name = Math.random().toString(36).substring(4, 8).toUpperCase();
-                rnd.push(name);
-            }
-            const list = rnd.reduce((p, c) => `${p}<br/>${c}`);
-            return list;
+
+            let man1 = new Box().add(gx[7], gy[3], 'box-blue', text[4]).lineTo(b1.center);
+            new Box().add(gx[18], gy[3], 'box-blue', text[5]);
+
+            let t1 = new Box().add(gx[4], gy[4], 'box-blue', text[6]);
+            let t2 = new Box().add(gx[11], gy[4], 'box-blue', text[7]);
+            addLine(t1.cx, t1.y1 + o50, t2.cx, t1.y1 + o50);
+            addLine(man1.cx, man1.cy, man1.cx, t1.y1 + o50);
+
+            new Box().add(gx[18], gy[4], 'box-blue', text[8]).lineTo(b2.center);
+
+            const anchor = { x: b1.cx, y: (gy[5] - o40) };
+            new Box().add(gx[0], gy[5], 'box-blue', text[9]).lineTo(anchor);
+            new Box().add(gx[2], gy[5], 'box-blue', text[10]).lineTo(anchor);
+            let d1 = new Box().add(gx[3], gy[5], 'box-blue', text[11]).lineTo(anchor);
+            let d2 = new Box().add(gx[5], gy[5], 'box-blue', text[12]).lineTo(anchor);
+            let d3 = new Box().add(gx[6], gy[5], 'box-blue', text[13]).lineTo(anchor);
+            let d4 = new Box().add(gx[8], gy[5], 'box-blue', text[14]).lineTo(anchor);
+            let d5 = new Box().add(gx[10], gy[5], 'box-blue', text[15]).lineTo(anchor);
+            let d6 = new Box().add(gx[12], gy[5], 'box-blue', text[16]).lineTo(anchor);
+            addLine(anchor.x, anchor.y, b1.cx, b1.cy)
+
+            const anchor2 = { x: b2.cx, y: (gy[5] - o40) };
+            addLine(b2.cx, b2.cy, b2.cx, anchor2.y);
+            new Box().add(gx[13], gy[5], 'box-blue', text[17]);
+            new Box().add(gx[16], gy[5], 'box-blue', text[18]);
+            new Box().add(gx[18], gy[5], 'box-blue', text[19]).lineTo(anchor2);
+
+            new Box().add(gx[3], gy[7], 'box-blue', text[20]).lineTo(d1.center);;
+            new Box().add(gx[5], gy[7], 'box-blue', text[21]).lineTo(d2.center);;
+            new Box().add(gx[6], gy[7], 'box-blue', text[22]).lineTo(d3.center);;
+            new Box().add(gx[8], gy[7], 'box-blue', text[23]).lineTo(d4.center);;
+            new Box().add(gx[10], gy[7], 'box-blue', text[24]).lineTo(d5.center);;
+            new Box().add(gx[12], gy[7], 'box-blue', text[25]).lineTo(d6.center);;
+
+            new Box().add(gx[13], gy[6], 'box-blue', text[26]).lineTo(anchor2);
+            new Box().add(gx[16], gy[6], 'box-blue', text[27]).lineTo(anchor2);
+
+            let pas = new Box().add(gx[13], gy[8], 'box-blue', text[28]);
+            let rec = new Box().add(gx[15], gy[8], 'box-blue', text[29]);
+            addLine(pas.cx, pas.cy, pas.x1 - o30, pas.cy);
+            addLine(pas.x1 - o30, pas.cy, pas.x1 - o30, b2.y1 + b2.h + o100);
+            addLine(pas.x1 - o30, b2.y1 + b2.h + o100, b2.cx, b2.y1 + b2.h + o100);
+            addLine(rec.x1 + o20, rec.cy, rec.x1 + o20, anchor2.y);
         }
+
+        $.get('names.csv', (text2) => {
+            text2 = text2
+            .split('\r')
+            .join('')
+            .split('\n')
+            .filter(txt => !!txt);
+            drawDiagram(text2);
+        });
+
         
-        let chief = new Box().add(gx[9], gy[0], 'box-brown', 'CHIEF HUMAN RESOURCE OFFICER<br/>LUNGI MAETA');
-        let assist = new Box().add(gx[16], gy[1], 'box-purple', 'PERSONAL ASSISTANT<br/>ALETTA WYNGAARDT');
-        let b1 = new Box().add(gx[1], gy[2], 'box-light-brown', 'GENERAL MANAGER(INTERNAL<br/>TRAINING):<br/>RENEY CHETTY');
-        let b2 = new Box().add(gx[14], gy[2], 'box-light-brown', 'GENERAL MANAGER(EXTERNAL<br/>TRAINING):<br/>DUDUZILE SCHALK');
-        addLine(b1.cx, b1.y1 + o20, b2.cx, b1.y1 + o20);
-        addLine(chief.cx, chief.cy, chief.cx, b1.y1 + o20);
-        addLine(assist.cx, assist.cy, chief.cx, assist.cy, { 'stroke-dasharray': '4 2' });
-
-
-        let man1 = new Box().add(gx[7], gy[3], 'box-blue', 'ADMIN MANAGER<br/>CANDICE PORTER<br/>').lineTo(b1.center);
-        new Box().add(gx[18], gy[3], 'box-blue', 'ACCOUNTANT<br/>SIBONGILE<br/>');
-
-        let t1 = new Box().add(gx[4], gy[4], 'box-blue', 'TRAINING ADMIN<br/>ASSISTANT<br/>CHANTEL SIMPSON');
-        let t2 = new Box().add(gx[11], gy[4], 'box-blue', 'LEARNING<br/>PROGRAMME<br/>CO-ORDINATOR<br/>VACANT');
-        addLine(t1.cx, t1.y1 + o50, t2.cx, t1.y1 + o50);
-        addLine(man1.cx, man1.cy, man1.cx, t1.y1 + o50);
-
-        new Box().add(gx[18], gy[4], 'box-blue', 'ADMINISTRATIVE<br/>ASSISTANT<br/>JOY MALINGA').lineTo(b2.center);
-
-        const anchor = { x: b1.cx, y: (gy[5] - o40) };
-        new Box().add(gx[0], gy[5], 'box-blue', 'NATIONAL<br/>SYSTEMS<br/>SPECIALIST<br/>FRANS<br/>MOTHUTSE').lineTo(anchor);
-        new Box().add(gx[2], gy[5], 'box-blue', 'SKILLS<br/>DEV<br/>FACILITA<br/>TOR<br/>MELBA<br/>JACOBS').lineTo(anchor);
-        let d1 = new Box().add(gx[3], gy[5], 'box-blue', 'FACILITA<br/>TORS<br/>HAZEL<br/>MOTSISI').lineTo(anchor);
-        let d2 = new Box().add(gx[5], gy[5], 'box-blue', 'FACILIT<br/>ACTORS<br/>PAULOS<br/>BEJE').lineTo(anchor);
-        let d3 = new Box().add(gx[6], gy[5], 'box-blue', 'TDM<br/>NORTHE<br/>RN<br/>RAJ<br/>GOVIND').lineTo(anchor);
-        let d4 = new Box().add(gx[8], gy[5], 'box-blue', 'TDM<br/>KZN<br/>MPUME<br/>MYEZA').lineTo(anchor);
-        let d5 = new Box().add(gx[10], gy[5], 'box-blue', 'TDM<br/>W&E<br/>CAPE<br/>VACANT').lineTo(anchor);
-        let d6 = new Box().add(gx[12], gy[5], 'box-blue', 'TDM<br/>HEALTHC<br/>ARE<br/>PHUME<br/>GUMEDE').lineTo(anchor);
-        addLine(anchor.x, anchor.y, b1.cx, b1.cy)
-
-        const anchor2 = { x: b2.cx, y: (gy[5] - o40) };
-        addLine(b2.cx, b2.cy, b2.cx, anchor2.y);
-        new Box().add(gx[13], gy[5], 'box-blue', 'MANAGER: SETA<br/>PROJECTS<br/>CLEMENT<br/>TSHIKOLOMO');
-        new Box().add(gx[16], gy[5], 'box-blue', 'MANAGER: EXTERNAL<br/>PROJECTS<br/>ANTHENA BASSON');
-        new Box().add(gx[18], gy[5], 'box-blue', 'MANAGER: EXTERNAL<br/>PROJECTS<br/>TANYA ANTHONY').lineTo(anchor2);
-
-        new Box().add(gx[3], gy[7], 'box-blue', 'TC X 7').lineTo(d1.center);;
-        new Box().add(gx[5], gy[7], 'box-blue', 'TC X 4').lineTo(d2.center);;
-        new Box().add(gx[6], gy[7], 'box-blue', 'TC X 6').lineTo(d3.center);;
-        new Box().add(gx[8], gy[7], 'box-blue', 'TC X 4').lineTo(d4.center);;
-        new Box().add(gx[10], gy[7], 'box-blue', 'TC X 6').lineTo(d5.center);;
-        new Box().add(gx[12], gy[7], 'box-blue', 'TC X 1<br/>VACANT X 2').lineTo(d6.center);;
-
-        new Box().add(gx[13], gy[6], 'box-blue', 'LEARNING<br/>PROGRAMME CO-<br/>ORDINAORS:<br/>THEMBI THEKISO<br/>SILAE MUFUMADI<br/>PORTIA NETSHIFHEFHE<br/>TUMELO MARAOKA').lineTo(anchor2);
-        new Box().add(gx[16], gy[6], 'box-blue', 'LEARNING<br/>PROGRAMME CO-<br/>CORDINATOR:<br/>MAMODISE MAAKE').lineTo(anchor2);
-
-        let pas = new Box().add(gx[13], gy[8], 'box-blue', 'PRODUCTION<br/>ASSISTANT:<br/>VACANT');
-        let rec = new Box().add(gx[15], gy[8], 'box-blue', 'RECEPTIONIST: <br/>SHIRLEY<br/>MASHASHANE');
-        addLine(pas.cx, pas.cy, pas.x1 - o30, pas.cy);
-        addLine(pas.x1 - o30, pas.cy, pas.x1 - o30, b2.y1 + b2.h + o100);
-        addLine(pas.x1 - o30, b2.y1 + b2.h + o100, b2.cx, b2.y1 + b2.h + o100);
-        addLine(rec.x1 + o20, rec.cy, rec.x1 + o20, anchor2.y);
     </script>
 
 </body>
