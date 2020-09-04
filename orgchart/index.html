@@ -119,8 +119,8 @@
         let o40 = Math.floor(50 * scale);
         let o50 = Math.floor(50 * scale);
         let o100 = Math.floor(50 * scale);
-        gx = gx.map(x => x * scale);
-        gy = gy.map(y => y * scale);
+        gx = gx.map(x => Math.floor(x * scale));
+        gy = gy.map(y => Math.floor(y * scale));
         $('html').css('font-size', `${Math.floor(20 * scale)}px`);
 
         function addLine(x1, y1, x2, y2, attr2) {
