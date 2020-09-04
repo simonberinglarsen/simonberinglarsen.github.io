@@ -11,6 +11,8 @@
         }
 
         body {
+            margin: 0;
+            padding: 0;
             font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
         }
 
@@ -68,7 +70,12 @@
             font-weight: bold;
             padding-bottom: 0.7rem;
             border-bottom: 0.1rem solid black;
-            width: 100rem;
+            
+        }
+
+        svg {
+            margin: 0px;
+            padding: 0px;
         }
     </style>
 </head>
@@ -100,7 +107,7 @@
             <td></td>
         </tr>
     </table>
-    <svg width="2000" height="2000">
+    <svg height="100vh" width="100vw">
     </svg>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -230,14 +237,14 @@
 
         $.get('names.csv', (text2) => {
             text2 = text2
-            .split('\r')
-            .join('')
-            .split('\n')
-            .filter(txt => !!txt);
+                .split('\r')
+                .join('')
+                .split('\n')
+                .filter(txt => !!txt);
             drawDiagram(text2);
         });
 
-        
+
     </script>
 
 </body>
