@@ -113,7 +113,7 @@
         <div class="center text-huge mt-3">🏆</div>
         <div class="center font-size-1 text-white m-1">Congratulations on winning</div>
         <div class="center font-size-3 text-bold text-white">You have earned</div>
-        <div class="center font-size-3 text-bold text-yellow">Rs.6,000.00</div>
+        <div class="center font-size-3 text-bold text-yellow">Rs.<span id="moneys"></span></div>
         <div class="center font-size-1 text-white mt-3">50 people share 10,000INR</div>
     </div>
     <div class="bg-white h-100">
@@ -251,8 +251,25 @@
 
         }).call(this);
 
+        (function() {
+            let moneys = 0;
+            function update() {
+                moneys += 6543;
+                if(moneys >= 600000) {
+                    moneys = 600000;
+                }
+                else {
+                    requestAnimationFrame(update);
+                }
+                const d1 = Math.floor(moneys % 100).toString().padStart(2, "0");
+                const d2 = Math.floor(moneys % 1000).toString().padStart(3, "0");
+                const d3 = Math.floor(moneys / 100000).toString().padStart(1, "0");
+                document.getElementById('moneys').innerText = `${d3},${d2}.${d1}`;
+            }
+            update();
+        })();
 
-//# sourceURL=coffeescript
+
     </script>
 </body>
 
