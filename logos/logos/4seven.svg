@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 132.29166 132.29167"
+   height="500"
+   width="500">
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1">
+    <g
+       transform="matrix(1.8232092,0,0,1.8232092,-50.241552,-27.841274)"
+       id="g880">
+      <path
+         id="path855"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:28.3706px;line-height:1.25;font-family:Bison;-inkscape-font-specification:'Bison Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.709264"
+         d="m 42.481354,62.089593 c 1.106806,-0.767944 1.676978,-1.823868 1.676978,-3.143773 v -1.055923 c 0,-1.535889 -0.838489,-2.831796 -2.481926,-3.887719 -0.436015,-0.287979 -1.240963,-0.647953 -2.414847,-1.103921 -0.637251,-0.26398 -1.073265,-0.455967 -1.308042,-0.575958 -0.838489,-0.527962 -1.240964,-1.151917 -1.240964,-1.895863 v -0.407971 c 0,-0.575958 0.167698,-0.983928 0.503093,-1.199913 0.301857,-0.191986 0.737871,-0.287979 1.375122,-0.287979 0.637251,0 1.106805,0.09599 1.375122,0.287979 0.335395,0.215985 0.503093,0.599957 0.503093,1.199913 v 1.463895 h 3.689349 v -1.463895 c 0,-1.319904 -0.570172,-2.375828 -1.676978,-3.143772 -0.972646,-0.647953 -2.280688,-0.98393 -3.890586,-0.98393 -1.609898,0 -2.91794,0.335977 -3.890588,0.98393 -1.106804,0.767944 -1.676977,1.823868 -1.676977,3.143772 v 0.407971 c 0,1.511891 0.872029,2.831795 2.481927,3.863721 0.503093,0.311977 1.274503,0.647953 2.314228,1.055923 0.77141,0.311978 1.240963,0.503964 1.408661,0.623955 0.838488,0.551961 1.240964,1.175915 1.240964,1.919862 v 1.055923 c 0,0.599957 -0.167698,0.983929 -0.503093,1.199914 -0.268317,0.191986 -0.737871,0.287979 -1.375122,0.287979 -0.637251,0 -1.073265,-0.09599 -1.375122,-0.287979 -0.335395,-0.215985 -0.503093,-0.623955 -0.503093,-1.199914 v -2.183842 h -3.68935 v 2.183842 c 0,1.319905 0.570173,2.375829 1.676977,3.143773 0.972648,0.647954 2.28069,0.98393 3.890588,0.98393 1.609898,0 2.91794,-0.335976 3.890586,-0.98393 z" />
+      <path
+         id="path857"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:28.3706px;line-height:1.25;font-family:Bison;-inkscape-font-specification:'Bison Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.709264"
+         d="m 56.060154,46.08275 h -9.726468 v 16.798786 h 9.726468 v -2.639809 h -6.037118 v -4.655664 h 4.158903 v -2.639809 h -4.158903 v -4.223695 h 6.037118 z" />
+      <path
+         id="path859"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:28.3706px;line-height:1.25;font-family:Bison;-inkscape-font-specification:'Bison Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.709263"
+         d="m 57.348953,46.082606 4.695322,16.798973 h 3.318661 l 4.296378,-12.855027 h -6.682798 v -3.943946 h -1.871202 z m 17.698661,0 -5.094779,16.798973 h 2.190564 1.984375 7.742164 V 60.241948 H 75.83258 V 55.5859 h 4.158919 V 52.946269 H 75.83258 v -4.223515 h 6.037358 v -2.640148 z" />
+      <path
+         id="path863"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:28.3706px;line-height:1.25;font-family:Bison;-inkscape-font-specification:'Bison Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.709264"
+         d="m 91.778198,46.08275 v 8.495386 L 86.143554,46.08275 h -2.146531 v 16.798786 h 3.68935 v -8.519384 l 5.634643,8.519384 h 2.146532 V 46.08275 Z" />
+    </g>
+    <g
+       style="font-style:normal;font-weight:normal;font-size:27.3903px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#aa0000;fill-opacity:1;stroke:none;stroke-width:0.684755"
+       id="text853"
+       transform="scale(1.137731,0.87894235)"
+       aria-label="7" />
+  </g>
+</svg>
