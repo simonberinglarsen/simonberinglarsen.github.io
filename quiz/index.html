@@ -185,6 +185,13 @@
             animation-iteration-count: infinite;
         }
 
+        .bounce2 {
+            max-width: 400px;
+            overflow: hidden;
+            animation: bounce2 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;        }
+
         .bounce {
             max-width: 400px;
             overflow: hidden;
@@ -215,6 +222,18 @@
             }
             100% {
                 transform: translate(-100px, 0px) rotate(-90deg);
+            }
+        }
+
+        @keyframes bounce2 {
+            0% {
+                transform: rotate(-8deg);
+            }
+            50% {
+                transform: rotate(8deg);
+            }
+            100% {
+                transform: rotate(-8deg);
             }
         }
 
@@ -256,6 +275,48 @@
             }
 
             40% {
+                transform: translate(0px, 0px) rotate(0deg);
+            }
+        }
+
+        @keyframes shake2 {
+            0% {
+                transform: translate(1px, 1px) rotate(0deg);
+            }
+
+            10% {
+                transform: translate(-1px, -2px) rotate(-1deg);
+            }
+
+            20% {
+                transform: translate(-3px, 0px) rotate(1deg);
+            }
+
+            30% {
+                transform: translate(3px, 2px) rotate(0deg);
+            }
+
+            40% {
+                transform: translate(1px, -1px) rotate(1deg);
+            }
+
+            50% {
+                transform: translate(-1px, 2px) rotate(-1deg);
+            }
+
+            60% {
+                transform: translate(-3px, 1px) rotate(0deg);
+            }
+
+            70% {
+                transform: translate(3px, 1px) rotate(-1deg);
+            }
+
+            80% {
+                transform: translate(-1px, -1px) rotate(1deg);
+            }
+
+            90% {
                 transform: translate(0px, 0px) rotate(0deg);
             }
         }
@@ -399,8 +460,10 @@
         <div>
             <div class="center text-huge mt-3">🏆</div>
             <div class="center font-size-1 text-white m-1">Congratulations on winning</div>
-            <div class="center font-size-3 text-bold text-white">You have earned</div>
-            <div class="center font-size-3 text-bold text-yellow">Rs.<span id="moneys"></span></div>
+            <div class="center font-size-3 text-bold text-white wiggle">You have earned</div>
+            <div class="row">
+                <div class="center font-size-3 text-bold text-yellow bounce2">Rs.<span id="moneys"></span></div>
+            </div>
             <div class="center font-size-1 text-white mt-3">50 people share 10,000INR</div>
         </div>
         <div class="bg-white pb-3">
@@ -560,7 +623,7 @@
 
         }).call(this);
 
-        (function () {
+        function moneyCounter() {
             let moneys = 0;
             function update() {
                 moneys += 6543;
@@ -576,7 +639,7 @@
                 document.getElementById('moneys').innerText = `${d3},${d2}.${d1}`;
             }
             update();
-        })();
+        }
 
         const state =
         {
@@ -617,6 +680,9 @@
             if (state.pages.find(p => p.id === state.activePage + 1)) {
                 state.activePage++;
                 showPage();
+                if(state.activePage === 4) {
+                    moneyCounter();
+                }
             }
         };
 
@@ -656,6 +722,10 @@
     
 /*
         CHANGE HISTORY:
+        2020-09-10.6:
+        * animation on finalpage
+        * money counter on finalpage
+
         2020-09-10.5:
         * header added to all pages with shadow
         * smooth scroll to top on modal / newpage
