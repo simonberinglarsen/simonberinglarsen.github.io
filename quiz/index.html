@@ -11,17 +11,20 @@
             margin: 0;
             padding: 0;
             width: 100%;
-            height: 1000px;
             background: rgb(171, 72, 162);
             background: linear-gradient(180deg, rgba(171, 72, 162, 1) 0%, rgba(111, 73, 234, 1) 100%);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #444;
+            overflow-x: hidden;
         }
 
         .center {
             text-align: center;
         }
 
+        .box {
+            height:500px;
+        }
 
         .text-yellow {
             color: rgb(255, 185, 0);
@@ -41,6 +44,10 @@
 
         .font-size-3 {
             font-size: 30px;
+        }
+
+        .font-size-4 {
+            font-size: 60px;
         }
 
         .text-huge {
@@ -64,6 +71,13 @@
         .btn-primary {
             border-radius: 40px;
             background: linear-gradient(90deg, rgba(250, 116, 78, 1) 0%, rgba(241, 80, 150, 1) 100%);
+            padding: 15px 30px;
+            cursor: pointer;
+        }
+
+        .btn-success {
+            border-radius: 40px;
+            background: linear-gradient(-45deg, rgba(100, 150, 100, 1) 0%, rgba(120, 220, 120, 1) 100%);
             padding: 15px 30px;
             cursor: pointer;
         }
@@ -99,26 +113,6 @@
             cursor: pointer;
             color: #222;
             font-weight: bold;
-        }
-
-        .btn-back:focus {
-            outline: none;
-        }
-
-        .btn-back {
-            position: absolute;
-            top: 50px;
-            left: 0px;
-            border-top-right-radius: 30px;
-            border-bottom-right-radius: 30px;
-            border: 1px solid #c6c;
-            background-color: #eae;
-            padding: 8px 30px;
-            cursor: pointer;
-            color: #444;
-            font-weight: bold;
-            font-size: 16px;
-            box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
         }
 
         .w-100 {
@@ -180,13 +174,29 @@
         .header {
             background-color: white;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
             width: 100%;
+            box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
         }
 
         .wiggle {
             animation: shake 2s;
+            animation-iteration-count: infinite;
+        }
+
+        .bounce2 {
+            max-width: 400px;
+            overflow: hidden;
+            animation: bounce2 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;        }
+
+        .bounce {
+            max-width: 400px;
+            overflow: hidden;
+            animation: bounce 2s;
+            animation-timing-function: ease-in-out;
             animation-iteration-count: infinite;
         }
 
@@ -203,9 +213,28 @@
             border: 0px;
         }
 
-        .item-selected {
-            background: linear-gradient(-45deg, rgba(100, 150, 100, 1) 0%, rgba(120, 220, 120, 1) 100%);
+        @keyframes bounce {
+            0% {
+                transform: translate(-100px, 0px) rotate(-90deg);
+            }
+            50% {
+                transform: translate(100px, 0px) rotate(90deg);
+            }
+            100% {
+                transform: translate(-100px, 0px) rotate(-90deg);
+            }
+        }
 
+        @keyframes bounce2 {
+            0% {
+                transform: rotate(-8deg);
+            }
+            50% {
+                transform: rotate(8deg);
+            }
+            100% {
+                transform: rotate(-8deg);
+            }
         }
 
         @keyframes shake {
@@ -250,111 +279,191 @@
             }
         }
 
+        @keyframes shake2 {
+            0% {
+                transform: translate(1px, 1px) rotate(0deg);
+            }
+
+            10% {
+                transform: translate(-1px, -2px) rotate(-1deg);
+            }
+
+            20% {
+                transform: translate(-3px, 0px) rotate(1deg);
+            }
+
+            30% {
+                transform: translate(3px, 2px) rotate(0deg);
+            }
+
+            40% {
+                transform: translate(1px, -1px) rotate(1deg);
+            }
+
+            50% {
+                transform: translate(-1px, 2px) rotate(-1deg);
+            }
+
+            60% {
+                transform: translate(-3px, 1px) rotate(0deg);
+            }
+
+            70% {
+                transform: translate(3px, 1px) rotate(-1deg);
+            }
+
+            80% {
+                transform: translate(-1px, -1px) rotate(1deg);
+            }
+
+            90% {
+                transform: translate(0px, 0px) rotate(0deg);
+            }
+        }
+
+        .pulse {
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+            -webkit-animation: pulse 1.5s infinite;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+
+            }
+            70% {
+
+                box-shadow: 0 0 0 50px rgba(255, 255, 255, 0);
+            }
+            100% {
+
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+            }
+        }
+
         .version {
             position: absolute;
             top: 0;
             left: 0;
         }
+
+        .img-scale-width {
+            width: 100%;
+            max-width:400px;
+            height: auto;
+        }
+
+        /* ------------------------------------------------------- */
+        /* MODAL */
+        /* ------------------------------------------------------- */
+        .modal {
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0;
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #eee;
+            border-radius: 4px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+        }
+        .overlay {
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+        }
+
+        .is-visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        
+
     </style>
 </head>
 
 <body>
-    <div class="version">2020-09-10.2</div>
+    <!--<div class="version">2020-09-10.5</div>-->
     <div class="header">
-        <button class="prev-page btn-back d-none">BACK</button>
-        <div class="center header-title"></div>
+        <div class="center"> <img src="header.jpg"></div>
     </div>
     <div id="page1" class="page d-none">
         <div class="center mt-3">
             <img class="w-300 wiggle" src="present.svg">
         </div>
         <div class="center font-size-1 text-white m-1">It's Raining Rewards!</div>
-        <div class="center font-size-2 text-bold text-white">Take a Quick</div>
-        <div class="center font-size-3 text-bold text-yellow">Survey Now</div>
+        <div class="center font-size-2 text-bold text-white">Answer 3 QUESTIONS And Get A Chance To Win</div>
+        <div class="center font-size-2 text-bold text-white">10,000 POINTS</div>
+        <div class="center font-size-3 text-bold text-yellow">Let's Start Now.</div>
         <div class="row">
-            <div class="next-page btn-primary font-size-2 text-white mt-3">LET'S GO</div>
+            <div class="next-page btn-primary font-size-2 text-white mt-3 pulse">CONTINUE</div>
         </div>
+        <div class="center bg-white mt-3 p-3 h-100"> 
+            <img class="img-scale-width" src="footer.jpg">
+        </div>
+        <div class="box bg-white"></div>
+
     </div>
     <div id="page2" class="page d-none">
         <div class="center mt-3">
-            <div class="center font-size-2 text-white m-1">What is your Gender?</div>
-            <div class="center font-size-1 text-bold text-yellow">click the icon</div>
+            <div class="center font-size-2 text-white m-1">Who is the president of the United States?</div>
+            <div class="row">
+                <div class="bounce font-size-4 m-2">🧠</div>
+            </div>
             <div class="mt-3">
-                <div>
-                    <button class="next-page btn-secondary m-1">
-                        <img class="w-100" src="male.svg">
-                    </button>
-                </div>
-                <div class="text-yellow text-bold">Male</div>
-                <div class="mt-3">
-                    <button class="next-page btn-secondary m-1">
-                        <img class="w-100" src="female.svg">
-                    </button>
-                </div>
-                <div class="text-yellow text-bold">Female</div>
+                <button class="correct-answer font-size-2 text-bold btn-secondary m-1">
+                    Donald Trump
+                </button>
+            </div>
+            <div class="mt-3">
+                <button class="wrong-answer  font-size-2 text-bold btn-secondary m-1">
+                    Narendra Modi
+                </button>
             </div>
         </div>
+        <div class="box"></div>
     </div>
     <div id="page3" class="page d-none">
         <div class="center mt-3">
-            <div class="center font-size-2 text-white m-2">Which of these ITEMS do you have at home?</div>
-            <div class="center font-size-1 text-bold text-yellow m-2">It could be owned by you, your family, the owner
-                of the house, or provided by your employer</div>
-            <div class="mt-3 center">
-                <span>
-                    <button class="btn-sm-secondary m-1 item-toggle">
-                        <div>
-                            <img src="https://image.flaticon.com/icons/png/128/3003/3003978.png" width="64" height="64">
-                        </div>
-                        <div class=" font-size-1 text-bold  m-1">Monitor</div>
-                    </button>
-                </span>
-                <span>
-                    <button class="btn-sm-secondary m-1 item-toggle">
-                        <div>
-                            <img src="https://image.flaticon.com/icons/png/128/3003/3003982.png" width="64" height="64">
-                        </div>
-                        <div class=" font-size-1 text-bold  m-1">Gaming Console</div>
-                    </button>
-                </span>
-                <span>
-                    <button class="btn-sm-secondary m-1 item-toggle">
-                        <div>
-                            <img src="https://image.flaticon.com/icons/png/128/3004/3004029.png" width="64" height="64">
-                        </div>
-                        <div class=" font-size-1 text-bold  m-1">Refrigerator</div>
-                    </button>
-                </span>
-                <span>
-                    <button class="btn-sm-secondary m-1 item-toggle">
-                        <div>
-                            <img src="https://image.flaticon.com/icons/png/128/3004/3004041.png" width="64" height="64">
-                        </div>
-                        <div class=" font-size-1 text-bold  m-1">Fan</div>
-                    </button>
-                </span>
-                <span>
-                    <button class="btn-sm-secondary m-1 item-toggle">
-                        <div>
-                            <img src="https://image.flaticon.com/icons/png/128/3004/3004016.png" width="64" height="64">
-                        </div>
-                        <div class=" font-size-1 text-bold  m-1">Lamp</div>
-                    </button>
-                </span>
-            </div>
+            <div class="center font-size-2 text-white m-1">Which is NOT a continent?</div>
             <div class="row">
-                <div class="next-page btn-primary font-size-2 text-white mt-3">NEXT</div>
+                <div class="bounce font-size-4 m-2">🌏</div>
             </div>
-
+            <div class="mt-3">
+                <button class="wrong-answer  font-size-2 text-bold btn-secondary m-1">
+                    South America
+                </button>
+            </div>
+            <div class="mt-3">
+                <button class="correct-answer font-size-2 text-bold btn-secondary m-1">
+                    Pacific Ocean
+                </button>
+            </div>
         </div>
+        <div class="box"></div>
     </div>
     <div id="page4" class="page d-none">
         <canvas class="aboslute" id="world"></canvas>
         <div>
             <div class="center text-huge mt-3">🏆</div>
             <div class="center font-size-1 text-white m-1">Congratulations on winning</div>
-            <div class="center font-size-3 text-bold text-white">You have earned</div>
-            <div class="center font-size-3 text-bold text-yellow">Rs.<span id="moneys"></span></div>
+            <div class="center font-size-3 text-bold text-white wiggle">You have earned</div>
+            <div class="row">
+                <div class="center font-size-3 text-bold text-yellow bounce2">Rs.<span id="moneys"></span></div>
+            </div>
             <div class="center font-size-1 text-white mt-3">50 people share 10,000INR</div>
         </div>
         <div class="bg-white pb-3">
@@ -373,7 +482,31 @@
                 </div>
             </div>
         </div>
+        <div class="box bg-white"></div>
     </div>
+
+
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="modal">
+        <div id="modal-body-correct">
+            <div class="row">
+                <div class="center font-size-3 text-bold m-2">Correct Answer</div>
+            </div>
+            <div class="row mt-3">
+                <button class="btn-success font-size-2" id="modal-close-next">NEXT</button>
+            </div>
+        </div>
+        <div id="modal-body-wrong">
+            <div class="row">
+                <div class="center font-size-3 text-bold m-2">Wrong Answer</div>
+            </div>
+            <div class="row mt-3">
+                <button class="btn-primary font-size-2 text-white" id="modal-close-retry">RETRY</button>
+            </div>
+        </div>
+    </div>
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script>
@@ -490,7 +623,7 @@
 
         }).call(this);
 
-        (function () {
+        function moneyCounter() {
             let moneys = 0;
             function update() {
                 moneys += 6543;
@@ -506,7 +639,7 @@
                 document.getElementById('moneys').innerText = `${d3},${d2}.${d1}`;
             }
             update();
-        })();
+        }
 
         const state =
         {
@@ -514,60 +647,106 @@
             pages: [
                 {
                     id: 1,
-                    title: `REWARDS!`,
-                    hideBackButton: true
+                    title: `WELCOME TO QUIZATHON!`,
                 },
                 {
                     id: 2,
-                    title: 'SURVEY'
+                    title: 'QUESTION 1',
                 },
                 {
                     id: 3,
-                    title: 'WHICH ITEMS?'
+                    title: 'QUESTION 2',
                 },
                 {
                     id: 4,
                     title: 'CONGRATULATIONS',
-                    hideBackButton: true
                 },
             ]
         };
 
+        function toTop() {
+            $("html, body").animate({scrollTop: 0}, 500);
+        }
         function showPage() {
             const n = state.activePage;
             $(`.page`).hide();
             const page = state.pages.find(p => p.id === state.activePage);
             $('.header-title').html(page.title);
-            $('.btn-back').removeClass('d-none');
-            if (page.hideBackButton) {
-                $('.btn-back').addClass('d-none');
-            }
             $(`#page${n}`).show();
+            toTop();
         }
 
         const nextPageHandler = () => {
             if (state.pages.find(p => p.id === state.activePage + 1)) {
                 state.activePage++;
                 showPage();
+                if(state.activePage === 4) {
+                    moneyCounter();
+                }
             }
         };
 
-        const prevPageHandler = () => {
-            if (state.pages.find(p => p.id === state.activePage - 1)) {
-                state.activePage--;
-                showPage();
-            }
+        const openDialog = () =>{
+            toTop();
+            $('#overlay').addClass('is-visible');
+            $('#modal').addClass('is-visible');
         };
 
-        const itemToggleHandler = (e) => {
-            $(e.currentTarget).toggleClass('item-selected');
+        const closeDialog = () =>{
+            $('#overlay').removeClass('is-visible');
+            $('#modal').removeClass('is-visible');
         };
 
-        $('.item-toggle').click(itemToggleHandler);
         $('.next-page').click(nextPageHandler);
-        $('.prev-page').click(prevPageHandler);
+        $('.correct-answer').click(()=>{
+            openDialog();
+            $('#modal-body-correct').show();
+            $('#modal-body-wrong').hide();
+        });
+        $('.wrong-answer').click(()=>{
+            openDialog();
+            $('#modal-body-wrong').show();
+            $('#modal-body-correct').hide();
+        });
+        $('#modal-close-next').click(()=>{
+            closeDialog();
+            nextPageHandler();
+        });
+        $('#modal-close-retry').click(()=>{
+            closeDialog();
+        });
+
 
         showPage();
+
+    
+/*
+        CHANGE HISTORY:
+        2020-09-10.6:
+        * animation on finalpage
+        * money counter on finalpage
+
+        2020-09-10.5:
+        * header added to all pages with shadow
+        * smooth scroll to top on modal / newpage
+
+        2020-09-10.4:
+        * header added to all pages with shadow
+        * smooth scroll to top on modal / newpage
+        
+        2020-09-10.3:
+        * hide backbutton on all pages
+        * remove multiple choise/survey
+        * add 2 easy questions
+        * add modal popups after answer
+        * update text on frontpage
+        * added banner to all pages
+        * added footer to index page
+        
+        2020-09-10.2:
+        * initial version
+        
+        */
     </script>
 </body>
 
