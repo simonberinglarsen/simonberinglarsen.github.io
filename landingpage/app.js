@@ -72,7 +72,7 @@ function typeText(id, text, speed, delay) {
 }
 
 
-projects.forEach(p => {
+projects.forEach((p, i) => {
     const x = $('#project-template').clone();
     const id1 = nextId();
     const id2 = nextId();
@@ -83,9 +83,9 @@ projects.forEach(p => {
     x.removeClass('d-none');
     x.find('.project-logo').append($(`<img src="assets/images/${p.logo}">`));
     $('main').append(x);
-    typeText(id1, p.title, 200, 1000);
-    typeText(id2, p.slogan, 100, 2000);
-    typeText(id3, p.description, 50, 3000);
+    typeText(id1, p.title, 200, i*100);
+    typeText(id2, p.slogan, 100, i*500);
+    typeText(id3, p.description, 50, i*1000);
 
 });
 
