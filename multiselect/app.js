@@ -114,7 +114,7 @@ Essie Gaulke`.split(/\r?\n/).filter(n => !!n).map((n, i) =>
     ({
         'id': i,
         'name': n.trim(),
-        'profileUrl': 'profile.jpg'
+        'profileUrl': i%2 ? `https://randomuser.me/api/portraits/thumb/men/${i+1}.jpg` : `https://randomuser.me/api/portraits/thumb/women/${i+1}.jpg`
     }));
 const multiselect = new Multiselect(
     allModels,
