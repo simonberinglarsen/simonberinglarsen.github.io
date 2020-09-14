@@ -1,6 +1,9 @@
 /*
     CHANGE history:
     
+    2020-09-14.4:
+    * no console typing for title + slogan
+
     2020-09-14.3:
     * center header, main and footer content
     * adjust colors (green text, background color)
@@ -8,7 +11,7 @@
     * version number added in upper left corner
 */
 
-$('.version').html('version: 2020-09-14.3');
+$('.version').html('version: 2020-09-14.4');
 
 const projects = [
     {
@@ -93,8 +96,10 @@ projects.forEach((p, i) => {
     x.removeClass('d-none');
     x.find('.project-logo').append($(`<img src="assets/images/${p.logo}">`));
     $('.main-content').append(x);
-    typeText(id1, p.title, 200, i*100);
-    typeText(id2, p.slogan, 100, i*500);
+    //typeText(id1, p.title, 200, i*100);
+    //typeText(id2, p.slogan, 100, i*500);
+    $(`#${id1}`).html(p.title);
+    $(`#${id2}`).html(p.title);
     typeText(id3, p.description, 50, i*1000);
 
 });
