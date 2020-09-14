@@ -17,7 +17,7 @@
 
 html,
 body {
-    background-color: #111;
+    background-color: #222;
     font-family: 'Noto Sans', sans-serif;
     color: white;
 }
@@ -84,6 +84,10 @@ h1 {
     flex-direction: column;
 }
 
+.flex-fill {
+    flex: 1;
+}
+
 .ml-auto {
     margin-left: auto;
 }
@@ -93,13 +97,13 @@ h1 {
     
     background-attachment: fixed;
     background-clip: border-box;
-    background: linear-gradient(45deg,  rgba(26, 26, 26, 1), rgba(0, 0, 0, 0.6) ), url("../images/infrastructure.png");
+    background: linear-gradient(45deg,  rgba(16, 16, 16, 1), rgba(0, 0, 0, 0.3) ), url("../images/infrastructure.png");
     background-origin: border-box;
     background-position-x: 50%;
     background-position-y: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 0px 10px 65px rgba(0,0,0,0.5);
+    box-shadow: 0px 10px 65px rgba(255,255,255,0.1);
 }
 
 #header-description {
@@ -124,13 +128,22 @@ h1 {
 }
 
 .project {
-    max-width: 1000px;
+    
 }
 
 .project-body {
-    background: #000;
+    background-color: #333;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.5);
     font-family: Inconsolata;
+}
+
+.project-console {
+    background-color: #000;
+    padding: 10px;
+}
+
+.debug {
+    outline: 2px solid blue;
 }
 
 .project-right {
@@ -138,7 +151,7 @@ h1 {
 }
 
 .project-logo {
-    background: #333;
+    background-color: #222;
 }
 
 .project-logo > img {
@@ -153,29 +166,31 @@ h1 {
 
 .project-description {
     padding: 20px 40px;
-    width: 600px;
 }
 
-.project-line {
-    border-top: 2px solid  #c0a062;
+.w-100 {
     width: 100%;
-    margin: 0px 16px;
 }
 
 .footer,
 main {
-    max-width:1400px;
-    margin: 0px auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+}
+
+
+.main-content {
+    text-align:left;
 }
 
 footer {
-    background-color: #222;
+    background-color: #111;
 
 }
 
 .contact-card {
-    background-color: #111;
-    max-width: 400px;
+    background-color: #222;
 }
 
 .text-bold {
@@ -187,26 +202,24 @@ footer {
 }
 
 .prompt {
-    color:#0f0;
+    color:#5a5;
     margin-right: 16px;
 }
 
 .text-inverted {
     color:#000;
-    background-color:#0f0;
+    background-color:#5a5;
 }
 
 .text-green {
-    color:#0f0;
+    color:#5a5;
 }
 
 
 .cmd-title {
-    height: 50px;
-    width: 200px;
+    font-size: 24px;
 }
 
 .cmd-slogan {
-    height: 100px;
-    width: 700px;
+    font-size: 20px;
 }

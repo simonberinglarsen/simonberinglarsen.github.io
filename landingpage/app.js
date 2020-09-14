@@ -82,7 +82,7 @@ projects.forEach((p, i) => {
     x.find('.cmd-description').attr('id', id3);
     x.removeClass('d-none');
     x.find('.project-logo').append($(`<img src="assets/images/${p.logo}">`));
-    $('main').append(x);
+    $('.main-content').append(x);
     typeText(id1, p.title, 200, i*100);
     typeText(id2, p.slogan, 100, i*500);
     typeText(id3, p.description, 50, i*1000);
