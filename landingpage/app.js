@@ -1,6 +1,12 @@
 /*
     CHANGE history:
     
+    2020-09-14.5:
+    * project titles font/size change
+    * updated terminal look
+    * subtle tiled background
+    * shadows adjusted 
+    
     2020-09-14.4:
     * no console typing for title + slogan
 
@@ -11,7 +17,7 @@
     * version number added in upper left corner
 */
 
-$('.version').html('version: 2020-09-14.4');
+$('.version').html('version: 2020-09-14.5');
 
 const projects = [
     {
@@ -51,10 +57,11 @@ const description = `cloud architect and site reliability engineer with over a d
 
 new TypeIt("#header-description", {
     strings: "",
-    speed: 20,
+    speed: 10,
     lifeLike: true,
     cursor: true,
     waitUntilVisible: true,
+    cursorChar: '█',
     afterComplete: async (step, instance) => {
         instance.destroy();
     }
@@ -75,6 +82,7 @@ function typeText(id, text, speed, delay) {
             lifeLike: true,
             cursor: true,
             waitUntilVisible: true,
+            cursorChar: '█',
             afterComplete: async (step, instance) => {
                 instance.destroy();
             }
@@ -96,11 +104,9 @@ projects.forEach((p, i) => {
     x.removeClass('d-none');
     x.find('.project-logo').append($(`<img src="assets/images/${p.logo}">`));
     $('.main-content').append(x);
-    //typeText(id1, p.title, 200, i*100);
-    //typeText(id2, p.slogan, 100, i*500);
     $(`#${id1}`).html(p.title);
-    $(`#${id2}`).html(p.title);
-    typeText(id3, p.description, 50, i*1000);
+    $(`#${id2}`).html(p.slogan);
+    typeText(id3, p.description, 25, i*1000);
 
 });
 

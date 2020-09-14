@@ -26,9 +26,10 @@
 
 html,
 body {
-    background-color: #222;
     font-family: 'Noto Sans', sans-serif;
     color: white;
+    background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-dot.png");
 }
 
 h1 {
@@ -128,7 +129,7 @@ h1 {
     background-position-y: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 0px 10px 65px rgba(255,255,255,0.1);
+    box-shadow: 0px 10px 20px rgba(0,0,0,1);
 }
 
 #header-description {
@@ -139,7 +140,8 @@ h1 {
 .header-title {
     padding: 100px 200px;
     border-radius: 10px;
-    background-color: black;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.90) 100%);
     box-shadow: 0px 10px 65px rgba(255,255,255,0.2);
 }
 
@@ -150,13 +152,22 @@ h1 {
 
 .project-body {
     background-color: #333;
-    box-shadow: 0px 3px 15px rgba(0,0,0,0.5);
-    font-family: Inconsolata;
+    box-shadow: 0px 10px 20px rgba(0,0,0,1);
 }
 
 .project-console {
-    background-color: #000;
+    font-family: Inconsolata;
     padding: 10px 20px;
+    content: "";
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 1px, transparent 1px, transparent 2px);
+    pointer-events: none;
+    color: #262;
+    font: 1.3rem Inconsolata, monospace;
+    text-shadow: 0 0 2px #262;
+}
+
+.terminal {
+    background-color: #000800;
 }
 
 .project-right {
@@ -169,21 +180,22 @@ h1 {
 
 .project-logo > img {
     display: block;
-    width:200px;
-    height:200px;
+    width:230px;
+    height:230px;
 }
 
 .prompt {
-    color:#5a5;
-    margin-right: 16px;
+    margin-right: 8px;
 }
 
 .cmd-title {
-    font-size: 24px;
+    font-size: 32px;
+    font-weight: bold;
 }
 
 .cmd-slogan {
     font-size: 20px;
+    font-weight: bold;
 }
 
 .d-none {
