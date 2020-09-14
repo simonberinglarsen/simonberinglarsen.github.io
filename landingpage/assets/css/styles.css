@@ -8,15 +8,20 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+.version {
+    position: absolute;
+    color: #888;
+    left: 20px;
+    top: 20px;
+}
+
+.debug {
+    outline: 2px solid blue;
+}
+
 * {
     margin: 0px;
     padding: 0px;
-}
-
-.version {
-    position: absolute;
-    left: 20px;
-    top: 20px;
 }
 
 html,
@@ -29,6 +34,10 @@ body {
 h1 {
     font-weight: bold;
     font-size: 60px;
+}
+
+.w-100 {
+    width: 100%;
 }
 
 .py-3 {
@@ -70,6 +79,10 @@ h1 {
     margin-right: 48px;
 }
 
+.ml-auto {
+    margin-left: auto;
+}
+
 .text-gold {
     color: #c0a062;
 }
@@ -78,12 +91,25 @@ h1 {
     color: #888;
 }
 
-.row {
+.text-green {
+    color:#5a5;
+}
+
+.text-align-left {
+    text-align:left;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+
+.flex-row {
     display: flex;
     flex-direction: row;
 }
 
-.column {
+.flex-column {
     display: flex;
     flex-direction: column;
 }
@@ -92,13 +118,8 @@ h1 {
     flex: 1;
 }
 
-.ml-auto {
-    margin-left: auto;
-}
-
-.header {
-    height: 700px;
-    
+.header-background {
+    height: 500px;
     background-attachment: fixed;
     background-clip: border-box;
     background: linear-gradient(45deg,  rgba(16, 16, 16, 1), rgba(0, 0, 0, 0.3) ), url("../images/infrastructure.png");
@@ -115,10 +136,6 @@ h1 {
     height: 100px;
 }
 
-.center {
-    justify-content: center;
-}
-
 .header-title {
     padding: 100px 200px;
     border-radius: 10px;
@@ -131,10 +148,6 @@ h1 {
     width:auto;
 }
 
-.project {
-    
-}
-
 .project-body {
     background-color: #333;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.5);
@@ -143,11 +156,7 @@ h1 {
 
 .project-console {
     background-color: #000;
-    padding: 10px;
-}
-
-.debug {
-    outline: 2px solid blue;
+    padding: 10px 20px;
 }
 
 .project-right {
@@ -164,61 +173,10 @@ h1 {
     height:200px;
 }
 
-.d-none {
-    display:none;
-}
-
-.project-description {
-    padding: 20px 40px;
-}
-
-.w-100 {
-    width: 100%;
-}
-
-.footer,
-main {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1000px;
-}
-
-
-.main-content {
-    text-align:left;
-}
-
-footer {
-    background-color: #111;
-
-}
-
-.contact-card {
-    background-color: #222;
-}
-
-.text-bold {
-    font-weight: bold;
-}
-
-.rounded {
-    border-radius: 5px;
-}
-
 .prompt {
     color:#5a5;
     margin-right: 16px;
 }
-
-.text-inverted {
-    color:#000;
-    background-color:#5a5;
-}
-
-.text-green {
-    color:#5a5;
-}
-
 
 .cmd-title {
     font-size: 24px;
@@ -227,3 +185,32 @@ footer {
 .cmd-slogan {
     font-size: 20px;
 }
+
+.d-none {
+    display:none;
+}
+
+.project-description {
+    padding: 20px 40px;
+}
+
+.footer,
+.header,
+main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+footer {
+    background-color: #111;
+}
+
+.contact-card {
+    background-color: #222;
+}
+
+.rounded {
+    border-radius: 5px;
+}
+

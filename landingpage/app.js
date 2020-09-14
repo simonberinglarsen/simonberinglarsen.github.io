@@ -1,14 +1,14 @@
 /*
     CHANGE history:
     
-    2020-09-14.2:
-    * center main content
+    2020-09-14.3:
+    * center header, main and footer content
     * adjust colors (green text, background color)
-    * card layou -> console only in description
-
+    * card layout -> console only in description
+    * version number added in upper left corner
 */
 
-$('.version').html('version: 2020-09-14.2');
+$('.version').html('version: 2020-09-14.3');
 
 const projects = [
     {
