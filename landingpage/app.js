@@ -1,4 +1,14 @@
-$('#test').html('hello')
+/*
+    CHANGE history:
+    
+    2020-09-14.2:
+    * center main content
+    * adjust colors (green text, background color)
+    * card layou -> console only in description
+
+*/
+
+$('.version').html('version: 2020-09-14.2');
 
 const projects = [
     {
