@@ -1,6 +1,10 @@
 /*
     CHANGE history:
-    
+
+    2020-09-14.6:
+    * aos - appear when scroll
+
+
     2020-09-14.5:
     * project titles font/size change
     * updated terminal look
@@ -17,8 +21,9 @@
     * version number added in upper left corner
 */
 
-$('.version').html('version: 2020-09-14.5');
+$('.version').html('version: 2020-09-14.6');
 
+AOS.init();
 const projects = [
     {
         logo: 'blocknet1.png',
