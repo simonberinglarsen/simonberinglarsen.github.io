@@ -1,7 +1,7 @@
 /*
     CHANGE history:
 
-    2020-09-14.7:
+    2020-09-16.1:
     * terminal colors updated
     * terminal writing flow a bit more human like
 
