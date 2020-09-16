@@ -19,9 +19,26 @@
             background-color: #aaa;
         }
 
+        .d-none {
+            display: none;
+        }
+
         .bg-white {
             background-color: white;
         }
+
+        .bg-1 {
+            background-color: #2a9d8f;
+        }
+
+        .bg-2 {
+            background-color: #e9c46a;
+        }
+
+        .bg-3 {
+            background-color: #e76f51;
+        }
+
 
         .center {
             margin-left: auto;
@@ -31,8 +48,16 @@
         .logo-box {
             width: 300px;
             height: 300px;
-            border: 1px solid #444;
             box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+            outline: 1px solid #444;
+        }
+
+        .logo-mini-box {
+            outline: 1px solid #444;
+            width: 100px;
+            height: 100px;
+            margin: 0px;
+            padding: 0px;
         }
 
         .logo-description {
@@ -68,115 +93,69 @@
             height: 4px;
         }
 
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
         img {
+            display: block;
+            margin: 0px;
+            padding: 0px;
             width: 100%;
             height: auto;
-
         }
     </style>
 </head>
 
 <body>
-    <div class="header"></div>
-    <div class="logo-box center bg-white">
-        <img src="logos/jyoti.svg">
+    <div class="template d-none">
+        <div class="row">
+            <div class="logo-box bg-white">
+                <img src="logos/jyoti.svg">
+            </div>
+            <div class="logo-mini-box">
+                <img class="logo-mini-box bg-1" src="logos/jyoti.svg">
+                <img class="logo-mini-box bg-2" src="logos/jyoti.svg">
+                <img class="logo-mini-box bg-3" src="logos/jyoti.svg">
+            </div>
+        </div>
+        <div class="center logo-description p-1 mb-2">
+            <div class="mb-1"><span class="highlight">Company:</span> %companyname%</div>
+            <div class="mb-1"><span class="highlight">Designer:</span> simon larsen</div>
+            <div class="mb-1"><span class="highlight">Format:</span> vector</div>
+        </div>
+        <div class="border-line"></div>
     </div>
-    <div class="center logo-description p-1 mb-2">
-        <div class="mb-1"><span class="highlight">Company:</span> jyoti</div>
-        <div class="mb-1"><span class="highlight">Designer:</span> simon larsen</div>
-        <div class="mb-1"><span class="highlight">Format:</span> vector</div>
-    </div>
-    <div class="border-line"></div>
-    <div class="logo-box center bg-white">
-        <img src="logos/savewell1.svg">
-    </div>
-    <div class="center logo-description p-1 mb-2">
-        <div class="mb-1"><span class="highlight">Company:</span> savewell</div>
-        <div class="mb-1"><span class="highlight">Designer:</span> simon larsen</div>
-        <div class="mb-1"><span class="highlight">Format:</span> vector</div>
-    </div>
-    <div class="border-line"></div>
-    <div class="logo-box center bg-white">
-        <img src="logos/4seven.svg">
-    </div>
-    <div class="center logo-description p-1 mb-1">
-        <div class="mb-1"><span class="highlight">Company:</span> 4seven</div>
-        <div class="mb-1"><span class="highlight">Designer:</span> simon larsen</div>
-        <div class="mb-1"><span class="highlight">Format:</span> vector</div>
-    </div>
-    <div class="border-line"></div>
-    <div class="logo-box center bg-white">
-        <img src="logos/BeautyA.svg">
-    </div>
-    <div class="center logo-description p-1 mb-2">
-        <div class="mb-1"><span class="highlight">Company:</span> BeautyA</div>
-        <div class="mb-1"><span class="highlight">Designer:</span> simon larsen</div>
-        <div class="mb-1"><span class="highlight">Format:</span> vector</div>
-    </div>
-    <div class="border-line"></div>
-    <div class="logo-box center bg-white">
-        <img src="logos/Bgirl.svg">
-    </div>
-    <div class="center logo-description p-1 mb-2">
-        <div class="mb-1"><span class="highlight">Company:</span> Bgirl</div>
-        <div class="mb-1"><span class="highlight">Designer:</span> simon larsen</div>
-        <div class="mb-1"><span class="highlight">Format:</span> vector</div>
-    </div>
-    <div class="border-line"></div>
-    <div class="logo-box center bg-white">
-        <img src="logos/Bleaf.svg">
-    </div>
-    <div class="center logo-description p-1 mb-2">
-        <div class="mb-1"><span class="highlight">Company:</span> Bleaf</div>
-        <div class="mb-1"><span class="highlight">Designer:</span> simon larsen</div>
-        <div class="mb-1"><span class="highlight">Format:</span> vector</div>
-    </div>
-    <div class="border-line"></div>
-    <div class="logo-box center bg-white">
-        <img src="logos/Bullisher.svg">
-    </div>
-    <div class="center logo-description p-1 mb-2">
-        <div class="mb-1"><span class="highlight">Company:</span> Bullisher</div>
-        <div class="mb-1"><span class="highlight">Designer:</span> simon larsen</div>
-        <div class="mb-1"><span class="highlight">Format:</span> vector</div>
-    </div>
-    <div class="border-line"></div>
-    <div class="logo-box center bg-white">
-        <img src="logos/HorseM.svg">
-    </div>
-    <div class="center logo-description p-1 mb-2">
-        <div class="mb-1"><span class="highlight">Company:</span> HorseM</div>
-        <div class="mb-1"><span class="highlight">Designer:</span> simon larsen</div>
-        <div class="mb-1"><span class="highlight">Format:</span> vector</div>
-    </div>
-    <div class="border-line"></div>
-    <div class="logo-box center bg-white">
-        <img src="logos/Buttonly.svg">
-    </div>
-    <div class="center logo-description p-1 mb-2">
-        <div class="mb-1"><span class="highlight">Company:</span> Buttonly</div>
-        <div class="mb-1"><span class="highlight">Designer:</span> simon larsen</div>
-        <div class="mb-1"><span class="highlight">Format:</span> vector</div>
-    </div>
-    <div class="border-line"></div>
-    <div class="logo-box center bg-white">
-        <img src="logos/cashift.svg">
-    </div>
-    <div class="center logo-description p-1 mb-2">
-        <div class="mb-1"><span class="highlight">Company:</span> cashift</div>
-        <div class="mb-1"><span class="highlight">Designer:</span> simon larsen</div>
-        <div class="mb-1"><span class="highlight">Format:</span> vector</div>
-    </div>
-    <div class="border-line"></div>
-    <div class="logo-box center bg-white">
-        <img src="logos/savewell2.svg">
-    </div>
-    <div class="center logo-description p-1 mb-2">
-        <div class="mb-1"><span class="highlight">Company:</span> savewell</div>
-        <div class="mb-1"><span class="highlight">Designer:</span> simon larsen</div>
-        <div class="mb-1"><span class="highlight">Format:</span> vector</div>
-    </div>
-    <div class="border-line"></div>
+    <header>
+        <div class="header"></div>
+    </header>
+    <main></main>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script>
+        const logos = [
+            { name: 'jyoti', img: 'jyoti.svg' },
+            { name: 'savewell', img: 'savewell1.svg' },
+            { name: '4seven', img: '4seven.svg' },
+            { name: 'BeautyA', img: 'BeautyA.svg' },
+            { name: 'Bgirl', img: 'Bgirl.svg' },
+            { name: 'Bleaf', img: 'Bleaf.svg' },
+            { name: 'Bullisher', img: 'Bullisher.svg' },
+            { name: 'HorseM', img: 'HorseM.svg' },
+            { name: 'Buttonly', img: 'Buttonly.svg' },
+            { name: 'cashift', img: 'cashift.svg' },
+            { name: 'savewell', img: 'savewell2.svg' }
+        ];
+        logos.forEach(l => {
+            const templateHtml = $('.template').html().split('jyoti.svg').join(l.img).split('%companyname%').join(l.name);
+            const templateInstance = $(templateHtml);
+            templateInstance.removeClass('d-none');
+            $('main').append(templateInstance);
+        });
+
+    </script>
 </body>
 
 </html>
