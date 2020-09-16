@@ -3,7 +3,7 @@
 
     2020-09-16.1:
     * terminal colors updated
-    * terminal writing flow a bit more human like
+    * terminal writing flow a bit more human like.
 
     2020-09-14.6:
     * aos - appear when scroll
