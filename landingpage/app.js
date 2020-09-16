@@ -1,9 +1,12 @@
 /*
     CHANGE history:
 
+    2020-09-14.7:
+    * terminal colors updated
+    * terminal writing flow a bit more human like
+
     2020-09-14.6:
     * aos - appear when scroll
-
 
     2020-09-14.5:
     * project titles font/size change
@@ -21,7 +24,7 @@
     * version number added in upper left corner
 */
 
-$('.version').html('version: 2020-09-14.6');
+$('.version').html('version: 2020-09-14.7');
 
 AOS.init();
 const projects = [
@@ -65,6 +68,7 @@ new TypeIt("#header-description", {
     speed: 10,
     lifeLike: true,
     cursor: true,
+    cursorSpeed: 10,
     waitUntilVisible: true,
     cursorChar: '█',
     afterComplete: async (step, instance) => {
@@ -80,20 +84,45 @@ function nextId() {
 }
 
 function typeText(id, text, speed, delay) {
-    setTimeout(() => {
-        new TypeIt(`#${id}`, {
-            strings: "",
-            speed: speed,
-            lifeLike: true,
-            cursor: true,
-            waitUntilVisible: true,
-            cursorChar: '█',
-            afterComplete: async (step, instance) => {
-                instance.destroy();
+    function addText(t, text) {
+        const words = text.split(' ');
+        words.forEach(w => {
+            const typo = (Math.random() < 0.30 && w.length > 4);
+
+            const d = Math.floor(Math.random() * 30 + 60);
+            const s = Math.floor(Math.random() * 20 + 30);
+            if (!typo) {
+                t.type(`${w} `, { speed: s, delay: d });
             }
-        })
-            .type(text)
-            .go();
+            else {
+                const typoAt = Math.floor(w.length / 2);
+                const w1 = w.substring(0, typoAt);
+                const w2 = w.substring(typoAt);
+                t.type(`${w1}`, { speed: s, delay: d });
+                console.log(w1);
+                t.type(`${w2[0]}`, { speed: s, delay: d });
+                t.delete(1, { speed: s, delay: d });
+                t.type(`${w2} `, { speed: s, delay: d });
+            }
+        });
+
+
+    }
+    setTimeout(() => {
+        const t =
+            new TypeIt(`#${id}`, {
+                strings: "",
+                speed: 50,
+                lifeLike: true,
+                waitUntilVisible: true,
+                cursorChar: '█',
+                afterComplete: async (step, instance) => {
+                    instance.destroy();
+                }
+            });
+        addText(t, text);
+        t.go();
+
     }, delay);
 }
 
@@ -111,7 +140,7 @@ projects.forEach((p, i) => {
     $('.main-content').append(x);
     $(`#${id1}`).html(p.title);
     $(`#${id2}`).html(p.slogan);
-    typeText(id3, p.description, 25, i*1000);
+    typeText(id3, p.description, 25, i * 1000);
 
 });
 

@@ -92,10 +92,6 @@ h1 {
     color: #888;
 }
 
-.text-green {
-    color:#5a5;
-}
-
 .text-align-left {
     text-align:left;
 }
@@ -161,13 +157,13 @@ h1 {
     content: "";
     background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 1px, transparent 1px, transparent 2px);
     pointer-events: none;
-    color: #262;
+    color: #666;
     font: 1.3rem Inconsolata, monospace;
-    text-shadow: 0 0 2px #262;
+    text-shadow: 0 0 2px #333;
 }
 
 .terminal {
-    background-color: #000800;
+    background-color: #111;
 }
 
 .project-right {
