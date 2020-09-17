@@ -27,7 +27,7 @@
     * version number added in upper left corner
 */
 
-$('.version').html('version: 2020-09-14.7');
+$('.version').html('version: 2020-09-17.1');
 
 AOS.init();
 const projects = [
