@@ -58,9 +58,17 @@ h1 {
     margin-bottom: 48px;
 }
 
+.p-2 {
+    padding: 32px;
+}
+
 .py-2 {
     padding-top: 32px;
     padding-bottom: 32px;
+}
+.px-2 {
+    padding-left: 32px;
+    padding-right: 32px;
 }
 .px-3 {
     padding-left: 48px;
@@ -148,7 +156,19 @@ h1 {
 
 .project-body {
     background-color: #333;
-    box-shadow: 0px 10px 20px rgba(0,0,0,1);
+}
+
+.bg-light {
+    background-color: #666;
+}
+
+.text-dark {
+    color: #111;
+    font-weight: bold;
+}
+
+.project {
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
 }
 
 .project-console {
@@ -222,3 +242,14 @@ footer {
     border-radius: 5px;
 }
 
+.media-link {
+    padding: 10px 20px;
+    margin: 5px 10px;
+    border-radius: 5px;
+    background: #666;
+    color: #111;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
+    text-decoration: none;
+    border-bottom: 2px solid #444;
+
+}

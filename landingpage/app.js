@@ -1,6 +1,9 @@
 /*
     CHANGE history:
 
+    2020-09-17.1:
+    * media links mock up
+
     2020-09-16.1:
     * terminal colors updated
     * terminal writing flow a bit more human like.
@@ -99,7 +102,6 @@ function typeText(id, text, speed, delay) {
                 const w1 = w.substring(0, typoAt);
                 const w2 = w.substring(typoAt);
                 t.type(`${w1}`, { speed: s, delay: d });
-                console.log(w1);
                 t.type(`${w2[0]}`, { speed: s, delay: d });
                 t.delete(1, { speed: s, delay: d });
                 t.type(`${w2} `, { speed: s, delay: d });
