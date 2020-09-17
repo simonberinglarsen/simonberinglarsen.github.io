@@ -122,7 +122,7 @@ function nextId() {
     return `pid-${projectId++}`;
 }
 
-function typeText(id, text, speed, delay) {
+function typeText(id, text, delay) {
     function addText(t, text) {
         const words = text.split(' ');
         words.forEach(w => {
@@ -181,7 +181,7 @@ projects.forEach((p, i) => {
     p.mediaLinks.forEach(l => {
         x.find('.media-links').append(`<a class="media-link" href="${l.url}" target="_blank">${l.icon}</a>`);
     });
-    typeText(id3, p.description, 25, i * 1000);
+    typeText(id3, p.description, i * 1000);
 
 });
 
