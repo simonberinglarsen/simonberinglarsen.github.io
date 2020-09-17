@@ -1,6 +1,9 @@
 /*
     CHANGE history:
 
+    2020-09-17.2:
+    * media links added
+
     2020-09-17.1:
     * media links mock up
 
@@ -33,38 +36,66 @@ AOS.init();
 const projects = [
     {
         logo: 'blocknet1.png',
-        title: 'BLOCK',
+        title: 'BlockNet',
         slogan: 'Internet of Blockchains',
         description: 'Blocknet is a blockchain interoperability protocol that enables communication, interaction, and exchange between different public and private blockchains, as well as on-chain access to off-chain data, APIs, and services via oracles.',
-        links: [{ name: 'google', link: 'http://www.google.com' }, { name: 'bing', link: 'http://www.bing.com' }, { name: 'yahoo', link: 'http://www.yahoo.com' }]
+        link: 'https://blocknet.co',
+        mediaLinks: [
+            { name: 'Telegram', url: 'https://t.me/Blocknet', icon:'<i class="fab fa-telegram"></i>' },
+            { name: 'Discord', url: 'https://discord.gg/jydgk2', icon:'<i class="fab fa-discord"></i>' },
+            { name: 'Twitter', url: 'https://twitter.com/The_Blocknet', icon:'<i class="fab fa-twitter"></i>' },
+            { name: 'Stats', url: 'https://dropstab.com/blocknet', icon:'<i class="fas fa-chart-line"></i>' },
+        ]
     },
     {
         logo: 'casperlabs3.png',
         title: 'Casperlabs',
         slogan: 'Blockchain for the builders',
         description: 'Build unstoppable businesses on the truly scalable, simple to use, and always secure blockchain and smart contracting platform.',
-        links: [{ name: 'google', link: 'http://www.google.com' }, { name: 'bing', link: 'http://www.bing.com' }, { name: 'yahoo', link: 'http://www.yahoo.com' }]
+        link: 'https://casperlabs.io',
+        mediaLinks: [
+            { name: 'Telegram', url: 'https://t.me/casperlabs', icon:'<i class="fab fa-telegram"></i>' },
+            { name: 'Discord', url: 'https://discord.gg/Q38s3Vh', icon:'<i class="fab fa-discord"></i>' },
+            { name: 'Twitter', url: 'https://twitter.com/meetCasperLabs', icon:'<i class="fab fa-twitter"></i>' },
+        ]
     },
     {
         logo: 'dogecash2.png',
         title: 'DogeCash',
         slogan: 'Who says you can’t teach an old doge new tricks ?',
         description: 'Transparent, community governed cryptocurrency aimed at preserving what makes DogeCoin unique while offering an alternative way for the average investor to get involved. This is done through the creation of DogeNodes, utilization of Proof of Stake, and active governance.',
-        links: [{ name: 'google', link: 'http://www.google.com' }, { name: 'bing', link: 'http://www.bing.com' }, { name: 'yahoo', link: 'http://www.yahoo.com' }]
+        link: 'httops://dogec.io',
+        mediaLinks: [
+            { name: 'Telegram', url: 'https://t.me/dogecashcoin', icon:'<i class="fab fa-telegram"></i>' },
+            { name: 'Discord', url: 'https://discord.gg/7rZ8jn', icon:'<i class="fab fa-discord"></i>' },
+            { name: 'Twitter', url: 'https://twitter.com/dogecashcoin', icon:'<i class="fab fa-twitter"></i>' },
+            { name: 'Stats', url: 'https://coinmarketcap.com/currencies/dogecash/', icon:'<i class="fas fa-chart-line"></i>' },
+        ]
     },
     {
         logo: 'elrond2.png',
         title: 'Elrond',
         slogan: 'Developers, validators and businesses use Elrond to build a new internet economy.',
         description: 'Give anyone, anywhere easy access to the digital economy, by bringing a 1000x improvement in blockchain speed, scale, cost and user. experience.',
-        links: [{ name: 'google', link: 'http://www.google.com' }, { name: 'bing', link: 'http://www.bing.com' }, { name: 'yahoo', link: 'http://www.yahoo.com' }]
+        link: 'https://elrond.com',
+        mediaLinks: [
+            { name: 'Telegram', url: 'https://t.me/ElrondNetwork', icon:'<i class="fab fa-telegram"></i>' },
+            { name: 'Twitter', url: 'https://twitter.com/elrondnetwork', icon:'<i class="fab fa-twitter"></i>' },
+            { name: 'Stats', url: 'https://dropstab.com/elrond-erd-2', icon:'<i class="fas fa-chart-line"></i>' },
+        ]
     },
     {
         logo: 'solana1.png',
         title: 'Solana',
         slogan: 'Web-Scale Blockchain',
         description: 'For fast, secure, scalable, decentralized apps and marketplaces. Don’t choose between scale, security, and decentralization. Solana has solved the trilemma for you. No sharding required.',
-        links: [{ name: 'google', link: 'http://www.google.com' }, { name: 'bing', link: 'http://www.bing.com' }, { name: 'yahoo', link: 'http://www.yahoo.com' }]
+        link: 'https://solana.com',
+        mediaLinks: [
+            { name: 'Telegram', url: 'https://t.me/solanaio', icon:'<i class="fab fa-telegram"></i>' },
+            { name: 'Discord', url: 'https://discord.gg/q64Kz8', icon:'<i class="fab fa-discord"></i>' },
+            { name: 'Twitter', url: 'https://twitter.com/solana', icon:'<i class="fab fa-twitter"></i>' },
+            { name: 'Stats', url: 'https://dropstab.com/solana', icon:'<i class="fas fa-chart-line"></i>' },
+        ]
     },
 
 ];
@@ -147,8 +178,8 @@ projects.forEach((p, i) => {
     $('.main-content').append(x);
     $(`#${id1}`).html(p.title);
     $(`#${id2}`).html(p.slogan);
-    p.links.forEach(l => {
-        x.find('.media-links').append(`<a class="media-link" href="${l.url}" target="_blank">${l.name}</a>`);
+    p.mediaLinks.forEach(l => {
+        x.find('.media-links').append(`<a class="media-link" href="${l.url}" target="_blank">${l.icon}</a>`);
     });
     typeText(id3, p.description, 25, i * 1000);
 

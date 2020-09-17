@@ -245,14 +245,19 @@ footer {
     border-radius: 5px;
 }
 
+.media-link:hover {
+    box-shadow: 0px 10px 65px rgba(255,255,255,0.2);
+    background: #111;
+    color: #666;
+}
+
 .media-link {
-    padding: 10px 20px;
+    padding: 5px 10px;
     margin: 5px 10px;
     border-radius: 5px;
     background: #666;
     color: #111;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
     text-decoration: none;
-    border-bottom: 2px solid #444;
-
+    font-size: 20px;
 }
