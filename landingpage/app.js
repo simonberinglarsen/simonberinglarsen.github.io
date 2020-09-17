@@ -35,31 +35,36 @@ const projects = [
         logo: 'blocknet1.png',
         title: 'BLOCK',
         slogan: 'Internet of Blockchains',
-        description: 'Blocknet is a blockchain interoperability protocol that enables communication, interaction, and exchange between different public and private blockchains, as well as on-chain access to off-chain data, APIs, and services via oracles.'
+        description: 'Blocknet is a blockchain interoperability protocol that enables communication, interaction, and exchange between different public and private blockchains, as well as on-chain access to off-chain data, APIs, and services via oracles.',
+        links: [{ name: 'google', link: 'http://www.google.com' }, { name: 'bing', link: 'http://www.bing.com' }, { name: 'yahoo', link: 'http://www.yahoo.com' }]
     },
     {
         logo: 'casperlabs3.png',
         title: 'Casperlabs',
         slogan: 'Blockchain for the builders',
-        description: 'Build unstoppable businesses on the truly scalable, simple to use, and always secure blockchain and smart contracting platform.'
+        description: 'Build unstoppable businesses on the truly scalable, simple to use, and always secure blockchain and smart contracting platform.',
+        links: [{ name: 'google', link: 'http://www.google.com' }, { name: 'bing', link: 'http://www.bing.com' }, { name: 'yahoo', link: 'http://www.yahoo.com' }]
     },
     {
         logo: 'dogecash2.png',
         title: 'DogeCash',
         slogan: 'Who says you can’t teach an old doge new tricks ?',
-        description: 'Transparent, community governed cryptocurrency aimed at preserving what makes DogeCoin unique while offering an alternative way for the average investor to get involved. This is done through the creation of DogeNodes, utilization of Proof of Stake, and active governance.'
+        description: 'Transparent, community governed cryptocurrency aimed at preserving what makes DogeCoin unique while offering an alternative way for the average investor to get involved. This is done through the creation of DogeNodes, utilization of Proof of Stake, and active governance.',
+        links: [{ name: 'google', link: 'http://www.google.com' }, { name: 'bing', link: 'http://www.bing.com' }, { name: 'yahoo', link: 'http://www.yahoo.com' }]
     },
     {
         logo: 'elrond2.png',
         title: 'Elrond',
         slogan: 'Developers, validators and businesses use Elrond to build a new internet economy.',
-        description: 'Give anyone, anywhere easy access to the digital economy, by bringing a 1000x improvement in blockchain speed, scale, cost and user. experience.'
+        description: 'Give anyone, anywhere easy access to the digital economy, by bringing a 1000x improvement in blockchain speed, scale, cost and user. experience.',
+        links: [{ name: 'google', link: 'http://www.google.com' }, { name: 'bing', link: 'http://www.bing.com' }, { name: 'yahoo', link: 'http://www.yahoo.com' }]
     },
     {
         logo: 'solana1.png',
         title: 'Solana',
         slogan: 'Web-Scale Blockchain',
-        description: 'For fast, secure, scalable, decentralized apps and marketplaces. Don’t choose between scale, security, and decentralization. Solana has solved the trilemma for you. No sharding required.'
+        description: 'For fast, secure, scalable, decentralized apps and marketplaces. Don’t choose between scale, security, and decentralization. Solana has solved the trilemma for you. No sharding required.',
+        links: [{ name: 'google', link: 'http://www.google.com' }, { name: 'bing', link: 'http://www.bing.com' }, { name: 'yahoo', link: 'http://www.yahoo.com' }]
     },
 
 ];
@@ -142,6 +147,9 @@ projects.forEach((p, i) => {
     $('.main-content').append(x);
     $(`#${id1}`).html(p.title);
     $(`#${id2}`).html(p.slogan);
+    p.links.forEach(l => {
+        x.find('.media-links').append(`<a class="media-link" href="${l.url}" target="_blank">${l.name}</a>`);
+    });
     typeText(id3, p.description, 25, i * 1000);
 
 });
