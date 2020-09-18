@@ -45,6 +45,9 @@ h1 {
     padding-top: 48px;
     padding-bottom: 48px;
 }
+.mt-1 {
+    margin-top: 16px;
+}
 .mt-3 {
     margin-top: 48px;
 }
@@ -255,7 +258,7 @@ footer {
     padding: 5px 10px;
     margin: 5px 10px;
     border-radius: 5px;
-    background: #666;
+    background: #444;
     color: #111;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
     text-decoration: none;

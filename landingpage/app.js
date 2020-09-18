@@ -1,5 +1,10 @@
+$('.version').html('version: 2020-09-18.1');
+
 /*
     CHANGE history:
+
+    2020-09-18.1:
+    * media links moved to project header
 
     2020-09-17.2:
     * media links added
@@ -29,8 +34,6 @@
     * card layout -> console only in description
     * version number added in upper left corner
 */
-
-$('.version').html('version: 2020-09-17.1');
 
 AOS.init();
 const projects = [
