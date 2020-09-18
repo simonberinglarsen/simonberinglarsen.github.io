@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ludo Project</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <section id="main">
+      <!-- Main Board -->
+      <div id="board">
+        <!-- Center Box -->
+        <div id="center">
+          <div id="startTurn"><span>CLICK</span></div>
+          <div class="dice" id="dice1"></div>
+
+          <div class="dice" id="dice2"></div>
+        </div>
+        <!-- Main player boxes -->
+
+        <!-- Player 1 -->
+        <div class="pBox player1"></div>
+        <div class="sBox p1TokenBox p1TokenBox1 nuN">
+          <div class="gtoken1 gtoken"></div>
+        </div>
+        <div class="sBox p1TokenBox p1TokenBox2 nuN">
+          <div class="gtoken2 gtoken"></div>
+        </div>
+        <div class="sBox p1TokenBox p1TokenBox3 nuN">
+          <div class="gtoken3 gtoken"></div>
+        </div>
+        <div class="sBox p1TokenBox p1TokenBox4 nuN">
+          <div class="gtoken4 gtoken"></div>
+        </div>
+
+        <!-- Player 2 -->
+        <div class="pBox player2"></div>
+
+        <div class="sBox p2TokenBox p2TokenBox1 nuN">
+          <div class="rtoken1 rtoken"></div>
+        </div>
+        <div class="sBox p2TokenBox p2TokenBox2 nuN">
+          <div class="rtoken2 rtoken"></div>
+        </div>
+        <div class="sBox p2TokenBox p2TokenBox3 nuN">
+          <div class="rtoken3 rtoken"></div>
+        </div>
+        <div class="sBox p2TokenBox p2TokenBox4 nuN">
+          <div class="rtoken4 rtoken"></div>
+        </div>
+
+        <!-- Player 3 -->
+        <div class="pBox player3"></div>
+
+        <div class="sBox p3TokenBox p3TokenBox1 nuN">
+          <div class="btoken1 btoken"></div>
+        </div>
+        <div class="sBox p3TokenBox p3TokenBox2 nuN">
+          <div class="btoken2 btoken"></div>
+        </div>
+        <div class="sBox p3TokenBox p3TokenBox3 nuN">
+          <div class="btoken3 btoken"></div>
+        </div>
+        <div class="sBox p3TokenBox p3TokenBox4 nuN">
+          <div class="btoken4 btoken"></div>
+        </div>
+
+        <!-- Player 4 -->
+        <div class="pBox player4"></div>
+        <div class="sBox p4TokenBox p4TokenBox1 nuN">
+          <div class="ytoken1 ytoken"></div>
+        </div>
+        <div class="sBox p4TokenBox p4TokenBox2 nuN">
+          <div class="ytoken2 ytoken"></div>
+        </div>
+        <div class="sBox p4TokenBox p4TokenBox3 nuN">
+          <div class="ytoken3 ytoken"></div>
+        </div>
+        <div class="sBox p4TokenBox p4TokenBox4 nuN">
+          <div class="ytoken4 ytoken"></div>
+        </div>
+
+        <!-- Path boxes -->
+        <div class="nBox nBox1 stop"></div>
+        <div class="nBox nBox2"></div>
+        <div class="nBox nBox3"></div>
+        <div class="nBox nBox4"></div>
+        <div class="nBox nBox5"></div>
+        <div class="nBox nBox6"></div>
+        <div class="nBox nBox7"></div>
+        <div class="nBox nBox8"></div>
+        <div class="nBox nBox9 stop"></div>
+        <div class="nBox nBox10"></div>
+        <div class="nBox nBox11"></div>
+        <div class="nBox nBox12"></div>
+        <div class="nBox nBox13"></div>
+        <div class="nBox nBox14 stop"></div>
+        <div class="nBox nBox15"></div>
+        <div class="nBox nBox16"></div>
+        <div class="nBox nBox17"></div>
+        <div class="nBox nBox18"></div>
+        <div class="nBox nBox19"></div>
+        <div class="nBox nBox20"></div>
+        <div class="nBox nBox21"></div>
+        <div class="nBox nBox22 stop"></div>
+        <div class="nBox nBox23"></div>
+        <div class="nBox nBox24"></div>
+        <div class="nBox nBox25"></div>
+        <div class="nBox nBox26"></div>
+        <div class="nBox nBox27 stop"></div>
+        <div class="nBox nBox28"></div>
+        <div class="nBox nBox29"></div>
+        <div class="nBox nBox30"></div>
+        <div class="nBox nBox31"></div>
+        <div class="nBox nBox32"></div>
+        <div class="nBox nBox33"></div>
+        <div class="nBox nBox34"></div>
+        <div class="nBox nBox35 stop"></div>
+        <div class="nBox nBox36"></div>
+        <div class="nBox nBox37"></div>
+        <div class="nBox nBox38"></div>
+        <div class="nBox nBox39"></div>
+        <div class="nBox nBox40 stop"></div>
+        <div class="nBox nBox41"></div>
+        <div class="nBox nBox42"></div>
+        <div class="nBox nBox43"></div>
+        <div class="nBox nBox44"></div>
+        <div class="nBox nBox45"></div>
+        <div class="nBox nBox46"></div>
+        <div class="nBox nBox47"></div>
+        <div class="nBox nBox48 stop"></div>
+        <div class="nBox nBox49"></div>
+        <div class="nBox nBox50"></div>
+        <div class="nBox nBox51"></div>
+        <div class="nBox nBox52"></div>
+        <!-- Special Boxes -->
+        <div class="nBox nBoxG1 vip"></div>
+        <div class="nBox nBoxG2 vip"></div>
+        <div class="nBox nBoxG3 vip"></div>
+        <div class="nBox nBoxG4 vip"></div>
+        <div class="nBox nBoxG5 vip"></div>
+        <div class="nBox nBoxR1 vip"></div>
+        <div class="nBox nBoxR2 vip"></div>
+        <div class="nBox nBoxR3 vip"></div>
+        <div class="nBox nBoxR4 vip"></div>
+        <div class="nBox nBoxR5 vip"></div>
+        <div class="nBox nBoxB1 vip"></div>
+        <div class="nBox nBoxB2 vip"></div>
+        <div class="nBox nBoxB3 vip"></div>
+        <div class="nBox nBoxB4 vip"></div>
+        <div class="nBox nBoxB5 vip"></div>
+        <div class="nBox nBoxY1 vip"></div>
+        <div class="nBox nBoxY2 vip"></div>
+        <div class="nBox nBoxY3 vip"></div>
+        <div class="nBox nBoxY4 vip"></div>
+        <div class="nBox nBoxY5 vip"></div>
+        <div class="nBox nBoxZ1 vip mnone"></div>
+        <div class="nBox nBoxZ2 vip mnone"></div>
+        <div class="nBox nBoxZ3 vip mnone"></div>
+        <div class="nBox nBoxZ4 vip mnone"></div>
+        <div class="nBox nBoxZ5 vip mnone"></div>
+
+        <script src="script.js"></script>
+      </div>
+    </section>
+  </body>
+</html>
