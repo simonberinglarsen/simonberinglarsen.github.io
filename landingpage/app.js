@@ -7,6 +7,7 @@ $('.version').html('version: 2020-09-18.2');
     * add webpage icon to projects
     * add background from solanabeach.io
     * give $> another color
+    * bright hero image
 
     2020-09-18.1:
     * media links moved to project header
