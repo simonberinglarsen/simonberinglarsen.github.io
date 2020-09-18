@@ -3,6 +3,11 @@ $('.version').html('version: 2020-09-18.1');
 /*
     CHANGE history:
 
+    2020-09-18.2:
+    * add webpage icon to projects
+    * add background from solanabeach.io
+    * give $> another color
+
     2020-09-18.1:
     * media links moved to project header
     * push media links right
@@ -43,8 +48,8 @@ const projects = [
         title: 'BlockNet',
         slogan: 'Internet of Blockchains',
         description: 'Blocknet is a blockchain interoperability protocol that enables communication, interaction, and exchange between different public and private blockchains, as well as on-chain access to off-chain data, APIs, and services via oracles.',
-        link: 'https://blocknet.co',
         mediaLinks: [
+            { name: 'Webpage', url: 'https://blocknet.co', icon:'<i class="fas fa-globe-americas"></i>' },
             { name: 'Telegram', url: 'https://t.me/Blocknet', icon:'<i class="fab fa-telegram"></i>' },
             { name: 'Discord', url: 'https://discord.gg/jydgk2', icon:'<i class="fab fa-discord"></i>' },
             { name: 'Twitter', url: 'https://twitter.com/The_Blocknet', icon:'<i class="fab fa-twitter"></i>' },
@@ -56,8 +61,8 @@ const projects = [
         title: 'Casperlabs',
         slogan: 'Blockchain for the builders',
         description: 'Build unstoppable businesses on the truly scalable, simple to use, and always secure blockchain and smart contracting platform.',
-        link: 'https://casperlabs.io',
         mediaLinks: [
+            { name: 'Webpage', url: 'https://casperlabs.io', icon:'<i class="fas fa-globe-americas"></i>' },
             { name: 'Telegram', url: 'https://t.me/casperlabs', icon:'<i class="fab fa-telegram"></i>' },
             { name: 'Discord', url: 'https://discord.gg/Q38s3Vh', icon:'<i class="fab fa-discord"></i>' },
             { name: 'Twitter', url: 'https://twitter.com/meetCasperLabs', icon:'<i class="fab fa-twitter"></i>' },
@@ -68,8 +73,8 @@ const projects = [
         title: 'DogeCash',
         slogan: 'Who says you can’t teach an old doge new tricks ?',
         description: 'Transparent, community governed cryptocurrency aimed at preserving what makes DogeCoin unique while offering an alternative way for the average investor to get involved. This is done through the creation of DogeNodes, utilization of Proof of Stake, and active governance.',
-        link: 'httops://dogec.io',
         mediaLinks: [
+            { name: 'Webpage', url: 'https://dogec.io', icon:'<i class="fas fa-globe-americas"></i>' },
             { name: 'Telegram', url: 'https://t.me/dogecashcoin', icon:'<i class="fab fa-telegram"></i>' },
             { name: 'Discord', url: 'https://discord.gg/7rZ8jn', icon:'<i class="fab fa-discord"></i>' },
             { name: 'Twitter', url: 'https://twitter.com/dogecashcoin', icon:'<i class="fab fa-twitter"></i>' },
@@ -81,8 +86,8 @@ const projects = [
         title: 'Elrond',
         slogan: 'Developers, validators and businesses use Elrond to build a new internet economy.',
         description: 'Give anyone, anywhere easy access to the digital economy, by bringing a 1000x improvement in blockchain speed, scale, cost and user. experience.',
-        link: 'https://elrond.com',
         mediaLinks: [
+            { name: 'Webpage', url: 'https://elrond.com', icon:'<i class="fas fa-globe-americas"></i>' },
             { name: 'Telegram', url: 'https://t.me/ElrondNetwork', icon:'<i class="fab fa-telegram"></i>' },
             { name: 'Twitter', url: 'https://twitter.com/elrondnetwork', icon:'<i class="fab fa-twitter"></i>' },
             { name: 'Stats', url: 'https://dropstab.com/elrond-erd-2', icon:'<i class="fas fa-chart-line"></i>' },
@@ -93,8 +98,8 @@ const projects = [
         title: 'Solana',
         slogan: 'Web-Scale Blockchain',
         description: 'For fast, secure, scalable, decentralized apps and marketplaces. Don’t choose between scale, security, and decentralization. Solana has solved the trilemma for you. No sharding required.',
-        link: 'https://solana.com',
         mediaLinks: [
+            { name: 'Webpage', url: 'https://solana.com', icon:'<i class="fas fa-globe-americas"></i>' },
             { name: 'Telegram', url: 'https://t.me/solanaio', icon:'<i class="fab fa-telegram"></i>' },
             { name: 'Discord', url: 'https://discord.gg/q64Kz8', icon:'<i class="fab fa-discord"></i>' },
             { name: 'Twitter', url: 'https://twitter.com/solana', icon:'<i class="fab fa-twitter"></i>' },

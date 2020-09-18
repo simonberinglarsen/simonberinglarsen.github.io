@@ -29,7 +29,8 @@ body {
     font-family: 'Noto Sans', sans-serif;
     color: white;
     background-color: #000000;
-    background-image: url("https://www.transparenttextures.com/patterns/dark-dot.png");
+    /*background-image: url("https://www.transparenttextures.com/patterns/dark-dot.png");*/
+    background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0JyBoZWlnaHQ9JzQnPjxwYXRoIGZpbGw9JyM5QzkyQUMnIGZpbGwtb3BhY2l0eT0nLjQnIGQ9J00xIDNoMXYxSDFWM3ptMi0yaDF2MUgzVjF6Jy8+PC9zdmc+);
 }
 
 h1 {
@@ -208,6 +209,7 @@ h1 {
 
 .prompt {
     margin-right: 8px;
+    color: #333;
 }
 
 .cmd-title {
@@ -255,7 +257,7 @@ footer {
 }
 
 .fixed-size-1 {
-    width: 250px;
+    width: 350px;
 }
 
 .media-link {
