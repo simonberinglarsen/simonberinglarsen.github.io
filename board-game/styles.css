@@ -1,0 +1,10 @@
+.board {
+    background-color: #00f;
+    width: 400px;
+    height: 400px;
+}
+
+.field {
+    width: 12.5%;
+    height: 12.5%;
+}
