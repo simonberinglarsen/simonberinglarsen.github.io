@@ -5,6 +5,7 @@ $('.version').html('version: 2020-09-18.1');
 
     2020-09-18.1:
     * media links moved to project header
+    * push media links right
 
     2020-09-17.2:
     * media links added
