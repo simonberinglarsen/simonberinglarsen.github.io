@@ -203,6 +203,7 @@ h1 {
 
 .project-logo {
     background-color: #222;
+    border: 1px solid #555;
 }
 
 .project-logo > img {
@@ -230,6 +231,7 @@ h1 {
 
 .project-description {
     padding: 20px 40px;
+    border-bottom: 1px solid #555;
 }
 
 .footer,
@@ -241,6 +243,7 @@ main {
 }
 
 footer {
+    border-top: 1px solid #555;
     background-color: #111;
 }
 
@@ -253,16 +256,18 @@ footer {
 }
 
 .project-logo:hover {
-    box-shadow: 0px 10px 65px rgba(255,255,255,0.2);
+    box-shadow: 0px 0px 75px rgba(255,255,255,0.4);
     background: #666;
     color: #fc8;
     cursor: pointer;
+    border: 1px solid #fc8;
 }
 
 .media-link:hover {
-    box-shadow: 0px 10px 65px rgba(255,255,255,0.2);
+    box-shadow: 0px 0px 75px rgba(255,255,255,0.4);
     background: #666;
     color: #fc8;
+    border: 1px solid #fc8;
 }
 
 .fixed-size-1 {
@@ -273,9 +278,10 @@ footer {
     padding: 5px 10px;
     margin: 5px 10px;
     border-radius: 5px;
-    background: #444;
+    background: #333;
     color: #111;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
     text-decoration: none;
     font-size: 20px;
+    border: 1px solid #555;
 }
