@@ -185,6 +185,16 @@ projects.forEach((p, i) => {
     x.find('.cmd-description').attr('id', id3);
     x.removeClass('d-none');
     x.find('.project-logo').append($(`<img src="assets/images/${p.logo}">`));
+    x.find('.project-logo').click(()=>{
+        const homepage = p.mediaLinks.find(l => l.name === 'Webpage');
+        if(!homepage) {
+            return;
+        }
+        var a = document.createElement('a');
+        a.target="_blank";
+        a.href=homepage.url;
+        a.click();
+    });
     $('.main-content').append(x);
     $(`#${id1}`).html(p.title);
     $(`#${id2}`).html(p.slogan);
