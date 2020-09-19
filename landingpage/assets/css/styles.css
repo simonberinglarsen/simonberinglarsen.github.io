@@ -242,6 +242,10 @@ main {
     max-width: 1200px;
 }
 
+header {
+    border-bottom: 2px solid #641;
+}
+
 footer {
     border-top: 1px solid #555;
     background-color: #111;
