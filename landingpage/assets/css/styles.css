@@ -32,7 +32,7 @@ body {
     background-color: #000000;
     background-attachment: fixed;
     background-image: url("https://www.transparenttextures.com/patterns/subtle-dots.png");
-    min-width: 340px;
+    min-width: 380px;
 }
 
 h1 {
@@ -398,6 +398,13 @@ footer {
         padding: 20px;
     }
 
+    .fixed-size-1 {
+        display: none;
+    }
+
+    .cmd-slogan {
+        max-width: none;
+    }
 }
 
 
