@@ -58,7 +58,7 @@ const projects = [
         ]
     },
     {
-        logo: 'casperlabs3.png',
+        logo: 'casperlabs.svg',
         title: 'Casperlabs',
         slogan: 'Blockchain for the builders',
         description: 'Build unstoppable businesses on the truly scalable, simple to use, and always secure blockchain and smart contracting platform.',
