@@ -138,6 +138,7 @@ h1 {
     background-attachment: fixed;
     background-clip: border-box;
     background: linear-gradient(45deg,  rgba(192, 160, 100, 0.5), rgba(192, 160, 98, 0.9) ), url("../images/logo.png");
+    
     background-origin: border-box;
     background-position-x: 50%;
     background-position-y: 50%;
@@ -288,4 +289,26 @@ footer {
     text-decoration: none;
     font-size: 20px;
     border: 1px solid #555;
+}
+
+
+@media only screen and (max-width: 480px) {
+    .version::before {
+        content: 'SmartPhone-';
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+    .version::before {
+        content: 'Tablet-';
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    .version::before {
+        content: 'PC-';
+    }
+    
+
 }
