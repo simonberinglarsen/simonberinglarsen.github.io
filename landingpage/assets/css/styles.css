@@ -32,6 +32,7 @@ body {
     background-color: #000000;
     background-attachment: fixed;
     background-image: url("https://www.transparenttextures.com/patterns/subtle-dots.png");
+    min-width: 340px;
 }
 
 h1 {
@@ -64,6 +65,10 @@ h1 {
 }
 .mb-4 {
     margin-bottom: 64px;
+}
+.my-2 {
+    margin-bottom: 32px;
+    margin-top: 32px;
 }
 
 .p-2 {
@@ -149,7 +154,7 @@ h1 {
 
 #header-description {
     width: 500px;
-    height: 100px;
+    min-height: 100px;
 }
 
 .header-title {
@@ -275,6 +280,10 @@ footer {
     border: 1px solid #fc8;
 }
 
+.media-links {
+    line-height: 4rem;
+}
+
 .fixed-size-1 {
     width: 350px;
 }
@@ -291,24 +300,104 @@ footer {
     border: 1px solid #555;
 }
 
+.small-logo {
+    display: none;
+}
 
-@media only screen and (max-width: 480px) {
+.media-links.mobile {
+    display: none;
+}
+
+
+
+
+@media only screen and (min-width: 1280px) {
     .version::before {
-        content: 'SmartPhone-';
+        content: 'PC-';
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 1024px) {
+@media only screen and (max-width: 1280px) {
     .version::before {
         content: 'Tablet-';
     }
 
-}
-
-@media only screen and (min-width: 1024px) {
-    .version::before {
-        content: 'PC-';
+    .project-logo {
+        display: none;
     }
     
+    .header-title {
+        padding: 20px 40px;
+        margin: 20px 40px;
+    }
+
+    #header-description {
+        width: 300px;
+        min-height: 180px;
+    }
+
+    main {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .project-console {
+        min-height: 180px;
+    }
+
+    .small-logo {
+        display: block;
+        margin-right: 20px;
+        height: 100px;
+    }
+
+    .small-logo > img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .cmd-slogan {
+        max-width: 220px;
+    }
+
+    .project-description {
+        padding: 10px 20px;
+        margin-right: 0px;
+    }
+
+    .media-links {
+        margin-top: 0px;
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .version::before {
+        content: 'SmartPhone-';
+    }
+
+    .media-links {
+        display: none;
+    }
+
+    .media-links.mobile {
+        display: block;
+    }
+
+    .header-background {
+        background: none;
+    }
+    
+    .header-title {
+        margin: 0px;
+        padding: 20px;
+    }
 
 }
+
+
