@@ -142,7 +142,7 @@ h1 {
     height: 500px;
     background-attachment: fixed;
     background-clip: border-box;
-    background: linear-gradient(45deg,  rgba(192, 160, 100, 0.5), rgba(192, 160, 98, 0.9) ), url("../images/logo.png");
+    background: linear-gradient(45deg,  rgba(120, 100, 60, 0.9), rgba(120, 100, 60, 0.9) ), url("../images/logo.png");
     
     background-origin: border-box;
     background-position-x: 50%;
