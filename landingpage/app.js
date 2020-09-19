@@ -1,7 +1,10 @@
-$('.version').html('version: 2020-09-18.2');
+$('.version').html('version: 2020-09-19.1');
 
 /*
     CHANGE history:
+
+    2020-09-19.1:
+    * responsive design
 
     2020-09-18.2:
     * add webpage icon to projects

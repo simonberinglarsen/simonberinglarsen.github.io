@@ -10,7 +10,7 @@
 
 .version {
     position: absolute;
-    color: rgb(0,0,0,0.2);
+    color: rgb(100,100,100,0.6);
     font-weight:bold;
     left: 20px;
     top: 20px;
@@ -32,7 +32,7 @@ body {
     background-color: #000000;
     background-attachment: fixed;
     background-image: url("https://www.transparenttextures.com/patterns/subtle-dots.png");
-    min-width: 380px;
+    min-width: 300px;
 }
 
 h1 {
@@ -322,6 +322,11 @@ footer {
         content: 'Tablet-';
     }
 
+    #header-description {
+        width: 300px;
+        min-height: 180px;
+    }
+
     .project-logo {
         display: none;
     }
@@ -329,11 +334,6 @@ footer {
     .header-title {
         padding: 20px 40px;
         margin: 20px 40px;
-    }
-
-    #header-description {
-        width: 300px;
-        min-height: 180px;
     }
 
     main {
@@ -381,6 +381,11 @@ footer {
         content: 'SmartPhone-';
     }
 
+    #header-description {
+        width: 200px;
+        min-height: 180px;
+    }
+    
     .media-links {
         display: none;
     }
@@ -392,10 +397,9 @@ footer {
     .header-background {
         background: none;
     }
-    
-    .header-title {
-        margin: 0px;
-        padding: 20px;
+ 
+    .header-background {
+        height: 600px;
     }
 
     .fixed-size-1 {
@@ -405,6 +409,24 @@ footer {
     .cmd-slogan {
         max-width: none;
     }
+
+    .header-title,
+    main
+    {
+        padding: 0px 10px;
+        margin: 0px 10px;
+    }
+
+    .small-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .small-logo > img {
+        width: 80px;
+        height: 80px;
+    }
+
 }
 
 
