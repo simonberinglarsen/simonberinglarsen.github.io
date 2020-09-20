@@ -1,7 +1,10 @@
-$('.version').html('version: 2020-09-19.1');
+$('.version').html('version: 2020-09-20.1');
 
 /*
     CHANGE history:
+
+    2020-09-20.1:
+    * final text changes
 
     2020-09-19.1:
     * responsive design
