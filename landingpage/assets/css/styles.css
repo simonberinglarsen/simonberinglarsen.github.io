@@ -307,15 +307,9 @@ footer {
 }
 
 @media only screen and (min-width: 1280px) {
-    .version::before {
-        content: 'PC-';
-    }
 }
 
 @media only screen and (max-width: 1280px) {
-    .version::before {
-        content: 'Tablet-';
-    }
 
     .project-logo {
         display: none;
@@ -367,9 +361,6 @@ footer {
 }
 
 @media only screen and (max-width: 560px) {
-    .version::before {
-        content: 'SmartPhone-';
-    }
 
     h1 {
         font-size: 30px;
