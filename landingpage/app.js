@@ -3,6 +3,9 @@ $('.version').html('version: 2020-09-21.2');
 /*
     CHANGE history:
 
+    2020-09-21.2
+    * background color transparency
+    * disabled animations on mobile
 
     2020-09-20.1:
     * final text changes
