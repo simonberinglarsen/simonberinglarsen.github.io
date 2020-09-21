@@ -48,7 +48,8 @@
     * version number added in upper left corner
 */
 
-AOS.init();
+AOS.init({disable: 'mobile'});
+
 let globalId = 1;
 const description = [
     `Our international decentralized team is scattered around the globe, but united by same passion.`,
