@@ -1,7 +1,8 @@
-$('.version').html('version: 2020-09-21.1');
+$('.version').html('version: 2020-09-21.2');
 
 /*
     CHANGE history:
+
 
     2020-09-20.1:
     * final text changes
