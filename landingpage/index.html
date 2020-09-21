@@ -4,34 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>A3MC</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
     <div class="version"></div>
     <header>
         <div class="header-background py-3">
-            <div data-aos="fade-down" data-aos-duration="1000" class="header text-align-left">
+            <div data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000" class="header text-align-left">
                 <div class="header-title py-2 px-3">
                     <p class="mb-1">
-                        "Companyname A/S"
+                        A3MC
                     </p>
-                    <h1 class="text-gold">The Wonder Team</h1>
-                    <p id="header-description" class="mb-2 text-gray"></p>
-                    <p>
-                        <i class="fab fa-twitter"></i>
-                        <span class="mx-1">/</span>
-                        <i class="fab fa-linkedin"></i>
-                        <span class="mx-1">/</span>
-                        <i class="fab fa-facebook"></i>
-                        <span class="mx-1">/</span>
-                        <i class="fab fa-google-plus-g"></i>
-                    </p>
+                    <h1 class="text-gold">INDEPENDENT RESEARCH LAB</h1>
+                    <p id="header-description" class="text-gray py-2"></p>
                 </div>
             </div>
         </div>
@@ -50,13 +45,17 @@
                         </div>
                         <div class="flex-column w-100">
                             <div class="ml-1 project-description flex-row">
+                                <div class="project-logo small-logo">
+                                </div>
                                 <div>
                                     <div class="cmd-title"></div>
-                                    <div class="cmd-slogan text-gray"></div>
+                                    <div class="cmd-slogan mt-1 text-gray"></div>
                                 </div>
                                 <div class="ml-auto fixed-size-1 flex-row">
                                     <div class="media-links text-dark ml-auto mt-1"></div>
                                 </div>
+                            </div>
+                            <div class="media-links mobile">
                             </div>
                             <div class="terminal project-console flex-fill">
                                 <span class="prompt">$></span>
@@ -74,21 +73,30 @@
                 Reach out to us
             </p>
             <h1 class="mb-3 text-gold">Contact</h1>
-            <div class="flex-row">
-                <div class="contact-card rounded px-3 py-2 flex-row">
-                    <div>
-                        <div class="text-gray text-bold mb-2">Email</div>
-                        <div class="mb-1">mail1@domain.com</div>
-                        <div class="mb-1">mail2@domain.com</div>
+            <div class="contact-card rounded">
+                <div class="p-2 flex-row">
+                    <div class="mr-3">
+                        <div><i class="far fa-envelope fa-2x text-gold"></i></div>
+                        <span class="text-gray">email</span>
                     </div>
-                    <div class="flex-column ml-3"><i class="far fa-envelope fa-2x text-gold"></i></div>
+                    <div class="font-size-small mt-1">a3mc@protonmail.com</div>
                 </div>
-                <div class="contact-card rounded px-3 py-2 ml-3 flex-row">
-                    <div>
-                        <div class="text-gray text-bold mb-2">Twitter</div>
-                        <div class="mb-1">@twitterHandle</div>
+                <div class="p-2 flex-row">
+                    <div class="mr-3">
+                        <div><i class="fas fa-key fa-2x text-gold"></i></div>
+                        <span class="text-gray">PGP</span>
                     </div>
-                    <div class="flex-column ml-3"><i class="fab fa-twitter fa-2x text-gold"></i></div>
+                    <div class="font-size-small mt-1">
+                        <div>3E5DAE8A18V42017E283</div>
+                        <div class="ml-1">47B95C5631581B71021A</div>
+                    </div>
+                </div>
+                <div class="p-2 flex-row">
+                    <div class="mr-3">
+                        <div><i class="fab fa-keybase fa-2x text-gold"></i></div>
+                        <span class="text-gray">Keybase</span>
+                    </div>
+                    <div class="font-size-small mt-1">art3mis</div>
                 </div>
             </div>
 

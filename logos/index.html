@@ -1,159 +1,141 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logo design by Simon</title>
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
     <style>
-        * {
-            margin: 0px;
-            padding: 0px;
+        .container {
+            position: relative;
+            width: 500px;
         }
 
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
-            font-size: 20px;
-            color: #444;
-            background-color: #aaa;
+        .imageOne {
+            padding-top: 50px;
+            width: 100%;
         }
 
-        .d-none {
-            display: none;
+        .imageTwo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
-        .bg-white {
-            background-color: white;
-        }
-
-        .bg-1 {
-            background-color: #2a9d8f;
-        }
-
-        .bg-2 {
-            background-color: #e9c46a;
-        }
-
-        .bg-3 {
-            background-color: #e76f51;
-        }
-
-
-        .center {
+        .mx-auto {
             margin-left: auto;
             margin-right: auto;
         }
 
-        .logo-box {
-            width: 300px;
-            height: 300px;
-            box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-            outline: 1px solid #444;
-        }
-
-        .logo-mini-box {
-            outline: 1px solid #444;
-            width: 100px;
-            height: 100px;
-            margin: 0px;
-            padding: 0px;
-        }
-
-        .logo-description {
-            width: 500px;
-        }
-
-        .highlight {
-            padding: 4px 8px;
-            background: #444;
-            color: #aaa;
-        }
-
-        .p-1 {
-            padding: 20px;
-        }
-
-        .mb-1 {
-            margin-bottom: 10px;
-        }
-
-        .mb-2 {
-            margin-bottom: 40px;
-        }
-
-        .border-line {
-            margin: 40px 0px;
-            border-bottom: 4px solid #888;
-        }
-
-        .header {
-            background: #888;
-            margin-bottom: 20px;
-            height: 4px;
-        }
-
-        .row {
+        .flex-row {
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            ;
         }
 
-        img {
-            display: block;
-            margin: 0px;
-            padding: 0px;
-            width: 100%;
-            height: auto;
+        .rounded {
+            border-radius: 5px;
+            border: 2px solid white;
+            box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .bubble {
+            position: relative;
+            background: white;
+            color: black;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+            line-height: 2.5rem;
+            max-width: 300px;
+        }
+
+        .clickable {
+            cursor: pointer;
+        }
+
+        .description {
+            color: #888;
+        }
+
+        .company-name {
+            color: white;
         }
     </style>
 </head>
 
 <body>
-    <div class="template d-none">
-        <div class="row">
-            <div class="logo-box bg-white">
-                <img src="logos/jyoti.svg">
-            </div>
-            <div class="logo-mini-box">
-                <img class="logo-mini-box bg-1" src="logos/jyoti.svg">
-                <img class="logo-mini-box bg-2" src="logos/jyoti.svg">
-                <img class="logo-mini-box bg-3" src="logos/jyoti.svg">
-            </div>
+    <div class="reveal">
+        <div class="slides">
+            <section id="slide-deck">
+                <section id="main" class="clickable">
+                    <div class="description mx-auto">
+                        <div>Simon @</div>
+                        <div>Freelancer.com</div>
+                    </div>
+                    <div>
+                        <img class="rounded" src="images/profile200.jpg" width="100">
+                    </div>
+                    <div class="bubble mx-auto">
+                        <div>Welcome to my portfolio</div>
+                        <div>(click or use scrollwheel)</div>
+                    </div>
+                </section>
+                <section id="slide-template">
+                    <div class="container mx-auto">
+                        <img class="imageOne" src="images/frame%frame-index%.svg" width="500">
+                        <img class="imageTwo" src="logos/%img-src%" width="250">
+                    </div>
+                    <div class="description">
+                        <div class="company-name">%company-name%</div>
+                        <div class="company-description">%company-description%</div>
+                    </div>
+                </section>
+            </section>
         </div>
-        <div class="center logo-description p-1 mb-2">
-            <div class="mb-1"><span class="highlight">Company:</span> %companyname%</div>
-            <div class="mb-1"><span class="highlight">Designer:</span> simon larsen</div>
-            <div class="mb-1"><span class="highlight">Format:</span> vector</div>
-        </div>
-        <div class="border-line"></div>
     </div>
-    <header>
-        <div class="header"></div>
-    </header>
-    <main></main>
+    <script src="dist/reveal.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script>
-        const logos = [
-            { name: 'Jyoti Beauty Parlour', img: 'jyoti.svg' },
-            { name: 'Savewell', img: 'savewell1.svg' },
-            { name: '4seven', img: '4seven.svg' },
-            { name: 'BeautyA', img: 'BeautyA.svg' },
-            { name: 'Bgirl', img: 'Bgirl.svg' },
-            { name: 'Bleaf', img: 'Bleaf.svg' },
-            { name: 'Bullisher', img: 'Bullisher.svg' },
-            { name: 'HorseM', img: 'HorseM.svg' },
-            { name: 'Buttonly', img: 'Buttonly.svg' },
-            { name: 'Cashift', img: 'cashift.svg' },
-            { name: 'Savewell', img: 'savewell2.svg' }
-        ];
-        logos.forEach(l => {
-            const templateHtml = $('.template').html().split('jyoti.svg').join(l.img).split('%companyname%').join(l.name);
-            const templateInstance = $(templateHtml);
-            templateInstance.removeClass('d-none');
-            $('main').append(templateInstance);
+        Reveal.initialize({
+            controls: true,
+            loop: false,
+            mouseWheel: true,
+            center: true,
+            theme: 'default', // default/neon
+            transition: 'default' // default/cube/page/concave/linear(2d)        
         });
+        $('#main').click(() => {
+            Reveal.next();
+        });
+
+        const logos = [
+            { name: 'Eternity Ready Plus', img: 'eternity.svg', description: 'Podcast platform - hosting podcasts' },
+            { name: 'Jyoti Beauty Parlour', img: 'jyoti.svg', description: 'Beauty Parlour. Hair. Manicure. Pedicure. Facial.' },
+            { name: 'Savewell', img: 'savewell1.svg', description: 'Financial freedom. Wealth.' },
+            { name: '4seven', img: '4seven.svg', description: 'Webshop with Gadgets' },
+            { name: 'BeautyA', img: 'BeautyA.svg', description: 'Beauty. Manicure. Pedicure.' },
+            { name: 'Bgirl', img: 'Bgirl.svg', description: 'T-shirts for girls' },
+            { name: 'Bullisher', img: 'Bullisher.svg', description: 'Freelancer doing scripting on linux' },
+            { name: 'HorseM', img: 'HorseM.svg', description: 'Excellent instruction in riding and horse management' },
+            { name: 'Buttonly', img: 'Buttonly.svg', description: 'Shop buttons online - webshop.' },
+            { name: 'Cashift', img: 'cashift.svg', description: 'Buy & sell used electronics.' },
+        ];
+        const slideDeck = $('#slide-deck');
+        const slideTemplate = $('#slide-template');
+        const html = slideTemplate.html();
+        slideTemplate.remove();
+        logos.forEach((logo, i) => {
+            const newHtml = html
+                .split('%company-name%').join(logo.name)
+                .split('%img-src%').join(logo.img)
+                .split('%company-description%').join(logo.description)
+                .split('%frame-index%').join(`${i % 4}`);
+            const newSlide = $(`<section>${newHtml}</section>`);
+            slideDeck.append(newSlide);
+        });
+
 
     </script>
 </body>

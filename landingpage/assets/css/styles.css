@@ -10,7 +10,8 @@
 
 .version {
     position: absolute;
-    color: #888;
+    color: rgb(100,100,100,0.6);
+    font-weight:bold;
     left: 20px;
     top: 20px;
 }
@@ -29,12 +30,14 @@ body {
     font-family: 'Noto Sans', sans-serif;
     color: white;
     background-color: #000000;
-    background-image: url("https://www.transparenttextures.com/patterns/dark-dot.png");
+    background-attachment: fixed;
+    background-image: url("https://www.transparenttextures.com/patterns/subtle-dots.png");
+    min-width: 300px;
 }
 
 h1 {
     font-weight: bold;
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .w-100 {
@@ -63,6 +66,10 @@ h1 {
 .mb-4 {
     margin-bottom: 64px;
 }
+.my-2 {
+    margin-bottom: 32px;
+    margin-top: 32px;
+}
 
 .p-2 {
     padding: 32px;
@@ -88,6 +95,10 @@ h1 {
 
 .ml-3 {
     margin-left: 48px;
+}
+
+.ml-1 {
+    margin-left: 16px;
 }
 
 .mr-3 {
@@ -129,30 +140,27 @@ h1 {
     flex: 1;
 }
 
+
+
 .header-background {
-    height: 500px;
     background-attachment: fixed;
     background-clip: border-box;
-    background: linear-gradient(45deg,  rgba(16, 16, 16, 1), rgba(0, 0, 0, 0.3) ), url("../images/infrastructure.png");
+    background: linear-gradient(45deg,  rgba(120, 100, 60, 0.9), rgba(120, 100, 60, 0.9) ), url("../images/logo.png");
+    
     background-origin: border-box;
     background-position-x: 50%;
     background-position-y: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 0px 10px 20px rgba(0,0,0,1);
-}
-
-#header-description {
-    width: 500px;
-    height: 100px;
+    box-shadow: 0px 20px 60px rgba(192,160,80,0.3);
 }
 
 .header-title {
-    padding: 100px 200px;
+    padding: 20px 50px;
     border-radius: 10px;
     background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.90) 100%);
-    box-shadow: 0px 10px 65px rgba(255,255,255,0.2);
+    background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.9) 100%);
+    box-shadow: 0px 10px 65px rgba(0,0,0,0.9);
 }
 
 .header-image {
@@ -184,12 +192,13 @@ h1 {
     background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 1px, transparent 1px, transparent 2px);
     pointer-events: none;
     color: #666;
-    font: 1.3rem Inconsolata, monospace;
+    font: Inconsolata, monospace;
+    line-height: 2rem;
     text-shadow: 0 0 2px #333;
 }
 
 .terminal {
-    background-color: #111;
+    background-color: #222;
 }
 
 .project-right {
@@ -198,6 +207,7 @@ h1 {
 
 .project-logo {
     background-color: #222;
+    border: 1px solid #555;
 }
 
 .project-logo > img {
@@ -208,16 +218,15 @@ h1 {
 
 .prompt {
     margin-right: 8px;
+    color: #333;
 }
 
 .cmd-title {
-    font-size: 32px;
-    font-weight: bold;
+    font-size: 24px;
 }
 
 .cmd-slogan {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 16px;
 }
 
 .d-none {
@@ -226,6 +235,7 @@ h1 {
 
 .project-description {
     padding: 20px 40px;
+    border-bottom: 1px solid #555;
 }
 
 .footer,
@@ -236,7 +246,12 @@ main {
     max-width: 1200px;
 }
 
+header {
+    border-bottom: 2px solid #641;
+}
+
 footer {
+    border-top: 1px solid #555;
     background-color: #111;
 }
 
@@ -248,23 +263,149 @@ footer {
     border-radius: 5px;
 }
 
+.project-logo:hover {
+    box-shadow: 0px 0px 75px rgba(255,255,255,0.4);
+    background: #666;
+    color: #fc8;
+    cursor: pointer;
+    border: 1px solid #fc8;
+}
+
 .media-link:hover {
-    box-shadow: 0px 10px 65px rgba(255,255,255,0.2);
-    background: #111;
-    color: #666;
+    box-shadow: 0px 0px 75px rgba(255,255,255,0.4);
+    background: #666;
+    color: #fc8;
+    border: 1px solid #fc8;
+}
+
+.media-links {
+    line-height: 4rem;
 }
 
 .fixed-size-1 {
-    width: 250px;
+    width: 350px;
 }
 
 .media-link {
     padding: 5px 10px;
     margin: 5px 10px;
     border-radius: 5px;
-    background: #444;
+    background: #333;
     color: #111;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
     text-decoration: none;
     font-size: 20px;
+    border: 1px solid #555;
 }
+
+.small-logo {
+    display: none;
+}
+
+.media-links.mobile {
+    display: none;
+}
+
+@media only screen and (min-width: 1280px) {
+}
+
+@media only screen and (max-width: 1280px) {
+
+    .project-logo {
+        display: none;
+    }
+    
+    .header-title {
+        padding: 20px 40px;
+        margin: 20px 40px;
+    }
+
+    main {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .project-console {
+        min-height: 180px;
+    }
+
+    .small-logo {
+        display: block;
+        margin-right: 20px;
+        height: 100px;
+    }
+
+    .small-logo > img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .cmd-slogan {
+        max-width: 220px;
+    }
+
+    .project-description {
+        padding: 10px 20px;
+        margin-right: 0px;
+    }
+
+    .media-links {
+        margin-top: 0px;
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+
+    h1 {
+        font-size: 30px;
+    }
+    
+    .media-links {
+        display: none;
+    }
+
+    .media-links.mobile {
+        display: block;
+    }
+
+    .header-background {
+        background: none;
+    }
+ 
+    .fixed-size-1 {
+        display: none;
+    }
+
+    .cmd-slogan {
+        max-width: none;
+    }
+
+    .header-title,
+    main
+    {
+        padding: 0px 5px;
+        margin: 0px 0px;
+    }
+
+    .small-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .small-logo > img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .font-size-small {
+        font-size: 10px;
+    }
+}
+
+

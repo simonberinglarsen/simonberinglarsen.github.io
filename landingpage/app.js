@@ -1,7 +1,19 @@
-$('.version').html('version: 2020-09-18.1');
+//$('.version').html('version: 2020-09-20.1');
 
 /*
     CHANGE history:
+
+    2020-09-20.1:
+    * final text changes
+
+    2020-09-19.1:
+    * responsive design
+
+    2020-09-18.2:
+    * add webpage icon to projects
+    * add background from solanabeach.io
+    * give $> another color
+    * bright hero image
 
     2020-09-18.1:
     * media links moved to project header
@@ -37,30 +49,39 @@ $('.version').html('version: 2020-09-18.1');
 */
 
 AOS.init();
+let globalId = 1;
+const description = [
+    `Our international decentralized team is scattered around the globe, but united by same passion.`,
+    `We encourage and support professional blockchain developers and scientists in the fields of mathematics, cryptography, programming languages and related interdisciplinary sub-fields, by using high-standard, industry quality tools and skills.`,
+    `Blockchain technology, smart contracts and cryptography are fast becoming an essential part of the modern world.`,
+    `It seems there are more blockchains around than croissants in France, who each have their own specific properties, applications and possibilities. Sadly, most of those croissants won't be around anymore in the foreseeable future.On the internet within each specific niche it is usually a winner - takes - all situation.`,
+    `Nevertheless, we did extensive research into each competitive candidate to decide which ones serve a purpose. By sharing our knowledge we help developers and scientists make informed decisions onto which blockchains they would want to unleash their brain product and how to approach the ecosystem in which it should live and thrive.`,
+    `We help build castles on a blockchain.`,
+].map(x => `${x}<br/><br/>`).join('');
 const projects = [
     {
         logo: 'blocknet1.png',
         title: 'BlockNet',
         slogan: 'Internet of Blockchains',
         description: 'Blocknet is a blockchain interoperability protocol that enables communication, interaction, and exchange between different public and private blockchains, as well as on-chain access to off-chain data, APIs, and services via oracles.',
-        link: 'https://blocknet.co',
         mediaLinks: [
-            { name: 'Telegram', url: 'https://t.me/Blocknet', icon:'<i class="fab fa-telegram"></i>' },
-            { name: 'Discord', url: 'https://discord.gg/jydgk2', icon:'<i class="fab fa-discord"></i>' },
-            { name: 'Twitter', url: 'https://twitter.com/The_Blocknet', icon:'<i class="fab fa-twitter"></i>' },
-            { name: 'Stats', url: 'https://dropstab.com/blocknet', icon:'<i class="fas fa-chart-line"></i>' },
+            { name: 'Webpage', url: 'https://blocknet.co', icon: '<i class="fas fa-globe-americas"></i>' },
+            { name: 'Telegram', url: 'https://t.me/Blocknet', icon: '<i class="fab fa-telegram"></i>' },
+            { name: 'Discord', url: 'https://discord.gg/jydgk2', icon: '<i class="fab fa-discord"></i>' },
+            { name: 'Twitter', url: 'https://twitter.com/The_Blocknet', icon: '<i class="fab fa-twitter"></i>' },
+            { name: 'Stats', url: 'https://dropstab.com/blocknet', icon: '<i class="fas fa-chart-line"></i>' },
         ]
     },
     {
-        logo: 'casperlabs3.png',
+        logo: 'casperlabs.svg',
         title: 'Casperlabs',
         slogan: 'Blockchain for the builders',
         description: 'Build unstoppable businesses on the truly scalable, simple to use, and always secure blockchain and smart contracting platform.',
-        link: 'https://casperlabs.io',
         mediaLinks: [
-            { name: 'Telegram', url: 'https://t.me/casperlabs', icon:'<i class="fab fa-telegram"></i>' },
-            { name: 'Discord', url: 'https://discord.gg/Q38s3Vh', icon:'<i class="fab fa-discord"></i>' },
-            { name: 'Twitter', url: 'https://twitter.com/meetCasperLabs', icon:'<i class="fab fa-twitter"></i>' },
+            { name: 'Webpage', url: 'https://casperlabs.io', icon: '<i class="fas fa-globe-americas"></i>' },
+            { name: 'Telegram', url: 'https://t.me/casperlabs', icon: '<i class="fab fa-telegram"></i>' },
+            { name: 'Discord', url: 'https://discord.gg/Q38s3Vh', icon: '<i class="fab fa-discord"></i>' },
+            { name: 'Twitter', url: 'https://twitter.com/meetCasperLabs', icon: '<i class="fab fa-twitter"></i>' },
         ]
     },
     {
@@ -68,12 +89,12 @@ const projects = [
         title: 'DogeCash',
         slogan: 'Who says you can’t teach an old doge new tricks ?',
         description: 'Transparent, community governed cryptocurrency aimed at preserving what makes DogeCoin unique while offering an alternative way for the average investor to get involved. This is done through the creation of DogeNodes, utilization of Proof of Stake, and active governance.',
-        link: 'httops://dogec.io',
         mediaLinks: [
-            { name: 'Telegram', url: 'https://t.me/dogecashcoin', icon:'<i class="fab fa-telegram"></i>' },
-            { name: 'Discord', url: 'https://discord.gg/7rZ8jn', icon:'<i class="fab fa-discord"></i>' },
-            { name: 'Twitter', url: 'https://twitter.com/dogecashcoin', icon:'<i class="fab fa-twitter"></i>' },
-            { name: 'Stats', url: 'https://coinmarketcap.com/currencies/dogecash/', icon:'<i class="fas fa-chart-line"></i>' },
+            { name: 'Webpage', url: 'https://dogec.io', icon: '<i class="fas fa-globe-americas"></i>' },
+            { name: 'Telegram', url: 'https://t.me/dogecashcoin', icon: '<i class="fab fa-telegram"></i>' },
+            { name: 'Discord', url: 'https://discord.gg/7rZ8jn', icon: '<i class="fab fa-discord"></i>' },
+            { name: 'Twitter', url: 'https://twitter.com/dogecashcoin', icon: '<i class="fab fa-twitter"></i>' },
+            { name: 'Stats', url: 'https://coinmarketcap.com/currencies/dogecash/', icon: '<i class="fas fa-chart-line"></i>' },
         ]
     },
     {
@@ -81,11 +102,11 @@ const projects = [
         title: 'Elrond',
         slogan: 'Developers, validators and businesses use Elrond to build a new internet economy.',
         description: 'Give anyone, anywhere easy access to the digital economy, by bringing a 1000x improvement in blockchain speed, scale, cost and user. experience.',
-        link: 'https://elrond.com',
         mediaLinks: [
-            { name: 'Telegram', url: 'https://t.me/ElrondNetwork', icon:'<i class="fab fa-telegram"></i>' },
-            { name: 'Twitter', url: 'https://twitter.com/elrondnetwork', icon:'<i class="fab fa-twitter"></i>' },
-            { name: 'Stats', url: 'https://dropstab.com/elrond-erd-2', icon:'<i class="fas fa-chart-line"></i>' },
+            { name: 'Webpage', url: 'https://elrond.com', icon: '<i class="fas fa-globe-americas"></i>' },
+            { name: 'Telegram', url: 'https://t.me/ElrondNetwork', icon: '<i class="fab fa-telegram"></i>' },
+            { name: 'Twitter', url: 'https://twitter.com/elrondnetwork', icon: '<i class="fab fa-twitter"></i>' },
+            { name: 'Stats', url: 'https://dropstab.com/elrond-erd-2', icon: '<i class="fas fa-chart-line"></i>' },
         ]
     },
     {
@@ -93,37 +114,21 @@ const projects = [
         title: 'Solana',
         slogan: 'Web-Scale Blockchain',
         description: 'For fast, secure, scalable, decentralized apps and marketplaces. Don’t choose between scale, security, and decentralization. Solana has solved the trilemma for you. No sharding required.',
-        link: 'https://solana.com',
         mediaLinks: [
-            { name: 'Telegram', url: 'https://t.me/solanaio', icon:'<i class="fab fa-telegram"></i>' },
-            { name: 'Discord', url: 'https://discord.gg/q64Kz8', icon:'<i class="fab fa-discord"></i>' },
-            { name: 'Twitter', url: 'https://twitter.com/solana', icon:'<i class="fab fa-twitter"></i>' },
-            { name: 'Stats', url: 'https://dropstab.com/solana', icon:'<i class="fas fa-chart-line"></i>' },
+            { name: 'Webpage', url: 'https://solana.com', icon: '<i class="fas fa-globe-americas"></i>' },
+            { name: 'Telegram', url: 'https://t.me/solanaio', icon: '<i class="fab fa-telegram"></i>' },
+            { name: 'Discord', url: 'https://discord.gg/q64Kz8', icon: '<i class="fab fa-discord"></i>' },
+            { name: 'Twitter', url: 'https://twitter.com/solana', icon: '<i class="fab fa-twitter"></i>' },
+            { name: 'Stats', url: 'https://dropstab.com/solana', icon: '<i class="fas fa-chart-line"></i>' },
         ]
     },
 
 ];
 
-const description = `cloud architect and site reliability engineer with over a decade of intense professional experience strictly adhering to DevOps methodology. He has architected and built multiple platform-agnostic infrastructures from scratch for modern cloud systems`;
+$('#header-description').html(description);
 
-new TypeIt("#header-description", {
-    strings: "",
-    speed: 10,
-    lifeLike: true,
-    cursor: true,
-    cursorSpeed: 10,
-    waitUntilVisible: true,
-    cursorChar: '█',
-    afterComplete: async (step, instance) => {
-        instance.destroy();
-    }
-})
-    .type(description, { delay: 1000 })
-    .go();
-
-let projectId = 1;
 function nextId() {
-    return `pid-${projectId++}`;
+    return `element-${globalId++}`;
 }
 
 function typeText(id, text, delay) {
@@ -168,24 +173,34 @@ function typeText(id, text, delay) {
     }, delay);
 }
 
+function navigateTo(url) {
+    var a = document.createElement('a');
+    a.target = "_blank";
+    a.href = url;
+    a.click();
+}
 
 projects.forEach((p, i) => {
-    const x = $('#project-template').clone();
-    const id1 = nextId();
-    const id2 = nextId();
-    const id3 = nextId();
-    x.find('.cmd-title').attr('id', id1);
-    x.find('.cmd-slogan').attr('id', id2);
-    x.find('.cmd-description').attr('id', id3);
-    x.removeClass('d-none');
-    x.find('.project-logo').append($(`<img src="assets/images/${p.logo}">`));
-    $('.main-content').append(x);
-    $(`#${id1}`).html(p.title);
-    $(`#${id2}`).html(p.slogan);
-    p.mediaLinks.forEach(l => {
-        x.find('.media-links').append(`<a class="media-link" href="${l.url}" target="_blank">${l.icon}</a>`);
+    const t = $('#project-template').clone();
+    const [titleId, sloganId, descriptionId] = [nextId(), nextId(), nextId()];
+    t.find('.cmd-title').attr('id', titleId);
+    t.find('.cmd-slogan').attr('id', sloganId);
+    t.find('.cmd-description').attr('id', descriptionId);
+    t.removeClass('d-none');
+    t.find('.project-logo').append($(`<img src="assets/images/${p.logo}">`));
+    t.find('.project-logo').click(() => {
+        const homepage = p.mediaLinks.find(l => l.name === 'Webpage');
+        if (!homepage) {
+            return;
+        }
+        navigateTo(homepage.url);
     });
-    typeText(id3, p.description, i * 1000);
-
+    p.mediaLinks.forEach(l => {
+        t.find('.media-links').append(`<a class="media-link" href="${l.url}" target="_blank">${l.icon}</a>`);
+    });
+    $('.main-content').append(t);
+    $(`#${titleId}`).html(p.title);
+    $(`#${sloganId}`).html(p.slogan);
+    typeText(descriptionId, p.description, i * 1000);
 });
 
