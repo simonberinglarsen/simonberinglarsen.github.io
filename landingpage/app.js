@@ -1,7 +1,11 @@
-//$('.version').html('version: 2020-09-20.1');
+$('.version').html('version: 2020-09-21.2');
 
 /*
     CHANGE history:
+
+    2020-09-21.2
+    * background color transparency
+    * disabled animations on mobile
 
     2020-09-20.1:
     * final text changes
@@ -48,7 +52,8 @@
     * version number added in upper left corner
 */
 
-AOS.init();
+AOS.init({disable: 'mobile'});
+
 let globalId = 1;
 const description = [
     `Our international decentralized team is scattered around the globe, but united by same passion.`,
