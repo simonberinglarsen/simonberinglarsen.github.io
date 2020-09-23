@@ -4,7 +4,6 @@
 }
 /* ---- ELEMENTS ---- */
 html {
-    min-height: 1200px;
     font-size: 16px;
 }
 
@@ -95,6 +94,7 @@ h3, .h3 {
 }
 .bg-image {
     background-image: url("https://lq3-production01.s3-accelerate.amazonaws.com/lead_quizzes_3.0/simple_upload/0002/32/44a270c0131f73c689b95af2d8e832231bfe2934.jpeg");
+    background-attachment: fixed;
     position: absolute;
     left: 0;
     top: 0;
@@ -122,7 +122,7 @@ h3, .h3 {
     height: 100%;
 }
 
-.cookie-notification {
+.flex-row {
     display: flex;
     flex-direction: row;
 }
@@ -187,35 +187,57 @@ h3, .h3 {
         opacity: 1;
     }
   }
-  
-  .dot {
-      height: 20px;
-      width: 20px;
-      border-radius:50%;
-      background-color:#016fdf;
-      animation: scaling 1.0s ease-in-out infinite;
-      display: inline-block;
-      margin: 0px 10px;
-  }
-  
-  .dot:nth-child(0){
-    animation-delay:0s;
-  }
-  .dot:nth-child(1){
+
+.dot {
+    height: 20px;
+    width: 20px;
+    border-radius:50%;
+    background-color:#016fdf;
+    animation: scaling 1.0s ease-in-out infinite;
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+.dot:nth-child(1){
     animation-delay:0.1s;
-  }
-  .dot:nth-child(2){
+}
+.dot:nth-child(2){
     animation-delay:0.2s;
-  }
-  .dot:nth-child(3){
+}
+.dot:nth-child(3){
     animation-delay:0.3s;
-  }
-  .dot:nth-child(4){
+}
+.dot:nth-child(4){
     animation-delay:0.4s;
-  }
-  .dot:nth-child(5){
+}
+.dot:nth-child(5){
     animation-delay:0.5s;
-  }
+}
+.dot:nth-child(6){
+    animation-delay:0.5s;
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+
+.content-top {
+    padding-bottom: 5rem;    
+}
+
+.content-bottom {
+    background-color: black;
+    margin-top: auto;
+}
+
+footer  {
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
 @media only screen and (max-width: 1024px) {
     html {
@@ -249,5 +271,10 @@ h3, .h3 {
     .video {
         width: 1px !important;
         min-width: 100% !important;
+    }
+
+    footer {
+        display: block;
+        text-align: center;
     }
 }
