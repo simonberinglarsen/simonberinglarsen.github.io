@@ -245,4 +245,9 @@ h3, .h3 {
         margin-left: 0px !important;
         margin-right: 0px !important;
     }
+
+    .video {
+        width: 1px !important;
+        min-width: 100% !important;
+    }
 }
