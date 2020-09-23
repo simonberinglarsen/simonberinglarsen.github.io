@@ -22,7 +22,6 @@
                 </p>
                 <button class="rounded bg-white mr-2">OK</button> <a href="http://www.google.com">Learn More</a>
             </div>
-            <!--<div class="ml-auto vertical-center"><button class="rounded bg-white">X</button></div>-->
         </div>
     </header>
     <main class="mx-3">
@@ -44,7 +43,32 @@
                 </div>
             </div>
             <div class="page-6 text-center d-none">
-                <div><img src="final.gif"></div>
+                <h1 class="text-blue mb-3">Processing</h1>
+                <div class="progress">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div class="page-7 text-center d-none">
+                <h1 class="mb-2 text-blue">THANKS FOR SIGNING UP!</h1>
+                <h3 class="mb-2 text-bold">Everything we promised you will be sent yo your inbox shortly.</h3>
+                <div class="video-container mb-3">
+                    <iframe class="video" allowfullscreen="" frameborder="0"
+                        src="https://www.youtube.com/embed/eY1FF6SEggk?autoplay=0&amp;enablejsapi=1&amp;rel=0"></iframe>
+                </div>
+                <p class="mb-2">
+                    While you wait for your materials to arrive via email, we recommend you to
+                    <span class="text-bold">click here below to learn more about us and what we can do for your
+                        business</span>
+                </p>
+                <div class="video-container mb-3">
+                    <iframe class="video" allowfullscreen="" frameborder="0" src="https://www.google.com"></iframe>
+                </div>
+
             </div>
             <div id="page-quiz-template" class="page-{{page.index}} d-none">
                 <div class="text-small mb-2">{{page.step}}</div>
@@ -62,19 +86,6 @@
     </footer>
 
     <script>
-        function bindData(template, prefix, o) {
-            let html = template[0].outerHTML;
-            for (prop of Object.keys(o)) {
-                html = html.split(`{{${prefix}.${prop}}}`).join(o[prop]);
-            }
-            return $(html);
-        };
-        function setPage(index) {
-            state.currentPage = state.pages.find(p => p.index === index);
-            $('.page').children().hide();
-            const name = state.currentPage.id;
-            $(`.page-${index}`).show();
-        }
         const state = {
             currentPage: null,
             pages: [
@@ -86,9 +97,9 @@
                 },
                 {
                     index: 6,
-                    onAction: () => {
-                        setPage(0);
-                    }
+                },
+                {
+                    index: 7,
                 },
                 {
                     index: 1,
@@ -163,41 +174,61 @@
 
             ]
         };
-        const pageTemplate = $('#page-quiz-template');
-        pageTemplate.attr('id', null);
-        const questionTemplate = pageTemplate.find('.question');
-        questionTemplate.remove();
-        pageTemplate.remove();
-        state.pages
-            .filter(p => p.type === 'page-quiz')
-            .forEach(p => {
-                const newPage = bindData(pageTemplate, 'page', p);
-                p.questions.forEach((q, i) => {
-                    const newQuestion = bindData(questionTemplate, 'question', q);
-                    newPage.append(newQuestion);
-                });
-                $('.page').append(newPage);
-            });
-        $('.cookie-notification').find('button').click(() => {
-            $('.cookie-notification').hide();
-        });
-        $('main button').click((e) => {
-            const action = $(e.currentTarget).data().action;
-            if (state.currentPage.onAction) {
-                state.currentPage.onAction(action);
+        function bindData(template, prefix, o) {
+            let html = template[0].outerHTML;
+            for (prop of Object.keys(o)) {
+                html = html.split(`{{${prefix}.${prop}}}`).join(o[prop]);
             }
-        });
-        $('.question').click((e) => {
-            const answer = $(e.currentTarget).data().answer;
-            state.currentPage.answer = answer;
-            setPage(state.currentPage.index + 1);
-            if(state.currentPage.index === 6) {
+            return $(html);
+        };
+        function setPage(index) {
+            state.currentPage = state.pages.find(p => p.index === index);
+            $('.page').children().hide();
+            const name = state.currentPage.id;
+            $(`.page-${index}`).show();
+
+            if (state.currentPage.index === 6) {
                 setTimeout(() => {
-                    window.location.href = 'http://www.google.com';
+                    setPage(state.currentPage.index + 1);
                 }, 3000);
-                
             }
-        });
+        }
+        function hookupEvents() {
+            $('.cookie-notification').find('button').click(() => {
+                $('.cookie-notification').hide();
+            });
+            $('main button').click((e) => {
+                const action = $(e.currentTarget).data().action;
+                if (state.currentPage.onAction) {
+                    state.currentPage.onAction(action);
+                }
+            });
+            $('.question').click((e) => {
+                const answer = $(e.currentTarget).data().answer;
+                state.currentPage.answer = answer;
+                setPage(state.currentPage.index + 1);
+            });
+        }
+        function buildQuiz() {
+            const pageTemplate = $('#page-quiz-template');
+            pageTemplate.attr('id', null);
+            const questionTemplate = pageTemplate.find('.question');
+            questionTemplate.remove();
+            pageTemplate.remove();
+            state.pages
+                .filter(p => p.type === 'page-quiz')
+                .forEach(p => {
+                    const newPage = bindData(pageTemplate, 'page', p);
+                    p.questions.forEach((q, i) => {
+                        const newQuestion = bindData(questionTemplate, 'question', q);
+                        newPage.append(newQuestion);
+                    });
+                    $('.page').append(newPage);
+                });
+        }
+        
+        buildQuiz();
+        hookupEvents();
         setPage(0);
     </script>
 </body>
