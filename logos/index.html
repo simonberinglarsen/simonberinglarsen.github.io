@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="dist/reveal.css">
     <link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
     <style>
         .container {
             position: relative;
@@ -33,21 +34,34 @@
         }
 
         .rounded {
-            border-radius: 5px;
-            border: 2px solid white;
-            box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 3px;
+            border: 1px solid #aaa;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.8);
         }
 
-        .bubble {
-            position: relative;
-            background: white;
-            color: black;
+        .p-1 {
+            padding: 10px;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #aaa;
+        }
+
+        .font-size-medium {
             font-size: 1.5rem;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
-            line-height: 2.5rem;
+        }
+
+        .font-size-small {
+            font-size: 0.75rem;
+        }
+
+        .text-gray {
+            color: #aaa;
+        }
+
+        .options {
             max-width: 300px;
+            background-color: #555;
         }
 
         .clickable {
@@ -61,6 +75,33 @@
         .company-name {
             color: white;
         }
+
+        .mb-1 {
+            margin-bottom: 10px;
+        }
+
+        .mr-auto {
+            margin-right: auto;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .w-fixed-1 {
+            width: 50px;
+        }
+
+        .badge{
+            font-size: 0.75rem;
+            border-radius: 5px;
+            padding: 5px;
+            background-color: #222;
+            color:#aaa;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.8);
+            border: 1px solid #aaa;
+        }
     </style>
 </head>
 
@@ -69,16 +110,28 @@
         <div class="slides">
             <section id="slide-deck">
                 <section id="main" class="clickable">
-                    <div class="description mx-auto">
-                        <div>Simon @</div>
-                        <div>Freelancer.com</div>
-                    </div>
                     <div>
                         <img class="rounded" src="images/profile200.jpg" width="100">
                     </div>
-                    <div class="bubble mx-auto">
-                        <div>Welcome to my portfolio</div>
-                        <div>(click or use scrollwheel)</div>
+                    <div class="mx-auto">Simon</div>
+                    <div class="mx-auto font-size-small text-gray mb-1">on freelancer.com</div>
+                    <div class="options  text-gray rounded mx-auto font-size-medium">
+                        <div class="flex-row p-1">
+                            <div class="w-fixed-1"><i class="fas fa-mouse"></i></div>
+                            <div class="text-gray2">Click to continue</div>
+                        </div>
+                        <div class="flex-row p-1">
+                            <div class="w-fixed-1"><i class="far fa-keyboard"></i></div>
+                            <div class="text-gray2">Use arrow keys</div>
+                        </div>
+                        <div class="flex-row p-1">
+                            <div class="w-fixed-1"><i class="fas fa-mouse"></i></div>
+                            <div class="text-gray2">Use scroll wheel</div>
+                        </div>
+                        <div class="flex-row p-1">
+                            <div class="w-fixed-1"><span class="badge">ESC</span> </div>
+                            <div class="text-gray2">View all slides</div>
+                        </div>
                     </div>
                 </section>
                 <section id="slide-template">
@@ -111,8 +164,11 @@
         });
 
         const logos = [
+            { name: 'Retro 1', img: 'retro1.svg', description: 'Showcasing retro style' },
             { name: 'Eternity Ready Plus', img: 'eternity.svg', description: 'Podcast platform - hosting podcasts' },
+            { name: 'Retro 2', img: 'retro2.svg', description: 'Showcasing retro style' },
             { name: 'Jyoti Beauty Parlour', img: 'jyoti.svg', description: 'Beauty Parlour. Hair. Manicure. Pedicure. Facial.' },
+            { name: 'Retro 3', img: 'retro3.svg', description: 'Showcasing retro style' },
             { name: 'Savewell', img: 'savewell1.svg', description: 'Financial freedom. Wealth.' },
             { name: '4seven', img: '4seven.svg', description: 'Webshop with Gadgets' },
             { name: 'BeautyA', img: 'BeautyA.svg', description: 'Beauty. Manicure. Pedicure.' },
