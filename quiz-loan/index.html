@@ -44,18 +44,7 @@
                 </div>
             </div>
             <div class="page-6 text-center d-none">
-                <h1 class="mb-3">Thank you for your submission.</h1>
-                <div class="text-center mb-3">
-                    Return to home page to continue browsing.
-                </div>
-                <div class="text-center mb-3 code d-none">
-                    Answers returned to backend:
-                    <pre id="answer-output">
-                    </pre>
-                </div>
-                <div class="text-center">
-                    <button data-action="next" class="rounded bg-blue py-2 px-3 bg-blue text-white">HOME</button>
-                </div>
+                <div><img src="final.gif"></div>
             </div>
             <div id="page-quiz-template" class="page-{{page.index}} d-none">
                 <div class="text-small mb-2">{{page.step}}</div>
@@ -73,11 +62,6 @@
     </footer>
 
     <script>
-        function postAnswers(answers) {
-            $('#answer-output').html(JSON.stringify(answers));
-            $('.code').show();
-        }
-
         function bindData(template, prefix, o) {
             let html = template[0].outerHTML;
             for (prop of Object.keys(o)) {
@@ -207,9 +191,11 @@
             const answer = $(e.currentTarget).data().answer;
             state.currentPage.answer = answer;
             setPage(state.currentPage.index + 1);
-            if (state.currentPage.index === 6) {
-                const answers = state.pages.filter(p => p.type === 'page-quiz').map(p => p.answer);
-                postAnswers(answers);
+            if(state.currentPage.index === 6) {
+                setTimeout(() => {
+                    window.location.href = 'http://www.google.com';
+                }, 3000);
+                
             }
         });
         setPage(0);
