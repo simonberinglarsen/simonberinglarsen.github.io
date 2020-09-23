@@ -12,208 +12,98 @@
 </head>
 
 <body class="bg-image">
-    <header>
-        <div class="cookie-notification bg-blue text-white p-2">
-            <div class="text-center w-100">
-                <p class="mb-3">
-                    This website stores cookies on your device. These cookies are used to improve our website and
-                    provide
-                    more personalized services to you, both on this website and through other media.
-                </p>
-                <button class="rounded bg-white mr-2">OK</button> <a href="http://www.google.com">Learn More</a>
-            </div>
-            <!--<div class="ml-auto vertical-center"><button class="rounded bg-white">X</button></div>-->
+    <div class="content">
+        <div class="content-top">
+            <header>
+                <div class="cookie-notification flex-row bg-blue text-white p-2">
+                    <div class="text-center w-100">
+                        <p class="mb-3">
+                            This website stores cookies on your device. These cookies are used to improve our website
+                            and
+                            provide
+                            more personalized services to you, both on this website and through other media.
+                        </p>
+                        <button class="rounded bg-white mr-2">OK</button> <a href="http://www.google.com">Learn More</a>
+                    </div>
+                </div>
+            </header>
+            <main class="mx-3">
+                <div class="page rounded mt-4 mx-auto">
+                    <div class="page-0 text-center d-none">
+                        <h1 class="mb-3">Will You Qualify For A Quick Loan Up To $5,000?</h1>
+                        <div class="video-container mb-3">
+                            <iframe class="video" allowfullscreen="" frameborder="0"
+                                src="https://www.youtube.com/embed/eY1FF6SEggk?autoplay=0&amp;enablejsapi=1&amp;rel=0"></iframe>
+                        </div>
+                        <div class="text-center mb-3">
+                            We Connect You To The Best Lending Partner Whose Most Likely To Accept Your Loan
+                            Application.
+                            Click
+                            The
+                            Button Below To Start Your Approval Process In Less Than 1-Minute.
+                        </div>
+                        <div class="text-center">
+                            <button data-action="next" class="rounded bg-blue py-2 px-3 bg-blue text-white">GET STARTED
+                                NOW</button>
+                        </div>
+                    </div>
+                    <div class="page-6 text-center d-none">
+                        <h1 class="text-blue mb-3">Processing</h1>
+                        <div class="progress">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    <div class="page-7 text-center d-none">
+                        <h1 class="mb-2 text-blue">THANKS FOR SIGNING UP!</h1>
+                        <h3 class="mb-2 text-bold">Everything we promised you will be sent yo your inbox shortly.</h3>
+                        <div class="video-container mb-3">
+                            <iframe class="video" allowfullscreen="" frameborder="0"
+                                src="https://www.youtube.com/embed/eY1FF6SEggk?autoplay=0&amp;enablejsapi=1&amp;rel=0"></iframe>
+                        </div>
+                        <p class="mb-2">
+                            While you wait for your materials to arrive via email, we recommend you to
+                            <span class="text-bold">click here below to learn more about us and what we can do for your
+                                business</span>
+                        </p>
+                        <div class="video-container mb-3">
+                            <iframe class="video" allowfullscreen="" frameborder="0"
+                                src="https://google.com/search?igu=1 "></iframe>
+                        </div>
+
+                    </div>
+                    <div id="page-quiz-template" class="page-{{page.index}} d-none">
+                        <div class="text-small mb-2">{{page.step}}</div>
+                        <h1 class="mb-2">{{page.title}}</h1>
+                        <h3 class="mb-2">{{page.subTitle}}</h3>
+                        <div data-answer="{{question.letter}}" class="question clickable border rounded mb-2 p-2">
+                            <span
+                                class="d-inline-block px-3 py-2 rounded border bg-white h3 text-bold mr-2">{{question.letter}}</span>{{question.text}}
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
-    </header>
-    <main class="mx-3">
-        <div class="page rounded mt-4 mx-auto">
-            <div class="page-0 text-center d-none">
-                <h1 class="mb-3">Will You Qualify For A Quick Loan Up To $5,000?</h1>
-                <div class="video-container mb-3">
-                    <iframe class="video" allowfullscreen="" frameborder="0"
-                        src="https://www.youtube.com/embed/eY1FF6SEggk?autoplay=0&amp;enablejsapi=1&amp;rel=0"></iframe>
+        <div class="content-bottom">
+            <footer>
+                <div class="p-2">
+                    <a href="http://www.google.com">Privacy policy</a>
                 </div>
-                <div class="text-center mb-3">
-                    We Connect You To The Best Lending Partner Whose Most Likely To Accept Your Loan Application. Click
-                    The
-                    Button Below To Start Your Approval Process In Less Than 1-Minute.
+                <div class="p-2">
+                    <a href="http://www.google.com">Terms of service</a>
                 </div>
-                <div class="text-center">
-                    <button data-action="next" class="rounded bg-blue py-2 px-3 bg-blue text-white">GET STARTED
-                        NOW</button>
+                <div class="p-2">
+                    <a href="http://www.google.com">Disclaimer</a>
                 </div>
-            </div>
-            <div class="page-6 text-center d-none">
-                <h1 class="mb-3">Thank you for your submission.</h1>
-                <div class="text-center mb-3">
-                    Return to home page to continue browsing.
-                </div>
-                <div class="text-center mb-3 code d-none">
-                    Answers returned to backend:
-                    <pre id="answer-output">
-                    </pre>
-                </div>
-                <div class="text-center">
-                    <button data-action="next" class="rounded bg-blue py-2 px-3 bg-blue text-white">HOME</button>
-                </div>
-            </div>
-            <div id="page-quiz-template" class="page-{{page.index}} d-none">
-                <div class="text-small mb-2">{{page.step}}</div>
-                <h1 class="mb-2">{{page.title}}</h1>
-                <h3 class="mb-2">{{page.subTitle}}</h3>
-                <div data-answer="{{question.letter}}" class="question clickable border rounded mb-2 p-2">
-                    <span
-                        class="d-inline-block px-3 py-2 rounded border bg-white h3 text-bold mr-2">{{question.letter}}</span>{{question.text}}
-                </div>
-            </div>
+            </footer>
         </div>
-    </main>
-    <footer>
+    </div>
 
-    </footer>
-
-    <script>
-        function postAnswers(answers) {
-            $('#answer-output').html(JSON.stringify(answers));
-            $('.code').show();
-        }
-
-        function bindData(template, prefix, o) {
-            let html = template[0].outerHTML;
-            for (prop of Object.keys(o)) {
-                html = html.split(`{{${prefix}.${prop}}}`).join(o[prop]);
-            }
-            return $(html);
-        };
-        function setPage(index) {
-            state.currentPage = state.pages.find(p => p.index === index);
-            $('.page').children().hide();
-            const name = state.currentPage.id;
-            $(`.page-${index}`).show();
-        }
-        const state = {
-            currentPage: null,
-            pages: [
-                {
-                    index: 0,
-                    onAction: () => {
-                        setPage(1);
-                    }
-                },
-                {
-                    index: 6,
-                    onAction: () => {
-                        setPage(0);
-                    }
-                },
-                {
-                    index: 1,
-                    type: 'page-quiz',
-                    step: 'Step 1 of 5',
-                    title: 'How Much Do You Need?',
-                    subTitle: `Tell Us How Much Money You'd Like To Borrow.`,
-                    questions: [
-                        { letter: 'A', text: `Less than $500` },
-                        { letter: 'B', text: `$1,000-$3,000` },
-                        { letter: 'C', text: `$3,000-$5,000` },
-                        { letter: 'D', text: `$5,000-$10,000` },
-                        { letter: 'E', text: `As Much As I Can Get` },
-                    ],
-                    answer: null,
-                },
-                {
-                    index: 2,
-                    type: 'page-quiz',
-                    step: 'Step 2 of 5',
-                    title: 'What Will You Use The Money For?',
-                    subTitle: `Tell Us What You Intend To Use The Money For If Approved.`,
-                    questions: [
-                        { letter: 'A', text: `Go Shopping` },
-                        { letter: 'B', text: `Pay For Late Bills` },
-                        { letter: 'C', text: `Pay For Food & Groceries` },
-                        { letter: 'D', text: `Pay For An Emergency` },
-                        { letter: 'E', text: `All The Above` },
-                    ],
-                    answer: null,
-                },
-                {
-                    index: 3,
-                    type: 'page-quiz',
-                    step: 'Step 3 of 5',
-                    title: 'What Is Your Credit Score?',
-                    subTitle: `This Will Help Us Connect You To The Lending Partner Whose Most Likely To Approve You.`,
-                    questions: [
-                        { letter: 'A', text: `Worse Than Bad` },
-                        { letter: 'B', text: `Average` },
-                        { letter: 'C', text: `Good` },
-                        { letter: 'D', text: `I Have No Credit History` },
-                    ],
-                    answer: null,
-                },
-                {
-                    index: 4,
-                    type: 'page-quiz',
-                    step: 'Step 4 of 5',
-                    title: 'What Is Your Approximate Annual Income?',
-                    subTitle: `Tell Us Approximately How Much You Earn Yearly (Before Tax).`,
-                    questions: [
-                        { letter: 'A', text: `$20,000 - $30,000` },
-                        { letter: 'B', text: `$40,000 - $50,000` },
-                        { letter: 'C', text: `$50,000+` },
-                        { letter: 'D', text: `I'm Unemployed` },
-                    ],
-                    answer: null,
-                },
-                {
-                    index: 5,
-                    type: 'page-quiz',
-                    step: 'Step 5 of 5',
-                    title: 'Do You Receive Any Monthly or Annual Financial Assistance From The Government?',
-                    subTitle: `This Will Help Us Further Connect You To The Best Lending Partner For You.`,
-                    questions: [
-                        { letter: 'A', text: `Yes` },
-                        { letter: 'B', text: `No` },
-                    ],
-                    answer: null,
-                },
-
-            ]
-        };
-        const pageTemplate = $('#page-quiz-template');
-        pageTemplate.attr('id', null);
-        const questionTemplate = pageTemplate.find('.question');
-        questionTemplate.remove();
-        pageTemplate.remove();
-        state.pages
-            .filter(p => p.type === 'page-quiz')
-            .forEach(p => {
-                const newPage = bindData(pageTemplate, 'page', p);
-                p.questions.forEach((q, i) => {
-                    const newQuestion = bindData(questionTemplate, 'question', q);
-                    newPage.append(newQuestion);
-                });
-                $('.page').append(newPage);
-            });
-        $('.cookie-notification').find('button').click(() => {
-            $('.cookie-notification').hide();
-        });
-        $('main button').click((e) => {
-            const action = $(e.currentTarget).data().action;
-            if (state.currentPage.onAction) {
-                state.currentPage.onAction(action);
-            }
-        });
-        $('.question').click((e) => {
-            const answer = $(e.currentTarget).data().answer;
-            state.currentPage.answer = answer;
-            setPage(state.currentPage.index + 1);
-            if (state.currentPage.index === 6) {
-                const answers = state.pages.filter(p => p.type === 'page-quiz').map(p => p.answer);
-                postAnswers(answers);
-            }
-        });
-        setPage(0);
-    </script>
+    <script src="app.js"></script>
 </body>
 
 </html>
