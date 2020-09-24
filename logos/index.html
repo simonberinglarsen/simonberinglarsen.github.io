@@ -59,6 +59,10 @@
             color: #aaa;
         }
 
+        .text-gray-2 {
+            color: #222;
+        }
+
         .options {
             max-width: 300px;
             background-color: #555;
@@ -99,8 +103,9 @@
             padding: 5px;
             background-color: #222;
             color:#aaa;
+            font-weight: bold;
             box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.8);
-            border: 1px solid #aaa;
+            border: 2px solid #555;
         }
     </style>
 </head>
@@ -117,20 +122,20 @@
                     <div class="mx-auto font-size-small text-gray mb-1">on freelancer.com</div>
                     <div class="options  text-gray rounded mx-auto font-size-medium">
                         <div class="flex-row p-1">
+                            <div class="w-fixed-1 text-gray-2"><i class="fas fa-mouse"></i></div>
+                            <div class="text-gray">Click to continue</div>
+                        </div>
+                        <div class="flex-row p-1">
+                            <div class="w-fixed-1 text-gray-2"><i class="far fa-keyboard"></i></div>
+                            <div class="text-gray">Use arrow keys</div>
+                        </div>
+                        <div class="flex-row p-1 text-gray-2">
                             <div class="w-fixed-1"><i class="fas fa-mouse"></i></div>
-                            <div class="text-gray2">Click to continue</div>
+                            <div class="text-gray">Use scroll wheel</div>
                         </div>
-                        <div class="flex-row p-1">
-                            <div class="w-fixed-1"><i class="far fa-keyboard"></i></div>
-                            <div class="text-gray2">Use arrow keys</div>
-                        </div>
-                        <div class="flex-row p-1">
-                            <div class="w-fixed-1"><i class="fas fa-mouse"></i></div>
-                            <div class="text-gray2">Use scroll wheel</div>
-                        </div>
-                        <div class="flex-row p-1">
+                        <div class="flex-row p-1 text-gray-2">
                             <div class="w-fixed-1"><span class="badge">ESC</span> </div>
-                            <div class="text-gray2">View all slides</div>
+                            <div class="text-gray">View all slides</div>
                         </div>
                     </div>
                 </section>
@@ -165,13 +170,15 @@
 
         const logos = [
             { name: 'Retrogusto', img: 'retro4.svg', description: 'Itialian family restaurant' },
+            { name: `John's Bakery`, img: 'johnsbakery.svg', description: 'Bakery. Offsetting colors for extra retro look.' },
+            { name: 'Buttonly', img: 'Buttonly.svg', description: 'Shop buttons online - webshop.' },
+            { name: 'Bullisher', img: 'Bullisher.svg', description: 'Freelancer doing scripting on linux' },
+            { name: `Owl Creek Soccer`, img: 'soccer.svg', description: 'Old boys team with custom logo.' },
             { name: 'Self Promotion', img: 'retro1.svg', description: 'Showcasing retro style' },
             { name: 'Eternity Ready Plus', img: 'eternity.svg', description: 'Podcast platform - hosting podcasts' },
             { name: 'Self Promotion', img: 'retro2.svg', description: 'Showcasing retro style' },
             { name: 'Jyoti Beauty Parlour', img: 'jyoti.svg', description: 'Beauty Parlour. Hair. Manicure. Pedicure. Facial.' },
             { name: 'Self Promotion', img: 'retro3.svg', description: 'Showcasing retro style' },
-            { name: 'Buttonly', img: 'Buttonly.svg', description: 'Shop buttons online - webshop.' },
-            { name: 'Bullisher', img: 'Bullisher.svg', description: 'Freelancer doing scripting on linux' },
             { name: 'Cashift', img: 'cashift.svg', description: 'Buy & sell online.' },
             { name: '4seven', img: '4seven.svg', description: 'Webshop with Gadgets' },
             { name: 'Bgirl', img: 'Bgirl.svg', description: 'T-shirts for girls' },
