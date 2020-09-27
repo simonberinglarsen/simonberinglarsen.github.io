@@ -68,13 +68,17 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script>
         async function getInfo() {
-            const response = await fetch('http://ip-api.com/json');
-            let res = await response.json();
-            console.log(res);
+            let response;
+            
+            response = await fetch('https://www.cloudflare.com/cdn-cgi/trace');
+            let ip = (await response.text()).split('ip=')[1].split('\n')[0];
+
+            response = await fetch(`https://cors-anywhere.herokuapp.com/ip-api.com/json/${ip}`);
+            let geoInfo = await response.json();
             $('.greeting').html(`
-            <div>Hi! I see that you are from <span class="country text-big">${res.country}</span></div>
-            <div>and live in <span class="city text-big">${res.city}</span> </div>
-            <div>with zipcode <span class="zip text-big">${res.zip}</span></div> `);
+            <div>Hi! I see that you are from <span class="country text-big">${geoInfo.country}</span></div>
+            <div>and live in <span class="city text-big">${geoInfo.city}</span> </div>
+            <div>with zipcode <span class="zip text-big">${geoInfo.zip}</span></div> `);
         }
         getInfo();
     </script>
