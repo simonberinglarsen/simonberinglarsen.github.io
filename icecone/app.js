@@ -179,8 +179,6 @@ export class App {
             };
             const avgTime = this.simulation.run(params);
             $('#results').html(`avg wait time in minutes = ${avgTime}`);
-
         });
-
     }
 }
