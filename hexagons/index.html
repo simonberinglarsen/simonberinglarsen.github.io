@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .bg-gray {
+        background-color: #dcdddf;
+      }
+
+      .p-1 {
+        padding: 30px;
+      }
+
+      .info-header {
+        font-weight: bold;
+      }
+
+      .pb-1 {
+        padding-bottom: 30px;
+      }
+
+      .contact-header {
+        font-weight: bold;
+      }
+
+      .seperator {
+        border-bottom: 1px solid black;
+        width: 200px;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .col {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .justify-center {
+        justify-content: center;
+      }
+
+      /* -------------------------------------------------- */
+      /*                    HEX style                       */
+      /* -------------------------------------------------- */
+      .hexagons {
+        margin-top: 100px;
+      }
+
+      .hex-title {
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .hex {
+        background: url("Hexagon_1.svg") no-repeat;
+        background-size: contain;
+        width: 358px;
+        height: 310px;
+      }
+
+      .hex-none {
+        width: 358px;
+        height: 310px;
+      }
+
+      .hex-inner-text {
+        height: 100%;
+        width: 100%;
+        padding-top: 20%;
+        padding-left: 20%;
+        width: 60%;
+        height: 60%;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .hex-row {
+        margin-top: -100px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .hex-row-odd {
+        margin-left: 80px;
+      }
+
+      .hex-spacer {
+        width: 200px;
+      }
+
+      /* responsive */
+      @media only screen and (min-width: 1500px) {
+        .hex-large {
+          display: block;
+        }
+
+        .hex-small,
+        .hex-medium {
+          display: none;
+        }
+      }
+
+      @media only screen and (min-width: 960px) and (max-width: 1499px) {
+        .hex-medium {
+          display: block;
+        }
+
+        .hex-small,
+        .hex-large {
+          display: none;
+        }
+      }
+
+      @media only screen and (max-width: 959px) {
+        .hex-small {
+          display: block;
+        }
+
+        .hex-medium,
+        .hex-large {
+          display: none;
+        }
+
+        .hex-small {
+          margin-top: -100px;
+        }
+
+        .hex {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header center p-1">
+      <img src="header.png" />
+    </div>
+    <div class="description bg-gray center p-1">
+      Your strategic specialist for luxury mobility and assets, financing
+      solutions, entrepreneurs‘ needs and private management.
+    </div>
+    <div class="hexagons row justify-center p-1">
+      <div class="col hex-large">
+        <div class="hex-row">
+          <div class="hex">
+            <div class="hex-inner-text">
+              <div class="hex-title">Luxury Mobility & Assets</div>
+              Private Aircraft & Super Yachts, Charter, Sales & Purchase, Ma-
+              nagement.
+            </div>
+          </div>
+          <div class="hex-spacer"></div>
+          <div class="hex">
+            <div class="hex-inner-text">
+              <div class="hex-title">Private Office Services</div>
+              Management, Logistic and Solving of the needs of Entre- preneurs
+              and their Families. We take care of all needs and aspects which
+              are not covered by the standard services of existing specialists
+              like lawyers, ban- kers, asset managers or accountants.
+            </div>
+          </div>
+          <div class="hex-spacer"></div>
+          <div class="hex">
+            <div class="hex-inner-text">
+              <div class="hex-title">Financing Solutions</div>
+              Sourcing & Negotiation of suitable financing options for your
+              speci- al assets.
+            </div>
+          </div>
+        </div>
+        <div class="hex-row hex-row-odd">
+          <div class="hex-spacer"></div>
+          <div class="hex">
+            <div class="hex-inner-text">
+              <div class="hex-title">
+                Corporate Strategy & Board Assignments
+              </div>
+              Strategy reviews and development, Change Management, Cost Op-
+              timisation, Interim Manage- ment, Restructurings.
+            </div>
+          </div>
+          <div class="hex-spacer"></div>
+          <div class="hex">
+            <div class="hex-inner-text">
+              <div class="hex-title">Real Estate</div>
+              Off-market Prime Property and Ho- tels, Project Development and
+              Management.
+            </div>
+          </div>
+        </div>
+        <div class="hex-row">
+          <div class="hex-none"></div>
+          <div class="hex-spacer"></div>
+          <div class="hex">
+            <div class="hex-inner-text">
+              <div class="hex-title">M&A Advisory</div>
+              For Small and Midcap private com- panies with succession oppor-
+              tunities.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col hex-medium">
+        <div class="hex-row">
+          <div class="hex">
+            <div class="hex-inner-text">
+              <div class="hex-title">Luxury Mobility & Assets</div>
+              Private Aircraft & Super Yachts, Charter, Sales & Purchase, Ma-
+              nagement.
+            </div>
+          </div>
+          <div class="hex-spacer"></div>
+          <div class="hex">
+            <div class="hex-inner-text">
+              <div class="hex-title">Private Office Services</div>
+              Management, Logistic and Solving of the needs of Entre- preneurs
+              and their Families. We take care of all needs and aspects which
+              are not covered by the standard services of existing specialists
+              like lawyers, ban- kers, asset managers or accountants.
+            </div>
+          </div>
+        </div>
+        <div class="hex-row hex-row-odd">
+          <div class="hex-spacer"></div>
+          <div class="hex">
+            <div class="hex-inner-text">
+              <div class="hex-title">
+                Corporate Strategy & Board Assignments
+              </div>
+              Strategy reviews and development, Change Management, Cost Op-
+              timisation, Interim Manage- ment, Restructurings.
+            </div>
+          </div>
+        </div>
+        <div class="hex-row">
+          <div class="hex">
+            <div class="hex-inner-text">
+              <div class="hex-title">Real Estate</div>
+              Off-market Prime Property and Ho- tels, Project Development and
+              Management.
+            </div>
+          </div>
+          <div class="hex-spacer"></div>
+          <div class="hex">
+            <div class="hex-inner-text">
+              <div class="hex-title">Financing Solutions</div>
+              Sourcing & Negotiation of suitable financing options for your
+              speci- al assets.
+            </div>
+          </div>
+        </div>
+        <div class="hex-row hex-row-odd">
+          <div class="hex-spacer"></div>
+          <div class="hex">
+            <div class="hex-inner-text">
+              <div class="hex-title">M&A Advisory</div>
+              For Small and Midcap private com- panies with succession oppor-
+              tunities.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col hex-small">
+        <div class="hex">
+          <div class="hex-inner-text">
+            <div class="hex-title">Luxury Mobility & Assets</div>
+            Private Aircraft & Super Yachts, Charter, Sales & Purchase, Ma-
+            nagement.
+          </div>
+        </div>
+        <div class="hex">
+          <div class="hex-inner-text">
+            <div class="hex-title">Private Office Services</div>
+            Management, Logistic and Solving of the needs of Entre- preneurs and
+            their Families. We take care of all needs and aspects which are not
+            covered by the standard services of existing specialists like
+            lawyers, ban- kers, asset managers or accountants.
+          </div>
+        </div>
+        <div class="hex">
+          <div class="hex-inner-text">
+            <div class="hex-title">Corporate Strategy & Board Assignments</div>
+            Strategy reviews and development, Change Management, Cost Op-
+            timisation, Interim Manage- ment, Restructurings.
+          </div>
+        </div>
+        <div class="hex">
+          <div class="hex-inner-text">
+            <div class="hex-title">Real Estate</div>
+            Off-market Prime Property and Ho- tels, Project Development and
+            Management.
+          </div>
+        </div>
+        <div class="hex">
+          <div class="hex-inner-text">
+            <div class="hex-title">Financing Solutions</div>
+            Sourcing & Negotiation of suitable financing options for your speci-
+            al assets.
+          </div>
+        </div>
+        <div class="hex">
+          <div class="hex-inner-text">
+            <div class="hex-title">M&A Advisory</div>
+            For Small and Midcap private com- panies with succession oppor-
+            tunities.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info center p-1">
+      <div class="info-header">OUR CLIENTS.</div>
+      <p class="pb-1">
+        We work exclusively for selected private individuals, families and
+        entrepreneurs.
+      </p>
+
+      <div class="info-header">OUR SERVICES.</div>
+      <p class="pb-1">
+        We are specialised in sourcing luxury assets. Our focus is on private
+        jets, helicopters and super yachts globally, prime real estate and
+        privately held companies in Switzerland. We guide and support our
+        selected clients from identifying the right asset, through negotiation
+        and acquisition to completion and maintenance of their special assets.
+      </p>
+
+      <div class="info-header">OUR VALUE.</div>
+      <p class="pb-1">
+        Our work is based on mutual trust, superior knowhow and experience,
+        long-term perspectives, stable partnership, un-biased advice and
+        ultimate discretion.
+      </p>
+
+      <div class="info-header">SIMPLY SPEAKING – TRULY SWISS.</div>
+    </div>
+    <div class="contact bg-gray center p-1">
+      <div class="contact-header pb-1">CONTACT</div>
+      <div class="row justify-center">
+        <div class="seperator"></div>
+      </div>
+      <div class="center p-1">
+        <div>Sesalpena AG</div>
+        <div>Weinbergstrasse 20</div>
+        <div>8001 Zürich</div>
+        <div>service@sesalpena.ch</div>
+      </div>
+    </div>
+  </body>
+</html>
