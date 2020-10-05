@@ -3,7 +3,245 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Lucky-gen</title>
+    <link href="nouislider.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      html,
+      body {
+        font-family: "Arvo", serif;
+      }
+
+      .text-size-2 {
+        font-size: 2rem;
+      }
+
+      .p-1 {
+        padding: 20px;
+      }
+
+      .m-1 {
+        margin: 20px;
+      }
+
+      .mb-1 {
+        margin-bottom: 20px;
+      }
+
+      .mb-3 {
+        margin-bottom: 80px;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .justify-center {
+        justify-content: center;
+      }
+
+      .justify-around {
+        justify-content: space-around;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .ml-auto {
+        margin-left: auto;
+      }
+
+      .card {
+        margin: 20px auto;
+        padding: 20px;
+        max-width: 500px;
+      }
+
+      .shadow {
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+      }
+
+      .shadow-inset {
+        box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.5);
+      }
+
+      button {
+        padding: 20px;
+        border-radius: 10px;
+        border: 0px solid black;
+        font-family: "Arvo", serif;
+        font-weight: bold;
+      }
+
+      button:focus,
+      button:active {
+        border: none;
+        outline: none;
+      }
+
+      button:active {
+        position: relative;
+        top: 4px;
+        box-shadow: none;
+      }
+
+      .circle-size-2 {
+        width: 75px;
+        height: 75px;
+      }
+      .circle-size-1 {
+        width: 50px;
+        height: 50px;
+      }
+      .circle {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .text-bold {
+        font-weight: bold;
+      }
+
+      .bg-white {
+        background-color: #fff;
+      }
+
+      .bg-yellow {
+        background-color: #bb4;
+      }
+
+      .bg-red {
+        background-color: #a66;
+      }
+
+      .bg-gray {
+        background-color: #aaa;
+      }
+
+      .bg-light-gray {
+        background-color: #ddd;
+      }
+
+      .bg-black {
+        background-color: #000;
+      }
+
+      .text-white {
+        color: white;
+      }
+
+      .connect-1 {
+        background-color: #aaa;
+      }
+    </style>
   </head>
-  <body></body>
+
+  <body class="bg-gray">
+    <div class="header p-1 row justify-center bg-black shadow">
+      <h1 class="text-white">Lucky-gen</h1>
+    </div>
+    <div class="range-selection card bg-light-gray shadow">
+      <div class="row mb-1">
+        <div class="circle circle-size-1 bg-gray text-bold shadow-inset">
+          <div id="startText"></div>
+        </div>
+        <div
+          class="circle circle-size-1 bg-gray ml-auto text-bold shadow-inset"
+        >
+          <div id="endText"></div>
+        </div>
+      </div>
+      <div id="range"></div>
+    </div>
+    <div class="count-selection card bg-light-gray shadow">
+      <div class="row mb-1 justify-center">
+        <div class="circle circle-size-1 bg-gray text-bold shadow-inset">
+          <div id="countText"></div>
+        </div>
+      </div>
+      <div id="count"></div>
+    </div>
+    <div class="row justify-center mb-3">
+      <button id="btn-gen" class="bg-blue shadow">HIT ME!</button>
+    </div>
+    <div id="nums" class="text-bold text-white text-size-2 center"></div>
+    <script src="nouislider.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var rangeSlider = document.getElementById("range");
+      var countSlider = document.getElementById("count");
+
+      noUiSlider.create(rangeSlider, {
+        start: [20, 80],
+        connect: true,
+        range: {
+          min: [1, 1],
+          max: 100,
+        },
+      });
+      $(".noUi-connect").addClass("connect-1");
+      $("#btn-gen").click(() => {
+        const cols = [
+          ["#FF004D", "#000"],
+          ["#FFA300", "#000"],
+          ["#FFEC27", "#000"],
+          ["#00E436", "#000"],
+          ["#29ADFF", "#000"],
+          ["#83769C", "#000"],
+          ["#FF77A8", "#000"],
+          ["#FFCCAA", "#000"],
+        ];
+        const count = +countSlider.noUiSlider.get();
+        $("#nums").empty();
+        for (let i = 1; i <= count; i++) {
+          $("#nums").append(
+            `<div style="display:inline-block"><div id="num${i}" class="circle circle-size-2 shadow-inset shadow"></div></div>`
+          );
+          const x = Math.floor(Math.random() * 10);
+          const q = $(`#num${i}`);
+          q.html(String.fromCharCode(x + 65));
+          const rndCol = x % 8;
+          q.css("background-color", cols[rndCol][0]);
+          q.css("color", cols[rndCol][1]);
+        }
+      });
+      noUiSlider.create(countSlider, {
+        start: [3],
+        connect: true,
+        range: {
+          min: [1, 1],
+          max: 10,
+        },
+      });
+
+      rangeSlider.noUiSlider.on("update", function () {
+        const x = rangeSlider.noUiSlider.get();
+        const start = +x[0];
+        const end = +x[1];
+        $("#startText").html(start);
+        $("#endText").html(end);
+      });
+
+      countSlider.noUiSlider.on("update", function () {
+        const count = +countSlider.noUiSlider.get();
+        $("#countText").html(count);
+      });
+    </script>
+  </body>
 </html>
