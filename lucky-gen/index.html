@@ -99,10 +99,12 @@
         width: 75px;
         height: 75px;
       }
+
       .circle-size-1 {
         width: 50px;
         height: 50px;
       }
+
       .circle {
         border-radius: 50%;
         display: flex;
@@ -213,9 +215,13 @@
           $("#nums").append(
             `<div style="display:inline-block"><div id="num${i}" class="circle circle-size-2 shadow-inset shadow"></div></div>`
           );
-          const x = Math.floor(Math.random() * 10);
+          const range = rangeSlider.noUiSlider.get();
+          const start = +range[0];
+          const end = +range[1];
+          const delta = end - start + 1;
+          const x = Math.floor(Math.random() * delta + start);
           const q = $(`#num${i}`);
-          q.html(String.fromCharCode(x + 65));
+          q.html(x);
           const rndCol = x % 8;
           q.css("background-color", cols[rndCol][0]);
           q.css("color", cols[rndCol][1]);
