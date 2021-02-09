@@ -1,0 +1,8 @@
+MyHomeworkRewards is a platform for students to practice homework. We are seeking assistance developing the remainder of our high school gr 12 vectors content. 
+The current lessons are found here: http://myhomeworkrewards.com/lessons/Gr12/Math/Vectors/gr12_math_vectors_main.html
+
+We need help converting/summarizing existing content into HTML format (using MathJax for equations). There are 10 lessons on topics like: application of vectors, 
+dot product, cross product and scalar/vector projections. Each lesson has definitions/explanations and solutions to example questions (1-2 per lesson). 
+We will also need graphics created when required.
+
+Please demonstrate experience with HTML/MathJax and knowledge on vectors content.
