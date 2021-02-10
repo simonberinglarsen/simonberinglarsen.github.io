@@ -24,11 +24,20 @@
 		.list-group-item {
 			border: 0px solid black;
 		}
+		.my-2 {
+			margin: 16px
+		}
+		.mb-2 {
+			margin-bottom: 16px
+		}
+		.mt-3 {
+			margin-top: 24px
+		}
+		.mt-4 {
+			margin-top: 48px
+		}
 	</style>
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-
 </head>
 
 <body style="padding-top:70px;">
@@ -53,29 +62,6 @@
 					<li class="active"><a href="http://myhomeworkrewards.com/lessons/lessons_main.html">Lessons</a></li>
 					<li><a href="http://hw.myhomeworkrewards.com/rewards.php">Rewards </a></li>
 				</ul>
-
-				<!--<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign In<span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li>
-						<div class="container" style="max-width:250px">
-							<form class="form-signin">
-								<input type="email" class="form-control" id="email" placeholder="Email" required autofocus>
-								<input type="password" class="form-control" id="password" placeholder="Password" required>
-								<div class="checkbox">
-									<label>
-									<input type="checkbox"> Remember Me
-									</label>
-								</div>
-								<a href="#">Sign up</a>
-								<button type="submit" class="btn btn-primary btn-block">Sign In</button>								
-							</form>
-						</div>	
-						</li>
-					 </ul>
-					</li>
-				</ul>-->
 			</div>
 		</div>
 
@@ -102,7 +88,6 @@
 			<div class="col-lg-8 col-lg-offset-2">
 				<h1>VECTORS</h1>
 				<h2>Force</h2>
-
 				<div class="row">
 					<div class="col-lg-9">
 						<p>
@@ -111,76 +96,61 @@
 							force. The counteracting force is called the equilibrant force. Draw the resultant force and
 							the corresponding equilibrant force for the following forces:
 						</p>
-
-
-
-						<div class="row">
+						<div class="row mt-4 mb-2">
 							<div class="col-sm-6 text-center">
-								<div class="p-2">Collinear forces at
+								<div class="my-2">Collinear forces at
 									equilibrium</div>
 								<div><img src="force-graphs/g1.png"></div>
 							</div>
 
 							<div class="col-sm-6 text-center">
-								<div>Coplanar Forces at equilibrium</div><img src="force-graphs/g2.png">
+								<div class="my-2">Coplanar Forces at equilibrium</div>
+								<div><img src="force-graphs/g2.png"></div>
 							</div>
 						</div>
-						<div class="well well-sm">
-							<div>2. Describe the forces that act on the object to keep in a state of equilibrium.</div>
+						<div class="well well-sm mt-4">
+							<div>Describe the forces that act on the object to keep in a state of equilibrium.</div>
 						</div>
-
-						<div class="row">
-							<div class="col-sm-4 text-center">
-								<div>a. aircraft flying at constant velocity</div><img src="force-graphs/g3.png">
+						<div class="row mb-2">
+							<div class="col-md-4 text-center">
+								<div class="mt-4 mb-2">a. aircraft flying at constant velocity</div>
+								<div><img src="force-graphs/g3.png"></div>
 							</div>
-							<div class="col-sm-4 text-center">
-								<div>b. an object hanging on two wires</div><img src="force-graphs/g4.png">
+							<div class="col-md-4 text-center">
+								<div class="mt-4 mb-2">b. an object hanging on two wires</div>
+								<div><img src="force-graphs/g4.png"></div>
 							</div>
-							<div class="col-sm-4 text-center">
-								<div>c. a box standing on a ramp</div><img src="force-graphs/g5.png">
+							<div class="col-md-4 text-center">
+								<div class="mt-4 mb-2">c. a box standing on a ramp</div>
+								<div><img src="force-graphs/g5.png"></div>
 							</div>
 						</div>
-
-
-
-						<div class="well well-sm">
-							<div>3. Jake and Maria are towing their freinds on toboggan. Jake is exerting a force of 65N
+						<div class="well well-sm mt-4">
+							<div>Jake and Maria are towing their freinds on toboggan. Jake is exerting a force of 65N
 								and Maria a force of 60N. Since they are walking side by side, the ropes pull to eitehr
 								side of the toboggan at 40° to each other.
-
-
-
 							</div>
 						</div>
-						<p><img src="force-graphs/g6.png"></p>
-						<div>a. Find the resultant force pulling the toboggan forward from a stop.</div>
+						<p class="mt-4 text-center"><img src="force-graphs/g6.png"></p>
+						<p class="mt-4 my-2">a. Find the resultant force pulling the toboggan forward from a stop.</p>
 						<p>
-
-
 							\(\vert\vec{f_{R}}\vert^2=65^2+60^2-2(65)(60)cos 140° \)
 						</p>
 						<p>
-
-
 							\(\vert\vec{f_{R}}\vert=117.5N\)
 						</p>
 						<p>
-							\( \dfrac{sinθ}{65}=\dfrac{sin140°}{117.5} \)
+							\( \dfrac{sinθ}{65}=\dfrac{sin140°}{117.5} \implies θ=21°\)
 						</p>
 						<p>
-							\( θ=21° \)
+							\(\vec{f_{R}}=117.5N \) <span>(21° off of 60N force)</span>
 						</p>
+						<p class="mt-4 my-2">b. Soon the toboggan is travelling at a constant speed. Find the equilibrant force
+							and explain what it represents.</p>
 						<p>
-							\(\vec{f_{R}}=117.5N [\text{21° off of 60N force}] \)
+							\(\vec{f_{E}}=117.5N \) <span>159° off of 60N force</span>
 						</p>
-						<div>b. Soon the toboggan is travelling at a constant speed. Find the equilibrant force
-							and explain what it represents.</div>
-						<p>
-							\(\vec{f_{E}}=117.5N [\text{159° off of 60N force}] \)
-						</p>
-
 					</div>
-
 					<div class="col-lg-3">
 						<div class="panel panel-default">
 							<div class="panel-heading">
@@ -209,9 +179,6 @@
 						</div>
 					</div>
 				</div>
-
-
-				<br><br>
 				<footer>
 					&copy;MyHomeworkRewards 2016
 				</footer>
