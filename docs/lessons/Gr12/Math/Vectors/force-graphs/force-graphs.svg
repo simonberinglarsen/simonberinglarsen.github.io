@@ -22,6 +22,342 @@
      id="defs2">
     <marker
        style="overflow:visible"
+       id="marker15890"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4)"
+         style="fill:#0000ff;fill-opacity:1;fill-rule:evenodd;stroke:#0000ff;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path15888" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker15222"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4)"
+         style="fill:#0000ff;fill-opacity:1;fill-rule:evenodd;stroke:#0000ff;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path15220" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker14572"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4)"
+         style="fill:#0000ff;fill-opacity:1;fill-rule:evenodd;stroke:#0000ff;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path14570" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker13918"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path13916" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker13435"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path13433" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker11483"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleOutL"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,-4.8,0)"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#008000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path11481" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker10849"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleOutL"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,-4.8,0)"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#008000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path10847" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker8933"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path8931" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker7619"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleOutL"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,-4.8,0)"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#008000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path7617" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker7609"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleOutL"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,-4.8,0)"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#0000ff;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path7607" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker6379"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleOutL"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,-4.8,0)"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#008000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path6377" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker5801"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleOutL"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,-4.8,0)"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#008000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5799" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker4678"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleOutL"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         transform="matrix(0.8,0,0,0.8,-4.8,0)"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#008000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path4676" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker4114"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleOutL"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         transform="matrix(0.8,0,0,0.8,-4.8,0)"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#008000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path4112" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker3544"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleOutL"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         transform="matrix(0.8,0,0,0.8,-4.8,0)"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#008000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path3542" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 105.83334 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="132.29166 : 105.83334 : 1"
+       inkscape:persp3d-origin="66.14583 : 70.555557 : 1"
+       id="perspective3511" />
+    <marker
+       style="overflow:visible"
+       id="marker2934"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path2932" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker2236"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4)"
+         style="fill:#0000ff;fill-opacity:1;fill-rule:evenodd;stroke:#0000ff;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path2234" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker2226"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleOutL"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,-4.8,0)"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path2224" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker2216"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path2214" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker2196"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleOutL"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,-4.8,0)"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#0000ff;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path2194" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker2186"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4)"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path2184" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker2176"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleOutL"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,-4.8,0)"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path2174" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker2166"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleOutL"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,-4.8,0)"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path2164" />
+    </marker>
+    <marker
+       style="overflow:visible"
        id="marker6530"
        refX="0"
        refY="0"
@@ -41,7 +377,8 @@
        refY="0"
        orient="auto"
        inkscape:stockid="EmptyTriangleOutL"
-       inkscape:isstock="true">
+       inkscape:isstock="true"
+       inkscape:collect="always">
       <path
          transform="matrix(0.8,0,0,0.8,-4.8,0)"
          style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
@@ -504,7 +841,8 @@
        refY="0"
        orient="auto"
        inkscape:stockid="TriangleOutM"
-       inkscape:isstock="true">
+       inkscape:isstock="true"
+       inkscape:collect="always">
       <path
          transform="scale(0.4)"
          style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
@@ -518,7 +856,8 @@
        refY="0"
        orient="auto"
        inkscape:stockid="TriangleOutM"
-       inkscape:isstock="true">
+       inkscape:isstock="true"
+       inkscape:collect="always">
       <path
          transform="scale(0.4)"
          style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
@@ -576,7 +915,8 @@
        refY="0"
        orient="auto"
        inkscape:stockid="TriangleOutM"
-       inkscape:isstock="true">
+       inkscape:isstock="true"
+       inkscape:collect="always">
       <path
          transform="scale(0.4)"
          style="fill:#0000ff;fill-opacity:1;fill-rule:evenodd;stroke:#0000ff;stroke-width:1pt;stroke-opacity:1"
@@ -822,11 +1162,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="303.5365"
-     inkscape:cy="201.16284"
+     inkscape:zoom="2.8"
+     inkscape:cx="302.6466"
+     inkscape:cy="236.19153"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="g8929"
      inkscape:document-rotation="0"
      showgrid="false"
      units="px"
@@ -834,7 +1174,13 @@
      inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="true" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -872,7 +1218,7 @@
          inkscape:label="Layer 2">
         <path
            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#EmptyTriangleOutL)"
-           d="M -18.409357,15.629087 H 9.7931031"
+           d="m -98.162331,15.251111 h 28.20246"
            id="path1633"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g1.png"
@@ -880,7 +1226,7 @@
            inkscape:export-ydpi="119.68478" />
         <path
            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1716)"
-           d="M 10.026391,15.629087 H 20.570136"
+           d="m -69.726583,15.251111 h 10.543745"
            id="path1712"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g1.png"
@@ -888,7 +1234,7 @@
            inkscape:export-ydpi="119.68478" />
         <g
            id="g2128"
-           transform="translate(-66.712797,-30.653869)"
+           transform="translate(-146.46577,-31.031845)"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g1.png"
            inkscape:export-xdpi="119.68478"
            inkscape:export-ydpi="119.68478">
@@ -913,7 +1259,7 @@
         </g>
         <g
            id="g2151"
-           transform="translate(-66.712797,-30.464881)"
+           transform="translate(-146.46577,-30.842857)"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g1.png"
            inkscape:export-xdpi="119.68478"
            inkscape:export-ydpi="119.68478">
@@ -938,7 +1284,7 @@
         </g>
         <path
            style="fill:#ffffff;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker2187)"
-           d="M -18.409357,9.6381629 H 20.570136"
+           d="m -98.162331,9.2601867 h 38.979493"
            id="path2183"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g1.png"
@@ -946,7 +1292,7 @@
            inkscape:export-ydpi="119.68478" />
         <path
            style="fill:#ffffff;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker2351)"
-           d="M 20.570136,29.292924 H -18.409357"
+           d="M -59.182838,28.914948 H -98.162331"
            id="path2347"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g1.png"
@@ -954,7 +1300,7 @@
            inkscape:export-ydpi="119.68478" />
         <g
            id="g2525"
-           transform="translate(-61.657366,-17.519198)"
+           transform="translate(-141.41034,-17.897174)"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g1.png"
            inkscape:export-xdpi="119.68478"
            inkscape:export-ydpi="119.68478">
@@ -982,16 +1328,16 @@
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="-5.8711786"
-           y="7.1956377"
+           x="-85.624153"
+           y="6.8176613"
            id="text2677"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g1.png"
            inkscape:export-xdpi="119.68478"
            inkscape:export-ydpi="119.68478"><tspan
              sodipodi:role="line"
              id="tspan2675"
-             x="-5.8711786"
-             y="7.1956377"
+             x="-85.624153"
+             y="6.8176613"
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Calibri;-inkscape-font-specification:'Calibri Italic';fill:#0000ff;stroke:none;stroke-width:0.264583">f<tspan
    style="font-size:65%;baseline-shift:sub;fill:#0000ff;stroke:none"
    id="tspan2861">R</tspan> <tspan
@@ -999,7 +1345,7 @@
    id="tspan3051">(resulting force)</tspan></tspan></text>
         <path
            style="fill:#0000ff;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;marker-end:url(#marker2685);paint-order:stroke fill markers"
-           d="m -5.1171699,2.2847849 h 3.541321"
+           d="m -84.870144,1.9068087 h 3.541321"
            id="path2679"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g1.png"
@@ -1008,22 +1354,22 @@
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="76.698013"
-           y="14.564546"
+           x="-3.054961"
+           y="14.186569"
            id="text3243"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
            inkscape:export-xdpi="120.17917"
            inkscape:export-ydpi="120.17917"><tspan
              sodipodi:role="line"
              id="tspan3241"
-             x="76.698013"
-             y="14.564546"
+             x="-3.054961"
+             y="14.186569"
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Calibri;-inkscape-font-specification:'Calibri Italic';fill:#0000ff;stroke:none;stroke-width:0.264583">f<tspan
    style="font-size:65%;baseline-shift:sub;fill:#0000ff;stroke:none"
    id="tspan3237">R</tspan></tspan></text>
         <path
            style="fill:#0000ff;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;marker-end:url(#marker3249);paint-order:stroke fill markers"
-           d="m 77.452037,9.6536909 h 3.54132"
+           d="m -2.3009372,9.2757147 h 3.54132"
            id="path3245"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
@@ -1031,7 +1377,7 @@
            inkscape:export-ydpi="120.17917" />
         <path
            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker3319)"
-           d="m 74.857697,36.663073 -18.950079,0"
+           d="M -4.8952772,36.285097 H -23.845356"
            id="path3197"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
@@ -1039,7 +1385,7 @@
            inkscape:export-ydpi="120.17917" />
         <g
            id="g3209"
-           transform="translate(4.6549131,-10.149049)"
+           transform="translate(-75.098061,-10.527025)"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
            inkscape:export-xdpi="120.17917"
            inkscape:export-ydpi="120.17917">
@@ -1064,7 +1410,7 @@
         </g>
         <g
            id="g3219"
-           transform="translate(8.7470957,-26.159668)"
+           transform="translate(-71.005879,-26.537644)"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
            inkscape:export-xdpi="120.17917"
            inkscape:export-ydpi="120.17917">
@@ -1089,7 +1435,7 @@
         </g>
         <path
            style="fill:#ffffff;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker3279)"
-           d="M 74.857697,36.663073 V 3.1123127"
+           d="M -4.8952772,36.285097 V 2.7343365"
            id="path3221"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
@@ -1097,7 +1443,7 @@
            inkscape:export-ydpi="120.17917" />
         <g
            id="g3235"
-           transform="translate(22.283123,-1.1868448)"
+           transform="translate(-57.469851,-1.564821)"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
            inkscape:export-xdpi="120.17917"
            inkscape:export-ydpi="120.17917">
@@ -1122,7 +1468,7 @@
         </g>
         <path
            style="fill:#ffffff;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4282)"
-           d="m 74.742057,36.727326 v 33.55076"
+           d="M -5.0109172,36.34935 V 69.90011"
            id="path4278"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
@@ -1133,28 +1479,28 @@
            id="rect4650"
            width="32.874149"
            height="9.6217022"
-           x="-9.219449"
-           y="67.073517"
+           x="-88.97242"
+           y="66.695541"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g3.png"
            inkscape:export-xdpi="119.85254"
            inkscape:export-ydpi="119.85254" />
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="-1.1567067"
-           y="73.787437"
+           x="-80.909683"
+           y="73.409462"
            id="text4654"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g3.png"
            inkscape:export-xdpi="119.85254"
            inkscape:export-ydpi="119.85254"><tspan
              sodipodi:role="line"
              id="tspan4652"
-             x="-1.1567067"
-             y="73.787437"
+             x="-80.909683"
+             y="73.409462"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Calibri;-inkscape-font-specification:Calibri;stroke-width:0.264583">Aircraft</tspan></text>
         <path
            style="fill:#ffffff;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker5198)"
-           d="M -9.3517409,71.884373 H -22.189113"
+           d="M -89.104715,71.506397 H -101.94209"
            id="path4668"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g3.png"
@@ -1162,7 +1508,7 @@
            inkscape:export-ydpi="119.85254" />
         <path
            style="fill:#ffffff;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker5208)"
-           d="M 7.2176251,66.941231 V 54.103859"
+           d="M -72.535349,66.563255 V 53.725883"
            id="path4928"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g3.png"
@@ -1170,7 +1516,7 @@
            inkscape:export-ydpi="119.85254" />
         <path
            style="fill:#ffffff;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker5616)"
-           d="M 23.786991,71.884373 H 36.624363"
+           d="m -55.965983,71.506397 h 12.837372"
            id="path5417"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g3.png"
@@ -1178,7 +1524,7 @@
            inkscape:export-ydpi="119.85254" />
         <path
            style="fill:#ffffff;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker5606)"
-           d="M 23.786991,71.884373 H 36.624363"
+           d="m -55.965983,71.506397 h 12.837372"
            id="path5419"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g3.png"
@@ -1186,7 +1532,7 @@
            inkscape:export-ydpi="119.85254" />
         <path
            style="fill:#ffffff;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker5942)"
-           d="M 7.2176251,76.827516 V 89.664891"
+           d="M -72.535349,76.44954 V 89.286915"
            id="path5938"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g3.png"
@@ -1195,64 +1541,64 @@
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="-19.74213"
-           y="76.058395"
+           x="-99.495102"
+           y="75.68042"
            id="text6232"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g3.png"
            inkscape:export-xdpi="119.85254"
            inkscape:export-ydpi="119.85254"><tspan
              sodipodi:role="line"
              id="tspan6230"
-             x="-19.74213"
-             y="76.058395"
+             x="-99.495102"
+             y="75.68042"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#0000ff;stroke-width:0.264583">drag</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="8.2042532"
-           y="63.299778"
+           x="-71.548721"
+           y="62.921803"
            id="text6236"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g3.png"
            inkscape:export-xdpi="119.85254"
            inkscape:export-ydpi="119.85254"><tspan
              sodipodi:role="line"
              id="tspan6234"
-             x="8.2042532"
-             y="63.299778"
+             x="-71.548721"
+             y="62.921803"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#0000ff;stroke-width:0.264583">lift</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="25.171219"
-           y="76.066666"
+           x="-54.581757"
+           y="75.68869"
            id="text6240"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g3.png"
            inkscape:export-xdpi="119.85254"
            inkscape:export-ydpi="119.85254"><tspan
              sodipodi:role="line"
              id="tspan6238"
-             x="25.171219"
-             y="76.066666"
+             x="-54.581757"
+             y="75.68869"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#0000ff;stroke-width:0.264583">thrust</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="8.3220778"
-           y="84.421173"
+           x="-71.430893"
+           y="84.043198"
            id="text6244"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g3.png"
            inkscape:export-xdpi="119.85254"
            inkscape:export-ydpi="119.85254"><tspan
              sodipodi:role="line"
              id="tspan6242"
-             x="8.3220778"
-             y="84.421173"
+             x="-71.430893"
+             y="84.043198"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#0000ff;stroke-width:0.264583">weight</tspan></text>
         <circle
            style="fill:#0000ff;fill-opacity:0;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
            id="path6306"
-           cx="6.8099203"
-           cy="119.37467"
+           cx="-72.943054"
+           cy="118.9967"
            r="6.8035712"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g4.png"
            inkscape:export-xdpi="119.97743"
@@ -1260,28 +1606,28 @@
         <path
            id="rect6308"
            style="fill:#0000ff;fill-opacity:0;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
-           d="m -20.478466,98.019015 h 54.57679 v 5.480645 h -54.57679 z"
+           d="m -100.23144,97.641039 h 54.57679 v 5.480641 h -54.57679 z"
            sodipodi:nodetypes="ccccc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g4.png"
            inkscape:export-xdpi="119.97743"
            inkscape:export-ydpi="119.97743" />
         <path
            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="M 1.4022891,115.24598 -13.309195,103.49966"
+           d="M -78.350685,114.868 -93.062169,103.12168"
            id="path6326"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g4.png"
            inkscape:export-xdpi="119.97743"
            inkscape:export-ydpi="119.97743" />
         <path
            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 12.279464,115.32836 14.81467,-11.8287"
+           d="m -67.47351,114.95038 14.81467,-11.8287"
            id="path6328"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g4.png"
            inkscape:export-xdpi="119.97743"
            inkscape:export-ydpi="119.97743" />
         <path
            style="fill:#ffffff;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker6340)"
-           d="M -0.17753989,116.07489 -14.915591,104.4446"
+           d="M -79.930514,115.69691 -94.668565,104.06662"
            id="path6336"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g4.png"
@@ -1289,7 +1635,7 @@
            inkscape:export-ydpi="119.97743" />
         <path
            style="fill:#ffffff;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker6640)"
-           d="m 13.992904,115.8859 14.73805,-11.63028"
+           d="m -65.76007,115.50792 14.73805,-11.63028"
            id="path6636"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g4.png"
@@ -1298,34 +1644,34 @@
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="-19.210503"
-           y="114.59488"
+           x="-98.963478"
+           y="114.2169"
            id="text6946"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g4.png"
            inkscape:export-xdpi="119.97743"
            inkscape:export-ydpi="119.97743"><tspan
              sodipodi:role="line"
              id="tspan6944"
-             x="-19.210503"
-             y="114.59488"
+             x="-98.963478"
+             y="114.2169"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#0000ff;stroke-width:0.264583">tension</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="19.577248"
-           y="114.67726"
+           x="-60.175728"
+           y="114.29929"
            id="text6950"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g4.png"
            inkscape:export-xdpi="119.97743"
            inkscape:export-ydpi="119.97743"><tspan
              sodipodi:role="line"
              id="tspan6948"
-             x="19.577248"
-             y="114.67726"
+             x="-60.175728"
+             y="114.29929"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#0000ff;stroke-width:0.264583">tension</tspan></text>
         <path
            style="fill:#ffffff;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker6966)"
-           d="m 6.8099241,126.31054 v 12.83737"
+           d="m -72.94305,125.93256 v 12.83737"
            id="path6958"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g4.png"
@@ -1334,20 +1680,20 @@
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="7.9143744"
-           y="133.90419"
+           x="-71.8386"
+           y="133.52621"
            id="text6962"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g4.png"
            inkscape:export-xdpi="119.97743"
            inkscape:export-ydpi="119.97743"><tspan
              sodipodi:role="line"
              id="tspan6960"
-             x="7.9143744"
-             y="133.90419"
+             x="-71.8386"
+             y="133.52621"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#0000ff;stroke-width:0.264583">weight</tspan></text>
         <path
            style="fill:none;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 44.768993,124.2692 45.435824,-16.83798 10e-6,16.83798 z"
+           d="m -34.983981,123.89122 45.435824,-16.83798 10e-6,16.83798 z"
            id="path7298"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g5.png"
            inkscape:export-xdpi="119.69896"
@@ -1357,15 +1703,15 @@
            id="rect7300"
            width="9.6217022"
            height="9.7553377"
-           x="18.331415"
-           y="122.42021"
+           x="-56.171501"
+           y="93.959793"
            transform="rotate(-20.635518)"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g5.png"
            inkscape:export-xdpi="119.69896"
            inkscape:export-ydpi="119.69896" />
         <path
            style="fill:#ffffff;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker7312)"
-           d="M 67.753593,113.57005 62.367433,98.834355"
+           d="m -11.999381,113.19207 -5.38616,-14.735691"
            id="path7308"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g5.png"
@@ -1373,7 +1719,7 @@
            inkscape:export-ydpi="119.69896" />
         <path
            style="fill:#ffffff;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker7642)"
-           d="m 67.923261,113.49122 14.735696,-5.38616"
+           d="M -11.829713,113.11324 2.9059828,107.72708"
            id="path7638"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g5.png"
@@ -1381,7 +1727,7 @@
            inkscape:export-ydpi="119.69896" />
         <path
            style="fill:#ffffff;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker7980)"
-           d="m 67.753593,113.57005 v 14.51976"
+           d="m -11.999381,113.19207 v 14.51976"
            id="path7976"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g5.png"
@@ -1389,7 +1735,7 @@
            inkscape:export-ydpi="119.69896" />
         <path
            style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 66.958283,111.45814 2.08298,-0.78442 0.79532,2.11192"
+           d="m -12.794691,111.08016 2.08298,-0.78442 0.7953198,2.11192"
            id="path8330"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g5.png"
            inkscape:export-xdpi="119.69896"
@@ -1397,48 +1743,48 @@
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="64.541382"
-           y="101.50912"
+           x="-15.211593"
+           y="101.13114"
            id="text8334"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g5.png"
            inkscape:export-xdpi="119.69896"
            inkscape:export-ydpi="119.69896"><tspan
              sodipodi:role="line"
-             x="64.541382"
-             y="101.50912"
+             x="-15.211593"
+             y="101.13114"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#ff0000;stroke-width:0.264583"
              id="tspan8336">normal force</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="75.061691"
-           y="115.04276"
+           x="-4.6912827"
+           y="114.66479"
            id="text8342"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g5.png"
            inkscape:export-xdpi="119.69896"
            inkscape:export-ydpi="119.69896"><tspan
              sodipodi:role="line"
-             x="75.061691"
-             y="115.04276"
+             x="-4.6912827"
+             y="114.66479"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#ff0000;stroke-width:0.264583"
              id="tspan8340">friction</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="68.94693"
-           y="121.95511"
+           x="-10.806045"
+           y="121.57713"
            id="text8346"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g5.png"
            inkscape:export-xdpi="119.69896"
            inkscape:export-ydpi="119.69896"><tspan
              sodipodi:role="line"
              id="tspan8344"
-             x="68.94693"
-             y="121.95511"
+             x="-10.806045"
+             y="121.57713"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#ff0000;stroke-width:0.264583">weight</tspan></text>
         <path
            style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 53.791983,120.92538 c 0,0 2.30256,1.47294 0.46508,3.34382"
+           d="m -25.960991,120.5474 c 0,0 2.30256,1.47294 0.46508,3.34382"
            id="path8362"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g5.png"
@@ -1447,44 +1793,44 @@
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="56.107258"
-           y="123.27141"
+           x="-23.645716"
+           y="122.89343"
            id="text8366"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g5.png"
            inkscape:export-xdpi="119.69896"
            inkscape:export-ydpi="119.69896"><tspan
              sodipodi:role="line"
              id="tspan8364"
-             x="56.107258"
-             y="123.27141"
+             x="-23.645716"
+             y="122.89343"
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#ff0000;stroke-width:0.264583">Ѳ</tspan></text>
         <rect
            style="fill:#ff0000;fill-opacity:0;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
            id="rect8906"
            width="32.874149"
            height="9.6217022"
-           x="-0.35695541"
-           y="167.35101"
+           x="-80.109932"
+           y="166.97304"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g6.png"
            inkscape:export-xdpi="120.22203"
            inkscape:export-ydpi="120.22203" />
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="5.2680407"
-           y="173.57849"
+           x="-74.484932"
+           y="173.20052"
            id="text8910"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g6.png"
            inkscape:export-xdpi="120.22203"
            inkscape:export-ydpi="120.22203"><tspan
              sodipodi:role="line"
              id="tspan8908"
-             x="5.2680407"
-             y="173.57849"
+             x="-74.484932"
+             y="173.20052"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Calibri;-inkscape-font-specification:Calibri;stroke-width:0.264583">tobbogan</tspan></text>
         <path
            style="fill:#ffffff;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker9468)"
-           d="M 32.517191,167.35102 57.320987,156.67319"
+           d="m -47.235783,166.97304 24.803796,-10.67783"
            id="path9464"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g6.png"
@@ -1492,7 +1838,7 @@
            inkscape:export-ydpi="120.22203" />
         <path
            style="fill:#ffffff;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker9880)"
-           d="M 32.517191,167.35102 64.502532,184.4003"
+           d="m -47.235783,166.97304 31.985341,17.04928"
            id="path9876"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g6.png"
@@ -1500,7 +1846,7 @@
            inkscape:export-ydpi="120.22203" />
         <path
            style="fill:#ffffff;stroke:#0000ff;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.793749, 0.793749;stroke-dashoffset:0;stroke-opacity:1"
-           d="M 64.502532,184.4003 89.306337,173.72247"
+           d="M -15.250442,184.02232 9.5533628,173.34449"
            id="path10308"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g6.png"
@@ -1508,7 +1854,7 @@
            inkscape:export-ydpi="120.22203" />
         <path
            style="fill:#ffffff;stroke:#0000ff;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.793749, 0.793749;stroke-dashoffset:0;stroke-opacity:1"
-           d="m 57.320986,156.90252 31.985351,16.81995"
+           d="M -22.431988,156.52454 9.5533628,173.34449"
            id="path10742"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g6.png"
@@ -1516,7 +1862,7 @@
            inkscape:export-ydpi="120.22203" />
         <path
            style="fill:#ffffff;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker11218)"
-           d="m 32.517191,167.35102 56.789146,6.37145"
+           d="m -47.235783,166.97304 56.7891458,6.37145"
            id="path11214"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g6.png"
@@ -1524,7 +1870,7 @@
            inkscape:export-ydpi="120.22203" />
         <g
            id="g11690"
-           transform="translate(32.98414,115.75358)"
+           transform="translate(-46.768834,115.3756)"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g6.png"
            inkscape:export-xdpi="120.22203"
            inkscape:export-ydpi="120.22203">
@@ -1550,34 +1896,34 @@
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="38.914043"
-           y="160.54518"
+           x="-40.838932"
+           y="160.16721"
            id="text12170"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g6.png"
            inkscape:export-xdpi="120.22203"
            inkscape:export-ydpi="120.22203"><tspan
              sodipodi:role="line"
              id="tspan12168"
-             x="38.914043"
-             y="160.54518"
+             x="-40.838932"
+             y="160.16721"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#0000ff;stroke-width:0.264583">60N</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="39.993679"
-           y="178.3954"
+           x="-39.759296"
+           y="178.01743"
            id="text12174"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g6.png"
            inkscape:export-xdpi="120.22203"
            inkscape:export-ydpi="120.22203"><tspan
              sodipodi:role="line"
              id="tspan12172"
-             x="39.993679"
-             y="178.3954"
+             x="-39.759296"
+             y="178.01743"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#0000ff;stroke-width:0.264583">65N</tspan></text>
         <path
            style="fill:#ffffff;stroke:#008000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker12186)"
-           d="m 32.634735,167.08726 -56.789136,-6.37145"
+           d="m -47.118239,166.70928 -56.789141,-6.37145"
            id="path12182"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g6.png"
@@ -1585,7 +1931,7 @@
            inkscape:export-ydpi="120.22203" />
         <g
            id="g12728"
-           transform="translate(-52.422398,104.8294)"
+           transform="translate(-132.17537,104.45142)"
            style="stroke:#008000"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g6.png"
            inkscape:export-xdpi="120.22203"
@@ -1611,7 +1957,7 @@
         </g>
         <path
            style="fill:none;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 36.894405,169.68422 c 0,0 2.899431,-1.70917 0.522607,-4.44254"
+           d="m -42.858569,169.30624 c 0,0 2.899431,-1.70917 0.522607,-4.44254"
            id="path13222"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g6.png"
@@ -1620,41 +1966,41 @@
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="43.827625"
-           y="166.63145"
+           x="-35.92535"
+           y="166.25348"
            id="text13230"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g6.png"
            inkscape:export-xdpi="120.22203"
            inkscape:export-ydpi="120.22203"><tspan
              sodipodi:role="line"
              id="tspan13228"
-             x="43.827625"
-             y="166.63145"
+             x="-35.92535"
+             y="166.25348"
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#ff0000;stroke-width:0.264583">Ѳ</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="62.231876"
-           y="180.54092"
+           x="-17.521097"
+           y="180.16295"
            id="text13234"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g6.png"
            inkscape:export-xdpi="120.22203"
            inkscape:export-ydpi="120.22203"><tspan
              sodipodi:role="line"
              id="tspan13232"
-             x="62.231876"
-             y="180.54092"
+             x="-17.521097"
+             y="180.16295"
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#0000ff;stroke-width:0.264583">140°</tspan></text>
         <path
            style="fill:none;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 60.212872,182.11376 c 0,0 4.10226,-2.2521 8.33203,0.54633"
+           d="m -19.540102,181.73578 c 0,0 4.10226,-2.2521 8.33203,0.54633"
            id="path13236"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g6.png"
            inkscape:export-xdpi="120.22203"
            inkscape:export-ydpi="120.22203" />
         <path
            style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 41.723669,168.38394 c 0,0 1.765972,-1.91107 -0.133411,-4.9388"
+           d="m -38.029305,168.00596 c 0,0 1.765972,-1.91107 -0.133411,-4.9388"
            id="path13752"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g6.png"
            inkscape:export-xdpi="120.22203"
@@ -1662,20 +2008,20 @@
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="36.630856"
-           y="172.61145"
+           x="-43.12212"
+           y="172.23347"
            id="text13756"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g6.png"
            inkscape:export-xdpi="120.22203"
            inkscape:export-ydpi="120.22203"><tspan
              sodipodi:role="line"
              id="tspan13754"
-             x="36.630856"
-             y="172.61145"
+             x="-43.12212"
+             y="172.23347"
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#0000ff;stroke-width:0.264583">40°</tspan></text>
         <path
-           style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:1.05833199,1.05833199;stroke-dashoffset:0"
-           d="M 55.907618,36.663073 74.857697,3.1123127"
+           style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.05833, 1.05833;stroke-dashoffset:0;stroke-opacity:1"
+           d="M -23.845356,36.285097 -4.8952772,2.7343365"
            id="path5187"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
@@ -1683,18 +2029,371 @@
            inkscape:export-ydpi="120.17917" />
         <path
            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker6048)"
-           d="M 74.742057,36.727326 93.692136,3.1765657"
+           d="M -5.0109172,36.34935 13.939162,2.7985895"
            id="path6044"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
            inkscape:export-xdpi="120.17917"
            inkscape:export-ydpi="120.17917" />
         <path
-           style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:1.05833199,1.05833199;stroke-dashoffset:0"
-           d="M 93.692136,3.1765657 H 74.742057"
+           style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.05833, 1.05833;stroke-dashoffset:0;stroke-opacity:1"
+           d="M 13.939162,2.7985895 H -5.0109172"
            id="path6526"
            sodipodi:nodetypes="cc"
            inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.26458331;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:;stroke-miterlimit:4;stroke-dasharray:0.79374994, 0.79374993999999999;stroke-dashoffset:0"
+           d="m 49.701135,30.018249 43.140554,0"
+           id="path2160"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.26458331;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:;stroke-miterlimit:4;stroke-dasharray:0.79374994, 0.79374993999999999;stroke-dashoffset:0"
+           d="M 69.851847,30.018249 V 8.6113251"
+           id="path2930"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="69.027092"
+           y="7.3864474"
+           id="text5695"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g3.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917"><tspan
+             sodipodi:role="line"
+             id="tspan5693"
+             x="69.027092"
+             y="7.3864474"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#000000;stroke-width:0.264583">y</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="93.229431"
+           y="30.867809"
+           id="text5699"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g3.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917"><tspan
+             sodipodi:role="line"
+             id="tspan5697"
+             x="93.229431"
+             y="30.867809"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#000000;stroke-width:0.264583">x</tspan></text>
+        <path
+           id="rect3529"
+           style="fill:#666666;fill-opacity:1;stroke:#000000;stroke-width:0.52916666;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
+           d="m 61.365807,33.518986 1.221288,2.149472 6.564883,-3.730038 -0.138109,-0.243073 c 0.76602,-0.521698 1.156644,-1.209923 0.921655,-1.623815 -0.235258,-0.41374 -1.026433,-0.430487 -1.866724,-0.03951 l -0.138109,-0.243074 z"
+           sodipodi:nodetypes="cccccccc"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917" />
+        <path
+           style="fill:none;stroke:#008000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker3544)"
+           d="M 69.851847,30.018249 81.876419,17.993677"
+           id="path3540"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917" />
+        <path
+           style="fill:none;stroke:#008000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4114)"
+           d="M 69.851847,30.018249 59.670318,21.962427"
+           id="path4110"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917" />
+        <path
+           style="fill:none;stroke:#008000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4678)"
+           d="m 85.093178,30.018249 -15.241331,0"
+           id="path4674"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.79375, 0.79375;stroke-dashoffset:0;stroke-opacity:1"
+           d="M 48.000242,74.524945 H 91.140796"
+           id="path7585"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.79375, 0.79375;stroke-dashoffset:0;stroke-opacity:1"
+           d="M 68.150954,74.524945 V 53.118021"
+           id="path7587"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="67.326195"
+           y="52.365612"
+           id="text7591"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g3.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917"><tspan
+             sodipodi:role="line"
+             id="tspan7589"
+             x="67.326195"
+             y="52.365612"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#0000ff;stroke-width:0.264583">y</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="91.056046"
+           y="75.374504"
+           id="text7595"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g3.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917"><tspan
+             sodipodi:role="line"
+             id="tspan7593"
+             x="91.056046"
+             y="75.374504"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#0000ff;stroke-width:0.264583">x</tspan></text>
+        <path
+           id="path7597"
+           style="fill:#666666;fill-opacity:1;stroke:#000000;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
+           d="m 59.664914,78.025682 1.221288,2.149472 6.564883,-3.730038 -0.138109,-0.243073 c 0.76602,-0.521698 1.156644,-1.209923 0.921655,-1.623815 -0.235258,-0.41374 -1.026433,-0.430487 -1.866724,-0.03951 l -0.138109,-0.243074 z"
+           sodipodi:nodetypes="cccccccc"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917" />
+        <g
+           id="g8929"
+           transform="translate(-25.769106,-32.517311)"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917">
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+             x="78.11454"
+             y="53.488319"
+             id="text8925"><tspan
+               sodipodi:role="line"
+               id="tspan8923"
+               x="78.11454"
+               y="53.488319"
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:'Calibri Italic';stroke-width:0.264583">f<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan9579">3</tspan><tspan
+   style="font-size:4.23333px;baseline-shift:sub"
+   id="tspan9545"> </tspan>= 200N</tspan></text>
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;marker-end:url(#marker8933);paint-order:stroke fill markers"
+             d="m 77.843756,49.942998 h 3.541321"
+             id="path8927"
+             sodipodi:nodetypes="cc" />
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+             x="102.07202"
+             y="49.499363"
+             id="text9569"><tspan
+               sodipodi:role="line"
+               id="tspan9567"
+               x="102.07202"
+               y="49.499363"
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:'Calibri Italic';stroke-width:0.264583">f<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan9577">2</tspan><tspan
+   style="font-size:4.23333px;baseline-shift:sub"
+   id="tspan9565"> </tspan>= 250N</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+             x="99.711502"
+             y="65.90097"
+             id="text9575"><tspan
+               sodipodi:role="line"
+               id="tspan9573"
+               x="99.711502"
+               y="65.90097"
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Calibri;-inkscape-font-specification:'Calibri Italic';stroke-width:0.264583">f<tspan
+   style="font-size:4.23333px;baseline-shift:sub"
+   id="tspan9571">1 </tspan>= 400N</tspan></text>
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="M 92.199544,59.743913 H 87.663839 V 56.342134"
+             id="path9611" />
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-weight:normal;font-size:2.82222px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+             x="85.988518"
+             y="58.737846"
+             id="text9615"><tspan
+               sodipodi:role="line"
+               id="tspan9613"
+               x="85.988518"
+               y="58.737846"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Calibri;-inkscape-font-specification:Calibri;stroke-width:0.264583">3</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-weight:normal;font-size:2.82222px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+             x="89.201309"
+             y="61.903397"
+             id="text9619"><tspan
+               sodipodi:role="line"
+               id="tspan9617"
+               x="89.201309"
+               y="61.903397"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Calibri;-inkscape-font-specification:Calibri;stroke-width:0.264583">4</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-weight:normal;font-size:2.82222px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+             x="89.910019"
+             y="57.840153"
+             id="text9623"><tspan
+               sodipodi:role="line"
+               id="tspan9621"
+               x="89.910019"
+               y="57.840153"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Calibri;-inkscape-font-specification:Calibri;stroke-width:0.264583">5</tspan></text>
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 98.67868,59.477833 c 0,0 -0.538582,-2.458569 -3.057727,-1.927041"
+             id="path9625"
+             sodipodi:nodetypes="cc" />
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-weight:normal;font-size:2.82222px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+             x="96.902977"
+             y="57.201481"
+             id="text10821"><tspan
+               sodipodi:role="line"
+               id="tspan10819"
+               x="96.902977"
+               y="57.201481"
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Calibri;-inkscape-font-specification:'Calibri Italic';stroke-width:0.264583">45<tspan
+   style="font-size:65%;baseline-shift:super"
+   id="tspan10837">0</tspan></tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-weight:normal;font-size:2.82222px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+             x="86.934822"
+             y="104.65215"
+             id="text16744"
+             inkscape:export-xdpi="120.17917"
+             inkscape:export-ydpi="120.17917"><tspan
+               sodipodi:role="line"
+               id="tspan16742"
+               x="86.934822"
+               y="104.65215"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Calibri;-inkscape-font-specification:'Calibri Italic';stroke-width:0.264583">θ</tspan></text>
+        </g>
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker13435)"
+           d="M 68.150954,54.146806 H 55.42495"
+           id="path13425"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker13918)"
+           d="m 54.541015,74.524945 0,-19.626495"
+           id="path13914"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917" />
+        <path
+           style="fill:none;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker7609)"
+           d="M 68.150954,74.524945 54.670581,54.340806"
+           id="path7605"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="61.938423"
+           y="63.232975"
+           id="text14566"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917"><tspan
+             sodipodi:role="line"
+             id="tspan14564"
+             x="61.938423"
+             y="63.232975"
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Calibri;-inkscape-font-specification:'Calibri Italic';fill:#0000ff;stroke:none;stroke-width:0.264583">f<tspan
+   style="font-size:65%;baseline-shift:sub;fill:#0000ff;stroke:none"
+   id="tspan14562">R</tspan></tspan></text>
+        <path
+           style="fill:#0000ff;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;marker-end:url(#marker14572);paint-order:stroke fill markers"
+           d="m 62.692449,58.322121 h 3.54132"
+           id="path14568"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="48.842583"
+           y="66.039307"
+           id="text15216"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917"><tspan
+             sodipodi:role="line"
+             id="tspan15214"
+             x="48.842583"
+             y="66.039307"
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Calibri;-inkscape-font-specification:'Calibri Italic';fill:#0000ff;stroke:none;stroke-width:0.264583">f<tspan
+   style="font-size:65%;baseline-shift:sub;fill:#0000ff;stroke:none"
+   id="tspan15212">R<tspan
+   id="tspan16694">y</tspan></tspan></tspan></text>
+        <path
+           style="fill:#0000ff;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;marker-end:url(#marker15222);paint-order:stroke fill markers"
+           d="m 49.596608,61.128451 h 3.54132"
+           id="path15218"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="58.997345"
+           y="51.226837"
+           id="text15884"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917"><tspan
+             sodipodi:role="line"
+             id="tspan15882"
+             x="58.997345"
+             y="51.226837"
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Calibri;-inkscape-font-specification:'Calibri Italic';fill:#0000ff;stroke:none;stroke-width:0.264583">f<tspan
+   style="font-size:65%;baseline-shift:sub;fill:#0000ff;stroke:none"
+   id="tspan15880">R<tspan
+   id="tspan16692">x</tspan></tspan></tspan></text>
+        <path
+           style="fill:#0000ff;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;marker-end:url(#marker15890);paint-order:stroke fill markers"
+           d="m 59.751371,46.315982 h 3.54132"
+           id="path15886"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="C:\Users\simon\Desktop\graph\g2.png"
+           inkscape:export-xdpi="120.17917"
+           inkscape:export-ydpi="120.17917" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 62.667058,74.524945 c 0,0 -0.114896,-3.445539 2.684502,-4.191529"
+           id="path16732"
            inkscape:export-xdpi="120.17917"
            inkscape:export-ydpi="120.17917" />
       </g>
