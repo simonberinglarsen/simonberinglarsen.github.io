@@ -24,6 +24,22 @@
 		.list-group-item {
 			border: 0px solid black;
 		}
+
+		.my-2 {
+			margin: 16px
+		}
+
+		.mb-2 {
+			margin-bottom: 16px
+		}
+
+		.mt-3 {
+			margin-top: 24px
+		}
+
+		.mt-4 {
+			margin-top: 48px
+		}
 	</style>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -92,104 +108,112 @@
 					<li><a
 							href="http://myhomeworkrewards.com/lessons/Gr12/Math/Vectors/gr12_math_vectors_main.html">Vectors</a>
 					</li>
-					<li><a href="http://myhomeworkrewards.com/lessons/Gr12/Math/Vectors/force.html"
-							style="font-weight:bold;">Force</a></li>
+					<li><a href="http://myhomeworkrewards.com/lessons/Gr12/Math/Vectors/velocity.html"
+							style="font-weight:bold;">Velocity</a></li>
 				</ol>
 			</div>
 		</div>
-
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2">
 				<h1>VECTORS</h1>
 				<h2>Velocity</h2>
-
 				<div class="row">
 					<div class="col-lg-9">
-						<p>
-						<div>Josh can paddle at a speed of 5km/h in still water. he wishes to cross a river 400m wide
+						<div class="well well-sm mt-4">
+							Josh can paddle at a speed of 5km/h in still water. he
+							wishes to cross a river 400m wide
 							that has a current
-							of 2km/h.</div>
-						<div>b. if he wishes to travel straight across the river, determine the direction he must head
-							and the time it will rake
-							him to cross the river.</div>
+							of 2km/h.
+						</div>
+						<p class="text-center mt-4">
+							<img src="velocity-graphs/g1.png">
 						</p>
-
-
-
+						<p class="text-center mt-4">
+							a. if he steers the canoe in a direction perpendicular to the current, determine the
+							resultant velocity. Find the
+							point on the opposite bank where the canoe touches.
+						</p>
 						<div class="row">
 							<div class="col-sm-6 text-center">
-								<div><img src="force-graphs/g1.png"></div>
+								<div class="my-2">Speed</div>
+								<div><img src="velocity-graphs/g2.png"></div>
 							</div>
-							<div>a. if he steers the canoe in a direction perpendicular to the current, determine the
-								resultant velocity. Find the
-								point on the opposite bank where the canoe touches.</div>
-							<p>
-								\(\vert\vec{r}\vert=\sqrt5^2+2^2 \)
-							</p>
-							<p>
-								\(θ=\text{tan}^{-1}\left(\dfrac{2}{5}\right) \)
-							</p>
+
 							<div class="col-sm-6 text-center">
-
+								<div class="my-2">Distance</div>
+								<div><img src="velocity-graphs/g3.png"></div>
 							</div>
 						</div>
-						<div class="well well-sm">
-							<div>2. An airplane heading northwesr at 500km/h encounters a wind of 120km/h from 65° east
-								of north. Determine the resultant ground velocity of the plane.</div>
+						<p class="text-center mt-4">
+							\(\vert\vec{r}\vert=\sqrt{5^2+2^2} =\sqrt29\approx5.4\text{km/h} \)
+						</p>
+						<p class="text-center">
+							\(θ=\text{tan}^{-1}\left(\dfrac{2}{5}\right) = 21.8°\)
+						</p>
+						<p class="text-center">
+							\(∴\vec{r}=\sqrt{29}\text{ km/h} [21.8° \text{off of his original direction}] \)
+						</p>
+						<p class="text-center">
+							\(\text{tan}21.8°=\dfrac{x}{400} \)
+						</p>
+						<p class="text-center">
+							\(160\text{m}=x \)
+						</p>
+						<p class="text-center">
+							\(∴\text{Josh touches at 160m downstream from his starting pt. on the opposite side} \)
+						</p>
+						<p class="text-center mt-4">
+							b. if he wishes to travel straight across the river, determine the direction he must head
+							and the time it will rake him to cross the river.
+						</p>
+						<p class="text-center mt-4">
+							<img src="velocity-graphs/g4.png">
+						</p>
+						<p class="text-center mt-4">
+							\(sin θ=\dfrac{2}{5} \)
+						</p>
+						<p class="text-center">
+							\(θ=23.6° \)
+						</p>
+						<p class="text-center">
+							\(∴\text{he must head 23.6° up the stream off of the perpendicular to the current} \)
+						</p>
+
+						<p class="text-center">
+							\(\vec\vert{r}\vert=\sqrt{5^2-2^2} \)
+						</p>
+						<p class="text-center">
+							\(=\sqrt{21}\approx4.6\text{km/h} \)
+						</p>
+						<p class="text-center">
+							\(T=\dfrac{D}{V}=\dfrac{\text{0.4km}}{\sqrt21} \approx 0.087 \text{hr or }5.2\text{min} \)
+						</p>
+						<div class="well well-sm mt-4">
+							An airplane heading northwesr at 500km/h encounters a wind of 120km/h from 65° east
+							of
+							north. Determine the resultant
+							ground velocity of the plane.
 						</div>
-
-						<div class="row">
-							<div class="col-sm-4 text-center">
-								<div>a. aircraft flying at constant velocity</div><img src="force-graphs/g3.png">
-							</div>
-							<div class="col-sm-4 text-center">
-								<div>b. an object hanging on two wires</div><img src="force-graphs/g4.png">
-							</div>
-							<div class="col-sm-4 text-center">
-								<div>c. a box standing on a ramp</div><img src="force-graphs/g5.png">
-							</div>
-						</div>
-
-
-
-						<div class="well well-sm">
-							<div>3. Jake and Maria are towing their freinds on toboggan. Jake is exerting a force of 65N
-								and Maria a force of 60N. Since they are walking side by side, the ropes pull to eitehr
-								side of the toboggan at 40° to each other.
-
-
-
-							</div>
-						</div>
-						<p><img src="force-graphs/g6.png"></p>
-						<div>a. Find the resultant force pulling the toboggan forward from a stop.</div>
-						<p>
-
-
-							\(\vert\vec{f_{R}}\vert^2=65^2+60^2-2(65)(60)cos 140° \)
+						<p class="text-center mt-4">
+							<img src="velocity-graphs/g5.png">
 						</p>
-						<p>
+						<p class="text-center mt-4">
+							\(\vec\vert{r}\vert=500^2+120^2-2(500)(120)\text{ cos }110° \)
+						</p>
+						<p class="text-center">
+							\(\vec\vert{r}\vert=553 \)
+						</p>
+						<p class="text-center">
+							\(\dfrac{\text{Sin110}}{553}=\dfrac{\text{Sinθ}}{500} \)
+						</p>
+						<p class="text-center">
+							\(θ=58.2° \)
+						</p>
+						<p class="text-center">
 
-
-							\(\vert\vec{f_{R}}\vert=117.5N\)
+							\(\vec{r}=553\text{km/h}[\text{N56.8°W}\text{ or }\text{W33.2°N}] \)
 						</p>
-						<p>
-							\( \dfrac{sinθ}{65}=\dfrac{sin140°}{117.5} \)
-						</p>
-						<p>
-							\( θ=21° \)
-						</p>
-						<p>
-							\(\vec{f_{R}}=117.5N [\text{21° off of 60N force}] \)
-						</p>
-						<div>b. Soon the toboggan is travelling at a constant speed. Find the equilibrant force
-							and explain what it represents.</div>
-						<p>
-							\(\vec{f_{E}}=117.5N [\text{159° off of 60N force}] \)
-						</p>
-
 					</div>
-
 					<div class="col-lg-3">
 						<div class="panel panel-default">
 							<div class="panel-heading">
@@ -198,9 +222,11 @@
 							<div class="panel-body">
 								<ul class="list-group">
 									<li class="list-group-item" style="padding:0px 0px 10px 0px;"><a
-											href="Intro.html">Intro to Vectors</a></li>
+											href="Intro.html">Intro
+											to Vectors</a></li>
 									<li class="list-group-item" style="padding:0px;"><a
-											href="Properties1.html">Properties of Vectors</a></li>
+											href="Properties1.html">Properties
+											of Vectors</a></li>
 								</ul>
 							</div>
 						</div>
@@ -218,23 +244,18 @@
 						</div>
 					</div>
 				</div>
-
-
-				<br><br>
 				<footer>
 					&copy;MyHomeworkRewards 2016
 				</footer>
-
 			</div>
 		</div>
-	</div>
 
 
 
-	<script type="text/javascript" async
-		src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-	<script src="../../../../js/bootstrap.min.js"></script>
-	<script type="text/x-mathjax-config">
+		<script type="text/javascript" async
+			src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+		<script src="../../../../js/bootstrap.min.js"></script>
+		<script type="text/x-mathjax-config">
 		MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
 	</script>
 </body>
