@@ -33,6 +33,10 @@
 			margin-bottom: 16px
 		}
 
+		.mt-2 {
+			margin-top: 12px
+		}
+
 		.mt-3 {
 			margin-top: 24px
 		}
@@ -108,140 +112,85 @@
 					<li><a
 							href="http://myhomeworkrewards.com/lessons/Gr12/Math/Vectors/gr12_math_vectors_main.html">Vectors</a>
 					</li>
-					<li><a href="http://myhomeworkrewards.com/lessons/Gr12/Math/Vectors/dotproductalgebraic.html"
-							style="font-weight:bold;">Dot Product (Algebraic)</a></li>
+					<li><a href="http://myhomeworkrewards.com/lessons/Gr12/Math/Vectors/applications.html"
+							style="font-weight:bold;">Applications of Dot & Cross Products</a></li>
 				</ol>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2">
 				<h1>VECTORS</h1>
-				<h2>Dot Product (Algebraic)</h2>
+				<h2>Applications of Dot & Cross Products</h2>
 				<div class="row">
 					<div class="col-lg-9">
+						<p class="mt-4"><strong>Work</strong> (in physics) is done whenever a force causes <i>linear</i> displacement</p>
+						<p><strong>Torque</strong> is the turning effect done by a force that causes <i>angular</i> displacement</pdiv>
+						<div class="row mt-4 mb-2">
+							<div class="col-sm-4 text-center">
+								<div class="mb-2"><strong>Work</strong></div>
+								<div>\( W = \vec{F}\cdot\vec{d} \)</div>
+								<div>\( W = \vert\vec{F}\vert\vert\vec{d}\vert\cos{\theta} \)</div>
+								<div class="mt-2">Unit is \( N\cdot m \) or Joules</div>
+							</div>
+							<div class="col-sm-4 text-center">
+								<div class="mb-2"><strong>Area of llgm</strong></div>
+								<div>\( Area =  l \cdot w \)</div>
+								<div>\( Area = \vert\vec{a}\vert\vert\vec{b}\vert\sin{\theta} \)</div>
+								<div>\( Area = \vert\vec{a} \times \vec{b}\vert \)</div>
+							</div>
+							<div class="col-sm-4 text-center">
+								<div class="mb-2"><strong>Torque</strong></div>
+								<div>\( \vec{T} = \vec{r} \times \vec{F} \)</div>
+								<div>\( \vec{T} = \vert\vec{r}\vert\vert\vec{F}\vert\sin{\theta} \text{ } \hat{n} \)</div>
+								<div class="mt-2">Unit is \( N\cdot m \) or Joules</div>
+							</div>
+						</div>
+						<p class="well mt-4">
+							Find the area of the triangle with the vertices P(7,2,-5), Q(9,-1,-6), and R(7,3,-3)
+						</p>
+						<p class="mt-4">
+							Use area of llgm formula but cut it in half.
+						</p>
 						<p>
-							The algebraic dot product of two vectors \(\vec{u}\) and \(\vec{v}\) is defined by
-						</p>
-						<p class="text-center mt-4">
-							\( \vec{u}=(a_{1}, b_{1}, c_{1}) \)
-						</p>
-						<p class="text-center">
-							\(\vec{v}=(a_{2}, b_{2}, c_{2}) \)
-						</p>
-						<p class="text-center">
-							\(\vec{u}\cdot\vec{v}=a_{1}a_{2}+b_{1}b_{2}+c_{1}c_{2} \)
-						</p>
-
-						<p class="well mt-4">
-							Find \((3\vec{a}\cdot\vec{b})\cdot(2\vec{b}-4\vec{a})\text{, if }\vec{a}
-							\)=\(-\hat{\text{i}}-3\hat{\text{j}}+\hat{\text{k }} \text{and } \vec{b}=2\hat{\text{i}}
-							+4\hat{\text{j}}-5\hat{\text{k}} \)
-						</p>
-						<p class="text-center mt-4">
-							The three vectors \( \hat{i} \), \( \hat{j} \) and \( \hat{k} \) represents 3 basis vectors for the vector space. We have:
-						</p>
-						<p class="text-center mt-4">
-							\(\vec{a}=(-1, -3, 1) \)
-						</p>
-						<p class="text-center">
-							\(3\vec{a}=(-3, -9, 3) \)
-						</p>
-						<p class="text-center">
-							\(4\vec{a}=(-4, -12, 4) \)
-						</p>
-						<p class="text-center mt-4">
-							\(\vec{b}=(2, 4, -5) \)
-						</p>
-						<p class="text-center">
-							\(2\vec{b}=(4, 8, -10) \)
-						</p>
-						<p class="text-center mt-4">
-							We can now find the dot product:
-						</p>
-						<p class="text-center mt-4">
-							\((3\vec{a}+\vec{b})\cdot(2\vec{b}-4\vec{a}) \)
-						</p>
-						<p class="text-center">
-							\(=(1, -5, -2)\cdot(8, 20, -14) \)
-						</p>
-						<p class="text-center">
-							\(=(-1)(8)+-5(20)+-2(-14) \)
-						</p>
-						<p class="text-center">
-							\(-8-100+28 \)
-						</p>
-						<p class="text-center">
-							\(=-80 \)
+							<div class="mt-2">\( \vec{PQ} = (9-7, -1-2, -6--5) = (2, -3, -1) \)</div>
+							<div class="mt-2">\( \vec{PR} = (7-7, 3-2, -3--5) = (0, 1, 2) \)</div>
+							<div class="mt-2">\( \vec{PQ} \times \vec{PR} = (-6+1, 0-4, 2-0) = (-5, -4, 2) \)</div>
+							<div class="mt-2">\( \therefore \text{Area of triangle} = \dfrac{\vert \vec{PQ} \times \vec{PR} \vert}{2} \)</div>
+							<div class="mt-2">\( = \dfrac{\sqrt{5^2 + 4^2 + 2^2}}{2} = \dfrac{3\sqrt{5}}{2}\)</div>
 						</p>
 						<p class="well mt-4">
-							Find the angle between the following vectors \(\vec{u}=(-3, 1, 2)\text{ and }\vec{v}=(5, -4,
-							-1) \)
+							A 25kg box is located 8m up a ramp inclined at an angle of 18° to the horizontal. Determine the work done by the force
+							of gravity as the box slides to the bottom of the ramp.
 						</p>
-						<p class="text-center">
-							\((-3, 1, 2)\cdot(5, -4, -1)=\sqrt{3^2+1^2+2^2} \sqrt{5^2+4^2+1^2} \cos{θ} \)
-						</p>
-						<p class="text-center">
-							\(-3(5)+1(-4)+2(-1)=\sqrt{14}\sqrt{42}\cos{θ} \)
-						</p>
-						<p class="text-center">
-							\(-21=\sqrt{588 \cos{θ}} \)
-						</p>
-						<p class="text-center">
-							\(\dfrac{-21}{\sqrt{588}}=\cos{θ} \)
-						</p>
-						<p class="text-center">
-							\(180°=θ \)
+						<p class="mt-4">
+							<div class="mt-2">\( W = \vec{F} \cdot \vec{d} \)</div>
+							<div class="mt-2">\(  = \vert\vec{F}\vert\vert\vec{d}\vert\cos{\theta} \)</div>
+							<div class="mt-2">\(  = (245)(8)cos{72°} \)</div>
+							<div class="mt-2">\(  = 606 \text{ Nm or Joules} \)</div>
 						</p>
 						<p class="well mt-4">
-							Given \(\vec{a}=(2, 3, 7)\text{ and }\vec{b}=(-4, y ,-14), \)
+							Determine the minimum force, acting at an angle of 40° to the horizontal, required to slide the box back up the ramp (Ignore friction).
 						</p>
-						<p class="text-center">
-							a. for what value of y are the vectors collinear?
+						<p class="mt-4">
+							Break both \( \vec{F_g} \) and \( \vec{F} \) forces into components ensuring they are parallel to the ramp. Now for the box to move, the up component needs to be
+							slightly bigger than the down component. 
+							<div>Use CAH (Cosine = Adjacent over Hypotenuse).</div>
 						</p>
-						<p class="text-center">
-							\(y=6 \)
+						<p>
+							<div class="mt-2">\( \vert\vec{F}\vert \cos{22°} > \vert\vec{F_g}\vert \cos{72} \)</div>
+							<div class="mt-2">\( \vert\vec{F}\vert > \dfrac{245\cos{72°}}{\cos{22°}}  \)</div>
+							<div class="mt-2">\( \vert\vec{F}\vert > 81.7 \text{ N }  \)</div>
 						</p>
-						<p class="text-center">
-							\(\vec{a}\text{ collinear to } \vec{b}\text{ iff }\vec{a}=k\vec{b} \)
+						<p class="well mt-4">
+							Find the torque produced by a cyclist exterting a force of 115 N on a pedal in the position shown in the diagram,
+							if the shaft of the pedal is 16cm long.
 						</p>
-						<p class="text-center">
-							\((2, 3, 7)=(-4, y, -14) \)
-						</p>
-						<p class="text-center">
-							\(2=-4k \)
-						</p>
-						<p class="text-center">
-							\(3=ky \)
-						</p>
-						<p class="text-center">
-							\(\dfrac{-1}{2}=k \)
-						</p>
-						<p class="text-center">
-							\(3=\dfrac{1}{2}y \)
-						</p>
-						<p class="text-center">
-							\(-6=y \)
-						</p>
-						<p class="text-center mt-4">
-							b. for what value of y are the vectors perpendicular
-						</p>
-						<p class="text-center">
-							\(\vec{a}\perp\vec{b}\text{ iff }\vec{a}\cdot\vec{b}=0 \)
-						</p>
-						<p class="text-center">
-							\((2, 3, 7)\cdot(-4, y, -14)=0 \)
-						</p>
-						<p class="text-center">
-							\(-8+3y-98=0 \)
-						</p>
-						<p class="text-center">
-							\(3y=106 \)
-						</p>
-						<p class="text-center">
-							\(y=\dfrac{106}{3} \)
-						</p>
-
-
+						<p class="mt-4">
+							<div class="mt-2">\( \vec{T} = \vec{r} \times \vec{F} \)</div>
+							<div class="mt-2">\( \vec{T} = \vert\vec{r}\vert\vert\vec{F}\vert \sin{\theta} \text{ } \hat{n} \)</div>
+							<div class="mt-2">\( \vec{T} = (0.16)(115) \sin{100°} \text{ } \hat{n} \)</div>
+							<div class="mt-2">\( \vec{T} = \text{ 18.1 Joules [into the page] } \)</div>
+						</p>						
 					</div>
 					<div class="col-lg-3">
 						<div class="panel panel-default">
