@@ -25,6 +25,10 @@
 			border: 0px solid black;
 		}
 
+		table.prop-table td {
+			padding-bottom: 10px;
+		}
+
 		.my-2 {
 			margin: 16px
 		}
@@ -39,6 +43,10 @@
 
 		.mt-4 {
 			margin-top: 48px
+		}
+
+		.pl-3 {
+			padding-left: 24px
 		}
 	</style>
 
@@ -131,6 +139,43 @@
 						</p>
 						<p class="text-center">
 							\( \theta \), is the angle between the tails.
+						</p>
+						<p class="well well mt-4">
+							Cross Product Properties
+						</p>
+						<p class="text-center mt-4">
+							<table class="prop-table">
+								<tr>
+									<td>1.</td>
+									<td class="pl-3">\( \vec{a}\times\vec{b} = -\vec{b}\times\vec{a} \) </td>
+									<td class="pl-3"><span class="text-danger">not commutative</span></td>
+								</tr>
+								<tr>
+									<td>2.</td>
+									<td class="pl-3">\( \vec{a}\times(\vec{b}+c)=\vec{a}\times\vec{b}+\vec{a}\times\vec{c} \) </td>
+									<td class="pl-3"><span class="text-danger">distributive</span></td>
+								</tr>
+								<tr>
+									<td>3.</td>
+									<td class="pl-3">\( k(\vec{a}\times\vec{b}) = \vec{a}\times k\vec{b} = k\vec{a}\times\vec{b} \)</td>
+									<td class="pl-3"></td>
+								</tr>
+								<tr>
+									<td>4.</td>
+									<td class="pl-3">\( (\vec{a}\times\vec{b})\times\vec{c} \ne \vec{a}\times(\vec{b}\times\vec{c}) \)</td>
+									<td class="pl-3"><span class="text-danger">not associative</span></td>
+								</tr>
+								<tr>
+									<td>5.</td>
+									<td class="pl-3">\( \vec{u}\cdot(v\times\vec{w}) = (\vec{u}\times\vec{v})\cdot\vec{w} \) </td>
+									<td class="pl-3"><span class="text-danger">triple scalar product - used to prove coplanar if equals zero</span></td>
+								</tr>
+								<tr>
+									<td>6.</td>
+									<td class="pl-3">\( \vec{a}\times\vec{a} \) = 0</td>
+									<td class="pl-3"></td>
+								</tr>
+							</table>
 						</p>
 						<p class="well well mt-4">
 							Find \( \vert\vec{u}\times\vec{v}\vert  \) for each of the following pairs of vectors. State whether \( \vec{u}\times\vec{v} \) is directed into or out of the page.
