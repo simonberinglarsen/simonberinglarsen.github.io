@@ -116,79 +116,113 @@
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2">
 				<h1>VECTORS</h1>
-				<h2>Cross Product</h2>
+				<h2>Cross Product (Algebraic)</h2>
 				<div class="row">
 					<div class="col-lg-9">
-
 						<p class="text-center mt-4">
-							Definition of the geometric cross product of \( \vec{a}\) and \(\vec{b}\):
+							Definition of the algebraic cross product of two vectors \( \vec{a} = \left(a_{1},a_{2},a_{3}\right), \vec{b} = \left(b_{1},b_{2},b_{3}\right)  \):
 						</p>
 						<p class="text-center">
-							\( \vec{a}\times\vec{b} = \vert\vec{a}\vert\vert\vec{b}\vert\sin{\theta}\text{ }\hat{n} \)
-						</p>
-						<p class="text-center">
-							\( \hat{n} \), is the normal vector perpendicular to \( \vec{a}\) and \(\vec{b}\)
-						</p>
-						<p class="text-center">
-							\( \theta \), is the angle between the tails.
-						</p>
-						<p class="well well mt-4">
-							Find \( \vert\vec{u}\times\vec{v}\vert  \) for each of the following pairs of vectors. State whether \( \vec{u}\times\vec{v} \) is directed into or out of the page.
-						</p>
-						<p class="text-center mt-4">
-							<img src="crossproduct-graphs/g1.png">
-						</p>
-						<p class="text-center">
-							\( \vert\vec{u}\times\vec{v}\vert = \vert\vec{u}\vert\vert\vec{v}\vert\sin{\theta}  \)
-						</p>
-						<p class="text-center">
-							\( = (12)(5)\sin{68°}  \)
-						</p>
-						<p class="text-center">
-							\( = 55.6  \)
-						</p>
-						<p class="text-center">
-							\( \therefore \text{ } \vec{u}\times\vec{v} = 55.6 \text{ units} \) [Into the page]
-						</p>
-						<p class="text-center mt-4">
-							<img src="crossproduct-graphs/g2.png">
-						</p>
-						<p class="text-center">
-							\( \vert\vec{u}\times\vec{v}\vert = \vert\vec{u}\vert\vert\vec{v}\vert\sin{\theta}  \)
-						</p>
-						<p class="text-center">
-							\( = (18)(25)\sin{120°}  \)
-						</p>
-						<p class="text-center">
-							\( = 450\left(\dfrac{\sqrt{3}}{2}\right)  \)
-						</p>
-						<p class="text-center">
-							\( \therefore \text{ } \vec{u}\times\vec{v} = 225 \sqrt{3} \text{ units} \) [Out of the page]
+							\( \vec{a}\times\vec{b} = \left(a_{2}b_{3}-a_{3}b_{2},a_{3}b_{1}-a_{1}b_{3}, a_{1}b_{2}-a_{2}b_{1} \right)\)
 						</p>
 						<p class="well mt-4">
-							State whether the following expressions are vectors, scalars or meaningless
+							Given two vectors \( \vec{a} = (2,4,6) \) and \( \vec{b} = (-1,2,-5) \) calculate \( \vec{a}\times\vec{b} \) and \( \vec{b}\times\vec{a} \).
+							What property does this demonstrate does hold not for the cross product? Explain why the property does not hold.
 						</p>
 						<p class="text-center mt-4">
-							<div class="row mt-4">
-								<div class="col-sm-4">
-									<div>\( \vec{a}\cdot(\vec{b}\times\vec{c}) = \) <span class="text-danger">scalar</span></div>
-									<div>\( \vec{a}\times(\vec{b}\cdot\vec{c}) = \) <span class="text-danger">meaningless</span></div>
-									<div>\( \vec{a}\cdot(\vec{b}\cdot\vec{c}) = \) <span class="text-danger">meaningless</span></div>
-									<div>\( \vec{a}\times(\vec{b}\times\vec{c}) = \) <span class="text-danger">vector</span></div>
+							\( \vec{a}\times\vec{b} = (-20-12, -6+10, 4+4) = (-32, 4, 8) \)
+						</p>
+						<p class="text-center">
+							\( \vec{b}\times\vec{a} = (12+20, -10+6, -4-4) = (32,-4,-8) \)
+						</p>
+						<p class="text-center">
+							since \( \vec{a}\times\vec{b} \neq \vec{b}\times\vec{a} \) cross product is NOT commutative
+						</p>
+						<div class="well mt-4">
+							Using the two vectors above and a third vector \( \vec{c} = (4,3,-1) \) calculate
+							<div class="text-center mt-3">
+								<div>
+									i) \(\vec{a}\times(\vec{b}+\vec{c})\)
 								</div>
-								<div class="col-sm-4">
-									<div>\( (\vec{a}\cdot\vec{b})\times(\vec{b}\cdot\vec{c}) = \) <span class="text-danger">meaningless</span></div>
-									<div>\( (\vec{a}\times\vec{b})\cdot(\vec{b}\times\vec{c}) = \) <span class="text-danger">scalar</span></div>
-									<div>\( (\vec{a}\times\vec{b})+(\vec{b}\times\vec{c}) = \) <span class="text-danger">vector</span></div>
-									<div>\( (\vec{a}\cdot\vec{b})+(\vec{b}\cdot\vec{c}) = \) <span class="text-danger">scalar</span></div>
-								</div>
-								<div class="col-sm-4">
-									<div>\( (\vec{a}+\vec{b})\cdot\vec{c} = \) <span class="text-danger">scalar</span></div>
-									<div>\( (\vec{a}+\vec{b})\times\vec{c} = \) <span class="text-danger">vector</span></div>
-									<div>\( (\vec{a}\times\vec{b})-\vec{c} = \) <span class="text-danger">vector</span></div>
-									<div>\( (\vec{a}\cdot\vec{b})-\vec{c} = \) <span class="text-danger">meaningless</span></div>
+								<div>and</div>
+								<div>
+									ii) \( (\vec{a}\times\vec{b}) + (\vec{a}\times\vec{c}) \)
 								</div>
 							</div>
+						</div>
+						<p class="text-center mt-4">
+							i)
+						</p>
+						<p class="text-center">
+							\(\vec{a}\times(\vec{b}+\vec{c})\) \( = (-24-30, 18+12, 10-12) \)
+						</p>
+						<p class="text-center">
+							\( = (-54,30,-2) \)
+						</p>
+						<p class="text-center mt-4">
+							ii)
+						</p>
+						<p class="text-center">
+							\( \vec{a}\times\vec{c} = (-4-18, 24+2, 6-16) \)
+						</p>
+						<p class="text-center">
+							\( = (-22, -26, -10) \)
+						</p>
+						<p class="text-center">
+							\( \therefore (\vec{a}\times\vec{b}) + (\vec{a}\times\vec{c}) \)
+						</p>
+						<p class="text-center">
+							\( = (-32, 4, 8) + (-22, -26, -10) \)
+						</p>
+						<p class="text-center">
+							\( = (-54,30,-2) \)
+						</p>
+						<p class="well mt-4">
+							Compare the results from above. What property does this demonstrate?
+						</p>
+						<p class="text-center mt-4">
+							Since the result from i) and ii) is the same - it demonstrates that the cross product is distributive:
+						</p>
+						<p class="text-center">
+							\(\vec{a}\times(\vec{b}+\vec{c}) = (\vec{a}\times\vec{b}) + (\vec{a}\times\vec{c})\)
+						</p>
+						<div class="well mt-4">
+							Using the three vectors \( \vec{a}, \vec{b} \text{ and } \vec{c}\) from above calculate 
+							<div class="text-center mt-3">
+								<div>
+									i) \( (\vec{a}\times\vec{b})\times\vec{c}\)
+								</div>
+								<div>and</div>
+								<div>
+									ii) \(\vec{a}\times(\vec{b}\times\vec{c})\)
+								</div>
+							</div>
+						</div>
+						<p class="text-center mt-4">
+							i)
+						</p>
+						<p class="text-center">
+							\( (\vec{a}\times\vec{b})\times\vec{c} = (-4-24, -32-32, -96-16) \)
+						</p>
+						<p class="text-center">
+							\(  = (-28,0,-112) \)
+						</p>
+						<p class="text-center mt-4">
+							ii)
+						</p>
+						<p class="text-center">
+							\( \vec{a}\times(\vec{b}\times\vec{c}) = (-44+126, 78+22, -42-52) \)
+						</p>
+						<p class="text-center">
+							\(  = (82, 100, -94) \)
+						</p>
+						<p class="well mt-4">
+							What property does this demonstrate does NOT hold for the cross product?
+						</p>
+						<p class="text-center mt-4">
+							Since the results from i) and ii) are different the cross product is not associative
+						</p>
+						<p class="text-center mt-4">
 						</p>
 					</div>
 					<div class="col-lg-3">
