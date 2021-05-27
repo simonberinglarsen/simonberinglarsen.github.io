@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --c1: #264653;
+            --c2: #2a9d8f;
+            --c3: #e9c46a;
+            --c4: #f4a261;
+            --c5: #e76f51;
+            --light: #fff;
+            --light2: #eee;
+            --dark: #222;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        * {
+            margin: 0px;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--light2);
+        }
+
+        .w-2 {
+            width: 60rem;
+        }
+
+        .w-1 {
+            width: 20rem;
+        }
+
+        .h-1 {
+            height: 30rem;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: row;
+            min-height: 50rem;
+        }
+
+        .border-right {
+            border-right: 1px solid var(--dark);
+        }
+
+        .box {
+            border: 1px solid var(--c1);
+            border-radius: 0.5rem;
+        }
+
+        .box:hover {
+            background: var(--light);
+            color: var(--dark);
+            cursor: pointer;
+        }
+
+        .shadow {
+            box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .ml-auto {
+            margin-left: auto;
+        }
+
+        .ml-2 {
+            margin-left: 2rem;
+        }
+
+        .mx-2 {
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+
+        .m-1 {
+            margin: 1rem;
+        }
+
+        .pr-1 {
+            padding-right: 1rem;
+        }
+
+        .pr-2 {
+            padding-right: 2rem;
+        }
+
+        .px-1 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .px-2 {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .px-4 {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+
+        .py-1 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .pb-1 {
+            padding-bottom: 1rem;
+        }
+
+        .pb-3 {
+            padding-bottom: 3rem;
+        }
+
+        .py-2 {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .py-3 {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .fg-green {
+            color: #282;
+        }
+
+        .fg-red {
+            color: #822;
+        }
+
+        .bg-1 {
+            background: var(--c1);
+            color: var(--light);
+        }
+
+        .bg-2 {
+            background: var(--c2);
+            color: var(--light);
+        }
+
+        .bg-3 {
+            background: var(--c3);
+            color: var(--dark);
+        }
+
+        .bg-4 {
+            background: var(--c4);
+            color: var(--dark);
+        }
+
+        .bg-5 {
+            background: var(--c5);
+            color: var(--light);
+        }
+
+        .bg-light {
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        .bg-dark {
+            background: var(--dark);
+            color: var(--light);
+        }
+
+        .m-0 {
+            margin: 0rem;
+        }
+
+        .row {
+            flex-direction: row;
+        }
+
+        .header {
+            height: 6rem;
+
+        }
+
+        .footer {
+            font-size: 1rem;
+            background: #aaa;
+            color: var(--dark);
+            height: 300px;
+        }
+
+
+
+        .f-6x {
+            font-size: 6rem;
+            text-overflow: clip;
+            overflow: hidden;
+        }
+
+        .f-4x {
+            font-size: 4rem;
+        }
+
+        .f-3x {
+            font-size: 3rem;
+        }
+
+        .f-2x {
+            font-size: 2rem;
+        }
+
+        .ml-6 {
+            margin-left: 6rem;
+        }
+
+        .mb-1 {
+            margin-bottom: 1rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 1rem;
+        }
+
+        .clickable {
+            cursor: pointer;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: row;
+            align-self: stretch;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu-item {
+            align-self: stretch;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            cursor: pointer;
+            width: 9rem;
+        }
+
+        .box.selected {
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        .menu-item.selected {
+            background: var(--light);
+            color: var(--dark);
+            font-weight: bold;
+        }
+
+        .menu-item:hover {
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        .align-right {
+            text-align: right;
+        }
+
+        th,
+        td {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        table {
+            border-collapse: collapse;
+
+        }
+
+        table tr {
+            border-bottom: 1px solid #aaa;
+        }
+
+        input {
+            padding: 20px;
+            border-radius: 0.5rem;
+            border: 1px solid var(--dark);
+            font-size: 2rem;
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #intro {
+            line-height: 1.5rem;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header shadow d-flex row px-2 bg-dark mb-1">
+        <div class="f-2x bold logo">
+            <div class="pr-2 f-4x">📟</div>
+            <div>Robo-Trader</div>
+        </div>
+        <div class="ml-6"></div>
+        <div id="menu-item-index" class="px-2 menu-item selected">
+            <div>📈 Index</div>
+        </div>
+        <div id="menu-item-top-traders" class="px-2 menu-item">
+            <div>👩‍🦱 Top Traders</div>
+        </div>
+        <div id="menu-item-failing-traders" class="px-2 menu-item">
+            <div>🧔 Failing Traders</div>
+        </div>
+        <div id="menu-item-top-stocks" class="px-2 menu-item">
+            <div>🔥 Top Stocks</div>
+        </div>
+        <div id="menu-item-bottom-stocks" class="px-2 menu-item">
+            <div>🐢 Cr*p Stocks</div>
+        </div>
+        <div id="menu-item-search" class="px-2 menu-item">
+            <div>🔎 Search</div>
+        </div>
+    </div>
+    <div class="main mx-2 pb-3">
+        <div class="w-1">
+            <div class="stocks">
+            </div>
+            <div class="traders">
+            </div>
+        </div>
+        <div class="ml-2">
+            <div class="w-2 h-1 py-3">
+                <div id="search" class="center" style="display:none">
+                    <div><input id="search-input" class="mb-2" type="text" autocomplete="false"></div>
+                    <div id="search-results"></div>
+                </div>
+                <div id="chart">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            <div id="intro" class="w-2">
+                <h1 class="py-2">Index</h1>
+                <p>This is the simulated S&P 500 index. All datapoints are calculated as an average of all stocks in the index.</p>
+                <h1 class="py-2">Top Traders</h1>
+                <p>This is all the best technical analysts. The top 8 traders are selected out of 1000 traders. Click the traders and study them! AS you might know these are the traders
+                    we see in TV... the traders being interviewed in podcasts and so on... everybody wants to know how they did it!
+                </p>
+                <h1 class="py-2">Failing Traders</h1>
+                <p>Well this is the poor bunch that lost money. Study them! and learn from thier mistakes. You will never hear about the strategies they use - cuz it is 
+                    non-sense. Too eager with no depth in thier technical analysis! All thier signals are simply wrong!
+                </p>
+                <h1 class="py-2">Top stocks & Cr*p stocks</h1>
+                <p>Yup you quest it. Click and explore!</p>
+                <h1 class="py-2">Search</h1>
+                <p>One usage of search could be to search for '1'... just to explore and study the average joe-trader with about 1% growth.</p>
+                <h1 class="py-2 fg-red">How It Works</h1>
+                <p class="fg-red bold">All traders use the exact same strategy: Each day they roll a pair of dice. If they get double 6 they will try to buy
+                    a stock for a random amount of money.
+                    If they dont succeed they will roll the dice again - if its double 6 they will try to sell a random stock from the
+                    portfolio. THATS IT. Technical Analysis is a bunch of bogus
+                    on top of randomness :) dont listen to the propaganda</p>
+                </div>
+            <div>
+                <table id="trader-actions">
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="footer d-flex px-2 py-1">
+        <div class="ml-auto">Technical analysis is a means of examining and predicting price movements in the financial
+            markets, by using historical price charts and market statistics.</div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.0/chart.min.js"
+        integrity="sha512-yadYcDSJyQExcKhjKSQOkBKy2BLDoW6WnnGXCAkCoRlpHGpYuVuBqGObf3g/TdB86sSbss1AOP4YlGSb6EKQPg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="module">
+        import { App } from './modules/main.js';
+
+        let app = new App();
+        app.run();
+    </script>
+</body>
+
+</html>
