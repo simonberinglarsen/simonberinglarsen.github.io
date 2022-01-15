@@ -22,7 +22,7 @@ export class SidChip {
 
         // range -1..1
         let mix = 0;
-        const oscVol = [1, 1, 1].map(x => x * 0.3);
+        const oscVol = [1, 1, 1].map(x => x * 1.0);
         for (let i = 0; i < this.osc.length; i++) {
             osc[i].tick();
             mix += osc[i].output * oscVol[i];
