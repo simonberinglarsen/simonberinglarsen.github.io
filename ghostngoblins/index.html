@@ -10,25 +10,35 @@
 </head>
 
 <body>
-<pre>
+    <div class="center">
+        <pre>
 <span lg white>** GHOST'N'GOBLINS **</span>
-<span lavender>Recreating the SID tune in javascript.
-- by Simon Bering Larsen
-</span>
 </pre>
-    <div class="col">
-        <div><button id="btn-start" player-button>▶</button></div>
-        <div><button id="btn-pause" player-button>❚❚</button></div>
-        <div><button id="btn-stop" player-button-stop>■</button></div>
-        <div><button id="btn-fast-reverse" player-button>◀◀</button></div>
-        <div><button id="btn-fast-forward" player-button>▶▶</button></div>
     </div>
-    <div id="progress">
-        <div id="progress-done"></div>
-        <div id="progress-todo"></div>
-        <div id="progress-overflow"></div>
+    <div class="center">
+        <pre><span lavender>Recreating the SID tune in javascript.
+  Javascript:   Simon Bering Larsen
+  Commodore64:  Mark Cooksey
+        </span></pre>
     </div>
-    <div class="col" h20>
+    <div class="row center">
+        <div class="button" id="btn-start" player-button>▶</div>
+        <div class="button" id="btn-pause" player-button>❚❚</div>
+        <div class="button player-button-stop" id="btn-stop">■</div>
+        <div class="button" id="btn-fast-reverse" player-button>◀◀</div>
+        <div class="button" id="btn-fast-forward" player-button>▶▶</div>
+        <div class="button-wide" id="btn-song-toggle" player-button>
+            <pre>SONG: <span orange glowText id="song-index">2</span></pre>
+        </div>
+    </div>
+    <div class="row center">
+        <div id="progress">
+            <div id="progress-done"></div>
+            <div id="progress-todo"></div>
+            <div id="progress-overflow"></div>
+        </div>
+    </div>
+    <div class="row center h-20">
         <div class="track">
             <pre id="channel-1"></pre>
         </div>
@@ -39,9 +49,20 @@
             <pre id="channel-3"></pre>
         </div>
     </div>
-    <img src="assets/web/knight.png">
+    <div class="center">
+        <img src="assets/web/knight.png" knight>
+    </div>
+    <div class="center">
+        <pre><span dark-grey>-------------------------------------</span>
+
+<span light-peach>Player code </span><span dark-grey>in javascript:</span> <a href="https://csdb.dk/sid/?id=5757" blue>github.com</a>
+
+<span light-peach>Music data </span><span dark-grey>in javascript:  <a href="https://csdb.dk/sid/?id=5757" blue>github.com</a>
+
+<span light-peach>Ghost'n'Goblins </span><span dark-grey>SID:       <a href="https://csdb.dk/sid/?id=5757" blue>csdb.dk</a></pre>
+    </div>
     <script type="module">
-        import { App } from './main.js';
+        import { App } from './app.js';
         const app = new App();
         app.run();
     </script>

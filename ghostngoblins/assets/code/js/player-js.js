@@ -275,10 +275,10 @@ class Channel {
             vibrato: this.vibratoEffect.enabled ? 'inv-orange' : 'dark-grey',
             slide: this.slideEffect.enabled ? 'inv-lavender' : 'dark-grey',
         };
-        let txt = `<span ${colors.arp}>Arpeggio</span>\n`;
-        txt += `<span ${colors.pulse}>Pulse mod.</span>\n`;
-        txt += `<span ${colors.vibrato}>Vibrato</span>\n`;
-        txt += `<span ${colors.slide}>Slide</span>\n`;
+        let txt = ` <span ${colors.arp}>   Arpeggio  </span>\n`;
+        txt += ` <span ${colors.pulse}>  Pulse Mod. </span>\n`;
+        txt += ` <span ${colors.vibrato}>   Vibrato   </span>\n`;
+        txt += ` <span ${colors.slide}>    Slide    </span>\n`;
         return txt;
     }
 
@@ -292,19 +292,20 @@ class Channel {
 
     setTextDrums(gate, d0, l) {
         const colors = ['white', 'blue', 'pink', 'red', 'brown'];
-        this.text += `<span yellow>@#!</span> <span dark-grey>(${(d0).toString().padStart(3, '0')})</span> <span ${colors[l % colors.length]}>${''.padStart(l, ' ')}${l}</span>\n\n`;
+        const activeColor = gate ? 'yellow glowText' : 'red';
+        this.text += `<span ${activeColor}>@#!</span> <span dark-grey>(${(d0).toString().padStart(3, '0')})</span> <span ${colors[l % colors.length]} glowText>${''.padStart(l, ' ')}*</span>\n\n`;
         this.text += `${this.getEffectText()}`;
     }
 
     setTextNote(gate, cmd, noteText) {
-        const activeColor = gate ? 'yellow' : 'red';
+        const activeColor = gate ? 'yellow glowText' : 'red';
         this.text += `<span ${activeColor}>${noteText}</span> <span dark-grey>(${(cmd).toString().padStart(3, '0')})</span>\n\n`;
         this.text += `${this.getEffectText()}`;
     }
 
     updateText(gate) {
-        this.text = `TRK# ${(this.trkOffset-1).toString().padStart(3,'0')}\n`;
-        this.text += `PAT# ${this.patternId}\n\n`;
+        this.text = `<span dark-grey>TRK#</span> ${(this.trkOffset-1).toString().padStart(2,'0')}\n`;
+        this.text += `<span dark-grey>PAT#</span> ${this.patternId}\n\n`;
         if (this.percussionIsSet) {
             this.setTextDrums(gate, this.percussionLength + 1, this.percussionProgramId)
         }
@@ -314,6 +315,7 @@ class Channel {
         else {
             this.setTextNote(gate, this.noteLength, '===');
         }
+        this.text = `<pre>${this.text}</pre>`;
     }
 }
 
