@@ -313,7 +313,7 @@ class Channel {
             this.setTextNote(gate, this.noteLength, this.noteIndexToText(this.noteIndex));
         }
         else {
-            this.setTextNote(gate, this.noteLength, '===');
+            this.setTextNote(gate, this.noteLength, '---');
         }
         this.text = `<pre>${this.text}</pre>`;
     }

@@ -44,16 +44,16 @@ const Prg = Object.freeze({
 export const songs = {
     "0": {
         "tracks": [
-            [4273, 4338, 4338, 4338, 4338, 4338, 4338, 4338, 0],
-            [4527, 4562, 4562, 4562, 4562, 4562, 4562, 4562, 0],
-            [4732, 4761, 4761, 4761, 4761, 4761, 4761, 4761, 0]
+            ["HI-IN-1", "VOICE1", "VOICE1", "VOICE1", "VOICE1", "VOICE1", "VOICE1", "VOICE1", 0],
+            ["HI-IN-2", "VOICE2", "VOICE2", "VOICE2", "VOICE2", "VOICE2", "VOICE2", "VOICE2", 0],
+            ["HI-IN-3", "VOICE3", "VOICE3", "VOICE3", "VOICE3", "VOICE3", "VOICE3", "VOICE3", 0]
         ],
     },
     "1": {
         "tracks": [
-            ["INTR-L1", 5234, "PAUSE-1", "PAUSE-1", "VERS-L1", "VERS-L1", "VERS-L2", "VERS-L2", "VERS-L1", "PAUSE-1", 5332, 5332, "PAUSE-1", 5332, 5332, 5238, "VERS-L1", "VERS-L1", "VERS-L2", "VERS-L2", "VERS-L1", 5411, 5332, 5332, 0],
-            ["INTR-L2", "PAUSE-2", 'DRUMS-1', 'DRUMS-1', 'DRUMS-1', 'DRUMS-1', 'DRUMS-1', 'DRUMS-1', "PAUSE-2", 5595, 5595, 5661, 5661, 5661, 5661, 5661, 'DRUMS-1', 'DRUMS-1', 'DRUMS-1', 'DRUMS-1', 'DRUMS-1', 5661, 5661, 5661, 5661, 0],
-            ["INTR-BASS", "VERS-BASS", "VERS-BASS", "VERS-BASS", "VERS-BASS", 5881, 5881, "VERS-BASS", 5947, 5947, 6039, 5947, 6039, 5947, 5947, 6039, 5947, 6039, "VERS-BASS", "VERS-BASS", 5881, 5881, "VERS-BASS", 5947, 6039, 5947, 6039, 0]
+            ["INTR-L1", "GO-PULSE", "PAUSE-1", "PAUSE-1", "VERS-L1", "VERS-L1", "VERS-L2", "VERS-L2", "VERS-L1", "PAUSE-1", "CHRUS-L1A", "CHRUS-L1A", "PAUSE-1", "CHRUS-L1A", "CHRUS-L1A", "PULS-ARP", "VERS-L1", "VERS-L1", "VERS-L2", "VERS-L2", "VERS-L1", "SETUP", "CHRUS-L1A", "CHRUS-L1A", 0],
+            ["INTR-L2", "PAUSE-2", 'DRUMS-1', 'DRUMS-1', 'DRUMS-1', 'DRUMS-1', 'DRUMS-1', 'DRUMS-1', "PAUSE-2", "CHRUS-L1B", "CHRUS-L1B", "DRUMS-2", "DRUMS-2", "DRUMS-2", "DRUMS-2", "DRUMS-2", 'DRUMS-1', 'DRUMS-1', 'DRUMS-1', 'DRUMS-1', 'DRUMS-1', "DRUMS-2", "DRUMS-2", "DRUMS-2", "DRUMS-2", 0],
+            ["INTR-BASS", "VERS-BASS", "VERS-BASS", "VERS-BASS", "VERS-BASS", "VERS-BASS2", "VERS-BASS2", "VERS-BASS", "CHRUS-BASS", "CHRUS-BASS", "CHRUS-BAS2", "CHRUS-BASS", "CHRUS-BAS2", "CHRUS-BASS", "CHRUS-BASS", "CHRUS-BAS2", "CHRUS-BASS", "CHRUS-BAS2", "VERS-BASS", "VERS-BASS", "VERS-BASS2", "VERS-BASS2", "VERS-BASS", "CHRUS-BASS", "CHRUS-BAS2", "CHRUS-BASS", "CHRUS-BAS2", 0]
         ],
     },
     "percussions": [
@@ -170,7 +170,7 @@ export const songs = {
         },
     ],
     "patterns": {
-        "4273": [
+        "HI-IN-1": [
             Cmd.pulseOff,
             Cmd.arpeggioOff,
             Cmd.vibratoOff,
@@ -203,7 +203,7 @@ export const songs = {
             Cmd.endOfPattern
         ].flat(),
 
-        "4338": [
+        "VOICE1": [
             Cmd.patternPause, [0x2],
             Cmd.vibratoOn, [0x1, 0x1, 0x0, 0xc8],
             toNote('G#5 8'),
@@ -299,7 +299,7 @@ export const songs = {
             Cmd.endOfPattern
         ].flat(),
 
-        "4527": [
+        "HI-IN-2": [
             Cmd.pulseOff,
             Cmd.arpeggioOff,
             Cmd.vibratoOff,
@@ -317,7 +317,7 @@ export const songs = {
             Cmd.endOfPattern
         ].flat(),
 
-        "4562": [
+        "VOICE2": [
             Cmd.vibratoOn, [0x1, 0x1, 0x0, 0x64],
             toNote('E-5 8'),
             toNote('G#4 8'),
@@ -403,7 +403,7 @@ export const songs = {
             Cmd.endOfPattern
         ].flat(),
 
-        "4732": [
+        "HI-IN-3": [
             Cmd.pulseOff,
             Cmd.arpeggioOff,
             Cmd.vibratoOff,
@@ -419,7 +419,7 @@ export const songs = {
             Cmd.endOfPattern
         ].flat(),
 
-        "4761": [
+        "VOICE3": [
             toNote('E-3 8'),
             toNote('B-3 8'),
             toNote('B-3 8'),
@@ -534,12 +534,12 @@ export const songs = {
             Cmd.endOfPattern
         ].flat(),
 
-        "5234": [
+        "GO-PULSE": [
             Cmd.setWaveform, [Prg.pulse],
             Cmd.endOfPattern
         ].flat(),
 
-        "5238": [
+        "PULS-ARP": [
             Cmd.setWaveform, [Prg.pulse],
             Cmd.arpOn, [0x1, 0x1],
             Cmd.vibratoOff,
@@ -588,7 +588,7 @@ export const songs = {
             Cmd.endOfPattern
         ].flat(),
 
-        "5332": [
+        "CHRUS-L1A": [
             Cmd.envelopeSR, [0xaa],
             toNote('F-5 36'),
             toNote('E-5 4'),
@@ -627,7 +627,7 @@ export const songs = {
             Cmd.endOfPattern
         ].flat(),
 
-        "5411": [
+        "SETUP": [
             Cmd.pulseOnDirty, [0x4, 0x0, 0xc, 0x0],
             Cmd.pulseOn, [0x1, 0x2, 0x0, 0x20, 0x1],
             Cmd.vibratoOn, [0x2, 0x2d, 0x1, 0x64],
@@ -684,7 +684,7 @@ export const songs = {
             Cmd.endOfPattern
         ].flat(),
 
-        "5595": [
+        "CHRUS-L1B": [
             Cmd.setWaveform, [Prg.pulse],
             toNote('C#5 36'),
             toNote('c-5 4'),
@@ -720,7 +720,7 @@ export const songs = {
             Cmd.endOfPattern
         ].flat(),
 
-        "5661": [
+        "DRUMS-2": [
             Cmd.percussion0, 8,
             Cmd.percussion2, 8,
             Cmd.percussion0, 4,
@@ -834,7 +834,7 @@ export const songs = {
             Cmd.endOfPattern
         ].flat(),
 
-        "5881": [
+        "VERS-BASS2": [
             toNote('D#2 4'),
             toNote('D#2 4'),
             toNote('F#2 4'),
@@ -870,7 +870,7 @@ export const songs = {
             Cmd.endOfPattern
         ].flat(),
 
-        "5947": [
+        "CHRUS-BASS": [
             Cmd.pulseOn, [0x1, 0x2, 0x0, 0x40, 0x1],
             Cmd.envelopeSR, [0xc8],
             Cmd.envelopeAD, [0x8],
@@ -917,7 +917,7 @@ export const songs = {
             Cmd.endOfPattern
         ].flat(),
 
-        "6039": [
+        "CHRUS-BAS2": [
             toNote('D#2 4'),
             toNote('D#2 4'),
             toNote('F#2 4'),
