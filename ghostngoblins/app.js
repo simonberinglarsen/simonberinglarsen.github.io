@@ -24,7 +24,7 @@ export class App {
         this.btnFastForward = document.getElementById('btn-fast-forward');
         this.btnFastReverse = document.getElementById('btn-fast-reverse');
         this.btnSongToggle = document.getElementById('btn-song-toggle');
-        
+
         this.uiProgress = {
             done: document.getElementById('progress-done'),
             todo: document.getElementById('progress-todo'),
@@ -87,7 +87,7 @@ export class App {
     disableButton(btn) {
         this.buttonGroup.forEach(b => {
             b.classList.remove('clicked');
-            if(b === btn) {
+            if (b === btn) {
                 b.classList.add('clicked');
             }
 
@@ -95,15 +95,14 @@ export class App {
     }
 
     async initAudio() {
-        if(this.audioContext) {
+        if (this.audioContext) {
             return;
         }
+
         this.audioContext = new AudioContext()
         await this.audioContext.audioWorklet.addModule('./assets/code/hardware/mos-6581-processor.js')
         const node = new AudioWorkletNode(this.audioContext, 'mos-6581-processor')
-        node.port.onmessage = (e) => console.log(e.data)
-        node.connect(this.audioContext.destination)
-        setInterval(() => {
+        node.port.onmessage = () => {
             if (!this.player) {
                 return;
             }
@@ -121,7 +120,8 @@ export class App {
                 mute: false,
                 regs: this.player.getRegs()
             });
-        }, 20);
+        }
+        node.connect(this.audioContext.destination)
         this.player = new PlayerJs();
         this.player.init(this.song);
     }
