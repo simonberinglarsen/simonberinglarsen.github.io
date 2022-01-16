@@ -1,21 +1,31 @@
 @font-face {
-    font-family: c64font;
-    src: url('Commodore-64-v6.3.TTF');
+    font-family:'C64 Pro';
+    src:url(C64_Pro-STYLE.eot);
+    src:url(C64_Pro-STYLE.eot?#iefix) format('embedded-opentype'),
+    url(C64_Pro-STYLE.woff2) format('woff2'),
+    url(C64_Pro-STYLE.woff) format('woff'),
+    url(C64_Pro-STYLE.ttf) format('truetype');
+    font-weight:normal;
+    font-style:normal;
 }
+
+
+
 
 body {
     background-color: black;
     color: #C2C3C7;
     padding-top: 1rem;
+    font-family: 'C64 Pro';
 }
 
 pre {
+    font-family: 'C64 Pro';
     line-height: 1.5rem;
-    font-family: c64font;
 }
 
 [c64font] {
-    font-family: c64font;
+    font-family: 'C64 Pro';
 }
 
 [black] {
