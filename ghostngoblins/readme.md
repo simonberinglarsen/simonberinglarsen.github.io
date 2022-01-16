@@ -1,3 +1,7 @@
+# Check it Out HERE!
+
+See a (hopefully) working demo here: https://simonberinglarsen.github.io/ghostngoblins/
+
 # The "SID" concept
 
 A sid-file is basically just a binary file with a bunch of machine code and data all mixed up.
