@@ -2,7 +2,7 @@
 
 This repo contains a few demos of this and that - all related to "web / javascript" somehow.
 
-# Ghost'n'Goblins goes javascript
+# Ghost'n'Goblins music goes javascript
 ![Ghostngoblins title screen](https://csdb.dk/gfx/releases/139000/139257.gif)
 
 This repo is a rewrite of the ghost'n'goblins music on the c64 into javascript - originally sid tune was created by Mark Cooksey in 6502 machinecode.
