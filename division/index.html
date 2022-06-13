@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Division</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+        
+        .center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input {
+            padding: 1rem;
+            margin: 0rem 1rem;
+            font-size: 2rem;
+            width: 10rem;
+            text-align: center; 
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div>
+            <div class="center">
+                <input type="text" id="input-upper" value="654837">
+            </div>
+            <div class="center">
+                <input type="text" id="input-lower" value="17">
+            </div>
+            <canvas id="canvas" width="600" height="1000"></canvas>
+        </div>
+    </div>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        ctx.translate(10, 10);
+        const slotSize = 40;
+        let calcSteps = 0;
+        let calcUpper = 654837;
+        let calcLower = 17;
+        ctx.font = "bold 30px courier new";
+
+        const ctrlUpper = document.getElementById('input-upper');
+        const ctrlLower = document.getElementById('input-lower');
+
+        ctrlUpper.addEventListener('input', (e) => {
+            calcUpper = +(e.target.value);
+            update();
+        });
+
+        ctrlLower.addEventListener('input', (e) => {
+            calcLower = +(e.target.value);
+            update();
+        });
+
+        ctrlUpper.value = calcUpper;
+        ctrlLower.value = calcLower;
+        update();
+
+        document.onkeydown = function (event) {
+            switch (event.keyCode) {
+                case 37:
+                    if(calcSteps === 0) return;
+                    calcSteps--;
+                    update();
+                    break;
+                case 39:
+                    calcSteps++;
+                    update();
+                    break;
+            }
+        };
+
+        function update() {
+            divide(calcSteps, calcUpper, calcLower, 5);
+        }
+
+        function divide(steps, dividend, divisor, maxDecimals) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            let upper = numToDigits(dividend);
+            let lower = divisor;
+
+            let work = 0;
+            let line = 3;
+            let pos = numToDigits(divisor).length;
+            let commaAdded = false;
+
+            numToDigits(divisor).reverse().forEach((x, i) => putText(0 + i, 2, x))
+            if(steps-- <= 0) return;
+            
+            drawLines([
+                { x: 0, y: 2.2 },
+                { x: pos - 0.2, y: 2.2 },
+                { x: pos - 0.2, y: 1.2 },
+                { x: upper.length + maxDecimals + pos - 0.2, y: 1.2 },
+            ]);
+            if(steps-- <= 0) return;
+
+            numToDigits(dividend).reverse().forEach((x, i) => putText(pos + i, 2, x))
+            if(steps-- <= 0) return;
+
+            while (maxDecimals >= 0 && (upper.length !== 0 || work !== 0)) {
+                const nextDigit = upper.pop() || 0;
+                putnumalignat(work, pos-1, line, 'red');
+                if(steps-- <= 0) return;
+
+                drawLines([
+                    { x: pos + 0.25, y: 1 + 1.1 },
+                    { x: pos + 0.25, y: line - 0.6 }
+                ], 'blue');
+                if(steps-- <= 0) return;
+
+                putnumalignat(nextDigit, pos, line, 'orange');
+                if(steps-- <= 0) return;
+
+                work = 10 * work + nextDigit;
+                line++;
+                const res = Math.floor(work / lower);
+                putText(pos, 1, res, 'green');
+                if(steps-- <= 0) return;
+
+
+                let workdigits = numToDigits(work).length;
+                const actual = res * lower;
+                putnumalignat(actual, pos, line);
+                if(steps-- <= 0) return;
+                
+                drawLines([
+                    { x: pos-workdigits+1, y: line + 0.2 },
+                    { x: pos+1, y: line + 0.2 }
+                ]);
+                if(steps-- <= 0) return;
+
+                line++;
+                work = work - actual;
+
+                if (upper.length === 0) {
+                    if (!commaAdded) {
+                        putText(pos + 0.5, 1, ",", 'green');
+                        commaAdded = true;
+                    }
+                    maxDecimals--;
+                }
+                pos++;
+            }
+
+
+        }
+
+        function drawLines(points, color) {
+            ctx.beginPath();
+            let p = points.pop();
+            ctx.moveTo(p.x * slotSize, p.y * slotSize);
+            while(points.length > 0)
+            {
+                p = points.pop();
+                ctx.lineTo(p.x * slotSize, p.y * slotSize);
+            }
+            ctx.strokeStyle = color;
+            ctx.stroke();
+            ctx.strokeStyle = 'black';
+        }
+
+        function putnumalignat(num, x, y, color) {
+            const l = numToDigits(num).length - 1;
+            numToDigits(num).reverse().forEach((digit, i) => putText(x + i - l, y, digit, color))
+        }
+
+
+        function numToDigits(num) {
+            if (num === 0) {
+                return [0];
+            }
+            num = Math.floor(num);
+            const digits = [];
+            while (num > 0) {
+                digits.push(num % 10);
+                num = Math.floor(num / 10);
+            }
+            return digits;
+        }
+
+        function putText(x, y, text, color) {
+            ctx.fillStyle = color;
+            ctx.fillText(text, x * slotSize, y * slotSize);
+            ctx.fillStyle = 'black';
+        }
+    </script>
+</body>
+
+</html>
