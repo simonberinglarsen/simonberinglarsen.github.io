@@ -449,3 +449,222 @@ Rd7 24.Ng4 c5 25.b5 c4 26.Nc6 cxd3 27.cxd3 Qd6 28.Nge5 Rc7
 40.Rxa4 Nc3+ 41.Kd2 Nxa4 42.Nfxe5+ fxe5 43.Nxe5+ Ke6 44.Nxd7
 Kxd7 45.Kc2 0-1
 
+[Event "69th US Open"]
+[Site "Aspen, CO USA"]
+[Date "1968.08.19"]
+[EventDate "1968.08.11"]
+[Round "8"]
+[Result "0-1"]
+[White "Walter Shawn Browne"]
+[Black "Bent Larsen"]
+[ECO "A10"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "104"]
+
+1.c4 f5 2.g3 Nf6 3.Bg2 e5 4.d4 exd4 5.Qxd4 Nc6 6.Qd1 Bb4+
+7.Nd2 O-O 8.Ngf3 a5 9.a3 Bc5 10.Nb3 Bb6 11.O-O d6 12.Nbd4 Ne5
+13.Qc2 Nxf3+ 14.Nxf3 a4 15.Bf4 Ne4 16.Rad1 Qf6 17.Ne1 Be6
+18.Nd3 Qf7 19.Rc1 h6 20.c5 Bb3 21.Qb1 Nxc5 22.Nxc5 Bxc5
+23.Bxb7 Rab8 24.Bf3 Bd5 25.Bxd5 Qxd5 26.Qc2 Rb3 27.Bd2 h5
+28.Bc3 h4 29.Rcd1 Qe6 30.e3 h3 31.Rfe1 Qe4 32.Qxe4 fxe4 33.Rc1
+Rf5 34.Red1 Bb6 35.Rc2 Kf7 36.Rcd2 g6 37.Rd5 Rxd5 38.Rxd5 Bc5
+39.Bh8 Bxa3 40.Rd2 Bb4 41.Rc2 c5 42.Kf1 Ke6 43.Ke2 d5 44.Bg7
+g5 45.g4 c4 46.Bd4 Bd6 47.f3 exf3+ 48.Kxf3 Be5 49.Bxe5 Kxe5
+50.Rd2 Rd3 51.Rc2 Rd1 52.Rf2 Rg1 0-1
+
+[Event "Chess Olympiad Qualifying Group 2"]
+[Site "Lugano SUI"]
+[Date "1968.10.22"]
+[EventDate "?"]
+[Round "5"]
+[Result "0-1"]
+[White "Samuel Reshevsky"]
+[Black "Bent Larsen"]
+[ECO "E54"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "84"]
+
+1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 4.e3 O-O 5.Bd3 c5 6.Nf3 d5 7.O-O
+dxc4 8.Bxc4 Nc6 9.a3 Ba5 10.Qd3 a6 11.Rd1 b5 12.Ba2 c4 13.Qe2
+Qe8 14.h3 e5 15.d5 Nd8 16.e4 Nb7 17.Bb1 Nd7 18.Bc2 Nd6 19.Na2
+Nc5 20.Bd2 Bxd2 21.Nxd2 Bd7 22.b4 cxb3 23.Nxb3 Nxb3 24.Bxb3
+Qe7 25.Rac1 Rfc8 26.Nb4 Bxh3 27.Qe3 Bd7 28.Nc6 Qf6 29.f3 h5
+30.Rc3 h4 31.Rdc1 g5 32.Na7 Rxc3 33.Rxc3 Ne8 34.Nc6 Kg7 35.Rc2
+Rc8 36.Qc3 Rc7 37.Kh1 Kh7 38.Qe3 g4 39.fxg4 Qf1+ 40.Kh2 Nf6
+41.Nxe5 Rxc2 42.Bxc2 Qa1 0-1
+
+[Event "Palma de Mallorca"]
+[Site "Palma ESP"]
+[Date "1968.11.29"]
+[EventDate "1968.11.24"]
+[Round "5"]
+[Result "1-0"]
+[White "Bent Larsen"]
+[Black "Florin Gheorghiu"]
+[ECO "D32"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "73"]
+
+1.Nf3 Nf6 2.c4 c5 3.Nc3 e6 4.e3 Nc6 5.d4 d5 6.cxd5 exd5 7.Be2
+cxd4 8.Nxd4 Bd6 9.O-O O-O 10.Nf3 a6 11.b3 Bg4 12.Bb2 Re8 13.h3
+Bh5 14.Nh4 Bxe2 15.Nxe2 Be5 16.Qb1 Ne4 17.Nf3 Bxb2 18.Qxb2 Qf6
+19.Qxf6 Nxf6 20.Rfd1 Rac8 21.Rd2 Ne7 22.Nfd4 Ne4 23.Rd3 Rc7
+24.f3 Nc5 25.Rc3 Rec8 26.Nf4 Nd7 27.Rxc7 Rxc7 28.Rd1 g6 29.g4
+h6 30.Kf2 Ne5 31.h4 Rc8 32.h5 Kg7 33.Ke2 g5 34.Nxd5 Nxd5
+35.Nf5+ Kh7 36.Rxd5 Rc2+ 37.Kd1 1-0
+
+[Event "Helsinki m"]
+[Site "Helsinki"]
+[Date "1969.??.??"]
+[EventDate "?"]
+[Round "7"]
+[Result "1-0"]
+[White "Bent Larsen"]
+[Black "Heikki Westerinen"]
+[ECO "E90"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "83"]
+
+1.Nf3 Nf6 2.c4 g6 3.Nc3 Bg7 4.e4 d6 5.d4 O-O 6.Bg5 c5 7.d5 Na6
+8.h3 Nc7 9.Bd3 a6 10.a4 Bd7 11.a5 Rb8 12.O-O b5 13.axb6 Rxb6
+14.Rb1 e5 15.Ne1 Qe7 16.Bc2 h6 17.Be3 Nh7 18.Nd3 f5 19.f4 exf4
+20.Nxf4 Qe8 21.Qd2 g5 22.Nd3 f4 23.Bf2 f3 24.e5 fxg2 25.Kxg2
+Qh5 26.Qe3 dxe5 27.Nxc5 Bc8 28.Qd3 Bf5 29.N5e4 Rg6 30.Bc5 g4
+31.Bxf8 gxh3+ 32.Kh1 Nxf8 33.Qf3 Bg4 34.Qf7+ Kh8 35.Qxf8+ Bxf8
+36.Rxf8+ Kg7 37.Rbf1 Be6 38.dxe6 Rg1+ 39.Rxg1+ Kxf8 40.Rf1+
+Ke7 41.Nd5+ Nxd5 42.cxd5 1-0
+
+[Event "Larsen - Tal 3rd place Candidates Playoff"]
+[Site "Eersel NED"]
+[Date "1969.03.15"]
+[EventDate "1969.03.10"]
+[Round "4"]
+[Result "0-1"]
+[White "Mikhail Tal"]
+[Black "Bent Larsen"]
+[ECO "B63"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "84"]
+
+1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 Nc6 6.Bg5 e6 7.Qd2
+Be7 8.O-O-O O-O 9.Nb3 a6 10.Bxf6 gxf6 11.Be2 Kh8 12.Bh5 Bd7
+13.f4 b5 14.Kb1 Qb6 15.f5 Rac8 16.Rhf1 a5 17.Ne2 b4 18.Nf4 a4
+19.Nc1 Ne5 20.Bxf7 b3 21.cxb3 axb3 22.Ng6+ Nxg6 23.fxg6 Kg7
+24.Nxb3 hxg6 25.Bxg6 Kxg6 26.Rf3 Bc6 27.Qf4 Kf7 28.Nd4 Rh8
+29.Rb3 Qa6 30.Ra3 Qb7 31.Rb3 Bxe4+ 32.Ka1 Qd5 33.Qf1 Ra8 34.a3
+Bxg2 35.Qf2 Rxh2 36.Rb5 Qe4 37.Re1 Rh1 38.Rxh1 Bxh1 39.Ne2 Rc8
+40.Nc3 Qd3 41.Rh5 Be4 42.Qe1 Bg6 0-1
+
+[Event "Buesum"]
+[Site "Buesum FRG"]
+[Date "1969.05.12"]
+[EventDate "?"]
+[Round "11"]
+[Result "0-1"]
+[White "Lev Polugaevsky"]
+[Black "Bent Larsen"]
+[ECO "A17"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "88"]
+
+1. c4 Nf6 2. Nc3 e6 3. Nf3 Bb4 4. Qc2 O-O 5. a3 Bxc3 6. Qxc3
+b6 7. e3 Bb7 8. Be2 d6 9. b4 Ne4 10. Qc2 Ng5 11. Bb2 Nd7
+12. Qd1 e5 13. d4 Qf6 14. dxe5 Nxe5 15. Nxe5 dxe5 16. f3 Rad8
+17. Qc1 Rfe8 18. O-O Qg6 19. Kh1 h5 20. Rd1 h4 21. Rxd8 Rxd8
+22. h3 Nxh3 23. Qe1 e4 24. Qxh4 Rd2 25. Qxh3 Rxb2 26. Rd1 Qf6
+27. Re1 exf3 28. Bxf3 Bxf3 29. gxf3 g6 30. e4 Rf2 31. e5 Qxf3+
+32. Qxf3 Rxf3 33. e6 Kf8 34. Rd1 fxe6 35. Rd7 Rf7 36. Rd8+ Ke7
+37. Ra8 Rf4 38. c5 bxc5 39. Rxa7 cxb4 40. Rxc7+ Kd6 41. Ra7
+Rf1+ 42. Kg2 Ra1 43. Ra6+ Kd5 44. a4 b3 0-1
+
+[Event "Buesum"]
+[Site "Buesum FRG"]
+[Date "1969.05.04"]
+[EventDate "?"]
+[Round "4"]
+[Result "0-1"]
+[White "Milko Bobotsov"]
+[Black "Bent Larsen"]
+[ECO "A17"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "30"]
+
+1.c4 Nf6 2.Nc3 e6 3.Nf3 Bb4 4.g3 O-O 5.Bg2 d5 6.O-O dxc4 7.Qa4
+Na6 8.a3 Bd7 9.Nb5 Qe8 10.Nfd4 e5 11.Bxb7 exd4 12.Bxa6 Bh3
+13.axb4 Qe4 14.Bb7 Qxb7 15.f3 Bd7 0-1
+
+[Event "Palma de Mallorca"]
+[Site "Palma ESP"]
+[Date "1969.11.29"]
+[EventDate "1969.11.22"]
+[Round "7"]
+[Result "1-0"]
+[White "Bent Larsen"]
+[Black "Viktor Korchnoi"]
+[ECO "A00"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "109"]
+
+1. g3 d5 2. Bg2 c6 3. c4 g6 4. Qa4 d4 5. Nf3 Bg7 6. O-O e5
+7. d3 Ne7 8. Nbd2 O-O 9. b4 Nd7 10. Rb1 a5 11. b5 c5 12. e3
+dxe3 13. fxe3 Ra7 14. Qc2 b6 15. Ne4 Nf6 16. Nxf6+ Bxf6
+17. Bb2 Nf5 18. Rbe1 Re8 19. e4 Ng7 20. Nd2 h5 21. Nb1 h4
+22. Nc3 hxg3 23. hxg3 Nh5 24. Nd5 Bg5 25. Qf2 f6 26. Bc1 Bxc1
+27. Rxc1 f5 28. Qe3 Rh7 29. Rce1 Kh8 30. exf5 gxf5 31. g4 Nf6
+32. Nxf6 Qxf6 33. gxf5 Bxf5 34. Qf3 Rf7 35. Qh5+ Kg7 36. Bd5
+Rff8 37. Rf2 Bg6 38. Rxf6 Bxh5 39. Rxb6 Bf3 40. Rd6 Rf4
+41. Bxf3 Rxf3 42. Rd5 Kf6 43. Kg2 Rf5 44. Re3 Rc8 45. Rf3 a4
+46. Rxf5+ Kxf5 47. Kf3 a3 48. Ke3 Rh8 49. Rxc5 Rh2 50. b6 Rxa2
+51. d4 Ke6 52. Rxe5+ Kd7 53. Ra5 Kc6 54. c5 Rh2 55. Ke4 1-0
+
+[Event "Palma de Mallorca"]
+[Site "Palma ESP"]
+[Date "1969.12.02"]
+[EventDate "1969.11.22"]
+[Round "9"]
+[Result "1-0"]
+[White "Bent Larsen"]
+[Black "Oscar Panno"]
+[ECO "A00"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "87"]
+
+1.g3 g6 2.Bg2 Bg7 3.Nc3 e5 4.d3 Nc6 5.f4 d6 6.Nf3 Nge7 7.O-O
+O-O 8.e4 h6 9.Be3 Nd4 10.Qd2 Kh7 11.Rae1 Be6 12.Nh4 exf4
+13.gxf4 Nec6 14.Nf3 Nxf3+ 15.Rxf3 f5 16.Kh1 Qf6 17.Nd5 Qf7
+18.c4 Rae8 19.Qf2 a6 20.b3 Nb8 21.Bc1 c6 22.Ne3 Nd7 23.exf5
+Bxf5 24.Nxf5 gxf5 25.Rxe8 Rxe8 26.Bh3 Nc5 27.b4 Ne6 28.Be3 Bc3
+29.Rg3 Qf6 30.a3 Re7 31.Rg1 Ng7 32.Bb6 Qe6 33.Qc2 Bf6 34.Qg2
+Qf7 35.a4 Re8 36.Qf3 Bd8 37.Bf2 Nh5 38.Bd4 Rg8 39.Rb1 Bh4
+40.b5 axb5 41.axb5 c5 42.Bc3 Re8 43.Rg1 Rg8 44.Bxf5+ 1-0
+
+[Event "Palma de Mallorca"]
+[Site "Palma ESP"]
+[Date "1969.12.13"]
+[EventDate "1969.11.22"]
+[Round "17"]
+[Result "0-1"]
+[White "Antonio Angel Medina Garcia"]
+[Black "Bent Larsen"]
+[ECO "A07"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "70"]
+
+1.e4 g6 2.Nc3 Bg7 3.g3 e5 4.Bg2 d6 5.d3 Be6 6.h4 Nf6 7.Nh3 Nc6
+8.Nd5 Bxd5 9.exd5 Ne7 10.c3 h6 11.Qb3 Qc8 12.Be3 O-O 13.O-O-O
+a5 14.a4 c6 15.dxc6 bxc6 16.Qa3 Nf5 17.Bd2 Rb8 18.h5 g5 19.Ng1
+c5 20.Qa2 Qa6 21.Kc2 Rfc8 22.Ne2 e4 23.Bc1 d5 24.Rhe1 Nd4+
+25.cxd4 exd3+ 26.Rxd3 cxd4+ 27.Kd2 Ne4+ 28.Bxe4 dxe4 29.Ra3
+Qc6 30.Qb1 d3 31.Ng1 Qc5 32.Ra1 Qxf2+ 33.Kd1 Bc3 34.bxc3 Rxb1
+35.Rxb1 Qc2+ 0-1
+
