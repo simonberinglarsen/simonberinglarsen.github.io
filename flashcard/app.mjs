@@ -219,15 +219,7 @@ export class App {
       .filter((x) => x.length > 0);
     const lines = [];
     for (var i = 0; i < e.length; i++) {
-      if (i < e.length - 1) {
-        if (
-          ["flashgametitle "].some((x) => e[i].toLowerCase().indexOf(x) == 0)
-        ) {
-          const v = e[i].match(/"([^']+)"/)[1];
-          lines.push(v);
-        }
-        continue;
-      }
+
       lines.push("");
       let line = "";
       let x = [];
@@ -268,6 +260,8 @@ export class App {
     const ctx = this.ctx;
     canvas.height = 3.5 * dpi;
     canvas.width = 2.5 * dpi * 2;
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.save();
     ctx.translate(canvas.width / 4, 440);
@@ -275,12 +269,17 @@ export class App {
     this.drawDiagram(fen);
     ctx.restore();
 
+    let lines;
     this.drawText(10, card.opening, canvas.width / 4, 80);
     this.drawText(8, card.variation, canvas.width / 4, 850);
-    this.drawText(6, card.variationLine, canvas.width / 4, 920);
-    const lines = this.getModelGameText(card.modelGame);
+    lines = this.getModelGameText(card.variationLine);
     for (var i = 0; i < lines.length; i++) {
-      this.drawText(6, lines[i], (3 * canvas.width) / 4, 60 + 50 * i);
+      this.drawText(6, lines[i], canvas.width / 4, 880 + 50 * i);
+    }
+    this.drawText(6, card.gameTitle, (3 * canvas.width) / 4, 80);
+    lines = this.getModelGameText(card.modelGame);
+    for (var i = 0; i < lines.length; i++) {
+      this.drawText(6, lines[i], (3 * canvas.width) / 4, 120 + 50 * i);
     }
 
     // Dashed line
