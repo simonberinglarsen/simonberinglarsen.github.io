@@ -1,4 +1,4 @@
-const dpi = 300;
+const dpi = 600;
 export class App {
   constructor() {
     console.clear();
@@ -104,12 +104,12 @@ export class App {
     const ctx = this.ctx;
     ctx.beginPath();
     ctx.lineWidth = 0.25;
-    const lines = 10 * 8;
+    const lines = 10 * 6;
     for (let i = 0; i < lines; i++) {
-      ctx.moveTo(0, i);
-      ctx.lineTo(i, 0);
-      ctx.moveTo(80, i);
-      ctx.lineTo(i, 80);
+      ctx.moveTo(0, i * 80 / lines);
+      ctx.lineTo(i * 80 / lines, 0);
+      ctx.moveTo(80, i * 80 / lines);
+      ctx.lineTo(i * 80 / lines, 80);
     }
     ctx.stroke();
     for (let i = 0; i < 8; i++) {
@@ -130,6 +130,8 @@ export class App {
         }
       }
     }
+
+    ctx.lineWidth = 0.4;
     ctx.beginPath();
     ctx.rect(0, 0, 80, 80);
     ctx.stroke();
@@ -191,7 +193,7 @@ export class App {
 
   drawDiagram(fen) {
     const ctx = this.ctx;
-    ctx.scale(7, 7);
+    ctx.scale(dpi / 40, dpi / 40);
     ctx.translate(-40, -40);
     const board = this.fen2Board(fen);
     this.drawBoard(board);
@@ -206,7 +208,7 @@ export class App {
     const ctx = this.ctx;
     ctx.textBaseline = "middle";
     ctx.textAlign = "center";
-    ctx.font = size * 5 + "px arial";
+    ctx.font = size * 5 * dpi / 300 + "px arial";
     ctx.fillStyle = "black";
     ctx.fillText(text, x, y);
   }
@@ -264,33 +266,33 @@ export class App {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.save();
-    ctx.translate(canvas.width / 4, 440);
+    ctx.translate(canvas.width / 4, canvas.height * 0.42);
     const fen = card.fen;
     this.drawDiagram(fen);
     ctx.restore();
 
     let lines;
-    this.drawText(10, card.opening, canvas.width / 4, 80);
-    this.drawText(8, card.variation, canvas.width / 4, 850);
+    this.drawText(10, card.opening, canvas.width / 4, canvas.height * 0.06);
+    this.drawText(8, card.variation, canvas.width / 4, canvas.height * 0.82);
     lines = this.getModelGameText(card.variationLine);
     for (var i = 0; i < lines.length; i++) {
-      this.drawText(6, lines[i], canvas.width / 4, 880 + 50 * i);
+      this.drawText(6, lines[i], canvas.width / 4, canvas.height * .84 + dpi / 6 * i);
     }
-    this.drawText(6, card.gameTitle, (3 * canvas.width) / 4, 80);
+    this.drawText(8, card.gameTitle, (3 * canvas.width) / 4, canvas.height * 0.06);
     lines = this.getModelGameText(card.modelGame);
     for (var i = 0; i < lines.length; i++) {
-      this.drawText(6, lines[i], (3 * canvas.width) / 4, 120 + 50 * i);
+      this.drawText(6, lines[i], (3 * canvas.width) / 4, canvas.height * .10 + dpi / 6 * i);
     }
 
     // Dashed line
     ctx.beginPath();
     ctx.strokeStyle = "black";
-    ctx.lineWidth = 1;
-    ctx.setLineDash([3, 3]);
+    ctx.lineWidth = 3;
+    ctx.setLineDash([dpi * .01, dpi * 0.02]);
     ctx.moveTo(canvas.width / 2, 0);
     ctx.lineTo(canvas.width / 2, canvas.height);
     ctx.stroke();
-    ctx.rect(0, 0, canvas.width, canvas.height);
+    ctx.rect(1, 1, canvas.width - 1, canvas.height - 1);
     ctx.stroke();
 
     return this.createImage(canvas.toDataURL());
