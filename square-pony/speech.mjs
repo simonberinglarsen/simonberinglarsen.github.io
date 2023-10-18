@@ -71,9 +71,17 @@ spillet ender remis.
             return inputStr.replace(/\{[^{}]*\}/g, '');
         }
 
+        let removeNestedParentheses = (inputStr) => {
+            return inputStr.replace(/\([^()]*\)/g, '');
+        }
+
         let removeHeadersFromPGN = (pgnText) => {
             const cleanedPGN = pgnText.replace(/\[\s*[^]+?\s*".*?"\s*\]\s*/g, '');
             return cleanedPGN;
+        }
+
+        let removeExclamationAndQuestionMarks = (inputStr) => {
+            return inputStr.replace(/[!?]/g, '');
         }
 
 
@@ -81,9 +89,12 @@ spillet ender remis.
             return !Number.isNaN(Number(char));
         }
 
+        pgn = pgn.replace(/\d+\.{3}/g, '');
         pgn = pgn.replace(/\./g, '. ');
         pgn = removeHeadersFromPGN(pgn);
         pgn = removeNestedBraces(pgn);
+        pgn = removeNestedParentheses(pgn);
+        pgn = removeExclamationAndQuestionMarks(pgn);
         pgn = pgn.split(/\r|\n/).map(x => x.trim()).join(' ').trim();
         pgn = pgn.replace(/\s+/g, ' ');
         let raw = pgn.split(" ");
