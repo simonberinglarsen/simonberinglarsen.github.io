@@ -1,55 +1,52 @@
 export class Speech {
-    begin() {
-        const loading = document.getElementById('loading');
-        loading.style.display = 'block';
-    }
 
-    end() {
-        loading.style.display = 'none';
-    }
 
-    async downloadByGid(gameID) {
-        this.begin();
-        const downloader = new PGNDownloader(gameID);
+    async downloadByGid(url) {
+        const downloader = new PGNDownloader(url);
         const pgn = await downloader.downloadPGN();
-        this.download(pgn);
+        return this.download(pgn);
     }
 
     async download(pgn) {
-        this.begin();
-
         const response = await fetch('speech_dk2.mp3');
         const data = await response.arrayBuffer();
+        return new Promise((resolve, reject) => {
+            this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const offlineContext = new OfflineAudioContext(1, 44100 * 60, 44100); // 60 seconds of audio buffer
 
-        this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        const offlineContext = new OfflineAudioContext(1, 44100 * 60, 44100); // 60 seconds of audio buffer
+            const pgnSlices = this.parsePgn(pgn);
+            offlineContext.oncomplete = async (event) => {
+                try {
+                    const mp3Data = [];
+                    const audioBuffer = event.renderedBuffer;
 
-        const pgnSlices = this.parsePgn(pgn);
-        offlineContext.oncomplete = async (event) => {
-            const mp3Data = [];
-            const audioBuffer = event.renderedBuffer;
+                    // render slices
+                    pgnSlices.forEach(x => this.renderSlice(mp3Data, audioBuffer, x));
 
-            // render slices
-            pgnSlices.forEach(x => this.renderSlice(mp3Data, audioBuffer, x));
+                    // download file
+                    const audioBlob = new Blob([new Uint8Array(mp3Data)], { type: 'audio/mpeg' });
+                    const audioUrl = URL.createObjectURL(audioBlob);
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = audioUrl;
+                    downloadLink.download = 'audio-slice.mp3'; // Specify the file name
+                    downloadLink.click();
+                    resolve();
+                }
+                catch (error) {
+                    reject(error);
+                }
+            };
 
-            // download file
-            const audioBlob = new Blob([new Uint8Array(mp3Data)], { type: 'audio/mpeg' });
-            const audioUrl = URL.createObjectURL(audioBlob);
-            const downloadLink = document.createElement('a');
-            downloadLink.href = audioUrl;
-            downloadLink.download = 'audio-slice.mp3'; // Specify the file name
-            downloadLink.click();
-            this.end();
-        };
+            offlineContext.decodeAudioData(data).then((audioBuffer) => {
+                const source = offlineContext.createBufferSource();
+                source.buffer = audioBuffer;
+                source.connect(offlineContext.destination);
+                source.start(0);
+                offlineContext.startRendering();
+            });
 
-        offlineContext.decodeAudioData(data).then((audioBuffer) => {
-            const source = offlineContext.createBufferSource();
-            source.buffer = audioBuffer;
-            source.connect(offlineContext.destination);
-            source.start(0);
-            offlineContext.startRendering();
         });
-    }
+    };
 
     parsePgn(pgn) {
         // https://ttsmp3.com/
@@ -251,24 +248,16 @@ spillet ender remis.
 }
 
 class PGNDownloader {
-    constructor(gid) {
-        this.gid = gid;
-        this.url = `https://lichess.org/game/export/${this.gid}?evals=0&clocks=0`;
+    constructor(url) {
+        this.url = url;
     }
 
     async downloadPGN() {
-        try {
-            const response = await fetch(this.url);
-
-            if (!response.ok) {
-                throw new Error(`Network response was not ok: ${response.status}`);
-            }
-
-            const data = await response.text();
-
-            return data;
-        } catch (error) {
-            throw error;
+        const response = await fetch(this.url);
+        if (!response.ok) {
+            throw new Error(`Unable to download pgn. ${response.status}`);
         }
+        const data = await response.text();
+        return data;
     }
 }

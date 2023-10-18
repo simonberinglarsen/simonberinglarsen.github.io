@@ -52,6 +52,12 @@
             }
         }
 
+        .error-text {
+            display: none;
+            color: #fff;
+            background-color: #833;
+        }
+
         .cta-button {
             display: inline-block;
             padding: 12px 24px;
@@ -134,14 +140,15 @@
         <div>
             <img class="drop-shadow" src="logo.jpg" alt="logo" width="400px">
         </div>
+        <div class="error-text" id="error-text">ERROR!</div>
         <div>
             <label class="radio-label">
                 <input type="radio" class="radio-input" name="inputType" value="pgn_text" id="pgn_text" checked>
                 pgn text
             </label>
             <label class="radio-label">
-                <input type="radio" class="radio-input" name="inputType" value="lichess_id" id="lichess_id">
-                lichess-game-id
+                <input type="radio" class="radio-input" name="inputType" value="pgn_url_id" id="pgn_url_id">
+                pgn-url
             </label>
         </div>
         <div>
@@ -160,29 +167,34 @@
         import { Speech } from './speech.mjs';
 
 
-        document.getElementById("btnPlay").addEventListener('click', () => {
+        $("#btnPlay").click(() => {
             async function sliceAndDownloadAudio() {
                 try {
+                    $('#loading').show();
+                    $('#error-text').hide();
                     const selectedRadioButton = $('input[type="radio"][name="inputType"]:checked');
                     const selectedValue = selectedRadioButton.val();
 
                     let speech = new Speech();
                     let txt = $('#txtPgn').val();
-                    if (selectedValue == "lichess_id")
+                    if (selectedValue == "pgn_url_id")
                         await speech.downloadByGid(txt);
                     else
                         await speech.download(txt);
+                    $('#loading').hide();
                 } catch (error) {
-                    console.error('Error loading or decoding the audio:', error);
+                    $('#loading').hide();
+                    $('#error-text').text(error);
+                    $('#error-text').show();
                 }
             }
 
             sliceAndDownloadAudio();
         });
         let defaultPgn = `1.e4 Nf6 2.e5 Nd5 3.Nf3 d6 4.Be2 Nf4 5.Bf1 dxe5 6.Nxe5 Qd5 7.Nf3 Qe4+ 8.Be2 Nxg2+ 9.Kf1 Bh3 10.d3 Nh4 11.Ke1 Nxf3# 0-1`
-        defaultPgn = 'YSvU3Ibw';
+        defaultPgn = 'https://lichess.org/game/export/OSvEenog?evals=0&clocks=0';
         $('#txtPgn').text(defaultPgn);
-        $('#lichess_id').prop('checked', true);
+        $('#pgn_url_id').prop('checked', true);
 
 
     </script>
