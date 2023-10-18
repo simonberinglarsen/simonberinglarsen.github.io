@@ -28,7 +28,7 @@ export class Speech {
                     const audioUrl = URL.createObjectURL(audioBlob);
                     const downloadLink = document.createElement('a');
                     downloadLink.href = audioUrl;
-                    downloadLink.download = 'audio-slice.mp3'; // Specify the file name
+                    downloadLink.download = 'chessgame.mp3'; // Specify the file name
                     downloadLink.click();
                     resolve();
                 }
