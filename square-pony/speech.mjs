@@ -18,7 +18,7 @@ export class Speech {
     async download(pgn) {
         this.begin();
 
-        const response = await fetch('/speech_dk2.mp3');
+        const response = await fetch('speech_dk2.mp3');
         const data = await response.arrayBuffer();
 
         this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
