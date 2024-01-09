@@ -1,0 +1,238 @@
+<html>
+
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #888;
+        }
+
+        #canvas-container {
+            position: relative;
+            border: 3px solid #000;
+            box-shadow: 0 0.25rem 2rem rgba(0, 0, 0, 0.5);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
+</head>
+
+<body>
+    <div id="canvas-container">
+        <script>
+            const model = {
+                square: '..',
+                score: 0,
+                indicator: null,
+                bullet: null,
+                status: '',
+                entities: [],
+                tick: 0,
+                effects: [],
+                level: 1,
+            };
+
+            function setup() {
+                let canvas = createCanvas(400, 500);
+                canvas.parent('canvas-container');
+            }
+
+            function draw() {
+                update();
+                background(220);
+                drawEffects();
+                drawChessboard(8, 50); // 8x8 chessboard with cell size of 50 pixels
+                model.entities.forEach(e => { drawEntity(e); });
+                drawIndicator();
+                drawBullet();
+                drawText();
+            }
+
+            function drawEffects() {
+                model.effects.forEach(eff => {
+                    if (eff.type == "SHAKE") {
+                        let s = 20;
+                        translate(Math.random() * s - s * 0.5, Math.random() * s - s * 0.5);
+                    }
+                });
+            }
+
+            function drawBullet() {
+                if (!model.bullet) return;
+                const bullet = model.bullet;
+                fill(Math.random() * 255, Math.random() * 255, Math.random() * 255);
+                let size = 20 * (100 - Math.abs(model.tick % 20 - 10)) / 100;
+                ellipse(bullet.pos[0], bullet.pos[1], size, size);
+            }
+
+            function drawIndicator() {
+                if (!model.indicator) return;
+                noStroke();
+                fill(255)
+                let t = model.tick % 20 / 20 * 2 * Math.PI;
+                let size = 50 * (Math.sin(t) + 1) * 0.5;
+                ellipse(model.indicator.pos[0], model.indicator.pos[1], size, size);
+            }
+
+            function drawText() {
+                textSize(32);
+                textStyle(BOLD);
+                fill(80, 80, 80);
+                textAlign(LEFT);
+                text(`square: ${model.square}`, 30, 440);
+                text(`score: ${model.score}`, 30, 480);
+                text(`level: ${model.level}`, 250, 440);
+                text(`fps: ${model.fps} `, 250, 480);
+
+
+                if (model.status == "GAMEOVER") {
+                    textAlign(CENTER);
+                    fill(Math.random() * 255, Math.random() * 255, Math.random() * 255);
+                    textSize(50 + model.tick % 2);
+                    text(`GAME OVER!`, 200, 200);
+                }
+            }
+
+            function spawnParticle(pos, v, life, size) {
+                model.entities.push({
+                    pos: [...pos],
+                    v: [...v],
+                    life,
+                    size
+                });
+
+            }
+
+            function vectorSub(v1, v2) {
+                return [v1[0] - v2[0], v1[1] - v2[1]];
+            }
+
+            function vectorLength(v) {
+                let x = v[0];
+                let y = v[1];
+                return Math.sqrt(x * x + y * y);
+            }
+
+            function vectorNorm(v) {
+                let l = vectorLength(v);
+                if (l == 0) return [0, 0];
+                return [v[0] / l, v[1] / l];
+            }
+
+            function vectorScale(s, v) {
+                return [v[0] * s, v[1] * s];
+            }
+
+            function update() {
+                if (model.tick % 30 == 0) {
+                    model.fps = Math.floor(frameRate());
+                }
+                model.tick++;
+                model.effects.forEach(eff => {
+                    eff.currentLife--;
+                });
+                model.effects = model.effects.filter(e => e.currentLife > 0);
+                model.entities.forEach(e => {
+                    e.pos[0] += e.v[0];
+                    e.pos[1] += e.v[1];
+                    if (!e.currentLife) {
+                        e.currentLife = e.life;
+                    }
+                    e.currentLife--;
+                });
+                model.entities = model.entities.filter(e => e.currentLife > 0);
+                if (model.status == "GAMEOVER") {
+                    return;
+                }
+                if (!model.indicator) {
+                    model.square = '--';
+                    let index = Math.floor(Math.random() * 64);
+                    model.indicator = { index, pos: [0, 0] };
+                    let x = index % 8;
+                    let y = Math.floor(index / 8);
+                    model.indicator.pos[0] = (x + 0.5) * 50;
+                    model.indicator.pos[1] = (y + 0.5) * 50;
+                    let bulletpos = [x < 4 ? 8 * 50 : 0, y < 4 ? 8 * 50 : 0];
+                    let speed = 0.5 + (model.level - 1) * 0.5;
+                    let v = vectorScale(speed, vectorNorm(vectorSub(model.indicator.pos, bulletpos)));
+                    model.bullet = { pos: bulletpos, v };
+                }
+                if (model.square == getSquare(model.indicator.index)) {
+                    model.indicator = null;
+                    model.bullet = null;
+                    model.effects.push({ currentLife: 10, type: "SHAKE" });
+                    model.score++;
+                    model.level = Math.floor(model.score / 5 + 1);
+                }
+                if (model.bullet) {
+                    if (model.entities.length < 40) {
+                        spawnParticle(model.bullet.pos, vectorScale(Math.random() * 3, vectorNorm([Math.random() * 10 - 5, Math.random() * 10 - 5])), 20, 20);
+                    }
+                    model.bullet.pos[0] += model.bullet.v[0];
+                    model.bullet.pos[1] += model.bullet.v[1];
+                }
+                if (model.bullet && model.indicator) {
+                    let d = vectorLength(vectorSub(model.indicator.pos, model.bullet.pos));
+                    if (d < 50 / 2) {
+                        model.status = "GAMEOVER";
+                        model.effects.push({ currentLife: 40, type: "SHAKE" });
+                        for (let i = 0; i < 50; i++) {
+                            spawnParticle(model.indicator.pos, vectorScale(Math.random() * 4, vectorNorm([Math.random() * 10 - 5, Math.random() * 10 - 5])), 30, 10);
+                            spawnParticle(model.indicator.pos, vectorScale(Math.random() * 4, vectorNorm([Math.random() * 10 - 5, Math.random() * 10 - 5])), 40, 15);
+                            spawnParticle(model.indicator.pos, vectorScale(Math.random() * 2, vectorNorm([Math.random() * 10 - 5, Math.random() * 10 - 5])), 60, 30);
+                            spawnParticle(model.indicator.pos, vectorScale(Math.random() * 1, vectorNorm([Math.random() * 10 - 5, Math.random() * 10 - 5])), 120, 60);
+                        }
+                        model.bullet = null;
+                        model.indicator = null;
+                    }
+                }
+
+            }
+
+            function drawEntity(e) {
+                const squareColor = color(255, 180, 100);
+                squareColor.setAlpha(255 * e.currentLife / e.life);
+                fill(squareColor);
+                ellipse(e.pos[0], e.pos[1], e.size, e.size);
+            }
+
+            function keyPressed() {
+                if ('abcdefgh12345678'.indexOf(key) >= 0) {
+                    model.square = '' + model.square[1] + key;
+                }
+            }
+
+            function getSquare(sq) {
+                let y = Math.floor(sq / 8);
+                let x = sq % 8;
+                return 'abcdefgh'.split('')[x] + '87654321'.split('')[y];
+            }
+
+            function drawChessboard(rows, cellSize) {
+                for (let i = 0; i < rows; i++) {
+                    for (let j = 0; j < rows; j++) {
+                        let x = j * cellSize;
+                        let y = i * cellSize;
+                        let l1 = model.bullet ? vectorLength(vectorSub(model.bullet.pos, [x + 25, y + 25])) : 600;
+                        let f1 = 1 - l1 / 300;
+                        let l2 = model.indicator ? vectorLength(vectorSub(model.indicator.pos, [x + 25, y + 25])) : 600;
+                        let f2 = 1 - l2 / 300;
+
+                        if ((i + j) % 2 === 0) {
+                            fill(255 * f1, 0, 255 * f2); // White cell
+                        } else {
+                            fill(0); // Black cell
+                        }
+                        rect(x, y, cellSize, cellSize);
+                    }
+                }
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>
