@@ -3,12 +3,6 @@ graph={}
 me=1000
 games=0
 
-function create_entity()
- e={}
- e_list[#e_list+1]=e
- return e
-end
-
 function draw_graph()
  p={}
  vmin=9999
