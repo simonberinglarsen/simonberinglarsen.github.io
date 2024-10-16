@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaporized Chess</title>
+    <!-- BEGINNING of PWA stuff -->
+    <meta name="theme-color" content="#333333">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/icons/icon-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/icons/icon-512x512.png">
+    <!-- END of PWA stuff -->
+
+    <style>
+        @font-face {
+            font-family: 'Press Start 2P';
+            src: url('/fonts/PressStart2P-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #333;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 2vh;
+        }
+
+        .scaled-area {
+            height: 100vh;
+            width: calc(100vh * (9 / 16));
+            background-color: #666;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        canvas {
+            width: 100%;
+            height: auto;
+            flex-shrink: 0;
+            box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+        }
+
+        .a {
+            background-color: #444;
+            flex-grow: 1;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px;
+            padding: 10px;
+            color: white;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .btn {
+            background-color: #666;
+            border-radius: 10%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #bbb;
+            cursor: pointer;
+            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:active {
+            transform: scale(0.85);
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scaled-area">
+        <canvas id="gameCanvas"></canvas>
+        <div class="a">
+            <div></div>
+            <div id="btn-up" class="btn">UP</div>
+            <div></div>
+            <div id="btn-enter" class="btn">ENTER</div>
+            <div id="btn-left" class="btn">LEFT</div>
+            <div id="btn-down" class="btn">DOWN</div>
+            <div id="btn-right" class="btn">RIGHT</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <script type="module">
+        import * as engine from './engine.mjs';
+        import * as score from './scenes/score.mjs';
+
+        engine.run(score);
+
+        // hookup keypad
+        [
+            { class: 'btn-enter', code: 'Enter' },
+            { class: 'btn-up', code: 'ArrowUp' },
+            { class: 'btn-down', code: 'ArrowDown' },
+            { class: 'btn-left', code: 'ArrowLeft' },
+            { class: 'btn-right', code: 'ArrowRight' },
+        ].forEach(m => document.getElementById(m.class).addEventListener('click', () => engine.onKeyPress(m.code)));
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js').then((registration) => {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                }).catch((error) => {
+                    console.error('Service Worker registration failed:', error);
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
