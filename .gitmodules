@@ -1,3 +1,4 @@
 [submodule "vaporized-chess"]
 	path = vaporized-chess
 	url = https://github.com/simonberinglarsen/vaporized-chess.git
+	branch = main
