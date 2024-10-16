@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaporized Chess</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #333;
+        }
+
+        canvas {
+            border: 2px solid #555;
+            box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="gameCanvas" width="600" height="400"></canvas>
+    <script type="module">
+        import * as engine from './engine.mjs';
+        import * as score from './scenes/score.mjs';
+
+        engine.run(score);
+    </script>
+</body>
+
+</html>
