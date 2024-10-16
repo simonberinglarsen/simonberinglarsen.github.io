@@ -13,7 +13,7 @@ self.addEventListener('install', (event) => {
                 '/scenes/score.mjs',
                 '/icons/icon-192x192.png',
                 '/icons/icon-512x512.png',
-                'fonts/PressStart2P-Regular.ttf'
+                '/fonts/PressStart2P-Regular.ttf'
             ]);
         })
     );
