@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Training</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e1e1e, #121212);
+            color: #eee;
+            font-family: "Poppins", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 20px;
+            background: rgba(40, 40, 40, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+            /* animation start */
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.6s ease forwards;
+            position: relative;
+        }
+
+        .card-footer {
+            position: absolute;
+            bottom: 12px;
+            right: 16px;
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card h3 {
+            margin: 0 0 20px;
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+
+        .card p {
+            margin: 0;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #ccc;
+        }
+
+        #dice-btn {
+            position: fixed;
+            top: 1.5rem;
+            left: 1.5rem;
+            background: #444;
+            border: none;
+            border-radius: 50%;
+            width: 4rem;
+            height: 4rem;
+            font-size: 2rem;
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+            transition: background 0.25s ease, transform 0.25s ease;
+        }
+
+        #dice-btn:hover {
+            background: #666;
+            transform: scale(1.12) rotate(8deg);
+        }
+
+        .fruit {
+            font-size: 2.5rem;
+            line-height: 1;
+            display: inline-block;
+            animation: fruitPulse 1s ease-in-out infinite;
+            transform-origin: center;
+        }
+
+        @keyframes fruitPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.25);
+                opacity: 0.9;
+            }
+        }
+
+        .dice {
+            display: inline-block;
+            animation: spinDice 2s linear infinite;
+        }
+
+        @keyframes spinDice {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button id="dice-btn">🎲</button>
+    <div id="training"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="module">
+        import { App } from './app.mjs';
+    </script>
+</body>
+
+</html>
