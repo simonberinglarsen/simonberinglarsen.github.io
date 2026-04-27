@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1777283605097,
+  "timestamp": 1777286448021,
   "index": "/chessmole/index.html",
   "assetGroups": [
     {
@@ -13,10 +13,10 @@
       "urls": [
         "/chessmole/favicon.ico",
         "/chessmole/index.html",
-        "/chessmole/main-7JFAUE5S.js",
+        "/chessmole/main-LAM5MTA3.js",
         "/chessmole/manifest.webmanifest",
         "/chessmole/polyfills-B6TNHZQ6.js",
-        "/chessmole/styles-OJRSSD3P.css"
+        "/chessmole/styles-4KK5TNOT.css"
       ],
       "patterns": []
     },
@@ -46,8 +46,8 @@
     "/chessmole/coin2.png": "a26add8d6eec2e189ee06f7f474c8241eb685178",
     "/chessmole/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
     "/chessmole/heart.png": "2751f1b0e6cb0036097486bf8ad14e2b95dd6de2",
-    "/chessmole/index.html": "121f6dff89fada75e52ec78af7bf38f66d2f4bde",
-    "/chessmole/main-7JFAUE5S.js": "2b154c9949716d97a4bf34bcbe0986d8c49846da",
+    "/chessmole/index.html": "4ae60b233c580cf2cfec29dbd69006030f8c3f35",
+    "/chessmole/main-LAM5MTA3.js": "678bfcc43007fd748322c8d01777974b14ea2965",
     "/chessmole/manifest.webmanifest": "d62c9bf6ac42fb5ea1f1c37f7fa936c38b6db3be",
     "/chessmole/media/Modenine-2OPd-7Y3WNTVO.ttf": "0a2b463d6c9da0e0ac6044e1227f589d14f6969d",
     "/chessmole/media/OpenChessFont-4ION6DPH.otf": "4784cbc40c616fc65ac6af63f7cf0419af1e4fd0",
@@ -55,7 +55,7 @@
     "/chessmole/molelogo.png": "e0ed3d1f5d623546474c957a8d6831024627bcdc",
     "/chessmole/pgn/miniatures.pgn": "c7284c5f5ee822422ab690572abab3d35dffba43",
     "/chessmole/polyfills-B6TNHZQ6.js": "bf76ac291d7f51c1139b7edcf86b359a30c08c64",
-    "/chessmole/styles-OJRSSD3P.css": "d87ee88d7f4214a3f455fa5f4944e7464812e16b"
+    "/chessmole/styles-4KK5TNOT.css": "4935c86080732e144fe24ff4797f8460e4e7e1ea"
   },
   "navigationUrls": [
     {
