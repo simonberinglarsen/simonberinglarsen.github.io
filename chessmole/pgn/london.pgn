@@ -1,0 +1,517 @@
+[Event "London: Chigorin"]
+[Site "Prague CZE"]
+[Date "2024.02.28"]
+[Round "1.7"]
+[White "GM Bharath,Subramaniyam H"]
+[Black " Taus,M"]
+[WhiteElo "2515"]
+[BlackElo "1992"]
+[Result "1-0"]
+[ECO "D02"]
+[Opening "Queen's pawn game, Chigorin variation"]
+
+1. d4 d5 2. Nf3 Nc6 3. Bf4 Bg4 4. e3 e6 5. c4 Bd6 6. cxd5 exd5 7. Bxd6 Qxd6 8. Nc3 Nf6 9. Be2 O-O 10. O-O Ne4 11. Rc1 Rfe8 12. a3 Re6 13. h3 Bh5 14. b4 a6 15. Na4 b6 16. Nc3 Rg6 17. Nh4 Nxc3 18. Rxc3 Bxe2 19. Qxe2 Re6 20. Qc2 a5 21. Nf5 1-0
+
+[Event "London: Chigorin"]
+[Site "Germany GER"]
+[Date "2025.02.22"]
+[Round "8.2"]
+[White "GM Kuzubov,Y"]
+[Black "IM Xu,X"]
+[WhiteElo "2609"]
+[BlackElo "2470"]
+[Result "1-0"]
+[ECO "D02"]
+[Opening "Queen's pawn game, Chigorin variation"]
+
+1. d4 d5 2. Nf3 Nc6 3. Bf4 Bg4 4. Nbd2 e6 5. h3 Bf5 6. e3 Bd6 7. Bb5 Nge7 8. c3 a6 9. Ba4 O-O 10. Qe2 h6 11. O-O Bxf4 12. exf4 Qd6 13. Qe3 b5 14. Bd1 Na5 15. b3 Nb7 16. Re1 Bh7 17. Nf1 c5 18. g4 cxd4 19. cxd4 Nc6 20. Ng3 Rac8 21. Rc1 Nb4 22. Rxc8 Rxc8 23. f5 exf5 24. gxf5 f6 25. Nh4 Nc6 26. Ng6 Bxg6 27. fxg6 f5 28. Nxf5 Qxg6+ 29. Bg4 Rf8 30. Nh4 Qf6 31. Qe6+ Rf7 32. Qe8+ Rf8 33. Be6+ Kh7 34. Bf5+ Kg8 35. Qe6+ Rf7 36. Qe8+ Rf8 37. Ng6 Qxf5 38. Nxf8 Nxd4 39. Ne6+ Kh7 40. Nxd4 Qxh3 41. Qc6 1-0
+
+[Event "London: Englund"]
+[Site "chess.com INT"]
+[Date "2023.06.14"]
+[Round "1.21"]
+[White "GM Lazavik,Denis"]
+[Black "GM Dardha,Daniel"]
+[WhiteElo "2553"]
+[BlackElo "2619"]
+[Result "1-0"]
+[ECO "A40"]
+[Opening "Queen's pawn"]
+
+1. d4 e5 2. dxe5 Nc6 3. Nf3 Qe7 4. Bf4 Qb4+ 5. Bd2 Qxb2 6. Nc3 Bb4 7. Rb1 Qxc3 8. Bxc3 Bxc3+ 9. Nd2 Nxe5 10. e3 Nf6 11. Rb3 Ba5 12. Bd3 c6 13. O-O O-O 14. Nc4 Nxc4 15. Bxc4 d5 16. Bd3 Re8 17. c4 dxc4 18. Bxc4 Bb6 19. a4 Rd8 20. Qc2 Bg4 21. a5 Bxa5 22. Rxb7 Bh5 23. Qa2 Bb6 24. Bxf7+ Kh8 25. Bxh5 Nxh5 26. Qf7 Rd5 27. Re7 Rg8 28. h3 Nf6 29. Rc1 Bc5 30. Re6 Bd6 31. Rxf6 gxf6 32. Qxf6+ Rg7 33. g3 c5 34. Rb1 h5 35. Rb7 Be5 36. Qf8+ Kh7 37. Qf5+ Kh6 38. Rxg7 Kxg7 39. Kg2 c4 40. f4 c3 41. fxe5 Rd2+ 42. Kf3 c2 43. Qc8 a5 44. Qc7+ Kg6 45. e6 Kf6 46. Qf7+ Ke5 47. e7 c1=Q 48. e8=Q+ Kd6 49. Qfd7+ Kc5 50. Qec8+ Kb4 51. Qdb7+ Ka3 52. Qxc1+ 1-0
+
+[Event "London: Englund"]
+[Site "St Petersburg RUS"]
+[Date "2022.10.24"]
+[Round "3.2"]
+[White "GM Afanasiev,Nikita"]
+[Black "FM Boiarintsev,Vitaly"]
+[WhiteElo "2569"]
+[BlackElo "2252"]
+[Result "1-0"]
+[ECO "A40"]
+[Opening "Queen's pawn"]
+
+1. d4 e5 2. dxe5 Nc6 3. Nf3 Nge7 4. Bf4 Ng6 5. Bg3 f6 6. exf6 Qxf6 7. c3 d6 8. e3 Bd7 9. Nbd2 O-O-O 10. Bb5 Kb8 11. Nd4 Nxd4 12. Bxd7 Rxd7 13. cxd4 h5 14. h3 Be7 15. Qa4 Rdd8 16. Rc1 Nh4 17. O-O Nf5 18. Bh2 g5 19. Nc4 Qe6 20. Na5 Qe4 21. Qb3 Rd7 22. d5 c6 23. Nxc6+ Ka8 24. Rc4 Qxd5 25. Nxa7 1-0
+
+[Event "London: Copycat"]
+[Site "Rhodes GRE"]
+[Date "2025.10.21"]
+[Round "3.5"]
+[White "GM Batsiashvili,N"]
+[Black "GM Muzychuk,A"]
+[WhiteElo "2469"]
+[BlackElo "2525"]
+[Result "1-0"]
+[ECO "D02"]
+[Opening "Queen's bishop game"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 Bf5 4. e3 e6 5. Bd3 Bd6 6. Bxf5 exf5 7. Qd3 Bxf4 8. exf4 O-O 9. Qxf5 Qe8+ 10. Ne5 Qb5 11. b3 Nc6 12. c3 Ne4 13. f3 Nxd4 14. cxd4 Qb4+ 15. Ke2 Qxd4 16. fxe4 Qxa1 17. exd5 Rae8 18. Qc2 Qd4 19. Qd2 Qb6 20. Kf3 Re7 21. Nc3 Rfe8 22. Re1 Qh6 23. Ng4 Qh5 24. Rxe7 Rxe7 25. d6 cxd6 26. Qxd6 Re8 27. Qd5 Qxd5+ 28. Nxd5 Re1 29. Nge3 Ra1 30. Nc3 Rc1 31. Ne2 Ra1 32. a4 g6 33. Nd4 Kf8 34. Ke4 Re1 35. Kd3 Ke7 36. Nf3 Rh1 37. g4 f6 38. f5 Kd6 39. Ke4 Rb1 40. Nd2 Re1 41. b4 gxf5+ 42. gxf5 Rh1 43. Ndc4+ Kc6 44. Na5+ Kd7 45. Nxb7 Rxh2 46. Nc5+ Kd6 47. Nd3 h5 48. Kf3 Ra2 49. a5 Ra1 50. Nf4 Rb1 51. Nxh5 Rxb4 52. Nxf6 Ra4 53. Ne4+ Ke7 54. f6+ Kf8 55. Ng5 Rxa5 56. Kf4 Ra6 57. Kf5 Rxf6+ 58. Kxf6 a5 59. Nc4 a4 60. Na3 Ke8 61. Ne4 Kd7 62. Kf7 Kc6 63. Ke6 Kc7 64. Nf6 Kc6 65. Nd7 Kc7 66. Nc5 Kc6 67. Nd3 Kc7 68. Nb4 Kd8 69. Nd5 Ke8 70. Nc7+ Kf8 71. Kf6 Kg8 72. Ne6 Kh7 73. Kg5 Kh8 74. Kh6 Kg8 75. Kg6 Kh8 76. Nc5 Kg8 77. Nd7 Kh8 78. Nc4 a3 79. Nf6 1-0
+
+[Event "London: Copycat"]
+[Site "London ENG"]
+[Date "2024.10.06"]
+[Round "5.2"]
+[White "GM Abdusattorov,Nodirbek"]
+[Black "GM Praggnanandhaa,R"]
+[WhiteElo "2783"]
+[BlackElo "2746"]
+[Result "1-0"]
+[ECO "D02"]
+[Opening "Queen's bishop game"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 Bf5 4. e3 e6 5. Bd3 Bd6 6. Bxf5 exf5 7. Bg5 Nbd7 8. Qd3 g6 9. Nbd2 c6 10. c4 h6 11. Bh4 Qe7 12. O-O Qe6 13. Qb3 Rb8 14. cxd5 Qxd5 15. Rac1 O-O 16. Bxf6 Nxf6 17. Qxd5 Nxd5 18. g3 a5 19. Nc4 Bc7 20. Ne1 Rfd8 21. a3 Ra8 22. Nd3 Bd6 23. Kg2 Be7 24. h3 h5 25. Rc2 Kg7 26. Rb1 a4 27. Nf4 Ra6 28. b4 axb3 29. Rxb3 Nxf4+ 30. gxf4 Ra7 31. Rcb2 Rd7 32. a4 Bd8 33. Ne5 Rc7 34. a5 f6 35. Nd3 Be7 36. Rb6 Kf7 37. h4 Ke6 38. Kf3 Bd6 39. Ra2 Kd5 40. Ra1 Ke6 41. Nc1 Kd5 42. Ne2 Ke6 43. Nc3 Kf7 44. Nb5 cxb5 45. Rxd6 Ra6 46. Rd5 b6 47. Rxb5 bxa5 48. Rbxa5 Rxa5 49. Rxa5 Rc1 50. Kg2 Rd1 51. Ra7+ Kf8 52. Rd7 Kg8 53. f3 Rd2+ 54. Kg3 Rd3 55. Kf2 Rd2+ 56. Ke1 Rh2 57. d5 Kf8 58. d6 Rxh4 59. Rh7 Rh1+ 60. Ke2 Ke8 61. e4 fxe4 62. fxe4 Ra1 63. e5 fxe5 64. fxe5 Ra5 65. Re7+ Kd8 66. Ke3 h4 67. Ke4 h3 68. Rh7 1-0
+
+[Event "London: Slav"]
+[Site "Vecindario ESP"]
+[Date "2022.09.08"]
+[Round "6.5"]
+[White "GM Sumets,A"]
+[Black " Cruz Pino,A"]
+[WhiteElo "2513"]
+[BlackElo "2026"]
+[Result "1-0"]
+[ECO "D02"]
+[Opening "Queen's pawn game"]
+
+1. d4 d5 2. Nf3 c6 3. Bf4 Nf6 4. e3 Bf5 5. c4 e6 6. Qb3 Qb6 7. c5 Qxb3 8. axb3 Bxb1 9. Rxb1 Nh5 10. b4 Nxf4 11. exf4 Be7 12. b5 O-O 13. Ra1 Rc8 14. Kd2 Bf6 15. Ra4 cxb5 16. Bxb5 a6 17. b4 Bd8 18. Rha1 Kf8 19. R1a2 Ke7 20. g3 g6 21. Ke3 f6 22. g4 a5 23. bxa5 Nc6 24. a6 b6 25. cxb6 Bxb6 26. Bxc6 Rxc6 27. R2a3 Bc7 28. g5 f5 29. a7 Bd6 30. Ne5 Bxe5 31. fxe5 Rc7 32. Ra6 Rb7 33. Kd2 Rc7 34. Ke2 Rb7 35. Kf1 Rc7 36. Rh3 Kf8 37. Rxe6 Raxa7 38. Rd6 Rc1+ 39. Kg2 Kf7 1-0
+
+[Event "London: Slav"]
+[Site "Austria AUT"]
+[Date "2022.03.24"]
+[Round "5.5"]
+[White "GM Martinovic,Sa"]
+[Black " Kozissnik,Christian"]
+[WhiteElo "2542"]
+[BlackElo "2025"]
+[Result "1-0"]
+[ECO "A40"]
+[Opening "Queen's pawn"]
+
+1. d4 c6 2. Nf3 d5 3. Bf4 Nf6 4. e3 Nh5 5. Be5 Qb6 6. Nbd2 f6 7. Bxb8 Rxb8 8. Bd3 g6 9. c4 Bd7 10. Qc2 f5 11. Ne5 Nf6 12. O-O-O Ne4 13. Nb3 e6 14. Nxd7 Kxd7 15. f3 Nf6 16. e4 Qc7 17. Kb1 fxe4 18. fxe4 dxe4 19. Bxe4 Re8 20. Rhf1 Bg7 21. Rf3 Kc8 22. Nc5 Rhf8 23. Ra3 Nxe4 24. Qxe4 Rf4 25. Rxa7 Rxe4 26. Ra8+ Qb8 27. Rxb8+ Kxb8 28. Nxe4 Rd8 29. Ng5 Rxd4 30. Rxd4 Bxd4 31. Nxh7 Bg7 32. Ng5 e5 33. Kc2 Kc8 34. b4 b5 35. cxb5 cxb5 36. Kd3 Kd7 37. Ne4 Ke6 38. g4 Kd5 39. Nc3+ Kc6 40. h4 Bf8 41. a3 Bh6 42. g5 Bf8 43. Ke3 Be7 44. Ke4 Bd6 45. Ne2 Bf8 46. Kxe5 Bg7+ 47. Ke6 Bb2 48. Nf4 Bxa3 49. Nd3 1-0
+
+[Event "London: Quick ...e6 and ...Bd6"]
+[Site "London ENG"]
+[Date "2025.06.14"]
+[Round "7.4"]
+[White "GM Duda,J"]
+[Black "FM Sava,Ch"]
+[WhiteElo "2725"]
+[BlackElo "2002"]
+[Result "1-0"]
+[ECO "D00"]
+[Opening "Queen's pawn, Mason variation"]
+
+1. d4 d5 2. Bf4 Nf6 3. e3 e6 4. Nf3 Bd6 5. Nbd2 O-O 6. Bd3 c5 7. c3 Nc6 8. Bg3 a6 9. Qe2 b5 10. e4 Be7 11. e5 Nd7 12. h4 h6 13. Bf4 f5 14. exf6 Nxf6 15. Ne5 Nxe5 16. Bxe5 Bd6 17. Nf3 Bxe5 18. Nxe5 Qe8 19. dxc5 d4 20. cxd4 Nd5 21. Qe4 1-0
+
+[Event "London: Quick ...e6 and ...Bd6"]
+[Site "Panama City PAN"]
+[Date "2023.11.25"]
+[Round "1.5"]
+[White "GM Almeida Quintana,O"]
+[Black "CM Mendez Machado,Andre"]
+[WhiteElo "2509"]
+[BlackElo "2096"]
+[Result "1-0"]
+[ECO "A45"]
+[Opening "Queen's pawn game"]
+
+1. d4 Nf6 2. Bf4 e6 3. e3 d5 4. Nf3 Bd6 5. Nbd2 O-O 6. Bd3 Bxf4 7. exf4 c5 8. dxc5 Qc7 9. g3 Qxc5 10. Nb3 Qc7 11. O-O Nc6 12. Re1 a6 13. c3 b5 14. Nbd4 Rb8 15. Rc1 Nxd4 16. cxd4 Qa5 17. Bb1 Bb7 18. Ne5 Rfc8 19. f3 Qb4 20. Rxc8+ Rxc8 21. Re2 g6 22. h4 Nh5 23. Kg2 f6 24. a3 Qd6 25. Nd3 Ng7 26. b4 Rc3 27. Nc5 Bc8 28. Qd2 Rc4 29. Ba2 Nf5 30. Bxc4 dxc4 31. d5 e5 32. fxe5 fxe5 33. Qe1 Nd4 34. Rxe5 Qf6 35. Qe4 1-0
+
+[Event "London: Tarrasch"]
+[Site "Riga LAT"]
+[Date "2022.08.15"]
+[Round "1.2"]
+[White "GM Meshkovs,Nikita"]
+[Black "WFM Sibajeva,Marija"]
+[WhiteElo "2554"]
+[BlackElo "2063"]
+[Result "1-0"]
+[ECO "D02"]
+[Opening "Queen's pawn game, Krause variation"]
+
+1. Nf3 d5 2. d4 c5 3. dxc5 e6 4. c4 Bxc5 5. cxd5 exd5 6. g3 Ne7 7. Bg2 O-O 8. O-O Nbc6 9. b3 Be6 10. Bb2 f6 11. Nc3 a6 12. Na4 Ba7 13. Nd4 Bf7 14. Nxc6 Nxc6 15. Ba3 Re8 16. Rc1 Nd4 17. e3 Nb5 18. Bc5 b6 19. Bb4 a5 20. Qd3 Qd7 21. Bc3 Rad8 22. Rfd1 Nc7 23. Bd4 Bg6 24. Qe2 Qd6 25. Qg4 Re7 26. Qf4 Ne6 27. Qxd6 Rxd6 28. Bb2 Rc7 29. Nc3 Be8 30. Bxd5 Kf7 31. Ne4 Rdd7 32. Rxc7 1-0
+
+[Event "London: Tarrasch"]
+[Site "Shanghai CHN"]
+[Date "2026.04.08"]
+[Round "3.2"]
+[White "GM Adly,A"]
+[Black "IM Isaev,J"]
+[WhiteElo "2580"]
+[BlackElo "2227"]
+[Result "1-0"]
+[ECO "D02"]
+[Opening "Queen's pawn game, Krause variation"]
+
+1. Nf3 d5 2. d4 c5 3. dxc5 e6 4. e4 Bxc5 5. exd5 Qxd5 6. Qxd5 exd5 7. Nc3 Be6 8. Nb5 Na6 9. c3 Nf6 10. b4 Be7 11. Be3 Ne4 12. Nd2 Nxc3 13. Nxc3 Bf6 14. Bb5+ Bd7 15. Bxa6 Bxc3 16. Bxb7 Rb8 17. Rc1 Bxd2+ 18. Kxd2 Rxb7 19. Bc5 Bb5 20. Bxa7 Kd7 21. Bd4 Ra8 22. Rc2 f6 23. Ra1 Ra3 24. Rc3 Ra4 25. a3 Bc4 26. Re1 Rb8 27. Rce3 Rg8 28. Re7+ Kc8 29. R1e3 Bb5 30. Kc2 Ra6 31. Kb3 Ba4+ 32. Kb2 Bd7 33. Rg3 g6 34. Rxh7 Re6 35. Rc3+ Kd8 36. Rc5 Re2+ 37. Kc3 Ke8 38. Ra5 1-0
+
+[Event "London: Queens Indian"]
+[Site "Peristeri GRE"]
+[Date "2023.08.23"]
+[Round "1.1"]
+[White "GM Papaioannou,I"]
+[Black "FM Papadopoulos,Ar"]
+[WhiteElo "2628"]
+[BlackElo "2045"]
+[Result "1-0"]
+[ECO "A46"]
+[Opening "Queen's pawn game"]
+
+1. d4 Nf6 2. Nf3 e6 3. Bf4 b6 4. e3 Bb7 5. Nbd2 d5 6. c3 Bd6 7. Bd3 O-O 8. O-O c5 9. Qe2 Nc6 10. Bg5 e5 11. e4 exd4 12. exd5 Ne7 13. Bxf6 gxf6 14. c4 Ng6 15. g3 Re8 16. Qd1 Bc8 17. Qc2 Bh3 18. Rfe1 Qd7 19. Kh1 Kg7 20. Ng1 Ne5 21. Nxh3 Nxd3 22. Qxd3 Qxh3 23. Re4 Qf5 24. Rae1 Rxe4 25. Rxe4 Re8 26. Kg2 Rxe4 27. Nxe4 Qd7 28. Nd2 f5 29. Nf3 Be7 30. Ne5 Qc8 31. Qf3 Bf6 32. Nd3 Qd7 33. b3 a6 34. h4 Qc8 35. Qf4 Qd7 36. Kf1 h6 37. Kg1 Kg6 38. Qb8 Qd8 39. Qb7 Qe7 40. Qxb6 Kh5 41. Qxf6 Qxf6 42. Nf4+ Kg4 43. Kg2 Qxh4 44. gxh4 Kxf4 45. d6 1-0
+
+[Event "London: Queens Indian"]
+[Site "Escaldes AND"]
+[Date "2023.07.22"]
+[Round "1.4"]
+[White "GM Cuartas,Ja"]
+[Black " Uriarte Prieto,G"]
+[WhiteElo "2526"]
+[BlackElo "1945"]
+[Result "1-0"]
+[ECO "A46"]
+[Opening "Queen's pawn game"]
+
+1. d4 Nf6 2. Nf3 e6 3. Bf4 b6 4. e3 Bb7 5. Be2 d6 6. h3 Nbd7 7. a4 a6 8. O-O g6 9. c4 Qe7 10. a5 Bg7 11. Nc3 O-O 12. Bh2 e5 13. Re1 Rfd8 14. Qb3 Rdb8 15. axb6 Bxf3 16. Bxf3 Rxb6 17. Qc2 Rab8 18. Reb1 exd4 19. exd4 c5 20. Na4 Rb4 21. Re1 Qf8 22. dxc5 Rxa4 23. Qxa4 Nxc5 24. Qc6 Rd8 25. Rad1 Ne8 26. Qxc5 1-0
+
+[Event "London: Kings Indian"]
+[Site "Saint Louis USA"]
+[Date "2026.02.28"]
+[Round "8.14"]
+[White "IM Atanasov,Anthony"]
+[Black "GM Fier,A"]
+[WhiteElo "2441"]
+[BlackElo "2572"]
+[Result "1-0"]
+[ECO "A45"]
+[Opening "Queen's pawn game"]
+
+1. d4 Nf6 2. Bf4 g6 3. Nd2 Bg7 4. e4 O-O 5. c3 d6 6. Ngf3 c5 7. dxc5 dxc5 8. h3 Nc6 9. Bc4 Nd7 10. O-O Nb6 11. Be2 e5 12. Be3 Qe7 13. a4 Na5 14. Qb1 Rd8 15. Rc1 c4 16. Bxb6 axb6 17. Nxc4 Nb3 18. Nxb6 Rb8 19. Bc4 Nxa1 20. a5 Be6 21. Qxa1 Bxc4 22. Nxc4 Rd3 23. Qb1 Rbd8 24. Qc2 Bh6 25. Ra1 Qc5 26. b3 f5 27. Nd4 R8xd4 28. cxd4 Qxd4 29. Re1 fxe4 30. Nxe5 Rc3 31. Qxe4 Qxe4 32. Rxe4 Rxb3 33. Nc4 Bf8 34. Kh2 Bc5 35. f3 Rc3 36. h4 Kg7 37. Kh3 h5 38. Nd2 Rc1 39. Ra4 Bf2 40. g3 Rc2 41. Ne4 Bg1 42. g4 Rh2+ 43. Kg3 Rb2 44. gxh5 gxh5 45. Kf4 Bh2+ 46. Kf5 Rb3 47. Ng5 Rb5+ 48. Ke6 Bc7 49. a6 bxa6 50. Rxa6 Bg3 51. Ra4 Kg6 52. Nh3 Re5+ 53. Kd7 Rf5 54. f4 Bxh4 55. Ke6 Bf6 56. Ra2 Rb5 57. Rg2+ Kh6 58. Kxf6 Rb6+ 59. Kf5 Rb5+ 60. Kf6 Rb6+ 61. Kf5 Rb5+ 62. Ke4 Rb4+ 63. Ke5 Rb5+ 64. Ke4 Rb4+ 65. Kd5 Rb3 66. Ng5 h4 67. Nf7+ Kh7 68. Rg4 h3 69. Ke6 Rb4 70. Ng5+ Kh6 71. Rh4+ Kg7 72. Kf5 1-0
+
+[Event "London: Kings Indian"]
+[Site "Karlsruhe GER"]
+[Date "2025.04.21"]
+[Round "9.7"]
+[White "GM Bartel,Mat"]
+[Black "FM Nothnagel,Marian Can"]
+[WhiteElo "2595"]
+[BlackElo "2424"]
+[Result "1-0"]
+[ECO "A48"]
+[Opening "King's Indian"]
+
+1. d4 Nf6 2. Nf3 g6 3. Bf4 Bg7 4. c3 O-O 5. Nbd2 d6 6. e4 Nbd7 7. Be2 Qe8 8. h3 e5 9. dxe5 dxe5 10. Be3 b6 11. Nh2 Bb7 12. Qc2 a5 13. g4 Qe7 14. g5 Ne8 15. h4 f5 16. gxf6 Ndxf6 17. Nhf1 Nd6 18. Ng3 h5 19. O-O-O Bc8 20. Nc4 Nf7 21. f3 Be6 22. Rhg1 b5 23. Nd2 Rfb8 24. Kb1 a4 25. Rg2 Qd7 26. Nh1 Kh7 27. Nf2 Bh6 28. Bxh6 Kxh6 29. Rdg1 Rg8 30. Nd3 Qd6 31. f4 Bg4 32. Nf3 Bxf3 33. Bxf3 Rad8 34. Nxe5 Nxe5 35. fxe5 Qxe5 36. Rg5 Qe8 37. Qc1 Kh7 38. e5 Ng4 39. Be4 Qe6 40. Rxh5+ Kg7 41. Rg5 Nxe5 42. Qf4 1-0
+
+[Event "London: Grunfeld"]
+[Site "Reykjavik ISL"]
+[Date "2025.04.11"]
+[Round "4.6"]
+[White "GM Banusz,T"]
+[Black "GM Thorhallsson,T"]
+[WhiteElo "2592"]
+[BlackElo "2394"]
+[Result "1-0"]
+[ECO "D02"]
+[Opening "Queen's bishop game"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 g6 4. c3 Bg7 5. e3 O-O 6. Nbd2 c6 7. Bd3 Qb6 8. Rb1 c5 9. h3 a5 10. O-O Nc6 11. a4 Nd7 12. Re1 e5 13. dxe5 Ndxe5 14. Bxe5 Nxe5 15. Nxe5 Bxe5 16. e4 Bc7 17. exd5 Qd6 18. Nf3 Qxd5 19. Be4 Qxd1 20. Rbxd1 Rb8 21. Bd5 Bd8 22. Bc4 Bf6 23. Ne5 Kg7 24. Nd7 Bxd7 25. Rxd7 b6 26. g3 Rbd8 27. Red1 Be7 28. R1d3 Bg5 29. f4 Bf6 30. Kg2 h6 31. Kf3 g5 32. f5 h5 33. g4 hxg4+ 34. hxg4 Rde8 35. Rb7 Re7 36. Rdd7 Rfe8 37. Rxe7 Bxe7 38. Bb5 1-0
+
+[Event "London: Grunfeld"]
+[Site "Qingdao CHN"]
+[Date "2023.12.17"]
+[Round "5.13"]
+[White "GM Dubov,Daniil"]
+[Black "IM Khusenkhojaev,Muhammad"]
+[WhiteElo "2710"]
+[BlackElo "2366"]
+[Result "1-0"]
+[ECO "A45"]
+[Opening "Queen's pawn game"]
+
+1. d4 Nf6 2. Bf4 g6 3. Nd2 d5 4. e3 Bg7 5. Ngf3 O-O 6. c3 b6 7. h4 c5 8. Ne5 h5 9. Be2 Nbd7 10. Ndf3 Bb7 11. Ng5 e6 12. g4 cxd4 13. exd4 hxg4 14. Bxg4 Nxe5 15. Bxe5 Nxg4 16. Qxg4 Bxe5 17. dxe5 d4 18. f3 dxc3 19. bxc3 Qd3 20. Kf2 Qxc3 21. Qf4 Rad8 22. h5 f6 23. hxg6 Qb2+ 24. Kg3 fxg5 25. Rh8+ Kxh8 26. g7+ Kxg7 27. Qxg5+ Kf7 28. Qf6+ 1-0
+
+[Event "London: Dutch"]
+[Site "Vrnjacka Banja SRB"]
+[Date "2024.10.20"]
+[Round "1.3"]
+[White "GM Grandelius,N"]
+[Black "FM Froeyman,H"]
+[WhiteElo "2650"]
+[BlackElo "2266"]
+[Result "1-0"]
+[ECO "A80"]
+[Opening "Dutch"]
+
+1. d4 f5 2. Bf4 Nf6 3. e3 d6 4. Nc3 e6 5. h3 Be7 6. g4 O-O 7. gxf5 Nd5 8. Nge2 Nxc3 9. Nxc3 exf5 10. Rg1 Kh8 11. Qf3 Nd7 12. Qg2 Bf6 13. O-O-O Nb6 14. h4 Qe8 15. f3 Qf7 16. Kb1 Be6 17. e4 fxe4 18. fxe4 Bc4 19. Bxc4 Nxc4 20. Nd5 Rae8 21. Bc1 Bd8 22. h5 Qd7 23. b3 Nb6 24. Nf4 Rf7 25. e5 dxe5 26. dxe5 Qc6 27. Qg4 Rd7 28. e6 1-0
+
+[Event "London: Dutch"]
+[Site "Chesterfield MO USA"]
+[Date "2024.10.18"]
+[Round "9.4"]
+[White "GM Jacobson,Brandon"]
+[Black "GM Zhou Jianchao"]
+[WhiteElo "2575"]
+[BlackElo "2590"]
+[Result "1-0"]
+[ECO "A80"]
+[Opening "Dutch"]
+
+1. d4 f5 2. Bf4 Nf6 3. e3 e6 4. Nf3 Nc6 5. a3 d6 6. Nc3 Ne7 7. Bg5 Ned5 8. Nxd5 exd5 9. c4 dxc4 10. Bxc4 h6 11. Bxf6 Qxf6 12. O-O Be7 13. b4 Bd7 14. a4 g5 15. b5 g4 16. Ne1 c6 17. bxc6 bxc6 18. d5 c5 19. Bb5 Bxb5 20. axb5 O-O 21. Nc2 Qc3 22. Qe2 Bf6 23. Ra3 Qe5 24. Qd3 c4 25. Qxc4 Rac8 26. Qd3 Qe4 27. Qxe4 fxe4 28. Nb4 Rc5 29. Nc6 Rxb5 30. Ra4 Re8 31. Rd1 Rb7 32. g3 Kg7 33. Ra6 Ra8 34. Nd4 Bxd4 35. Rxd4 Re7 36. Rxd6 a5 37. Ra4 Re5 38. Kg2 h5 39. h3 Kf7 40. hxg4 hxg4 41. Kf1 Rf5 42. Re6 Rxd5 43. Rexe4 Rg5 44. Ke2 Kf6 45. Rxg4 Rxg4 46. Rxg4 a4 47. Rb4 a3 48. Rb1 a2 49. Ra1 Kf5 50. f3 Ra3 51. Kf2 Kg5 52. Kg2 Ra8 53. e4 Ra7 54. Kh3 Rh7+ 55. Kg2 Ra7 56. f4+ Kh5 57. Kh3 Kg6 58. g4 Ra4 59. Kh4 Kf6 60. g5+ Kg6 61. Kg4 Kf7 62. Kf5 Ra5+ 63. e5 Ra6 64. e6+ Ke7 65. Kg6 Rxe6+ 66. Kg7 Ra6 67. f5 Ra7 68. f6+ Ke6+ 69. Kg6 1-0
+
+[Event "London: QGD 5...cxd4"]
+[Site "Bucharest ROU"]
+[Date "2024.03.23"]
+[Round "2.19"]
+[White "GM Moroni,L"]
+[Black " Veress,Armand"]
+[WhiteElo "2580"]
+[BlackElo "2098"]
+[Result "1-0"]
+[ECO "D00"]
+[Opening "Queen's pawn, Mason variation, Steinitz counter-gambit"]
+
+1. d4 d5 2. Bf4 c5 3. e3 Nc6 4. Nf3 Nf6 5. Nbd2 cxd4 6. exd4 a6 7. c3 Bf5 8. Nh4 Bg4 9. Qb3 Qd7 10. h3 Bh5 11. Bd3 e6 12. Ndf3 h6 13. g4 g5 14. Ne5 Nxe5 15. Bxe5 Be7 16. Nf3 Bg6 17. Bxg6 fxg6 18. Bh2 Bd6 19. Ne5 Bxe5 20. Bxe5 O-O 21. f3 Qb5 22. Qc2 Kh7 23. h4 gxh4 24. Rxh4 Ne4 25. Qh2 h5 26. Rxh5+ Kg8 27. Rh8+ Kf7 28. Qh7+ Ke8 29. Rxf8+ Kxf8 30. fxe4 1-0
+
+[Event "London: QGD 5...cxd4"]
+[Site "Tuapse RUS"]
+[Date "2021.09.07"]
+[Round "9.4"]
+[White "GM Petrov,N"]
+[Black " Gridnev,Selantiy"]
+[WhiteElo "2555"]
+[BlackElo "1961"]
+[Result "1-0"]
+[ECO "D02"]
+[Opening "Queen's bishop game"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. Nbd2 cxd4 6. exd4 Bf5 7. Bb5 Qb6 8. c4 dxc4 9. a4 a6 10. Nxc4 Qd8 11. Bxc6+ bxc6 12. O-O e6 13. Nce5 Qb6 14. Rc1 Qxb2 15. Nc4 Qb4 16. Nfe5 Rc8 17. Qe2 Nd5 18. Bd2 Qxa4 19. g4 Bg6 20. f4 Be7 21. f5 O-O 22. fxg6 hxg6 23. Ra1 Qc2 24. Rfc1 Qb3 25. Rcb1 Nc3 26. Qd3 Qxb1+ 27. Rxb1 Nxb1 28. Qxb1 c5 29. Qb7 Bf6 30. Nd7 Rfd8 31. Ncb6 1-0
+
+[Event "London: QGD 5...e6"]
+[Site "Karlsruhe GER"]
+[Date "2026.04.03"]
+[Round "3.76"]
+[White "GM Eljanov,P"]
+[Black " Berzioli,Pietro Maria"]
+[WhiteElo "2682"]
+[BlackElo "1977"]
+[Result "1-0"]
+[ECO "D02"]
+[Opening "Queen's bishop game"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 e6 4. e3 c5 5. Nbd2 Nc6 6. c3 Be7 7. Ne5 Nxe5 8. Bxe5 O-O 9. Bd3 b6 10. Qf3 Nd7 11. Bf4 f5 12. h4 Nf6 13. h5 h6 14. Qg3 Kh8 15. Nf3 Bd7 16. Ne5 Be8 17. Ng6+ Bxg6 18. hxg6 Ng8 19. O-O-O c4 20. Bc2 Qe8 21. f3 Rf6 22. Qh2 Rxg6 23. g4 fxg4 24. Bxg6 Qxg6 25. Rdg1 Nf6 26. fxg4 Ne4 27. Qh5 Qxh5 28. gxh5 Bg5 29. Rf1 Rf8 30. Bxg5 Rxf1+ 31. Rxf1 hxg5 32. Rf7 g4 33. Rf4 g3 34. Rg4 Kh7 35. Rg6 Nf6 36. Rxg3 Nxh5 37. Rg5 1-0
+
+[Event "London: QGD 5...e6"]
+[Site "London ENG"]
+[Date "2025.06.14"]
+[Round "8.2"]
+[White "GM Le Tuan Minh"]
+[Black " Sefton,Adam"]
+[WhiteElo "2598"]
+[BlackElo "2047"]
+[Result "1-0"]
+[ECO "A46"]
+[Opening "Queen's pawn game"]
+
+1. d4 Nf6 2. Nf3 e6 3. Bf4 d5 4. e3 c5 5. c3 Nc6 6. Nbd2 Be7 7. Bd3 O-O 8. Ne5 Bd7 9. Qf3 cxd4 10. exd4 Nxe5 11. Bxe5 Ne8 12. O-O f6 13. Bg3 Bd6 14. Rfe1 Bxg3 15. Qxg3 Qc7 16. Qh4 g6 17. Nf3 Nd6 18. Qg3 Rae8 19. Re3 f5 20. Qf4 Qb8 21. Ne5 Bb5 22. Bxb5 Nxb5 23. h4 Re7 24. h5 Rg7 25. Rg3 gxh5 26. Rxg7+ Kxg7 27. Qg3+ Kh8 28. Nf7+ Rxf7 29. Qxb8+ Kg7 30. Re1 Kf6 31. Qe5+ Kg6 32. Qxe6+ Rf6 33. Qe8+ 1-0
+
+[Event "London: QGD 5...Qb6"]
+[Site "Reykjavik ISL"]
+[Date "2026.03.25"]
+[Round "1.18"]
+[White "GM Cornette,M"]
+[Black "FM Bombek,P"]
+[WhiteElo "2535"]
+[BlackElo "2112"]
+[Result "1-0"]
+[ECO "D02"]
+[Opening "Queen's bishop game"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. Nbd2 Qb6 6. dxc5 Qxb2 7. Rb1 Qc3 8. Bb5 e6 9. O-O Bd7 10. Bd3 Be7 11. Rxb7 Na5 12. Be5 Qxc5 13. Nb3 Nxb3 14. cxb3 O-O 15. Qb1 Qc8 16. Rc7 Qd8 17. Rfc1 h6 18. Nd4 a6 19. b4 Ng4 20. Bg3 Bf6 21. Nc6 Bxc6 22. R7xc6 d4 23. Rd6 Qe7 24. exd4 e5 25. Rdc6 Bg5 26. Re1 Qd7 27. Rxa6 Rxa6 28. Bxa6 f5 29. Bxe5 f4 30. Bc4+ Kh8 31. Be6 1-0
+
+[Event "London: QGD 5...Qb6"]
+[Site "Van Nuys, CA USA"]
+[Date "2025.05.25"]
+[Round "4.2"]
+[White "GM Ali Marandi,C"]
+[Black "GM Baryshpolets,A"]
+[WhiteElo "2523"]
+[BlackElo "2571"]
+[Result "1-0"]
+[ECO "D02"]
+[Opening "Queen's bishop game"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. Nbd2 Qb6 6. dxc5 Qxb2 7. Rb1 Qc3 8. Bb5 Bd7 9. O-O e6 10. Ba4 Bxc5 11. Rxb7 Bb6 12. Bd6 Nb8 13. Ne5 Bxa4 14. Re7+ Kd8 15. Nxf7+ Kc8 16. Be5 Qb4 17. Nd6+ Kd8 18. Rxg7 Nbd7 19. a3 Qxa3 20. N2c4 dxc4 21. Bxf6+ Kc7 22. Be5 Qc5 23. Nb5+ 1-0
+
+[Event "London: QGD 5...Bg4"]
+[Site "Veli Losinj CRO"]
+[Date "2025.11.21"]
+[Round "7.3"]
+[White "GM Livaic,Leon"]
+[Black "FM Malada,V"]
+[WhiteElo "2550"]
+[BlackElo "2271"]
+[Result "1-0"]
+[ECO "D02"]
+[Opening "Queen's bishop game"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. Nbd2 Bg4 6. c3 e6 7. Qa4 Bxf3 8. Nxf3 a6 9. Ne5 Rc8 10. Nxc6 Qd7 11. Be2 c4 12. O-O Qxc6 13. Qc2 Bd6 14. Bxd6 Qxd6 15. Bf3 O-O 16. Rfe1 e5 17. dxe5 Qxe5 18. Rad1 Rfd8 19. Rd4 Rc7 20. Red1 Rcd7 21. Qa4 h5 22. Qa5 Qe6 23. h4 Qc6 24. b3 b6 25. Qxa6 cxb3 26. axb3 Qxc3 27. Qxb6 Qc8 28. b4 Rb7 29. Qa5 Qb8 30. Bxd5 Nxd5 31. Rxd5 Rxd5 32. Rxd5 Rb6 33. b5 g6 34. Qd2 Kh7 35. Qd3 Qe8 36. Rxh5+ Kg8 37. Rd5 Rb8 38. h5 Qe6 39. hxg6 Qxg6 40. Qxg6+ fxg6 41. f4 1-0
+
+[Event "London: QGD 5...Bg4"]
+[Site "Kuala Lumpur MAS"]
+[Date "2025.11.15"]
+[Round "8.5"]
+[White "GM Lalith,B"]
+[Black "GM Shyam,N"]
+[WhiteElo "2506"]
+[BlackElo "2423"]
+[Result "1-0"]
+[ECO "D00"]
+[Opening "Queen's pawn, Mason variation, Steinitz counter-gambit"]
+
+1. d4 d5 2. Bf4 c5 3. e3 Nc6 4. Nf3 Nf6 5. Nbd2 Bg4 6. c3 e6 7. Qb3 Qc8 8. Bb5 Nd7 9. h3 Bh5 10. Qa4 Be7 11. O-O a6 12. Bd3 c4 13. Bb1 b5 14. Qd1 g5 15. Bh2 f5 16. Bc2 g4 17. hxg4 Bxg4 18. b3 cxb3 19. Bxb3 Na5 20. Qc2 Rg8 21. Kh1 Ba3 22. Ng1 Qc6 23. f3 Bh5 24. e4 fxe4 25. fxe4 Nxb3 26. axb3 Be7 27. Nh3 Bg6 28. Nf4 dxe4 29. Nxg6 Rxg6 30. Nxe4 Nf6 31. Nxf6+ Bxf6 32. Rf2 Rc8 33. Raf1 Be7 34. Rf3 Kd7 35. d5 exd5 36. Rd1 Qe6 37. Rf5 Kc6 38. Re5 Qf7 39. Rexd5 Re6 40. c4 Kb7 41. Qd3 Qg6 42. Rd7+ Kb6 43. Qd5 1-0
+
+[Event "London: QGD 5...Nh5"]
+[Site "Munich GER"]
+[Date "2026.03.01"]
+[Round "8.1"]
+[White "GM Abasov,N"]
+[Black "IM Baum,Jonasz"]
+[WhiteElo "2587"]
+[BlackElo "2446"]
+[Result "1-0"]
+[ECO "D02"]
+[Opening "Queen's bishop game"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. Nbd2 Nh5 6. dxc5 Nxf4 7. exf4 g6 8. Bb5 Qc7 9. g3 Bg7 10. c3 O-O 11. O-O d4 12. Bxc6 dxc3 13. Be4 cxd2 14. Qxd2 Qxc5 15. Rac1 Qb6 16. b3 Bh3 17. Rfe1 Rac8 18. Ng5 Rxc1 19. Qxc1 Bd7 20. Qd2 Bc8 21. Rd1 Bg4 22. Bf3 Bxf3 23. Nxf3 Qc6 24. Kg2 Rc8 25. Qe3 a6 26. Qxe7 Bf6 27. Qd7 Kg7 28. Qxc6 Rxc6 29. Rd7 Rc2 30. a4 b5 31. axb5 axb5 32. Ne5 Bxe5 33. fxe5 Re2 34. Rd5 b4 35. Rb5 g5 36. Kf3 Re1 37. Kg4 Re2 38. Kf3 Re1 39. h4 gxh4 40. gxh4 Kg6 41. Kf4 Rh1 42. Rb6+ Kg7 43. Kg4 Rg1+ 44. Kf5 Rf1 45. f4 Rh1 46. Rb7 Rxh4 47. e6 Rh5+ 48. Kg4 Rc5 49. Rxf7+ Kg8 50. f5 Rc3 51. Rb7 Rxb3 52. f6 Rb1 53. Rb8# 1-0
+
+[Event "London: QGD 5...Nh5"]
+[Site "Saint Louis USA"]
+[Date "2026.02.28"]
+[Round "7.19"]
+[White "GM Kevlishvili,Robby"]
+[Black "IM Ostrovskiy,Al"]
+[WhiteElo "2527"]
+[BlackElo "2367"]
+[Result "1-0"]
+[ECO "D02"]
+[Opening "Queen's bishop game"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. Nbd2 Nh5 6. dxc5 Nxf4 7. exf4 g6 8. Nb3 Bh6 9. g3 O-O 10. Bg2 Bg7 11. c3 a5 12. O-O e6 13. Re1 a4 14. Nbd4 Qe7 15. Rc1 Qxc5 16. Qd2 a3 17. b4 Qb6 18. Nxc6 bxc6 19. Ne5 Rd8 20. h4 Ba6 21. h5 c5 22. hxg6 hxg6 23. Bh3 Rd6 24. Rb1 cxb4 25. Rxb4 Qc7 26. Reb1 Rdd8 27. Qe3 Re8 28. Rb6 Bc8 29. Bf1 Bf8 30. Rc6 Qa5 31. Rb5 Qa4 32. Rbb6 Qc2 33. Rc7 Re7 34. Qc5 Ra5 35. Qc6 Rxc7 36. Qxc7 1-0
+
+[Event "London: QGD 5...Bf5"]
+[Site "Calgary CAN"]
+[Date "2023.07.23"]
+[Round "3.4"]
+[White "GM Gupta,Ab"]
+[Black " Khodjimatov,Sherzod"]
+[WhiteElo "2629"]
+[BlackElo "2109"]
+[Result "1-0"]
+[ECO "D02"]
+[Opening "Queen's bishop game"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. Nbd2 Bf5 6. dxc5 e6 7. b4 Nxb4 8. Bb5+ Nd7 9. Nd4 Bg6 10. N2b3 a6 11. Ba4 Rc8 12. O-O b5 13. cxb6 Qxb6 14. Qd2 Rc4 15. Rab1 Nxa2 16. Na5 Rb4 17. Nc4 dxc4 18. Nf3 Bd3 19. Bxd7+ Kxd7 20. Rbd1 f6 21. Ne1 Ke8 22. Nxd3 cxd3 23. Qxd3 Be7 24. Qd7+ Kf7 25. Rd6 Qb7 26. Qxe6+ Kg6 27. Rd7 Qe4 28. Qxa2 Rd8 29. f3 Qxf4 30. exf4 Bc5+ 31. Kh1 Rxd7 32. Qe6 Rd2 33. Qe8+ Kh6 34. Qc8 Rxc2 35. Qh3+ Kg6 36. Re1 h5 37. g4 hxg4 38. fxg4 Kf7 39. Qh5+ g6 40. Qh7+ Kf8 41. Qxg6 1-0
+
+[Event "London: QGD 5...Bf5"]
+[Site "chess24.com INT"]
+[Date "2022.04.01"]
+[Round "5.8"]
+[White "GM Gupta,Ab"]
+[Black "GM Iniyan,P"]
+[WhiteElo "2628"]
+[BlackElo "2516"]
+[Result "1-0"]
+[ECO "A45"]
+[Opening "Queen's pawn game"]
+
+1. d4 Nf6 2. Bf4 d5 3. e3 c5 4. Nf3 Nc6 5. Nbd2 Bf5 6. dxc5 e6 7. b4 Nxb4 8. Bb5+ Nc6 9. Nd4 Qa5 10. O-O Bxc5 11. N2b3 Qb6 12. Nxc5 Qxc5 13. Be5 Bg6 14. Qf3 Nd7 15. Bxc6 bxc6 16. Qg3 Nxe5 17. Qxe5 O-O 18. h4 Rfe8 19. h5 f6 20. Qh2 Bf7 21. h6 e5 22. Nf5 g6 23. Ng7 Reb8 24. Qh4 Qe7 25. f4 Rb4 26. Rab1 Rab8 27. Rxb4 Rxb4 28. a3 Rb2 29. Qg4 exf4 30. exf4 f5 31. Nxf5 Qe6 32. Qg5 Rb8 33. Ng7 Qe3+ 34. Kh2 d4 35. Nf5 Qe2 36. Qf6 Kf8 37. Qh8+ Bg8 38. Qg7+ Ke8 39. Qxg8+ Kd7 40. Qxh7+ 1-0
+
+[Event "London: Benoni ...Qb6"]
+[Site "Stavanger NOR"]
+[Date "2022.06.03"]
+[Round "1.3"]
+[White " Gjestemoen-VonHirsch,Andre"]
+[Black "GM Chatalbashev,B"]
+[WhiteElo "2236"]
+[BlackElo "2529"]
+[Result "1-0"]
+[ECO "A45"]
+[Opening "Queen's pawn game"]
+
+1. d4 Nf6 2. Bf4 c5 3. e3 Qb6 4. Na3 d6 5. Nc4 Qc7 6. c3 Be6 7. Nd2 g6 8. Ngf3 Bg7 9. Be2 Nh5 10. Bg3 Nxg3 11. hxg3 h6 12. O-O Nd7 13. Ne1 O-O 14. Nd3 Nf6 15. Bf3 Rad8 16. Re1 Bc8 17. Qe2 e5 18. dxe5 dxe5 19. Red1 b6 20. e4 Nh7 21. Nc4 Ng5 22. Rd2 Ba6 23. b3 f5 24. Rad1 Bb7 25. Ne1 Rxd2 26. Nxd2 Rd8 27. exf5 Nxf3+ 28. Ndxf3 Rxd1 29. Qxd1 gxf5 30. Nh4 Qf7 31. Qd6 Kh7 32. c4 Be4 33. Nd3 Qf6 34. Qd7 f4 35. f3 Bc6 36. Qf5+ Qxf5 37. Nxf5 fxg3 38. Nxg3 Kg6 39. Kf2 h5 40. Ne4 h4 41. Nd6 Kf6 42. Nc8 e4 43. Nxa7 Bb7 44. fxe4 Bxe4 45. Nf4 Kf5 46. Ne2 Bb1 47. a4 Be5 48. Nc8 Bc7 49. Ne7+ Kg4 50. Nd5 Bd8 51. Nec3 Bd3 52. Nb5 Kf5 53. Nd6+ Ke6 54. Nb7 Bg5 55. a5 Kd7 56. axb6 Bc2 57. Nxc5+ Kc8 58. b7+ Kb8 59. Nb4 1-0
+
+[Event "London: Benoni ...Qb6"]
+[Site "Austria AUT"]
+[Date "2022.03.12"]
+[Round "10.3"]
+[White "IM Berchtenbreiter,M"]
+[Black " Bezler,R"]
+[WhiteElo "2507"]
+[BlackElo "2204"]
+[Result "1-0"]
+[ECO "A45"]
+[Opening "Queen's pawn game"]
+
+1. d4 Nf6 2. Bf4 c5 3. e3 Qb6 4. b3 d5 5. Nc3 g6 6. Qd2 cxd4 7. exd4 Bg7 8. Bb5+ Bd7 9. Bxb8 Bxb5 10. Be5 Qc6 11. f3 Rc8 12. Nxb5 Qxb5 13. Ne2 O-O 14. O-O Rfd8 15. Rfc1 a6 16. Rab1 Ne8 17. c3 Nd6 18. Bxg7 Kxg7 19. Nf4 Kg8 20. a4 Qc6 21. Qe2 e6 22. Nd3 Ne8 23. Ne5 Qd6 24. Qd2 Rc7 25. a5 Qa3 26. Ra1 Qxb3 27. Rcb1 Qxc3 28. Qxc3 Rxc3 29. Rxb7 Rdc8 30. Rxf7 Rc1+ 31. Rxc1 Rxc1+ 32. Kf2 Ra1 33. Re7 Ra2+ 34. Ke3 Nd6 35. g4 Rxa5 36. Rxe6 Nb5 37. Re7 Ra3+ 38. Kf4 Nxd4 39. Kg5 Rb3 40. Kh6 Kf8 41. Rxh7 Nxf3 1-0
+
+[Event "London: Benoni ...Nd5"]
+[Site "Austria AUT"]
+[Date "2022.11.04"]
+[Round "2.2"]
+[White "GM Korpa,B"]
+[Black "IM Livaic,Leon"]
+[WhiteElo "2500"]
+[BlackElo "2582"]
+[Result "1-0"]
+[ECO "A45"]
+[Opening "Queen's pawn game"]
+
+1. d4 Nf6 2. Bf4 c5 3. e3 Nd5 4. Bg3 Qb6 5. c4 Nf6 6. Nc3 Qxb2 7. Nge2 Qa3 8. Rb1 cxd4 9. exd4 Qa5 10. Rb5 Qd8 11. Nf4 d6 12. Be2 g6 13. h4 a6 14. Rb3 Qa5 15. O-O Bg7 16. Ncd5 Nbd7 17. Re3 O-O 18. Nxe7+ Kh8 19. h5 gxh5 20. Nfd5 Nxd5 21. Nxd5 Nf6 22. Nxf6 Bxf6 23. Bxd6 Rg8 24. Be5 Bxe5 25. Rxe5 Qxa2 26. Rxh5 Bd7 27. Qb1 Qxb1 28. Rxb1 a5 29. Bd3 Rg7 30. Be4 f5 31. Bxb7 Rb8 32. Be4 Rxb1+ 33. Bxb1 Rg4 34. Bxf5 Bxf5 35. Rxf5 Rxd4 36. Rxa5 Rxc4 37. Ra7 Kg8 38. Kh2 h6 39. Kg3 Rc2 40. f4 Rb2 41. Kf3 Rc2 42. Re7 Ra2 43. Rd7 Rb2 44. g3 Rb1 45. Kg4 Rb3 46. Re7 Ra3 47. Kh4 Rf3 48. Kg4 Ra3 49. f5 Rb3 50. Kh4 Rb1 51. Kh5 Kf8 52. Rh7 Rh1+ 53. Kg6 Rg1 54. Rh8+ Ke7 55. f6+ Kd7 56. f7 Rxg3+ 57. Kh7 1-0
+
+[Event "London: Benoni quick c5"]
+[Site "Scarborough, WA AUS"]
+[Date "2023.01.07"]
+[Round "9.6"]
+[White "GM Tin,Jingyao"]
+[Black " Hare,T"]
+[WhiteElo "2598"]
+[BlackElo "2017"]
+[Result "1-0"]
+[ECO "A43"]
+[Opening "Old Benoni"]
+
+1. d4 c5 2. d5 f5 3. e4 fxe4 4. Nc3 Nf6 5. Nge2 d6 6. Ng3 a6 7. Ncxe4 Nxe4 8. Nxe4 g6 9. Bd3 Nd7 10. Ng5 Ne5 11. Be4 Bg7 12. f4 Bg4 13. Qd2 Nc4 14. Qd3 Nxb2 15. Bxg6+ hxg6 16. Qxg6+ Kd7 17. Qxg7 Qa5+ 18. Kf2 Nc4 19. Ne4 Bf5 20. Nf6+ Kc7 21. Re1 Rae8 22. Nxe8+ Rxe8 23. Rxe7+ Rxe7 24. Qxe7+ Bd7 25. Qe1 Qa4 26. Qe4 Qb4 27. Be3 Qc3 28. Re1 b5 29. h3 Qf6 30. Re2 Qh4+ 31. Kg1 Qg3 32. Qe7 Nb6 33. Qg5 1-0
+
+[Event "London: Benoni quick c5"]
+[Site "Hamilton, ON CAN"]
+[Date "2022.07.16"]
+[Round "8.8"]
+[White "GM Mikhalevski,V"]
+[Black " Moura,E"]
+[WhiteElo "2532"]
+[BlackElo "2100"]
+[Result "1-0"]
+[ECO "A43"]
+[Opening "Old Benoni defence"]
+
+1. d4 c5 2. d5 Nf6 3. Nc3 d6 4. e4 g6 5. Bb5+ Bd7 6. a4 Bg7 7. Nf3 O-O 8. h3 Na6 9. O-O Nc7 10. Bc4 a6 11. e5 dxe5 12. Nxe5 Rb8 13. Bf4 b5 14. axb5 axb5 15. Nxd7 Nxd7 16. Bxc7 Qxc7 17. Nxb5 Qf4 18. Be2 Bxb2 19. Ra7 Rfd8 20. g3 Qf6 21. c4 Nb6 22. Qc2 Ra8 23. Rb1 Rxa7 24. Nxa7 Bd4 25. Bf1 Ra8 26. Nc6 Nd7 27. Qe2 Ra3 28. Kg2 Ne5 29. Nxd4 cxd4 30. c5 d3 31. Qe4 g5 32. c6 Ra2 33. Qe3 Nc4 34. Qc5 Nd2 35. c7 Ne4 36. c8=Q+ Kg7 37. Qe3 Rxf2+ 38. Kg1 Rf3 39. Qxe4 Rxg3+ 40. Bg2 1-0
