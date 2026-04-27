@@ -1,0 +1,31 @@
+{
+  "name": "ChessMole",
+  "short_name": "ChessMole",
+  "description": "A chess training game where you play moves and answer questions about the board.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a2d67",
+  "theme_color": "#0a2d67",
+  "icons": [
+    {
+      "src": "molelogo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "molelogo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "molelogo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
