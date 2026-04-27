@@ -1,0 +1,699 @@
+[Event "Caro-Kann: Advance"]
+[Site "San Vicente ESP"]
+[Date "2026.04.01"]
+[Round "1.10"]
+[White " Lopez Martinez,Jaime"]
+[Black "GM Piorun,K"]
+[WhiteElo "2096"]
+[BlackElo "2536"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. Nd2 e6 5. Nb3 Nd7 6. Nf3 h6 7. Be2 Ne7 8. Bd2 Nc8 9. O-O Be7 10. a4 O-O 11. Ne1 c5 12. Nxc5 Nxc5 13. dxc5 Bxc5 14. c3 a6 15. Nf3 Qc7 16. Qc1 Be4 17. b4 Ba7 18. c4 dxc4 19. Qxc4 Qxc4 20. Bxc4 Rd8 21. Rfd1 Ne7 22. b5 Bxf3 23. gxf3 Rac8 24. Bf1 axb5 25. axb5 Bd4 26. Ba5 Rd5 27. Rac1 Rxc1 28. Rxc1 Bxe5 29. Bc7 Bb2 30. Rc2 Ba3 31. b6 Rd1 32. Kg2 Nd5 33. Ra2 Bc5 34. Be2 Rd4 35. Rb2 f6 36. Ba6 bxa6 37. b7 Ba7 38. Bb6 Nxb6 39. Rxb6 Bb8 40. Rxe6 Kf7 41. Rxa6 Rb4 0-1
+
+[Event "Caro-Kann: Advance"]
+[Site "Nara Village IND"]
+[Date "2026.03.21"]
+[Round "8.3"]
+[White " Karan J P"]
+[Black "IM Aronyak,Ghosh"]
+[WhiteElo "2077"]
+[BlackElo "2524"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. h4 h5 5. Bd3 Bxd3 6. Qxd3 e6 7. Nf3 c5 8. dxc5 Bxc5 9. c4 Bb4+ 10. Nc3 dxc4 11. Qxc4 Nc6 12. O-O Bxc3 13. Qxc3 Nge7 14. Bg5 Qa5 15. Qe3 Nf5 16. Qe2 Rc8 17. Rfd1 O-O 18. a3 Qa4 19. Rac1 Na5 20. Nh2 Rxc1 21. Rxc1 Nc6 22. Re1 Qa5 23. Nf3 Rc8 24. Nd2 Qd5 25. Qxh5 Nxe5 26. Ne4 Nd3 27. Re2 Nd4 28. Re3 Nf4 29. Qg4 Nfe2+ 30. Kh2 f5 31. Nf6+ gxf6 32. Qh5 fxg5 33. Qg6+ Kf8 34. Qf6+ Ke8 35. hxg5 Qd6+ 36. g3 Qe7 37. Qe5 Qxg5 38. Kg2 Kf7 0-1
+
+[Event "Caro-Kann: Advance"]
+[Site "Nara Village IND"]
+[Date "2026.03.19"]
+[Round "5.2"]
+[White " Kumar,Piyush"]
+[Black "IM Aronyak,Ghosh"]
+[WhiteElo "1940"]
+[BlackElo "2524"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. c4 e6 5. Nc3 Ne7 6. Nf3 Bg4 7. Be3 Nf5 8. cxd5 cxd5 9. h3 Bxf3 10. Bb5+ Nc6 11. Qxf3 Be7 12. Rd1 O-O 13. O-O Rc8 14. Ba4 Nxe3 15. fxe3 Qb6 16. Rf2 Bg5 17. Qg3 Qd8 18. Rf3 Bh4 19. Qh2 Qb6 20. g3 Be7 21. Qf2 f6 22. exf6 Rxf6 23. Rxf6 Bxf6 24. Kg2 Rf8 25. Rf1 g6 26. h4 Ne7 27. Bb3 Nf5 28. Kh3 Be7 29. Qd2 Kg7 30. Qd3 Qd8 31. e4 dxe4 32. Qxe4 Nd6 33. Rxf8 Qxf8 34. Qe5+ Bf6 35. Qxe6 Bxd4 36. Bd5 Qf1+ 37. Bg2 Qf5+ 38. Qxf5 gxf5 39. g4 Kf6 40. gxf5 Kxf5 41. Bf1 Bxc3 42. bxc3 Kf4 43. Bd3 h6 44. Bg6 b6 45. Bd3 a5 46. a4 Ne4 47. Bxe4 Kxe4 48. Kg4 Kd5 49. Kf5 h5 50. Kf4 b5 51. Ke3 bxa4 52. Kd3 a3 0-1
+
+[Event "Caro-Kann: Advance"]
+[Site "Quenza FRA"]
+[Date "2025.07.06"]
+[Round "3.6"]
+[White "CM Stoenescu,R"]
+[Black "GM Maurizzi,MarcAndria"]
+[WhiteElo "2009"]
+[BlackElo "2604"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. Nf3 e6 5. Be2 Ne7 6. Be3 Ng6 7. c3 Nd7 8. b4 f6 9. exf6 Qxf6 10. Nbd2 Bd6 11. Nf1 e5 12. Ng3 e4 13. Nxf5 Qxf5 14. Nd2 Nh4 15. Bf1 O-O 16. g3 Ng6 17. h4 Qf7 18. h5 Ne7 19. Qg4 Nf5 20. Rh2 Bxg3 21. fxg3 Nxe3 22. Qh3 Nc2+ 23. Kd1 Nxa1 24. Kc1 e3 0-1
+
+[Event "Caro-Kann: Advance"]
+[Site "Mumbai IND"]
+[Date "2025.06.17"]
+[Round "2.3"]
+[White " Rachit H Gurnani"]
+[Black "GM Paichadze,L"]
+[WhiteElo "1976"]
+[BlackElo "2529"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. h4 h5 5. Bg5 Qb6 6. Bd3 Bxd3 7. Qxd3 e6 8. Nd2 c5 9. c4 Nc6 10. Ngf3 cxd4 11. O-O Nge7 12. Rfc1 Qa6 13. a3 Ng6 14. b4 Ngxe5 15. Nxe5 Nxe5 16. Qxd4 f6 17. cxd5 Rd8 18. Qe4 Qd3 19. Qe1 Qxd5 20. Ne4 Nd3 21. Qe3 Nxc1 22. Bxf6 Qd1+ 23. Kh2 gxf6 24. Qg3 Qg1+ 0-1
+
+[Event "Caro-Kann: Advance"]
+[Site "Teplice CZE"]
+[Date "2025.06.16"]
+[Round "3.20"]
+[White "WFM Nguyen Thu Giang"]
+[Black "GM Laurusas,T"]
+[WhiteElo "2065"]
+[BlackElo "2566"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. h4 Qc8 5. c4 e6 6. Nc3 h6 7. g4 Bh7 8. Bd3 Bxd3 9. Qxd3 Ne7 10. b3 Nd7 11. Be3 Qd8 12. Nf3 h5 13. gxh5 Rxh5 14. Bg5 Qa5 15. Kf1 Qa6 16. Qe2 Rh8 17. Rg1 Nf5 18. cxd5 Qxe2+ 19. Nxe2 exd5 20. Ng3 Nxg3+ 21. fxg3 Ba3 22. Re1 Nf8 23. Kg2 a5 24. Bc1 Bb4 25. Re2 Ne6 26. Rd1 a4 27. a3 Be7 28. b4 Kd7 29. Ne1 b6 30. Nc2 Rh7 31. Rf1 g5 32. h5 Rxh5 33. Rxf7 Rah8 34. Kf3 Rh1 35. Bd2 Rf1+ 36. Rf2 Rxf2+ 37. Kxf2 Rh2+ 38. Ke1 Rh3 39. Kf2 Ke8 40. Rf5 Rh2+ 41. Ke1 g4 42. Rf2 Rh3 43. Rg2 Rh1+ 44. Ke2 Kd7 45. Kd3 c5 46. bxc5 bxc5 47. dxc5 Nxc5+ 48. Kd4 Ke6 49. Bb4 Rd1+ 50. Kc3 Ne4+ 51. Kb2 Bg5 52. Bc3 Bc1+ 0-1
+
+[Event "Caro-Kann: Advance"]
+[Site "Sitges ESP"]
+[Date "2024.12.12"]
+[Round "1.7"]
+[White " Fondrat,Johan"]
+[Black "GM Gorshtein,Ido"]
+[WhiteElo "2057"]
+[BlackElo "2542"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. h4 h5 5. Bd3 Bxd3 6. Qxd3 Qa5+ 7. Nd2 e6 8. Ngf3 Nh6 9. O-O Nf5 10. c4 Be7 11. g3 O-O 12. b3 Rd8 13. Bb2 c5 14. dxc5 Nc6 15. cxd5 Rxd5 16. Qc3 Qxc3 17. Bxc3 Bxc5 18. Kg2 Rad8 19. Rae1 Nb4 20. Ra1 Nd3 21. a4 Bxf2 22. Rxf2 Ne3+ 23. Kg1 Nxf2 24. Kxf2 Rd3 25. Bd4 Nc2 26. Ke2 Nxd4+ 27. Kxd3 Nxf3+ 28. Ke2 Nxd2 29. Rd1 f6 30. Rxd2 Rxd2+ 31. Kxd2 fxe5 32. Ke3 Kf7 33. Ke4 Kf6 34. a5 a6 35. b4 g6 0-1
+
+[Event "Caro-Kann: Advance"]
+[Site "Tegernsee GER"]
+[Date "2024.10.29"]
+[Round "4.7"]
+[White " Humbert,Arthur"]
+[Black "GM Amar,Elham"]
+[WhiteElo "1975"]
+[BlackElo "2540"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. h4 h5 5. Bd3 Bxd3 6. Qxd3 Qa5+ 7. Nc3 e6 8. Bd2 Qa6 9. Qxa6 Nxa6 10. Nce2 c5 11. c3 Ne7 12. Nh3 Nf5 13. Ng5 Rc8 14. Rh3 Be7 15. Ng3 Nxg3 16. Rxg3 cxd4 17. cxd4 O-O 18. Kd1 Rc4 19. Rd3 Bxg5 20. hxg5 Rfc8 21. Bc3 Kh7 22. Kd2 Kg6 23. Rf3 b5 24. a3 Nb8 25. Rh1 a5 26. b3 R4c7 27. Bxa5 Rc2+ 28. Ke3 Ra2 29. Bd2 Rcc2 30. Rd1 Rcb2 31. Bb4 Nc6 32. Kf4 Nxb4 33. axb4 Rxf2 34. Rc1 Rxg2 35. Rc5 Rg4+ 36. Ke3 Rb2 37. Rf1 Rxb3+ 38. Kd2 Rxd4+ 39. Ke2 Rbxb4 40. Rc7 Rf4 41. Rh1 Rbe4+ 42. Kd2 Rxe5 43. Rc8 Rxg5 44. Rg8 b4 45. Ke3 e5 46. Rh8 b3 47. Rb8 Rg3+ 48. Ke2 Ra4 49. Kf2 h4 50. Rc1 Ra2+ 51. Kf1 h3 52. Rh8 h2 53. Rc6+ Kg5 54. Rxh2 Rxh2 55. Rc7 b2 56. Rb7 Rc3 57. Kg1 Rd2 58. Rxb2 Rxb2 59. Kf1 d4 60. Ke1 e4 61. Kf1 f5 62. Ke1 Kf6 63. Kf1 g5 64. Ke1 g4 65. Kf1 f4 66. Ke1 g3 67. Kf1 f3 68. Ke1 e3 69. Kf1 d3 70. Ke1 Ra2 71. Kf1 Ra8 72. Ke1 Rcc8 73. Kf1 Rh8 74. Ke1 g2 75. Kd1 g1=B 76. Ke1 Bh2 77. Kd1 Bd6 78. Ke1 Bf8 79. Kd1 f2 80. Kc1 f1=B 81. Kd1 Bh3 82. Ke1 Bc8 83. Kd1 Ke7 84. Ke1 Ke8 85. Kf1 Bb7 86. Ke1 Ra1# 0-1
+
+[Event "Caro-Kann: Advance"]
+[Site "Chesterfield MO USA"]
+[Date "2024.10.14"]
+[Round "3.8"]
+[White " Xia,Joshua"]
+[Black "GM Nyzhnyk,I"]
+[WhiteElo "2012"]
+[BlackElo "2571"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. h4 Qb6 5. g4 Bd7 6. c4 h5 7. gxh5 Bf5 8. Nc3 e6 9. Bh3 Ne7 10. Bxf5 Nxf5 11. Nge2 Rxh5 12. Ng3 Rxh4 13. Rxh4 Nxh4 14. c5 Qb4 15. Nge2 b6 16. a3 Qc4 17. b3 Qa6 18. b4 Qc4 19. Be3 Be7 20. Rc1 Qa6 21. Nf4 g6 22. a4 bxc5 23. dxc5 Nd7 24. b5 Qb7 25. Nd3 d4 26. Bxd4 cxb5 27. c6 Qxc6 28. Nxb5 Qh1+ 29. Ke2 Qe4+ 30. Be3 Kf8 31. Qh1 Qg4+ 32. f3 Qxa4 33. Nd6 Kg7 34. Rc7 Nxe5 35. Nxf7 Qa2+ 36. Kf1 Nxd3 37. Ne5 Qb1+ 38. Bc1 Nxe5 39. Rxe7+ Kf8 40. Qxh4 Qxc1+ 41. Kg2 Qg1+ 42. Kxg1 Nxf3+ 43. Kf2 Nxh4 44. Rh7 Kg8 45. Rxh4 a5 46. Ra4 Kg7 0-1
+
+[Event "Caro-Kann: Advance"]
+[Site "Bydgoszcz POL"]
+[Date "2024.08.27"]
+[Round "2.13"]
+[White " Syrkiewicz,Michal"]
+[Black "GM Kazakouski,Valery"]
+[WhiteElo "2086"]
+[BlackElo "2588"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. h4 h5 5. c4 e6 6. Nc3 dxc4 7. Bxc4 Nd7 8. Nf3 Bg4 9. Be2 Ne7 10. Ng5 Bxe2 11. Nxe2 Nf5 12. Ng3 g6 13. Nxf5 gxf5 14. Rh3 Nb6 15. Rb3 Qd5 16. Kf1 c5 17. Be3 Rd8 18. Rd3 c4 19. Rd2 Be7 20. Rc1 Qb5 21. Qe2 Qa5 22. a3 Nd5 23. g3 b5 24. Nh3 Qa6 25. Kg1 Qb7 26. Qf3 Rd7 27. a4 a6 28. axb5 axb5 29. Ra1 Bd8 30. Nf4 Kf8 31. Nxd5 Kg7 32. Bf4 Qxd5 33. Qxd5 Rxd5 34. Ra6 Be7 35. Bg5 Bxg5 36. hxg5 h4 37. Kh2 Rhd8 38. Ra5 Rxe5 39. gxh4 Re4 40. Kg3 Rg4+ 41. Kf3 Rd5 42. Ke3 Re4+ 43. Kf3 Rxh4 44. Ke3 Re4+ 45. Kf3 e5 0-1
+
+[Event "Caro-Kann: Classical"]
+[Site "Minsk BLR"]
+[Date "2025.07.12"]
+[Round "2.1"]
+[White " Strizhnev,Ivan"]
+[Black "GM Lazavik,Denis"]
+[WhiteElo "1903"]
+[BlackElo "2580"]
+[Result "0-1"]
+[ECO "B15"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Nxf6+ exf6 6. c3 Bd6 7. Bd3 O-O 8. Qc2 Re8+ 9. Ne2 h5 10. O-O h4 11. h3 Nd7 12. Be3 Nf8 13. Rad1 Be6 14. c4 Rc8 15. Qd2 Ng6 16. f4 f5 17. b4 Qe7 18. Rf3 Bxb4 19. Qc2 Qd7 20. Qb1 Ba5 21. d5 cxd5 22. cxd5 Bxd5 23. Bxf5 Qc6 24. Rc1 Bxf3 25. Rxc6 Rxc6 26. Nd4 Rxe3 27. Nxf3 Bb6 28. Kh1 Nxf4 29. Bh7+ Kh8 30. Be4 Rc4 31. Ng5 Rexe4 32. Nxf7+ Kg8 33. Nd6 Nd3 0-1
+
+[Event "Caro-Kann: Classical"]
+[Site "Roquetas de Mar ESP"]
+[Date "2025.01.02"]
+[Round "1.3"]
+[White "WFM Hu,Jiani"]
+[Black "GM Grigoryan,K2"]
+[WhiteElo "2095"]
+[BlackElo "2572"]
+[Result "0-1"]
+[ECO "B15"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Nxf6+ exf6 6. c3 Bd6 7. Bd3 O-O 8. Qc2 Re8+ 9. Ne2 h5 10. O-O Qc7 11. h3 c5 12. Be3 c4 13. Bh7+ Kh8 14. Bf5 Nc6 15. Bxc8 Qxc8 16. Nf4 Bxf4 17. Bxf4 Ne7 18. Rfe1 Qc6 19. Re2 Ng6 20. Bg3 h4 21. Bh2 Rxe2 22. Qxe2 Re8 23. Qd2 Qd5 24. Re1 Re6 25. Kf1 a6 26. Qd1 Ne7 27. Qg4 g5 28. Rxe6 Qxe6 29. Qxe6 fxe6 30. f4 gxf4 31. Bxf4 Kg7 32. Ke2 Kg6 33. Kf3 Kf5 34. Be3 e5 35. dxe5 fxe5 36. Bf2 e4+ 37. Ke2 Ng6 38. g3 hxg3 39. Bxg3 Ne7 40. Bd6 Nd5 41. Bg3 Kg5 42. Kf2 b5 43. Ke2 Kf5 44. Bd6 Ke6 45. Bg3 Ne7 46. Bf4 Nf5 47. Kf2 Kf6 48. Kg2 Kg6 49. Kf2 Kh5 50. Bg3 Kg5 51. Kg2 Ne3+ 52. Kf2 Nd1+ 53. Ke2 Nxb2 54. Ke3 Kf5 55. h4 Nd3 56. h5 b4 57. Kd2 b3 58. axb3 cxb3 59. c4 a5 60. Bd6 a4 61. Kc3 Kg5 62. Ba3 Kxh5 63. c5 Ne5 64. Bc1 Kg4 65. Kd4 Kf5 66. Ke3 Nc4+ 67. Kd4 b2 68. Bxb2 Nxb2 69. c6 Ke6 70. Kxe4 a3 71. Kd4 a2 0-1
+
+[Event "Caro-Kann: Classical"]
+[Site "Sitges ESP"]
+[Date "2024.07.22"]
+[Round "1.2"]
+[White " Najar Arrieta,Oriol"]
+[Black "GM Berdayes Ason,Dylan Isidro"]
+[WhiteElo "2076"]
+[BlackElo "2519"]
+[Result "0-1"]
+[ECO "B15"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Nxf6+ exf6 6. c3 Bd6 7. Bd3 O-O 8. Qc2 Re8+ 9. Ne2 h5 10. O-O h4 11. h3 Nd7 12. Be3 Nf8 13. Rae1 Be6 14. c4 Rc8 15. Nc3 Bb8 16. Qd2 f5 17. d5 cxd5 18. cxd5 Qd6 19. f4 Bd7 20. Qf2 Ng6 21. Bxa7 Rxe1 22. Rxe1 Bxa7 23. Qxa7 Nxf4 24. Bf1 Nxh3+ 25. Kh1 Nf4 26. Qxb7 Rb8 27. Qa6 Qc5 28. Qc4 Qf2 29. Rb1 Rc8 30. Qb3 h3 31. gxh3 Re8 32. Rc1 Nh5 33. Ne2 Rxe2 0-1
+
+[Event "Caro-Kann: Classical"]
+[Site "Hilversum NED"]
+[Date "2024.06.22"]
+[Round "3.9"]
+[White " Leenes,Robert"]
+[Black "GM Beerdsen,Thomas"]
+[WhiteElo "2052"]
+[BlackElo "2513"]
+[Result "0-1"]
+[ECO "B15"]
+[Opening "Caro-Kann"]
+
+1. d4 d5 2. Nc3 c6 3. e4 dxe4 4. Nxe4 Nf6 5. Nxf6+ exf6 6. Nf3 Bd6 7. Bd3 O-O 8. Be3 Re8 9. Qd2 Na6 10. O-O Nb4 11. c3 Nxd3 12. Qxd3 Qa5 13. Qd2 Bg4 14. Bf4 Bxf3 15. Bxd6 Bxg2 16. Kxg2 Qd5+ 17. f3 Qxd6 18. Rae1 h5 19. Rf2 Rxe1 20. Qxe1 Qe6 21. Qxe6 fxe6 22. Rd2 Kf7 23. Kf2 Kg6 24. c4 Kf5 25. b4 a5 26. b5 cxb5 27. cxb5 Rc8 28. b6 Rc6 29. Rb2 Kf4 30. Ke2 g5 0-1
+
+[Event "Caro-Kann: Classical"]
+[Site "FIDE Online Arena INT"]
+[Date "2024.05.22"]
+[Round "11.15"]
+[White "WFM Jimenez Salas,Maria Teresa"]
+[Black "GM Kosteniuk,A"]
+[WhiteElo "1900"]
+[BlackElo "2501"]
+[Result "0-1"]
+[ECO "B15"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Nxf6+ exf6 6. c3 Bd6 7. Bd3 Na6 8. Ne2 Nc7 9. Qc2 h5 10. O-O Nd5 11. a3 Kf8 12. c4 Ne7 13. Be3 g6 14. Nc3 Bb8 15. Rad1 Qc7 16. f4 Kg7 17. Bc1 Rd8 18. Be4 Bf5 19. Qf2 a5 20. Rfe1 Ba7 21. c5 Bxe4 22. Nxe4 Nf5 23. Rd3 Rd7 24. Red1 Re8 25. Ng3 Nxg3 26. Qxg3 f5 27. Qf3 Re4 28. g3 b6 29. Kg2 Rd5 30. cxb6 Qxb6 31. Kf1 a4 32. Kg2 Qb5 33. Kh3 Bxd4 0-1
+
+[Event "Caro-Kann: Classical"]
+[Site "FIDE Online Arena INT"]
+[Date "2024.05.08"]
+[Round "4.195"]
+[White "WGM Wafa,Shahenda"]
+[Black "GM Kosteniuk,A"]
+[WhiteElo "2081"]
+[BlackElo "2501"]
+[Result "0-1"]
+[ECO "B15"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Nxf6+ exf6 6. c3 Bd6 7. Bd3 Na6 8. Qc2 h5 9. Ne2 Nc7 10. Be3 Nd5 11. O-O-O Nxe3 12. fxe3 Qa5 13. Kb1 Be6 14. c4 b5 15. Nf4 Bxf4 16. exf4 O-O 17. d5 cxd5 18. cxd5 Rac8 19. Bh7+ Kh8 20. Qd3 Bg4 21. Rc1 Rcd8 22. h3 Be6 23. Be4 b4 24. Rcd1 g6 25. Bxg6 fxg6 26. Qxg6 Bg8 27. Qh6+ Bh7+ 28. Ka1 b3 29. a3 Rf7 30. Qxh5 Kg8 31. Rhe1 Bc2 32. Rc1 Qxd5 33. Re8+ Rf8 34. Qg4+ Kf7 35. Rxf8+ Kxf8 36. f5 Qd2 37. Rf1 Qd1+ 38. Rxd1 Rxd1+ 39. Qxd1 Bxd1 40. Kb1 Bc2+ 41. Kc1 Bxf5 42. Kd2 Ke7 43. Kc3 Bc2 44. a4 Ke6 45. a5 Ke5 46. h4 Kf5 0-1
+
+[Event "Caro-Kann: Classical"]
+[Site "FIDE Online Arena INT"]
+[Date "2024.03.27"]
+[Round "10.53"]
+[White "WIM Nguyen Thanh Thuy Tien"]
+[Black "GM Kosteniuk,A"]
+[WhiteElo "2069"]
+[BlackElo "2501"]
+[Result "0-1"]
+[ECO "B15"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Nxf6+ exf6 6. c3 Bd6 7. Bd3 Na6 8. Ne2 Nc7 9. O-O O-O 10. Qc2 g6 11. Nf4 f5 12. Be3 Bd7 13. c4 b5 14. b3 a5 15. Rac1 Qb8 16. c5 Be7 17. Rfe1 Bf6 18. d5 cxd5 19. c6 Be6 20. Bc5 Re8 21. Bd6 Qd8 22. Bxc7 Qxc7 23. Nxe6 fxe6 24. Bxb5 e5 25. Qc5 Rad8 26. a3 d4 27. b4 axb4 28. axb4 Kg7 29. Bc4 d3 30. Red1 e4 31. b5 Bd4 32. Qb4 Bb6 33. Qc3+ Bd4 34. Qb4 Qb6 35. Rf1 f4 36. Bb3 e3 37. c7 Rc8 38. Kh1 e2 39. Rfe1 Bxf2 40. Qxf4 Qf6 41. Qc4 Bxe1 42. Qxd3 Qf1# 0-1
+
+[Event "Caro-Kann: Classical"]
+[Site "Bratislava SVK"]
+[Date "2023.09.15"]
+[Round "1.2"]
+[White " Striskova,Lucia"]
+[Black "GM Fridman,D"]
+[WhiteElo "1926"]
+[BlackElo "2577"]
+[Result "0-1"]
+[ECO "B15"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Nxf6+ exf6 6. c3 Bd6 7. Bd3 Be6 8. Ne2 Qc7 9. c4 Qa5+ 10. Bd2 Bb4 11. Nc3 Qd8 12. Ne2 Na6 13. a3 Bxd2+ 14. Qxd2 Nc7 15. O-O Qd6 16. Rad1 O-O-O 17. b4 h5 18. a4 h4 19. d5 h3 20. g3 Bd7 21. dxc6 Qxc6 22. f3 a5 23. Qe3 axb4 24. Be4 Rhe8 25. Qf2 Qa6 26. Nf4 Bc6 27. Nd5 Bxd5 28. cxd5 Kb8 29. Qd4 Qd6 30. Rf2 g6 31. Rb2 f5 32. Bc2 Qxd5 33. Qxd5 Nxd5 34. Bb3 Nc3 35. Rxd8+ Rxd8 36. Bxf7 Rd1+ 37. Kf2 Rh1 38. Rxb4 Rxh2+ 39. Ke3 Nd1+ 40. Kd3 Rg2 41. f4 Nf2+ 42. Ke3 Ng4+ 43. Kd3 Rxg3+ 0-1
+
+[Event "Caro-Kann: Classical"]
+[Site "Moscow RUS"]
+[Date "2023.07.18"]
+[Round "2.6"]
+[White " Kamilov,Dmitry"]
+[Black "GM Rozum,I"]
+[WhiteElo "2083"]
+[BlackElo "2511"]
+[Result "0-1"]
+[ECO "B15"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Nf6 5. Nxf6+ exf6 6. c3 Bd6 7. Bd3 O-O 8. Qc2 Re8+ 9. Ne2 h5 10. Bd2 Nd7 11. O-O Nf8 12. Rae1 h4 13. h3 g6 14. f4 f5 15. c4 Ne6 16. Bc3 Bd7 17. b3 Ng7 18. Bb2 Qa5 19. c5 Bxf4 20. b4 Be3+ 21. Kh1 Qd8 22. d5 cxd5 23. Nc3 d4 24. Nd5 Ba4 25. Qc4 Bb5 26. Qxb5 Qxd5 27. Bc4 Qe4 28. Bd3 Qd5 29. Bc4 Qc6 30. Qxc6 bxc6 31. Ba6 Rab8 32. a3 Nh5 33. Kh2 Ng3 34. Rf3 Ne4 35. Bc1 f4 36. Rxf4 Bxf4+ 37. Bxf4 Rbd8 38. Bb7 Re6 39. Bxc6 Nxc5 40. Rxe6 Nxe6 41. Bd2 d3 42. Bb5 Nd4 43. Bc4 Nc2 44. a4 Nxb4 45. Bxb4 Rd4 46. Bxd3 Rxb4 47. a5 Kg7 0-1
+
+[Event "Caro-Kann: Classical"]
+[Site "Orsha BLR"]
+[Date "2023.01.20"]
+[Round "3.1"]
+[White " Spizharny,Mikhail"]
+[Black "GM Afanasiev,Nikita"]
+[WhiteElo "1991"]
+[BlackElo "2562"]
+[Result "0-1"]
+[ECO "B15"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Nxf6+ exf6 6. c3 Bd6 7. Bd3 O-O 8. Qc2 h5 9. Ne2 h4 10. h3 Re8 11. O-O Na6 12. Be3 Nc7 13. c4 Ne6 14. Rad1 Ng5 15. Rfe1 Bd7 16. Nc3 Qc7 17. d5 Bh2+ 18. Kh1 Bf4 19. Qd2 Rxe3 20. fxe3 Bg3 21. Rf1 Re8 22. Bf5 Bxf5 23. Rxf5 Be5 24. dxc6 bxc6 25. Qd7 Qb8 26. Qxc6 Re6 27. Qd5 Qxb2 28. Ne4 Nxe4 29. Qxe4 g6 30. Rff1 Bc7 31. Qxh4 Kg7 32. Rd7 Bb6 33. e4 Qe2 34. Qf4 Qxc4 35. Qf3 Qxa2 36. g4 Qa4 37. Rfd1 Rxe4 38. g5 Re6 39. gxf6+ Rxf6 40. Qc3 Qe4+ 41. Kh2 Bc7+ 42. Kg1 Be5 43. Re1 Rf1+ 44. Rxf1 Bxc3 45. Rfxf7+ Kh6 46. h4 Kh5 47. Rh7+ Kg4 48. h5 Bd4+ 49. Kh2 Qe2+ 0-1
+
+[Event "Caro-Kann: Fantasy"]
+[Site "Orsha BLR"]
+[Date "2026.01.22"]
+[Round "5.2"]
+[White " Strizhnev,Ivan"]
+[Black "IM Zarubitski,Viachaslau"]
+[WhiteElo "2080"]
+[BlackElo "2417"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. f3 dxe4 4. fxe4 e5 5. Nf3 Bg4 6. c3 Nd7 7. Bd3 Ngf6 8. O-O Qc7 9. Kh1 Bd6 10. Na3 O-O 11. Nc4 Rfe8 12. Qc2 h6 13. Be3 Rad8 14. Rae1 exd4 15. Nxd6 Qxd6 16. cxd4 Bxf3 17. gxf3 c5 18. d5 Nh5 19. Qd2 f5 20. Rc1 b6 21. Rg1 f4 22. Bf2 Ne5 23. Be2 g5 24. Rc3 Kf7 25. a3 Nf6 26. Rgc1 Re7 27. b3 Rde8 28. Qb2 g4 29. b4 c4 30. Bxc4 Nxf3 31. Bb5 Nxe4 32. Bxe8+ Rxe8 33. Rc7+ Re7 34. Qh8 Nxf2+ 35. Kg2 Ng5 36. Rxe7+ Qxe7 37. Qc8 Qe4+ 38. Kxf2 Qe3+ 39. Kf1 Qd3+ 40. Ke1 Qe3+ 41. Kd1 Qd3+ 42. Ke1 Nf3+ 43. Kf2 Qd2+ 44. Kf1 Nxh2+ 45. Kg1 Nf3+ 46. Kf1 Qd3+ 47. Kf2 g3+ 48. Kg2 Nh4+ 49. Kh3 g2+ 50. Kxh4 Qg3+ 51. Kh5 Qg5# 0-1
+
+[Event "Caro-Kann: Fantasy"]
+[Site "Dulles USA"]
+[Date "2025.10.11"]
+[Round "2.2"]
+[White "FM Samuelson,A"]
+[Black "GM Erenburg,S"]
+[WhiteElo "2044"]
+[BlackElo "2485"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. f3 e6 4. Nc3 Bb4 5. Bd2 Ne7 6. a3 Ba5 7. Bd3 Nd7 8. f4 c5 9. e5 a6 10. Nf3 Nc6 11. O-O Bb6 12. Be1 cxd4 13. Ne2 Nc5 14. Bf2 Bd7 15. Re1 Rc8 16. Nexd4 Nxd4 17. Bxd4 g6 18. Qd2 O-O 19. Rad1 Ba4 20. Rc1 Qd7 21. Bf2 Bb5 22. Bxb5 Qxb5 23. Nd4 Qd7 24. Be3 Ne4 25. Qe2 Rc4 26. c3 Rfc8 27. Rcd1 Bc5 28. Rd3 b5 29. Nc2 a5 30. Bd4 Qa7 31. Qe3 Bxd4 32. Nxd4 b4 33. axb4 axb4 34. cxb4 Rxb4 35. b3 Qa2 36. h4 Qb2 37. h5 Ra8 38. hxg6 hxg6 39. Ne2 Ra2 40. Qh3 Rb8 41. Qh6 Ra1 42. Rxa1 Qxa1+ 43. Kh2 Nf2 0-1
+
+[Event "Caro-Kann: Fantasy"]
+[Site "Stockholm SWE"]
+[Date "2025.01.03"]
+[Round "7.35"]
+[White " Nilsson,Oliver"]
+[Black "FM Diaz Rosas,J"]
+[WhiteElo "2079"]
+[BlackElo "2401"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. f3 g6 4. Nc3 Bg7 5. e5 f6 6. f4 Nh6 7. Be2 O-O 8. Nf3 Bg4 9. Qd3 e6 10. Nd1 c5 11. Ne3 Bxf3 12. Bxf3 cxd4 13. exf6 Qxf6 14. Ng4 Nxg4 15. Bxg4 e5 16. Qb3 Qh4+ 17. Qg3 Qe7 18. O-O Nc6 19. Qh3 e4 20. Bd2 Rf6 21. Be1 h5 22. Bc8 Nd8 23. Bh4 d3 24. Bxf6 Bxf6 25. Kh1 dxc2 26. Rac1 Qc5 27. Be6+ Kg7 28. b4 Qb5 29. Rf2 Qb6 30. Rcxc2 Nxe6 31. f5 Qd4 32. Rf1 Qd3 33. Qxd3 exd3 34. Rd2 Ng5 35. Rxd3 d4 36. Rc1 gxf5 37. Rc7+ Kg6 38. Rxb7 Ne4 39. Kg1 Rc8 40. Rd1 d3 41. Kf1 d2 0-1
+
+[Event "Caro-Kann: Fantasy"]
+[Site "Budapest HUN"]
+[Date "2024.09.11"]
+[Round "1.24"]
+[White " Mudasir,Iqbal"]
+[Black "GM Grigorov,G"]
+[WhiteElo "2055"]
+[BlackElo "2514"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. f3 Qb6 4. c3 e5 5. exd5 cxd5 6. Qe2 Nc6 7. dxe5 Bc5 8. Nh3 Bxh3 9. gxh3 O-O-O 10. f4 Nh6 11. b4 Be7 12. Be3 Bh4+ 13. Bf2 Bxf2+ 14. Qxf2 d4 15. b5 Ne7 16. Be2 Nhf5 17. cxd4 Qa5+ 18. Nd2 Rxd4 19. Bg4 Kb8 20. b6 Rhd8 21. bxa7+ Ka8 22. Rd1 Re4+ 23. Be2 Nd4 24. O-O Nxe2+ 25. Kh1 Rxd2 26. Rxd2 Qxd2 27. Qc5 Nxf4 28. Qg1 Qd5 29. Qxg7 Re2+ 0-1
+
+[Event "Caro-Kann: Fantasy"]
+[Site "Pardubice CZE"]
+[Date "2024.07.20"]
+[Round "2.35"]
+[White " Muratov,Batyrkhan"]
+[Black "IM Noe,C"]
+[WhiteElo "1908"]
+[BlackElo "2520"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. f3 e6 4. Nc3 Bb4 5. Bf4 Ne7 6. Qd3 O-O 7. Nge2 b6 8. O-O-O Ba6 9. Qe3 Nd7 10. h4 c5 11. exd5 Bxe2 12. Bxe2 Bxc3 13. Qxc3 Nxd5 14. Qd2 Nxf4 15. Qxf4 Qe7 16. g4 Nf6 17. Bc4 cxd4 18. Qxd4 Rac8 19. g5 Nh5 20. Qg4 g6 21. Bb3 b5 22. Rd4 Rc7 23. Rhd1 Ng7 24. Rd6 Nf5 25. R6d3 Qc5 26. Rh1 Ng7 27. Qf4 Nh5 28. Qh2 Rfc8 29. Rhd1 a5 30. Rc3 Qe7 31. Rxc7 Qxc7 32. Qxc7 Rxc7 33. c3 h6 34. Rd4 hxg5 35. hxg5 Rc5 36. Rg4 Kf8 37. Kd2 Ke7 38. Bc2 Ng7 39. a4 bxa4 40. Bxa4 Nf5 41. Bc2 Nd6 42. Bd3 Kd7 43. Ke3 Kc7 44. Kd2 Kb6 45. Ke3 e5 46. Kd2 Rc8 47. Rh4 Rd8 48. Ke3 Rb8 49. b4 Rc8 50. Kd2 Ra8 51. Be4 Ra7 52. bxa5+ Rxa5 53. Kd3 Ra1 54. Rg4 Kc5 55. Rg3 Ra2 56. f4 exf4 57. Rg2 Ra1 58. Bf3 Re1 59. Be2 Kd5 60. Bf3+ Ke5 61. Be2 Ne4 62. Kc4 Rxe2 63. Rxe2 f3 64. Re1 f2 0-1
+
+[Event "Caro-Kann: Fantasy"]
+[Site "FIDE Online Arena INT"]
+[Date "2024.07.17"]
+[Round "6.127"]
+[White "WFM Paragua,Megan Althea"]
+[Black "IM Kashlinskaya,A"]
+[WhiteElo "2041"]
+[BlackElo "2474"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. f3 e6 4. Nc3 Nf6 5. Bf4 Bb4 6. Qd3 b6 7. Nge2 Ba6 8. Qe3 O-O 9. a3 Bxc3+ 10. Nxc3 Bxf1 11. Rxf1 c5 12. O-O-O Nc6 13. exd5 cxd4 14. Qf2 dxc3 15. dxc6 cxb2+ 16. Kxb2 Qe8 17. Bd6 Qxc6 18. Bxf8 Rxf8 19. Rd3 Nd5 20. Rfd1 Rc8 21. Qd2 a5 22. f4 g6 23. g4 a4 24. f5 Qb5+ 25. Ka1 Qc4 26. fxe6 fxe6 27. Kb2 Qb5+ 28. Ka1 Qc4 29. Kb2 b5 30. Rd4 Qc6 31. Re1 Kg7 32. Re5 Nb6 33. Qe2 Qc3+ 34. Kb1 Qxd4 35. Rxe6 Nc4 36. Re7+ Kf8 0-1
+
+[Event "Caro-Kann: Fantasy"]
+[Site "Novi Sad SRB"]
+[Date "2024.06.28"]
+[Round "5.8"]
+[White " Sakmak,Kutay"]
+[Black "GM Bryakin,M"]
+[WhiteElo "1993"]
+[BlackElo "2470"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. f3 g6 4. Nc3 Bg7 5. Be3 Qb6 6. Qd2 Qxb2 7. Rb1 Qa3 8. Bd3 dxe4 9. fxe4 e5 10. Nf3 exd4 11. Bxd4 Bxd4 12. Nxd4 Nd7 13. Rb3 Qd6 14. Qf2 Ne5 15. O-O Nh6 16. Be2 O-O 17. Rd1 Neg4 18. Qg3 Qxg3 19. hxg3 Rd8 20. a4 Ne5 21. a5 Nhg4 22. Nf3 Rxd1+ 23. Nxd1 Rb8 24. Nd4 Nf6 25. Nf2 Be6 26. Rb1 Nfd7 27. Nd3 b5 28. Nb4 Rc8 29. Nxe6 fxe6 30. Kf2 Kf7 31. Ke3 Ke7 32. c3 Nc5 33. Rh1 Rh8 34. Rb1 h5 35. Nc2 Rd8 36. Nd4 Na4 37. Rb3 a6 38. Nc2 c5 39. Ra3 Nb2 40. Kf4 Rd2 41. Bxb5 axb5 42. a6 Kf6 43. a7 g5+ 44. Ke3 Nbc4# 0-1
+
+[Event "Caro-Kann: Fantasy"]
+[Site "Vecindario ESP"]
+[Date "2024.03.30"]
+[Round "8.12"]
+[White " Fernandez Manrique,A"]
+[Black "IM Fiorito,Joaquin"]
+[WhiteElo "2017"]
+[BlackElo "2409"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. f3 e6 4. Nc3 Bb4 5. Bd2 Bxc3 6. Bxc3 dxe4 7. Nh3 Nf6 8. fxe4 Nxe4 9. Qg4 Nxc3 10. Qxg7 Rf8 11. bxc3 Qh4+ 12. Nf2 Nd7 13. Bd3 h6 14. O-O Qg5 15. Qxg5 hxg5 16. a4 Rg8 17. a5 Nf6 18. Rab1 Rb8 19. c4 b6 20. axb6 axb6 21. c5 b5 22. c4 Ba6 23. Ne4 Nxe4 24. Bxe4 b4 25. Bxc6+ Kf8 26. Bb5 Bxb5 27. Rxb4 Ke7 28. cxb5 Rgc8 29. Ra4 Rb7 30. b6 e5 31. Re1 f6 32. Ra5 Ke6 33. dxe5 fxe5 34. Rxe5+ Kxe5 35. c6+ 0-1
+
+[Event "Caro-Kann: Fantasy"]
+[Site "Mexico City MEX"]
+[Date "2023.09.21"]
+[Round "1.6"]
+[White "CM Mendez Machado,Andre"]
+[Black "IM Amar,Elham"]
+[WhiteElo "2066"]
+[BlackElo "2541"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. f3 e6 4. Nc3 Bb4 5. Bd2 Nd7 6. Nce2 Bxd2+ 7. Qxd2 Ne7 8. O-O-O b5 9. Nh3 a5 10. g4 O-O 11. Ng3 Nb6 12. e5 b4 13. f4 Nc4 14. Qf2 a4 15. f5 b3 16. Bxc4 dxc4 17. a3 bxc2 18. Rdf1 exf5 19. gxf5 Rb8 20. Rhg1 Qb6 21. Qxc2 Qxd4 22. Re1 Bxf5 23. Nxf5 Nxf5 24. Re4 Rxb2 0-1
+
+[Event "Caro-Kann: Fantasy"]
+[Site "Ecka SRB"]
+[Date "2023.06.19"]
+[Round "7.3"]
+[White "FM Korelskiy,Egor"]
+[Black "IM Ratkovic,Milov"]
+[WhiteElo "2096"]
+[BlackElo "2401"]
+[Result "0-1"]
+[ECO "B12"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. f3 e6 4. Be3 Nf6 5. e5 Ng8 6. c3 c5 7. f4 Qb6 8. Qb3 Nc6 9. Nf3 Nh6 10. Qxb6 axb6 11. Nbd2 Nf5 12. Bf2 cxd4 13. Nxd4 Nfxd4 14. Bxd4 Nxd4 15. cxd4 Bd7 16. Bd3 Be7 17. h4 f6 18. Ke2 O-O 19. Nf3 Ra4 20. Rhc1 Bd8 21. Bc2 Ra8 22. Ke3 b5 23. Bb3 Bb6 24. g4 b4 25. exf6 gxf6 26. g5 Bb5 27. Rg1 Kh8 28. g6 Rg8 29. h5 hxg6 30. hxg6 Kg7 31. Rh1 Rh8 32. Bc2 Rac8 33. Kd2 Bc7 34. Ke3 Bd6 35. Bb3 Kxg6 36. f5+ Kf7 37. fxe6+ Kxe6 38. Kf2 Bf4 39. Nh4 Bd3 40. Rae1+ Kd6 41. Ng2 Bg5 42. Bd1 Rxh1 43. Rxh1 Rc1 44. Ne3 Be4 45. Rf1 Rb1 46. b3 Rb2+ 0-1
+
+[Event "Caro-Kann: Exchange"]
+[Site "Hua Hin THA"]
+[Date "2026.04.11"]
+[Round "1.5"]
+[White " Langreck,J"]
+[Black "GM Ganguly,S"]
+[WhiteElo "2046"]
+[BlackElo "2561"]
+[Result "0-1"]
+[ECO "B13"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 Nc6 6. Nf3 a6 7. cxd5 Nxd5 8. Bc4 Be6 9. Bb3 g6 10. O-O Bg7 11. Re1 O-O 12. Bg5 h6 13. Bh4 Re8 14. h3 Rc8 15. Ne4 b6 16. Rc1 Na5 17. Rxc8 Qxc8 18. Bxd5 Bxd5 19. Nc3 Bxf3 20. Qxf3 Nc6 21. Nd5 Nxd4 22. Qd3 Qf5 23. Qxf5 Nxf5 24. Bxe7 Bxb2 25. Kf1 b5 26. Bf6 Rxe1+ 27. Kxe1 Bxf6 28. Nxf6+ Kf8 29. Nd5 Nd4 30. Kd2 Ne6 31. Kc3 a5 32. f4 h5 33. g4 h4 34. f5 gxf5 35. gxf5 Ng5 36. Kd4 Nxh3 37. Kc5 Nf2 38. Nf4 Ke7 39. Kxb5 Kf6 40. Nd5+ Kxf5 41. Ne3+ Kf4 42. Nf1 h3 0-1
+
+[Event "Caro-Kann: Exchange"]
+[Site "Shanghai CHN"]
+[Date "2026.04.09"]
+[Round "7.1"]
+[White "FM Jaiswal,R"]
+[Black "GM Artemiev,V"]
+[WhiteElo "2091"]
+[BlackElo "2641"]
+[Result "0-1"]
+[ECO "B13"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. exd5 cxd5 4. Bd3 Nc6 5. c3 Qc7 6. Ne2 Bg4 7. O-O e6 8. Bf4 Bd6 9. Bxd6 Qxd6 10. Qd2 Nge7 11. Ng3 g6 12. Na3 a6 13. Nc2 h5 14. f3 Bf5 15. Rfe1 Bxd3 16. Qxd3 g5 17. Rf1 f5 18. Rae1 O-O-O 19. b4 f4 20. Nh1 e5 21. Nf2 Qg6 22. Qxg6 Nxg6 23. Nd3 Rhe8 24. dxe5 Ngxe5 25. Nxe5 Nxe5 26. Nd4 Kd7 27. Re2 Nc4 28. Kf2 Ne3 29. Rc1 Rc8 30. h3 Rxc3 31. Rxc3 Nd1+ 32. Ke1 Nxc3 33. Rxe8 Kxe8 34. a3 Ke7 35. Nb3 b6 36. Nc1 h4 37. Nd3 Kd6 38. Kf2 Nd1+ 0-1
+
+[Event "Caro-Kann: Exchange"]
+[Site "Merida MEX"]
+[Date "2025.12.16"]
+[Round "3.5"]
+[White "CM Cortes Medina,Fernando"]
+[Black "GM Cori,J"]
+[WhiteElo "2008"]
+[BlackElo "2599"]
+[Result "0-1"]
+[ECO "B14"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 g6 6. Qb3 Bg7 7. cxd5 O-O 8. Be2 a5 9. Bf3 Na6 10. a3 e5 11. Be3 Ng4 12. dxe5 Nxe3 13. fxe3 Nc5 14. Qc2 Bxe5 15. Nge2 Qb6 16. O-O-O Bf5 17. e4 Bd7 18. Kb1 Rfc8 19. Nd4 Na6 20. Qd2 Rc4 21. Nde2 Rac8 22. Rc1 Nc5 23. Qe3 Qb3 24. Rc2 Na4 25. Rhc1 Bxc3 26. Nxc3 Rxc3 0-1
+
+[Event "Caro-Kann: Exchange"]
+[Site "Garden Grove, CA USA"]
+[Date "2025.11.26"]
+[Round "2.1"]
+[White "WIM Utiatskaja,Irina"]
+[Black "GM Heimann,M"]
+[WhiteElo "2074"]
+[BlackElo "2520"]
+[Result "0-1"]
+[ECO "B13"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. exd5 cxd5 4. Bd3 Nc6 5. c3 e6 6. Nf3 Bd6 7. O-O Nge7 8. Bg5 O-O 9. Bh4 f6 10. c4 Nb4 11. Bg3 Nxd3 12. Qxd3 Bxg3 13. hxg3 dxc4 14. Qxc4 Qb6 15. Nc3 Bd7 16. Qe2 Nf5 17. g4 Nd6 18. Rfe1 Rae8 19. Rad1 Bc6 20. b3 Nb5 21. Nxb5 Bxb5 22. Qe3 Bc6 23. Nd2 Qa5 24. Nc4 Qd5 25. f3 Rf7 26. Qc3 Qd8 27. Qb4 Rd7 28. Ne3 Qb8 29. Qc5 Rc8 30. Qh5 Rcd8 31. d5 Bxd5 32. Qh3 Qf4 33. Qh5 Qg3 34. Qh2 Qxh2+ 35. Kxh2 Bc6 36. Rc1 Rd2 37. a4 Bxf3 0-1
+
+[Event "Caro-Kann: Exchange"]
+[Site "Kuala Lumpur MAS"]
+[Date "2025.11.10"]
+[Round "2.3"]
+[White " Tin,Shan Wen"]
+[Black "GM Fernandez,Dan SIN"]
+[WhiteElo "2021"]
+[BlackElo "2501"]
+[Result "0-1"]
+[ECO "B13"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. exd5 cxd5 4. Bd3 Nc6 5. c3 Nf6 6. Bf4 Bg4 7. Qb3 Qc8 8. Nd2 e6 9. Ngf3 Bh5 10. O-O Bg6 11. Bxg6 hxg6 12. Rae1 Be7 13. Qb5 a6 14. Qd3 Nh5 15. Bg5 Bd6 16. Ne5 Nf6 17. f4 Ne7 18. g4 b5 19. a3 Kf8 20. Kg2 a5 21. h3 Rb8 22. b4 a4 23. Rc1 Qb7 24. Qe2 Kg8 25. Rce1 Qc8 26. Rc1 Qe8 27. Nd3 Nc6 28. Rce1 Nh7 29. Bh4 Nf8 30. Bg3 Ne7 31. Nf3 Nc8 32. Ng5 Rb7 33. f5 gxf5 34. gxf5 Bxg3 35. fxe6 f6 36. Kxg3 Qg6 37. h4 fxg5 38. h5 Qxh5 0-1
+
+[Event "Caro-Kann: Exchange"]
+[Site "Ankara TUR"]
+[Date "2025.08.09"]
+[Round "7.16"]
+[White " Yilmaz,Gokcen"]
+[Black "GM Can,Isik"]
+[WhiteElo "1910"]
+[BlackElo "2504"]
+[Result "0-1"]
+[ECO "B13"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 Nc6 6. Bg5 Be6 7. Nf3 g6 8. c5 Bg7 9. Bb5 Ne4 10. O-O O-O 11. Be3 a6 12. Bd3 Nxc5 13. dxc5 d4 14. Nxd4 Bxd4 15. Qd2 f5 16. Rfe1 Bf7 17. Bxd4 Qxd4 18. Qe3 Rfd8 19. Qxd4 Rxd4 20. Rad1 Rad8 21. Bc2 Kg7 22. b3 Kf6 23. Kf1 Rxd1 24. Bxd1 e5 25. Be2 Rd2 26. Rc1 e4 27. Ke1 Rb2 28. f3 Ke5 29. fxe4 fxe4 30. Kf1 Kd4 31. Bg4 Ne5 32. Bc8 Nd3 33. Nd1 Rxa2 34. Rb1 Bd5 0-1
+
+[Event "Caro-Kann: Exchange"]
+[Site "Warsaw POL"]
+[Date "2025.07.07"]
+[Round "5.13"]
+[White " Korszanski,Stanislaw"]
+[Black "GM Fridman,D"]
+[WhiteElo "1960"]
+[BlackElo "2581"]
+[Result "0-1"]
+[ECO "B13"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 Nc6 6. Bg5 Ne4 7. Nxe4 dxe4 8. d5 Ne5 9. Qd4 f6 10. Bf4 Ng6 11. Be3 f5 12. c5 e5 13. Qa4+ Kf7 14. Bc4 f4 15. d6+ Kf6 16. Bd2 Bd7 17. Qb3 Bc6 18. h4 h5 19. Ne2 b6 20. g4 hxg4 21. h5 e3 22. fxe3 Bxh1 23. hxg6 Bf3 24. exf4 Rh1+ 25. Kf2 Rh2+ 26. Kg1 Rg2+ 27. Kf1 Kxg6 28. Bd3+ e4 29. Bxe4+ Kh6 30. f5+ Kh7 31. Bxf3 gxf3 32. Qxf3 Rh2 33. Kg1 Qh4 34. Ng3 Re8 35. f6 g6 36. d7 Rd8 37. c6 Bc5+ 38. Be3 Bd6 39. f7 Bxg3 40. f8=R Rxf8 41. Qxf8 Rh1+ 42. Kg2 Qh3+ 43. Kf3 Bd6+ 44. Ke4 Bxf8 45. d8=Q Qf5+ 46. Kd4 Rxa1 47. c7 Bc5+ 48. Kc4 b5+ 49. Kxb5 Bxe3+ 50. Ka6 Rxa2+ 51. Kb7 Rxb2+ 52. Kc6 Rb6# 0-1
+
+[Event "Caro-Kann: Exchange"]
+[Site "London ENG"]
+[Date "2025.06.14"]
+[Round "8.3"]
+[White " Eken,Atakan"]
+[Black "GM Maurizzi,Marc'Andria"]
+[WhiteElo "2010"]
+[BlackElo "2607"]
+[Result "0-1"]
+[ECO "B13"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. exd5 cxd5 4. Bd3 Nf6 5. Nf3 Nc6 6. Bf4 g6 7. c3 Bf5 8. O-O e6 9. Re1 Bd6 10. Bxd6 Qxd6 11. Qe2 Bxd3 12. Qxd3 Ne4 13. Nbd2 f5 14. Nf1 O-O 15. N3d2 e5 16. f3 Nxd2 17. Qxd2 e4 18. Qh6 b5 19. fxe4 dxe4 20. Ng3 Rae8 21. Rad1 Qd5 22. Qf4 Qxa2 23. Re2 Qb3 24. Rde1 a5 25. h4 Ne7 26. h5 Qe6 27. hxg6 hxg6 28. Qc7 Nd5 29. Qxa5 e3 30. Qxb5 f4 31. Nf1 f3 32. gxf3 Rxf3 33. Rg2 Nf4 34. Rh2 0-1
+
+[Event "Caro-Kann: Exchange"]
+[Site "Almaty KAZ"]
+[Date "2024.08.05"]
+[Round "2.8"]
+[White " Ishmukhametov,Adil"]
+[Black "GM Gareev,T"]
+[WhiteElo "2077"]
+[BlackElo "2541"]
+[Result "0-1"]
+[ECO "B13"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. exd5 cxd5 4. Bd3 Nc6 5. c3 g6 6. Nf3 Bf5 7. Bxf5 gxf5 8. Qb3 Qd7 9. Bf4 e6 10. Nbd2 Bh6 11. Bxh6 Nxh6 12. g3 Ng4 13. h3 Nf6 14. Qd1 Ne4 15. Qe2 b5 16. a3 a5 17. Nxe4 fxe4 18. Nd2 f5 19. Qh5+ Qf7 20. Qxf7+ Kxf7 21. Ke2 h5 22. h4 Rhg8 23. Rhg1 a4 24. f3 Na5 25. fxe4 dxe4 26. Raf1 Ke7 27. d5 Nc4 28. dxe6 Kxe6 29. Nxc4 bxc4 30. Ke3 Ke5 31. Rd1 Rg7 32. Rd4 Rag8 33. Kf2 Rb7 34. Rb1 Rc8 35. Ke3 Rg7 36. Kf2 Rcg8 37. Rg1 Rg4 38. Rd7 f4 39. Re7+ Kf5 40. Rf7+ Ke6 41. Rh7 Rxg3 42. Rxg3 Rxg3 43. Rxh5 e3+ 44. Ke2 Rg2+ 45. Kf3 Rf2+ 46. Ke4 e2 47. Re5+ Kd6 48. Kd4 f3 49. h5 Rf1 50. h6 Rd1+ 51. Kxc4 Kxe5 52. h7 Rd8 53. h8=Q+ Rxh8 0-1
+
+[Event "Caro-Kann: Exchange"]
+[Site "Escaldes AND"]
+[Date "2024.07.20"]
+[Round "1.5"]
+[White " Le Montagner,Y"]
+[Black "GM Arizmendi Martinez,J"]
+[WhiteElo "1974"]
+[BlackElo "2520"]
+[Result "0-1"]
+[ECO "B13"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. d4 d5 3. exd5 cxd5 4. Bd3 Nc6 5. c3 e6 6. Bf4 Nge7 7. Ne2 g6 8. Nd2 Bg7 9. Nf3 f6 10. Bg3 e5 11. dxe5 fxe5 12. Bc2 Bg4 13. h3 Bxf3 14. gxf3 O-O 15. Qd3 Qa5 16. h4 h5 17. Rg1 Rf6 18. b4 Qc7 19. Bb3 Rd8 20. Rd1 a6 21. a4 Kh8 22. Ba2 Rfd6 23. Bh2 d4 24. Qe4 dxc3 25. Nxc3 Nd4 26. Nd5 Nxd5 27. Rxg6 Nf6 28. Bxe5 Nxf3+ 29. Qxf3 Rxd1+ 30. Qxd1 Qxe5+ 0-1
+
+[Event "Caro-Kann: Two Knights"]
+[Site "Nara Village IND"]
+[Date "2026.03.17"]
+[Round "3.3"]
+[White "CM Prakhar Tripathi"]
+[Black "GM Ghosh,D"]
+[WhiteElo "2054"]
+[BlackElo "2571"]
+[Result "0-1"]
+[ECO "B11"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. Nc3 d5 3. Nf3 Bg4 4. Be2 e6 5. d4 Bb4 6. O-O Ne7 7. e5 O-O 8. Nb1 Nd7 9. Bd2 Bxd2 10. Nbxd2 c5 11. c3 Nc6 12. Re1 Rc8 13. Nb3 cxd4 14. cxd4 Nb4 15. Bd3 Nxd3 16. Qxd3 Nb8 17. Rac1 Nc6 18. a3 h6 19. h3 Bf5 20. Qe3 Qb6 21. Rc3 Rc7 22. Rec1 Rfc8 23. Kh2 Ne7 24. Nfd2 Rxc3 25. Rxc3 Rc6 26. Nc5 Qc7 27. Kg1 Qc8 28. Kh2 b6 29. Na4 Bc2 30. Rxc6 Qxc6 31. Nc3 Nf5 32. Qf4 a5 33. Nf3 Qc4 34. g4 Ne7 35. Qd2 Bg6 36. a4 Be4 37. Ng1 Nc6 38. Nge2 Bf3 39. Qd1 Qb4 40. Kg3 Bxe2 41. Nxe2 Qxb2 42. Qd3 Qb4 43. Qd1 b5 44. Qc1 Qc4 45. Qxc4 bxc4 46. Kf4 f6 47. exf6 g5+ 48. Ke3 Kf7 49. f4 Kxf6 50. fxg5+ hxg5 51. Nc3 Nb4 52. Nb5 e5 53. Nc7 c3 54. Nb5 Nc2+ 55. Kd3 Nxd4 56. Nc7 e4+ 57. Kxc3 Ke5 58. Nb5 Nxb5+ 59. axb5 d4+ 60. Kc4 d3 61. Kc3 a4 62. h4 a3 63. b6 Kd6 64. h5 a2 65. Kb2 d2 66. b7 a1=Q+ 67. Kxa1 d1=Q+ 68. Kb2 Kc7 69. h6 Qd4+ 70. Kc2 e3 71. h7 e2 0-1
+
+[Event "Caro-Kann: Two Knights"]
+[Site "Nara Village IND"]
+[Date "2026.03.16"]
+[Round "1.3"]
+[White "CM Vyom Malhotra"]
+[Black "GM Mitrabha,G"]
+[WhiteElo "2052"]
+[BlackElo "2508"]
+[Result "0-1"]
+[ECO "B11"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. Nc3 d5 3. Nf3 Bg4 4. Be2 e6 5. d4 Nf6 6. e5 Bxf3 7. Bxf3 Nfd7 8. O-O Be7 9. Ne2 O-O 10. c3 c5 11. Be3 Nc6 12. a3 Qb6 13. Rb1 cxd4 14. cxd4 Na5 15. Qd3 Rfc8 16. Nc3 Nc4 17. Nxd5 exd5 18. Bxd5 Qb5 19. Be4 g6 20. Bh6 Rd8 21. Qg3 Nf8 22. a4 Qb6 23. Be3 Ne6 24. a5 Qxa5 25. Rfd1 Qb6 26. d5 Nxe3 27. Qxe3 Qxe3 28. fxe3 Nc5 29. Bf3 Nd7 30. d6 Bg5 31. Bxb7 Rab8 32. Bc6 Nxe5 33. Ba4 Bxe3+ 34. Kf1 Nc4 35. Ke2 Bg5 36. Rd5 h6 37. Bc6 Rxd6 38. Rxd6 Nxd6 39. b3 Nf5 40. Bd5 Re8+ 41. Kf2 Be3+ 42. Kf3 Bb6 43. g4 Nh4+ 44. Kg3 Re3+ 0-1
+
+[Event "Caro-Kann: Two Knights"]
+[Site "Ganja AZE"]
+[Date "2025.11.14"]
+[Round "6.11"]
+[White "CM Matyakubov,Miraziz"]
+[Black "GM Iljiushenok,I"]
+[WhiteElo "2095"]
+[BlackElo "2521"]
+[Result "0-1"]
+[ECO "B11"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. Nf3 d5 3. Nc3 Bg4 4. h3 Bxf3 5. Qxf3 e6 6. g3 Nf6 7. Bg2 Bb4 8. O-O O-O 9. d3 Nbd7 10. Qe2 Bxc3 11. bxc3 dxe4 12. Bxe4 Qa5 13. Bd2 Qa4 14. Bg2 Qxc2 15. Rfc1 Qa4 16. Rab1 Qa6 17. c4 e5 18. a4 Rfe8 19. a5 Nc5 20. Qe3 Nfd7 21. Bc3 Rad8 22. Re1 Ne6 23. f4 f6 24. f5 Nc7 25. Re2 Rb8 26. Reb2 Rec8 27. Be1 Ne8 28. Bf2 b6 29. Ra1 Qb7 30. d4 Qc7 31. axb6 axb6 32. d5 c5 33. d6 Nxd6 34. Bd5+ Kh8 35. g4 b5 36. Rba2 Nb6 37. Be6 Nbxc4 38. Qe2 Rd8 39. g5 fxg5 40. h4 Qe7 41. Qg4 e4 42. Bxc5 Ne5 43. Qxe4 Qxe6 0-1
+
+[Event "Caro-Kann: Two Knights"]
+[Site "Rhodes GRE"]
+[Date "2025.10.19"]
+[Round "1.17"]
+[White " Skagseth,Havard M"]
+[Black "GM Anton Guijarro,D"]
+[WhiteElo "2029"]
+[BlackElo "2631"]
+[Result "0-1"]
+[ECO "B11"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. Nc3 d5 3. Nf3 Bg4 4. h3 Bxf3 5. Qxf3 e6 6. d3 Nd7 7. Be2 Bc5 8. O-O Ne7 9. Qg3 O-O 10. Bf4 Ng6 11. Bd6 Re8 12. Bxc5 Nxc5 13. Bh5 Qb6 14. Rab1 Rad8 15. Rfe1 Nd7 16. Bxg6 hxg6 17. Qf4 Qc5 18. Qd2 Nb6 19. a3 Qe7 20. Qf4 g5 21. Qf3 d4 22. Ne2 c5 23. b3 Nd7 24. a4 Nb8 25. Qh5 e5 26. g3 Rd6 27. Kh2 Rh6 28. Qg4 Nd7 29. Rg1 g6 30. Rbf1 Kg7 31. Kg2 Reh8 32. Rh1 Rh5 33. Qf3 Nf6 34. Rb1 Rxh3 35. Rxh3 g4 36. Qxf6+ Qxf6 37. Rxh8 Kxh8 38. Kf1 Qg5 39. Ke1 Qh6 40. Ng1 f5 41. exf5 gxf5 42. Rd1 f4 43. gxf4 exf4 44. Ne2 Kg7 0-1
+
+[Event "Caro-Kann: Two Knights"]
+[Site "New Delhi IND"]
+[Date "2025.06.08"]
+[Round "3.4"]
+[White " Banik Hrishikesh Kumar"]
+[Black "GM Petrosyan,M"]
+[WhiteElo "2086"]
+[BlackElo "2541"]
+[Result "0-1"]
+[ECO "B11"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. Nc3 d5 3. Nf3 Bg4 4. h3 Bxf3 5. Qxf3 e6 6. d3 Nf6 7. Bd2 a5 8. g4 Bc5 9. g5 Nfd7 10. h4 a4 11. O-O-O a3 12. b3 Na6 13. Bh3 Nc7 14. Kb1 Qe7 15. Qg3 Nb6 16. f4 Bb4 17. f5 d4 18. f6 gxf6 19. gxf6 Qd6 20. Qxd6 Bxd6 21. Ne2 Be5 22. Rdf1 Nd7 23. Bf4 Bxf4 24. Nxf4 Ne5 25. Rhg1 Kd7 26. Rg7 Kd6 27. Kc1 h5 28. Rg5 c5 29. Rf2 Rh6 30. Ne2 Rah8 31. Kd2 Rg6 32. b4 b6 33. bxc5+ bxc5 34. Nf4 Rxf6 0-1
+
+[Event "Caro-Kann: Two Knights"]
+[Site "Tbilisi GEO"]
+[Date "2025.02.03"]
+[Round "1.1"]
+[White "WCM Tsetskhladze,Mariam"]
+[Black "GM Dzagnidze,N"]
+[WhiteElo "2080"]
+[BlackElo "2518"]
+[Result "0-1"]
+[ECO "B11"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. Nc3 d5 3. Nf3 Bg4 4. h3 Bxf3 5. Qxf3 e6 6. Be2 d4 7. Nb1 Ne7 8. d3 Ng6 9. g3 h5 10. h4 a5 11. a4 Bb4+ 12. Nd2 Nd7 13. Qg2 e5 14. O-O Qe7 15. Qh3 Ngf8 16. Nf3 g6 17. Ne1 Ne6 18. Ng2 O-O-O 19. f4 f6 20. fxe5 fxe5 21. Ne1 g5 22. hxg5 Bxe1 23. Rxe1 Nxg5 24. Qh4 Rhg8 25. Kh1 Rdf8 26. Rf1 Rxf1+ 27. Bxf1 Qg7 28. Bxg5 Qxg5 29. Qxg5 Rxg5 30. Kh2 Kc7 31. Be2 Kd6 32. Kh3 Nf6 33. Kh4 Rg7 34. Bxh5 Nxh5 35. Kxh5 Rxg3 36. Kh4 Rg2 37. Rc1 Kc5 38. Kh3 Rg7 39. Rf1 Kb4 40. Rf5 Re7 41. Kg4 Kxa4 42. Rg5 Kb4 43. Kf5 a4 44. Kf6 Re8 45. Rg2 Kc5 46. Kf7 Rh8 47. Ke6 Rh5 48. Rf2 b5 49. Rf6 b4 50. Rf8 Rh2 51. Ra8 Rxc2 52. Ra5+ Kb6 53. Rxa4 Rxb2 54. Kxe5 c5 55. Kd5 Rb3 56. Ra8 Rxd3 57. Rb8+ Kc7 58. Rb5 Rc3 0-1
+
+[Event "Caro-Kann: Two Knights"]
+[Site "Aguascalientes MEX"]
+[Date "2024.08.06"]
+[Round "1.3"]
+[White "WIM Miranda Rodriguez,T"]
+[Black "GM Miranda Mesa,E"]
+[WhiteElo "2072"]
+[BlackElo "2511"]
+[Result "0-1"]
+[ECO "B11"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. Nc3 d5 3. Nf3 Bg4 4. h3 Bxf3 5. Qxf3 e6 6. d4 dxe4 7. Qxe4 Nf6 8. Qd3 Nbd7 9. g3 Be7 10. Bg2 O-O 11. O-O Qb6 12. Rd1 Rfd8 13. Rb1 Nd5 14. a3 Nxc3 15. Qxc3 Nf6 16. Rd3 Rd7 17. Qe1 Rad8 18. Be3 Nd5 19. Bd2 Qc7 20. Ba5 b6 21. Bd2 Bf6 22. Rd1 Ne7 23. Bf4 Qc8 24. Qe4 Qa6 25. Be5 Nd5 26. Bf1 Qa4 27. R3d2 Bxe5 28. Qxe5 Ne7 29. Bg2 Qc4 30. Bf1 Qd5 31. Qxd5 cxd5 32. c3 Nf5 33. Bd3 Nd6 34. Re2 b5 35. Rde1 g6 36. Kg2 a5 37. h4 Rb8 38. h5 Kg7 39. hxg6 hxg6 40. Ra1 Rc7 41. Rc2 Kf6 42. f4 b4 43. axb4 axb4 44. Ra6 Ke7 45. Ra1 bxc3 46. bxc3 Rb3 47. Rac1 f5 48. Kf2 Kf6 49. Kg2 g5 50. Kf3 gxf4 51. gxf4 Rh7 52. Kg3 Rb8 53. Rg2 Rc8 54. Kf2 Rhc7 55. Rh1 Nf7 56. Rh7 Rh8 57. Rhg7 Rxc3 58. Be2 Rc2 59. R2g6+ Ke7 60. Rg2 Rc3 61. Ke1 Rch3 62. Kd2 Rh2 63. Rg1 R2h7 64. Rxh7 Rxh7 65. Ra1 Rh3 66. Ra7+ Kf6 67. Rd7 Nh8 68. Rc7 Ng6 69. Rc3 Rh4 0-1
+
+[Event "Caro-Kann: Two Knights"]
+[Site "Colombo SRI"]
+[Date "2024.08.02"]
+[Round "8.6"]
+[White " Sivathanujan,S"]
+[Black "GM Mitrabha,G"]
+[WhiteElo "1968"]
+[BlackElo "2545"]
+[Result "0-1"]
+[ECO "B11"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. Nc3 d5 3. Nf3 Bg4 4. h3 Bxf3 5. Qxf3 e6 6. d4 Nf6 7. Bg5 h6 8. Bxf6 Qxf6 9. Qxf6 gxf6 10. a3 Nd7 11. O-O-O a6 12. Be2 b5 13. Bh5 Bd6 14. g3 Nb6 15. f4 Ke7 16. Rhf1 Raf8 17. Rd3 Rhg8 18. Rdf3 Bc7 19. g4 a5 20. e5 Nd7 21. Ne2 Bb6 22. b4 axb4 23. axb4 fxe5 24. fxe5 f6 25. exf6+ Rxf6 26. c3 Bc7 27. Nf4 Bd6 28. Kd2 Bb8 29. Ke2 e5 30. dxe5 Bxe5 31. Kd2 Nb6 32. Nd3 Rxf3 33. Rxf3 Bf6 34. Re3+ Kd6 35. Rf3 Nc4+ 36. Kc2 Ke7 37. Nb2 Nd6 38. Re3+ Ne4 39. Nd1 Kd6 40. Rf3 Ra8 41. Bg6 Bg5 42. Bxe4 dxe4 43. Rf1 Ke5 44. Rf5+ Ke6 45. Rf1 Rd8 46. Rf2 Rd3 47. Re2 Kd5 48. h4 Bxh4 49. Ne3+ Ke5 50. Nf5 Bg5 51. Nd4 Kd5 52. Nf5 Rh3 53. Rg2 Rh1 54. Ng3 Rc1+ 55. Kb2 Re1 56. Kc2 Ke5 57. Re2 Rxe2+ 58. Nxe2 Be3 59. Kb3 Kd5 60. Kc2 Bf2 61. Nf4+ Kc4 62. Kd2 Bh4 63. Ne2 Bf6 64. Kc2 e3 65. Nf4 Bxc3 66. Nd3 e2 0-1
+
+[Event "Caro-Kann: Two Knights"]
+[Site "Entebbe UGA"]
+[Date "2024.06.28"]
+[Round "7.10"]
+[White " Selepe,Lwazi"]
+[Black "GM Janik,Igor"]
+[WhiteElo "1913"]
+[BlackElo "2511"]
+[Result "0-1"]
+[ECO "B11"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. Nc3 d5 3. Nf3 Bg4 4. Be2 Bxf3 5. Bxf3 d4 6. Nb1 e5 7. d3 Bd6 8. a4 Ne7 9. Nd2 Bc7 10. O-O Nd7 11. b3 O-O 12. Ba3 Re8 13. g3 Nf6 14. Bg2 Ng6 15. h3 a5 16. Qe2 Ra6 17. Nf3 Bd6 18. Bc1 b5 19. Bd2 Qc7 20. Qe1 Rea8 21. h4 Nf8 22. Nxe5 Bxe5 23. f4 N6d7 24. fxe5 Nxe5 25. Qf2 Qd6 26. Qe1 Qc5 27. Bf4 Nfg6 28. Qe2 h6 29. h5 Nf8 30. Bh3 b4 31. Rf2 Re8 32. Raf1 Ra7 33. Kh2 f6 34. Bf5 Rae7 35. Kg2 Kh8 36. Kh1 Nf7 37. Bg6 Kg8 38. Bxf7+ Rxf7 39. Qg4 f5 40. exf5 Qxf5 41. Qxf5 Rxf5 42. g4 Rd5 43. Kg2 Nd7 44. Kg3 Re6 45. Bc7 Rc5 46. Rf4 Rxc2 47. Rxd4 Nf6 48. Bxa5 c5 49. Rc4 Rd2 50. Rf3 Ree2 51. Bc7 Rd1 52. a5 Rg1+ 53. Kh3 Rb1 54. a6 Ra2 55. Bd8 Nd7 56. d4 Rxa6 57. Be7 cxd4 58. Rxd4 Ne5 59. Re3 Nc6 60. Rd6 Rc1 61. Bh4 Raa1 62. Bf2 Rc2 63. Kg3 Rf1 64. Rf3 Kh7 65. Be3 Rb1 66. g5 hxg5 67. Bxg5 Ne5 68. Rf8 Rg1+ 69. Kh3 Rxg5 70. Kh4 Rg4+ 71. Kh3 Rc3+ 72. Kh2 Rh4+ 73. Kg2 Rxh5 0-1
+
+[Event "Caro-Kann: Two Knights"]
+[Site "Ceyreste FRA"]
+[Date "2024.05.09"]
+[Round "2.2"]
+[White " Vu Dinh,Adrien"]
+[Black "GM Sivuk,V"]
+[WhiteElo "2099"]
+[BlackElo "2541"]
+[Result "0-1"]
+[ECO "B11"]
+[Opening "Caro-Kann"]
+
+1. e4 c6 2. Nf3 d5 3. Nc3 Bg4 4. h3 Bxf3 5. Qxf3 Nf6 6. Be2 e6 7. d4 Bb4 8. e5 Nfd7 9. Qg3 g6 10. a3 Be7 11. Nd1 c5 12. dxc5 Nxc5 13. b4 Ne4 14. Qf3 Nc6 15. Bb2 Qc7 16. Bd3 Nxe5 17. Bb5+ Kf8 18. Qe2 Bf6 19. O-O Kg7 20. c4 Nxc4 21. Rc1 Ned6 22. Bxf6+ Kxf6 23. Bxc4 Nxc4 24. Ne3 b5 25. Nxc4 bxc4 26. Rfe1 Rhd8 27. Qe3 Kg7 28. Qd4+ Kg8 29. h4 Qb6 30. Qf6 Re8 31. h5 e5 32. Qg5 f6 33. Qd2 Qd4 34. Qc2 Qg4 35. h6 Qd7 36. Red1 Rac8 37. a4 d4 38. b5 Red8 39. Qb1 c3 40. a5 Qe6 41. Qb4 Rc4 42. Qb3 Kf7 43. b6 axb6 44. axb6 Rc6 45. Qa4 Qd7 46. Qb5 Rd6 47. Qb4 Qe6 48. b7 Rb6 49. Qc5 Qc6 50. Qa5 Rb8 51. Qa2+ Qe6 52. Qa5 R6xb7 53. Kf1 0-1

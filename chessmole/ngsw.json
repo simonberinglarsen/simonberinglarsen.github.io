@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1777286866658,
+  "timestamp": 1777293546574,
   "index": "/chessmole/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/chessmole/favicon.ico",
         "/chessmole/index.html",
-        "/chessmole/main-PXNQAQVX.js",
+        "/chessmole/main-FKWDWBOI.js",
         "/chessmole/manifest.webmanifest",
         "/chessmole/polyfills-B6TNHZQ6.js",
         "/chessmole/styles-4KK5TNOT.css"
@@ -35,6 +35,8 @@
         "/chessmole/media/OpenChessFont-4ION6DPH.otf",
         "/chessmole/media/OpenChessFont-U4UBPCPA.ttf",
         "/chessmole/molelogo.png",
+        "/chessmole/pgn/carokann.pgn",
+        "/chessmole/pgn/london.pgn",
         "/chessmole/pgn/miniatures.pgn"
       ],
       "patterns": []
@@ -46,13 +48,15 @@
     "/chessmole/coin2.png": "a26add8d6eec2e189ee06f7f474c8241eb685178",
     "/chessmole/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
     "/chessmole/heart.png": "2751f1b0e6cb0036097486bf8ad14e2b95dd6de2",
-    "/chessmole/index.html": "e008d5c9e0c87fb86678637c42731995654a23e4",
-    "/chessmole/main-PXNQAQVX.js": "a1cc5f2303b244ef25093900c4ec54887019061a",
+    "/chessmole/index.html": "86428cd433fbe00d1d6cf00324ce38a4fe4a15c1",
+    "/chessmole/main-FKWDWBOI.js": "505a786972a65f5707324d29f3bea6266a3c8ce5",
     "/chessmole/manifest.webmanifest": "d62c9bf6ac42fb5ea1f1c37f7fa936c38b6db3be",
     "/chessmole/media/Modenine-2OPd-7Y3WNTVO.ttf": "0a2b463d6c9da0e0ac6044e1227f589d14f6969d",
     "/chessmole/media/OpenChessFont-4ION6DPH.otf": "4784cbc40c616fc65ac6af63f7cf0419af1e4fd0",
     "/chessmole/media/OpenChessFont-U4UBPCPA.ttf": "e81d2252c48abf84140f837332205fb00ff50754",
     "/chessmole/molelogo.png": "e0ed3d1f5d623546474c957a8d6831024627bcdc",
+    "/chessmole/pgn/carokann.pgn": "0c15e41b0fa42ed9da4cbba99ce381eb5afc7a60",
+    "/chessmole/pgn/london.pgn": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     "/chessmole/pgn/miniatures.pgn": "c7284c5f5ee822422ab690572abab3d35dffba43",
     "/chessmole/polyfills-B6TNHZQ6.js": "bf76ac291d7f51c1139b7edcf86b359a30c08c64",
     "/chessmole/styles-4KK5TNOT.css": "4935c86080732e144fe24ff4797f8460e4e7e1ea"
