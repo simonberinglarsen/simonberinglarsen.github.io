@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1777282358722,
+  "timestamp": 1777282984390,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-GTPADWKW.js",
+        "/main-DWPKSPR7.js",
         "/manifest.webmanifest",
         "/polyfills-B6TNHZQ6.js",
         "/styles-OJRSSD3P.css"
@@ -46,8 +46,8 @@
     "/coin2.png": "a26add8d6eec2e189ee06f7f474c8241eb685178",
     "/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
     "/heart.png": "2751f1b0e6cb0036097486bf8ad14e2b95dd6de2",
-    "/index.html": "921e54212c878a472057d26e27e7a2ff441ef8be",
-    "/main-GTPADWKW.js": "15a14dce6eeb737ab747e2ff40e18c1f1be6cbe5",
+    "/index.html": "1eca98a544c53e1f46b6ef27a14884ca463f5f05",
+    "/main-DWPKSPR7.js": "e92dcc39ec6b28c66c514ad1c741c79553a4bcb7",
     "/manifest.webmanifest": "d62c9bf6ac42fb5ea1f1c37f7fa936c38b6db3be",
     "/media/Modenine-2OPd-7Y3WNTVO.ttf": "0a2b463d6c9da0e0ac6044e1227f589d14f6969d",
     "/media/OpenChessFont-4ION6DPH.otf": "4784cbc40c616fc65ac6af63f7cf0419af1e4fd0",
