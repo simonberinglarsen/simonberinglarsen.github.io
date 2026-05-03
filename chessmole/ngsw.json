@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1777811197651,
+  "timestamp": 1777811363760,
   "index": "/chessmole/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/chessmole/favicon.ico",
         "/chessmole/index.html",
-        "/chessmole/main-PXMTKLA3.js",
+        "/chessmole/main-VBNOYU77.js",
         "/chessmole/manifest.webmanifest",
         "/chessmole/polyfills-B6TNHZQ6.js",
         "/chessmole/styles-QGEH4BG2.css"
@@ -54,6 +54,7 @@
         "/chessmole/media/OpenChessFont-4ION6DPH.otf",
         "/chessmole/media/OpenChessFont-U4UBPCPA.ttf",
         "/chessmole/molelogo-bg-512.png",
+        "/chessmole/molelogo-favicon-128.png",
         "/chessmole/molelogo-maskable-512.png",
         "/chessmole/molelogo.png",
         "/chessmole/pgn/carokann.pgn",
@@ -89,13 +90,14 @@
     "/chessmole/coin2.png": "a26add8d6eec2e189ee06f7f474c8241eb685178",
     "/chessmole/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
     "/chessmole/heart.png": "2751f1b0e6cb0036097486bf8ad14e2b95dd6de2",
-    "/chessmole/index.html": "748410a5cd96500ae784ee7ebd98e29c4aa2dc60",
-    "/chessmole/main-PXMTKLA3.js": "eff8ad22e316753ccb4eb54a01111b6d7de593a7",
+    "/chessmole/index.html": "47e93be6a927374467909754ded726d85b28536c",
+    "/chessmole/main-VBNOYU77.js": "1d4f70ccae9bab3c2b1a4fb3b1a533f06f6ff5d3",
     "/chessmole/manifest.webmanifest": "3db61d4906179c48b94757ea1677be7851bba2dd",
     "/chessmole/media/Modenine-2OPd-7Y3WNTVO.ttf": "0a2b463d6c9da0e0ac6044e1227f589d14f6969d",
     "/chessmole/media/OpenChessFont-4ION6DPH.otf": "4784cbc40c616fc65ac6af63f7cf0419af1e4fd0",
     "/chessmole/media/OpenChessFont-U4UBPCPA.ttf": "e81d2252c48abf84140f837332205fb00ff50754",
     "/chessmole/molelogo-bg-512.png": "50a8dca22cc8fb7f147e620f21f498d6aeac60e4",
+    "/chessmole/molelogo-favicon-128.png": "2a695423874a29bfe207298c552e3b35931c317a",
     "/chessmole/molelogo-maskable-512.png": "d048510154b7b526d1a0404af4de4b2fc69e0b28",
     "/chessmole/molelogo.png": "e0ed3d1f5d623546474c957a8d6831024627bcdc",
     "/chessmole/pgn/carokann.pgn": "0c15e41b0fa42ed9da4cbba99ce381eb5afc7a60",
