@@ -1,0 +1,20 @@
+[
+  {"number": 1, "name": "Wilhelm Steinitz", "champion_period": "1886–1894", "image": "steinitz.png", "description": "The first official World Champion, he revolutionized chess with positional play and strategic principles over pure tactics."},
+  {"number": 2, "name": "Emanuel Lasker", "champion_period": "1894–1921", "image": "lasker.png", "description": "The longest-reigning champion, known for his psychological approach and adaptability against different opponents."},
+  {"number": 3, "name": "José Raúl Capablanca", "champion_period": "1921–1927", "image": "capablanca.png", "description": "Famous for his effortless style and endgame mastery, often called a 'chess machine' for his precision."},
+  {"number": 4, "name": "Alexander Alekhine", "champion_period": "1927–1935, 1937–1946", "image": "alekhine.png", "description": "A brilliant tactician and attacking player, known for complex combinations and dynamic play."},
+  {"number": 5, "name": "Max Euwe", "champion_period": "1935–1937", "image": "euwe.png", "description": "A mathematician and amateur champion who surprised the world by defeating Alekhine in 1935."},
+  {"number": 6, "name": "Mikhail Botvinnik", "champion_period": "1948–1957, 1958–1960, 1961–1963", "image": "botvinnik.png", "description": "The 'Patriarch of Soviet Chess,' he shaped modern training methods and mentored future champions."},
+  {"number": 7, "name": "Vasily Smyslov", "champion_period": "1957–1958", "image": "smyslov.png", "description": "Renowned for harmonious, natural play and exceptional endgame technique."},
+  {"number": 8, "name": "Mikhail Tal", "champion_period": "1960–1961", "image": "tal.png", "description": "The 'Magician from Riga,' famous for daring sacrifices and imaginative attacking chess."},
+  {"number": 9, "name": "Tigran Petrosian", "champion_period": "1963–1969", "image": "petrosian.png", "description": "A defensive genius, known for prophylactic play and an almost impenetrable style."},
+  {"number": 10, "name": "Boris Spassky", "champion_period": "1969–1972", "image": "spassky.png", "description": "A universal player comfortable in all styles, remembered for the historic 1972 match with Fischer."},
+  {"number": 11, "name": "Robert James Fischer", "champion_period": "1972–1975", "image": "fischer.png", "description": "An American prodigy who ended Soviet dominance and popularized chess worldwide."},
+  {"number": 12, "name": "Anatoly Karpov", "champion_period": "1975–1985", "image": "karpov.png", "description": "Known for positional precision and efficiency, squeezing wins from seemingly equal positions."},
+  {"number": 13, "name": "Garry Kasparov", "champion_period": "1985–2000", "image": "kasparov.png", "description": "A dominant and dynamic champion, combining deep preparation with aggressive, energetic play."},
+  {"number": 14, "name": "Vladimir Kramnik", "champion_period": "2000–2007", "image": "kramnik.png", "description": "Defeated Kasparov and is known for his solid style and contributions to opening theory like the Berlin Defense."},
+  {"number": 15, "name": "Viswanathan Anand", "champion_period": "2007–2013", "image": "anand.png", "description": "A rapid and versatile player, celebrated for his speed and success across multiple formats."},
+  {"number": 16, "name": "Magnus Carlsen", "champion_period": "2013–2023", "image": "carlsen.png", "description": "Dominated the modern era with exceptional endgame skill, intuition, and consistency."},
+  {"number": 17, "name": "Ding Liren", "champion_period": "2023–2024", "image": "ding.png", "description": "China’s first World Champion, known for deep calculation and calm, resilient play under pressure."},
+  {"number": 18, "name": "Gukesh Dommaraju", "champion_period": "2024–present", "image": "dommaraju.png", "description": "The youngest World Champion in history, representing the new generation of elite chess talent."}
+]
