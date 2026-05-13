@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="icon" href="data:,">
+    <title>Square Trainer</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --square-size: 2rem;
+        --gap: 0.25rem;
+        --green: #22c55e;
+        --gray: #9ca3af;
+        --bg: #e5e7eb;
+        --surface: #ffffff;
+        --border: #d1d5db;
+        --text: #111827;
+        --muted: #4b5563;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: var(--bg);
+      }
+
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        font-family: Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      main {
+        width: min(100vw, 375px);
+        min-height: min(100dvh, 667px);
+        margin: 0 auto;
+        padding:
+          calc(env(safe-area-inset-top, 0px) + 1.25rem)
+          calc(env(safe-area-inset-right, 0px) + 1rem)
+          calc(env(safe-area-inset-bottom, 0px) + 1.5rem)
+          calc(env(safe-area-inset-left, 0px) + 1rem);
+        background: var(--surface);
+        display: flex;
+        flex-direction: column;
+      }
+
+      h1, p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 0.75rem;
+        font-size: 1.75rem;
+        text-align: center;
+      }
+
+      p {
+        color: var(--muted);
+      }
+
+      .screen[hidden] {
+        display: none;
+      }
+
+      .screen {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+      }
+
+      .question-body {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .result-body {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .congratz-body {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .streak-body {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .screen-topbar {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 0.75rem;
+      }
+
+      .keypad[hidden] {
+        display: none;
+      }
+
+      .board {
+        display: grid;
+        grid-template-columns: repeat(8, var(--square-size));
+        gap: var(--gap);
+        margin: 1rem 0 1.5rem;
+        justify-content: center;
+      }
+
+      .square {
+        width: var(--square-size);
+        aspect-ratio: 1;
+        background: var(--gray);
+      }
+
+      .square.is-complete {
+        background: var(--green);
+      }
+
+      .actions {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: auto;
+      }
+
+      .preview {
+        margin: 0 0 1rem;
+        min-height: 1.5rem;
+      }
+
+      .result-status {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+      }
+
+      .status-badge {
+        width: 3rem;
+        height: 3rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        box-shadow: 0 10px 24px rgba(17, 24, 39, 0.18);
+      }
+
+      .status-badge .status-icon {
+        width: 1.4rem;
+        height: 1.4rem;
+      }
+
+      .result-status.is-correct {
+        color: var(--green);
+      }
+
+      .result-status.is-wrong {
+        color: #dc2626;
+      }
+
+      .result-status p {
+        margin: 0;
+        color: inherit;
+      }
+
+      .result-status.is-correct .status-badge {
+        background: var(--green);
+        color: #ffffff;
+      }
+
+      .result-status.is-wrong .status-badge {
+        background: #dc2626;
+        color: #ffffff;
+      }
+
+      .congratz-badge {
+        width: 4rem;
+        height: 4rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 1rem;
+        border-radius: 999px;
+        background: #eab308;
+        color: #ffffff;
+        box-shadow: 0 12px 28px rgba(234, 179, 8, 0.3);
+      }
+
+      .congratz-badge .status-icon {
+        width: 1.8rem;
+        height: 1.8rem;
+      }
+
+      .answer-display {
+        min-height: 1.5rem;
+        margin: 0 0 1rem;
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .keypad {
+        display: grid;
+        gap: 0.5rem;
+        margin: 0 0 1rem;
+        justify-content: center;
+      }
+
+      .keypad.squares {
+        grid-template-columns: repeat(3, minmax(0, 4rem));
+      }
+
+      .keypad.colors {
+        grid-template-columns: repeat(2, minmax(0, 4rem));
+      }
+
+      .keypad button {
+        width: 100%;
+      }
+
+      button {
+        min-height: 3rem;
+        padding: 0.75rem 1rem;
+        border: 1px solid var(--border);
+        border-radius: 0.75rem;
+        background: var(--surface);
+        color: var(--text);
+        font: inherit;
+      }
+
+      button:disabled {
+        color: #9ca3af;
+      }
+
+      .actions button {
+        flex: 1;
+      }
+
+      .debug-button {
+        min-height: auto;
+        padding: 0.4rem 0.65rem;
+        border-radius: 999px;
+      }
+
+      .button-content {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+
+      .icon {
+        width: 1rem;
+        height: 1rem;
+      }
+
+      @media (min-width: 376px) {
+        body {
+          display: grid;
+          place-items: center;
+          padding: 1rem 0;
+        }
+
+        main {
+          min-height: 667px;
+          border: 1px solid var(--border);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="screen" data-screen="streak">
+        <div class="screen-topbar">
+          <button type="button" id="open-debug" class="debug-button">
+            <span class="button-content">
+              <i class="icon" data-lucide="bug"></i>
+              <span>Debug</span>
+            </span>
+          </button>
+        </div>
+        <div class="streak-body">
+          <h1>Streak</h1>
+          <p id="streak-count">Current streak: 0 / 64</p>
+          <div class="board" id="streak-board" aria-label="Streak board"></div>
+        </div>
+        <div class="actions">
+          <button type="button" id="start-question">
+            <span class="button-content">
+              <span>Next</span>
+              <i class="icon" data-lucide="arrow-right"></i>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="question" hidden>
+        <h1>Question</h1>
+        <div class="question-body">
+          <p>Question <span id="question-number">1</span> of 64</p>
+          <p id="question-text">mention squares in diagonal, h6f8</p>
+          <p class="answer-display" id="answer-display"></p>
+          <div class="keypad squares" id="letter-keypad" hidden>
+            <button type="button" data-key="a">A</button>
+            <button type="button" data-key="b">B</button>
+            <button type="button" data-key="c">C</button>
+            <button type="button" data-key="d">D</button>
+            <button type="button" data-key="e">E</button>
+            <button type="button" data-key="f">F</button>
+            <button type="button" data-key="g">G</button>
+            <button type="button" data-key="h">H</button>
+          </div>
+          <div class="keypad squares" id="digit-keypad" hidden>
+            <button type="button" data-key="1">1</button>
+            <button type="button" data-key="2">2</button>
+            <button type="button" data-key="3">3</button>
+            <button type="button" data-key="4">4</button>
+            <button type="button" data-key="5">5</button>
+            <button type="button" data-key="6">6</button>
+            <button type="button" data-key="7">7</button>
+            <button type="button" data-key="8">8</button>
+          </div>
+          <div class="keypad colors" id="color-keypad" hidden>
+            <button type="button" data-key="w">W</button>
+            <button type="button" data-key="b">B</button>
+          </div>
+          <p class="preview" id="answer-preview"></p>
+        </div>
+        <div class="actions">
+          <button type="button" id="backspace-answer">
+            <span class="button-content">
+              <i class="icon" data-lucide="delete"></i>
+              <span>Back</span>
+            </span>
+          </button>
+          <button type="button" id="submit-answer">
+            <span class="button-content">
+              <span>Submit</span>
+              <i class="icon" data-lucide="arrow-right"></i>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="result" hidden>
+        <h1>Result</h1>
+        <div class="result-body">
+          <div class="result-status" id="result-status">
+            <span class="status-badge">
+              <i class="status-icon" id="result-icon" data-lucide="circle-check-big"></i>
+            </span>
+            <p id="result-text">Correct</p>
+          </div>
+          <p id="result-answer"></p>
+          <p id="result-your-answer"></p>
+        </div>
+        <div class="actions">
+          <button type="button" id="back-to-streak">
+            <span class="button-content">
+              <span>Next</span>
+              <i class="icon" data-lucide="arrow-right"></i>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="congratz" hidden>
+        <h1>Congratz</h1>
+        <div class="congratz-body">
+          <div class="congratz-badge">
+            <i class="status-icon" data-lucide="trophy"></i>
+          </div>
+          <p>You completed all 64 answers.</p>
+          <div class="board" id="congratz-board" aria-label="Completed streak board"></div>
+        </div>
+        <div class="actions">
+          <button type="button" id="restart-session">
+            <span class="button-content">
+              <i class="icon" data-lucide="rotate-ccw"></i>
+              <span>Restart</span>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="debug" hidden>
+        <h1>Debug</h1>
+        <p>Jump directly to a completed session state.</p>
+        <div class="actions">
+          <button type="button" id="debug-open-correct">
+            <span class="button-content">
+              <i class="icon" data-lucide="circle-check-big"></i>
+              <span>Open Correct</span>
+            </span>
+          </button>
+        </div>
+        <div class="actions">
+          <button type="button" id="debug-open-wrong">
+            <span class="button-content">
+              <i class="icon" data-lucide="circle-x"></i>
+              <span>Open Wrong</span>
+            </span>
+          </button>
+        </div>
+        <div class="actions">
+          <button type="button" id="debug-complete-session">
+            <span class="button-content">
+              <i class="icon" data-lucide="trophy"></i>
+              <span>Open Congratz</span>
+            </span>
+          </button>
+        </div>
+        <div class="actions">
+          <button type="button" id="debug-clear-all">
+            <span class="button-content">
+              <i class="icon" data-lucide="trash-2"></i>
+              <span>Clear All</span>
+            </span>
+          </button>
+        </div>
+        <div class="actions">
+          <button type="button" id="close-debug">
+            <span class="button-content">
+              <i class="icon" data-lucide="delete"></i>
+              <span>Back</span>
+            </span>
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/lucide@1.14.0/dist/umd/lucide.js"></script>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
