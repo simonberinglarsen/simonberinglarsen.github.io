@@ -1,0 +1,18 @@
+{
+  "name": "m8in2",
+  "short_name": "m8in2",
+  "description": "A mate-in-2 chess puzzle trainer.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#f6c979",
+  "theme_color": "#f6c979",
+  "icons": [
+    {
+      "src": "./pwa-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
