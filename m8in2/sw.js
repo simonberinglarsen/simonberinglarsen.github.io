@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v1'
+const CACHE_VERSION = new URL(self.location.href).searchParams.get('v') ?? 'v1'
 const APP_CACHE = `m8in2-app-${CACHE_VERSION}`
 const RUNTIME_CACHE = `m8in2-runtime-${CACHE_VERSION}`
 const PRECACHE_URLS = [
@@ -6,8 +6,9 @@ const PRECACHE_URLS = [
   './index.html',
   './manifest.webmanifest',
   './favicon.svg',
-  './apple-touch-icon.svg',
-  './pwa-icon.svg',
+  './apple-touch-icon.png',
+  './icon-192.png',
+  './icon-512.png',
 ]
 
 self.addEventListener('install', (event) => {
@@ -17,6 +18,12 @@ self.addEventListener('install', (event) => {
     ),
   )
   self.skipWaiting()
+})
+
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting()
+  }
 })
 
 self.addEventListener('activate', (event) => {
